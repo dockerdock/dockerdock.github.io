@@ -178,7 +178,7 @@ gulp.task('copyFonts', function() {
 });
 
 gulp.task('distCopy', function() {
-  return gulp.src( ['src/**/*', '!src/assets/{js/src,plugin/thesaas,scss}{,/**}'] ).pipe(gulp.dest('dist/'));
+  return gulp.src( ['./**/*', '!src/assets/{js/src,plugin/thesaas,scss}{,/**}'] ).pipe(gulp.dest('dist/'));
 });
 
 
@@ -199,9 +199,9 @@ gulp.task('distClean', function() {
 |
 */
 gulp.task('img', function() {
-  return gulp.src('src/assets/img/**/*.{jpg,jpeg,png,gif}')
+  return gulp.src('./assets/img/**/*.{jpg,jpeg,png,gif}')
     .pipe( imagemin() )
-    .pipe( gulp.dest('src/assets/img/') );
+    .pipe( gulp.dest('./assets/img/') );
 });
 
 /*
