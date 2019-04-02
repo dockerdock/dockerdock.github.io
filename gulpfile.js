@@ -20,20 +20,20 @@ var pkg = require('./package.json')
 var production = false;
 
 var file = {
-  html:   'src/**/*.html',
-  scss:   'src/assets/scss/**/*.scss',
-  js:     'src/assets/js/src/**/*.js',
+  html:   './**/*.html',
+  scss:   './assets/scss/**/*.scss',
+  js:     './assets/js/src/**/*.js',
 }
 
 var page = {
-  js:     'src/assets/js/src/page.js',
-  scss:   'src/assets/scss/page.scss',
+  js:     './assets/js/src/page.js',
+  scss:   './assets/scss/page.scss',
 }
 
 var dir = {
-  css:    'src/assets/css/',
-  js:     'src/assets/js/',
-  font:   'src/assets/fonts/',
+  css:    './assets/css/',
+  js:     './assets/js/',
+  font:   './assets/fonts/',
 }
 
 var browsers = [
@@ -61,7 +61,7 @@ gulp.task('reload', function() {
 
 gulp.task('serve', ['sass'], function() {
   browserSync({
-    server: 'src/'
+    server: './'
   });
 
   gulp.watch( file.scss, ['sass'] );
