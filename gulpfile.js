@@ -20,20 +20,20 @@ var pkg = require('./package.json')
 var production = false;
 
 var file = {
-  html:   'src/**/*.html',
-  scss:   'src/assets/scss/**/*.scss',
-  js:     'src/assets/js/src/**/*.js',
+  html:   './**/*.html',
+  scss:   './assets/scss/**/*.scss',
+  js:     './assets/js/src/**/*.js',
 }
 
 var page = {
-  js:     'src/assets/js/src/page.js',
-  scss:   'src/assets/scss/page.scss',
+  js:     './assets/js/src/page.js',
+  scss:   './assets/scss/page.scss',
 }
 
 var dir = {
-  css:    'src/assets/css/',
-  js:     'src/assets/js/',
-  font:   'src/assets/fonts/',
+  css:    './assets/css/',
+  js:     './assets/js/',
+  font:   './assets/fonts/',
 }
 
 var browsers = [
@@ -61,7 +61,7 @@ gulp.task('reload', function() {
 
 gulp.task('serve', ['sass'], function() {
   browserSync({
-    server: 'src/'
+    server: './'
   });
 
   gulp.watch( file.scss, ['sass'] );
@@ -178,7 +178,7 @@ gulp.task('copyFonts', function() {
 });
 
 gulp.task('distCopy', function() {
-  return gulp.src( ['src/**/*', '!src/assets/{js/src,plugin/thesaas,scss}{,/**}'] ).pipe(gulp.dest('dist/'));
+  return gulp.src( ['./**/*', '!src/assets/{js/src,plugin/thesaas,scss}{,/**}'] ).pipe(gulp.dest('dist/'));
 });
 
 
@@ -199,9 +199,9 @@ gulp.task('distClean', function() {
 |
 */
 gulp.task('img', function() {
-  return gulp.src('src/assets/img/**/*.{jpg,jpeg,png,gif}')
+  return gulp.src('./assets/img/**/*.{jpg,jpeg,png,gif}')
     .pipe( imagemin() )
-    .pipe( gulp.dest('src/assets/img/') );
+    .pipe( gulp.dest('./assets/img/') );
 });
 
 /*
