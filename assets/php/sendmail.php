@@ -17,12 +17,12 @@ $mail = new PHPMailer;
 | more chance to receive the email at gmail, yahoo, hotmail, etc.
 |
 */
-$reciever        = "info@yourdomain.com";
-$default_subject = "Email from yoursite.com";
+$reciever        = "gewaltigesprojekt@gmail.com";
+$default_subject = "E-Mail von Docker Doc(k);
 
 $sender_email    = "noreply@yourdomain.com";
 $sender_name     = "YourDomain.com";
-$error_message   = "An error occured. Please try again later.";
+$error_message   = "Ein Fehler ist aufgetreten! Bitte versuche es erneut!";
 
 
 /*
