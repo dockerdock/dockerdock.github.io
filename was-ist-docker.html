@@ -57,11 +57,12 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#">Weiterführendes <span class="arrow"></span></a>
+              <a class="nav-link" href="weiterfuehrendes.html">Weiterführendes <span class="arrow"></span></a>
               <ul class="nav">
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Composer</a>
-                  <a class="nav-link" href="#">Docker Swarm</a>
+                  <a class="nav-link" href="weiterfuehrendes.html#docker-compose">Composer</a>
+                  <a class="nav-link" href="weiterfuehrendes.html#swarm">Docker Swarm</a>
+                  <a class="nav-link" href="weiterfuehrendes.html#gui">GUI in Docker</a>
                 </li>
               </ul>
             </li>
@@ -105,27 +106,19 @@
               <div class="sidebar-body">
                 <ul class="nav nav-sidebar nav-sidebar-hero nav-sidebar-pill">
                   <li class="nav-item">
-                    <a class="nav-link" href="#definition">Definition <i class="nav-angle"></i></a>
-                    <div class="nav">
-                      <a class="nav-link" href="#definition_u1">Unterüberschrift 1</a>
-                      <a class="nav-link" href="#definition_u2">Unterüberschrift 2</a>
-                    </div>
+                    <a class="nav-link" href="#definition">Definition</a>
                   </li>
 
                   <li class="nav-item">
                     <a class="nav-link" href="#reason">Warum Docker? <i class="nav-angle"></i></a>
                     <div class="nav">
-                      <a class="nav-link" href="#reason_u1">Unterüberschrift 1</a>
-                      <a class="nav-link" href="#reason_u2">Unterüberschrift 2</a>
+                      <a class="nav-link" href="#reason_u1">Vorteile</a>
+                      <a class="nav-link" href="#reason_u2">Nachteile</a>
                     </div>
                   </li>
 
                   <li class="nav-item">
-                    <a class="nav-link" href="#use">Wer nutzt Docker? <i class="nav-angle"></i></a>
-                    <div class="nav">
-                      <a class="nav-link" href="#use_u1">Unterüberschrift 1</a>
-                      <a class="nav-link" href="#use_u2">Unterüberschrift 2</a>
-                    </div>
+                    <a class="nav-link" href="#use">Wer nutzt Docker?</a>
                   </li>
                 </ul>
               </div>
@@ -140,23 +133,13 @@
           !-->
           <div class="col-md-7 col-xl-8 ml-md-auto py-8">
             <h2 id="definition">Definition</h2>
-            <p class="lead-2">Get started with Bootstrap, the world’s most popular framework for building responsive, mobile-first sites, with BootstrapCDN and a template starter page.</p>
+            <p class="lead-2">In diesem Abschnitt erfährst du was Docker ist und wozu man es verwenden kann.</p>
 
 
             <hr class="hr-dash my-7">
-
-
-            <h3 id="definition_u1">Unterüberschrift 1</h3>
-            <p>Looking to quickly add Bootstrap to your project? Use BootstrapCDN, provided for free by the folks at StackPath. Using a package manager or need to download the source files? Head to the downloads page.</p>
-
-
-            <hr class="hr-dash my-7">
-
-
-            <h3 id="definition_u2">Unterüberschrift 2</h3>
-            <p>For who thoroughly her boy estimating conviction. Removed demands expense account in outward tedious do. Particular way thoroughly unaffected projection favourable mrs can projecting own. Thirty it matter enable become admire in giving. See resolved goodness felicity shy civility domestic had but. Drawings offended yet answered jennings perceive laughing six did far. </p>
+            <p>Ein Beispiel: Wenn auf einem Mac wird mit einer bestimmten Version von PHP Software entwickelt wird, kann es sein, dass diese auf einem Linux Server nicht gleichermaßen läuft. Selbst wenn beide Systeme mit derselben Version von PHP arbeiten, unterscheiden sich beispielsweise Konfigurationen. Dies kann Probleme verursachen und die Behebung dieser Barrieren eine Menge Arbeitsaufwand bedeuten. Docker wird zunehmend populär, weil es für diese Problematik eine Lösung findet.</p>
             <br>
-            <p><a class="btn btn-outline-primary" href="#">Download</a></p>
+            <p>Docker ist ein Open Source-Projekt zur Automatisierung der Bereitstellung von Anwendungen, die in der Cloud oder lokal ausgeführt werden können. Dazu nutzt Docker sogenannte Container und grenzt sich so auch gegenüber virtuellen Maschinen ab. Docker-Container enthalten eine Software mit all ihren Abhängigkeiten. Dadurch braucht ein Container weniger Ressourcen als virtuelle Maschinen und ermöglicht das plattformunabhängige Arbeiten. Docker sorgt dafür, dass sich die entwickelte Software auf jedem Gerät exakt gleich verhält. Diese und viele weitere nützliche Eigenschaften, tragen zu dem Erfolg von Docker bei und sorgen dafür, dass die Nutzeranzahl über die letzten Jahre stetig gestiegen ist - Tendenz steigend.</p>
 
 
             <hr class="hr-dash my-7">
@@ -168,50 +151,47 @@
             |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
             !-->
             <h2 id="reason">Warum Docker?</h2>
-            <p class="lead-2">Components and options for laying out your Bootstrap project, including wrapping containers, a powerful grid system, a flexible media object, and responsive utility classes.</p>
+            <p class="lead-2">Hier erfährst du wozu man Docker verwenden sollte und wo die Vor- und Nachteile der Containerisierungstechnologie liegen. Es soll auch klar gemacht werden, dass Docker sich grundsätzlich von Virtuellen Maschinen unterscheidet.</p>
 
 
             <hr class="hr-dash my-7">
 
 
-            <h3 id="reason_u1">Unterüberschrift 1</h3>
-            <p>Here's some notes to know how our navbar works, before getting deeper into it.</p>
+            <h3 id="reason_u1">Vorteile</h3>
+              <h4>Container-Technik</h4>
+               <p>Docker stellt für die jeweiligen Container und Images immer die passende Entwicklungsumgebung her. So werden Frameworks und Libraries geladen, aber unnötige Elemente ignoriert. Durch die Benutzung des Host OS-Kernels fällt auch der Hypervisor weg und wird durch die Docker Engine ersetzt. So können Ressourcen gespart werden, da der Server besser genutzt wird.</p>
 
-            <ul>
-              <li>Most of the basics can be find in the <a href="https://getbootstrap.com/docs/4.0/components/navbar/" target="blank">official documentation of navbar</a> component. It's highly recommended to get start from there.</li>
-              <li>Our color scheme classes works inverse of the Bootstrap definition. For example, <code>.navbar-dark</code> makes the text dark colored and <code>.navbar-light</code> makes the colors lighter.</li>
-              <li>You can have a different color scheme for the navbar once it's stick at the top by adding one of the <code>.navbar-stick-dark</code> or <code>.navbar-stick-light</code> classes.</li>
-              <li>Inside the <em>.navbar-brand</em>, you can specify two logos; <code>.logo-dark</code> to display for <em>.navbar-dark</em>; and <code>.logo-light</code> to be display with <em>.navbar-light</em>.</li>
-              <li>
-                You should set the placement of navbar using <code>data-navbar</code> attribute. It can has one of the following values:
-                <ul>
-                  <li><code>static</code>: Only at top, don't move with scroll.</li>
-                  <li><code>fixed</code>: Always at top of the screen and moves with scrolling down.</li>
-                  <li><code>sticky</code>: First at top, hides after a small scroll down, so it won't obscure the header. Once the user scrolls down and passes the header, navbar become fixed/sticky at the top again.</li>
-                  <li><code>smart</code>: It's like sticky navbar, but it only becomes sticky when the visitor scrolls up.</li>
-                </ul>
-              </li>
-              <li>Our template adds few classes to the body tag to detect when the scrollbar passed an element which is to use by CSS. Those classes are <code>.body-scrolled</code>, <code>.navbar-scrolled</code> and <code>.header-scrolled</code></li>
-              <li>In mobile devices, the content inside <code>.navbar-mobile</code> will display to the user.</li>
-              <li>We have defined few utility classes to make your coding easier for different situations. Those classes can categorized into <code>.d-mobile-*</code> —change display value on mobile devices— and <code>.d-stick-*</code> —when the navbar sticks to the top— which <strong>*</strong> can be one of the <code>none</code> | <code>block</code> | <code>inline-block</code> | <code>flex</code> | <code>inline-flex</code> values. So <code>.d-stick-none</code> will hide an element when the navbar has sticked at the top.</li>
-            </ul>
+              <h4>Speicherplatz</h4>
+               <p>Container sind in der Regel nicht größer als 100 MB. Virtuelle Maschinen benötigen durch das eigene Betriebssystem mehrere Gigabyte. So kann ein Server viel mehr Container hosten als VM. Dadurch werden Ressourcen gespart.</p>
 
+              <h4>Boot-Zeit</h4>
+               <p>Da die Container kein eigenes OS besitzen und recht klein sind benötigen sie nur wenige Augenblicke zum Start, während VM einige Minuten brauchen, bis sie betriebsbereit sind. Dadurch könnte man theoretisch Container beenden um Strom zu sparen und bei Bedarf wieder schnell booten.</p>
+
+              <h4>Modularisierung</h4>
+               <p>Statt eine komplette und komplexe Applikation in einem Container zu betreiben arbeiten verschiedene Modul-Container zusammen. Dieser sogenannte Mircoservice-Ansatz ermöglicht die Aufteilung von bspw. einer Datenbank. So können auch einfach Komponenten geändert oder ausgetauscht werden ohne die gesamte Applikation umzuschreiben.</p>
+
+              <h4>Versionierung</h4>
+                <p>Mit Docker können verschiedene Versionen eines Containers erstellt, untersucht und wiederhergestellt werden. Außerdem werden Komponenten aus den vorhergehenden Schichten wiederverwendet, umso den Container schlank zu halten.</p>
 
             <hr class="hr-dash my-7">
 
 
 
-            <h3 id="reason_u2">Unterüberschrift 2</h3>
-            <p>Their could can widen ten she any. As so we smart those money in. Am wrote up whole so tears sense oh. Absolute required of reserved in offering no. How sense found our those gay again taken the. Had mrs outweigh desirous sex overcame. Improved property reserved disposal do offering me.</p>
+            <h3 id="reason_u2">Nachteile</h3>
+              <h4>“Hauptsache Container” (Hype)</h4>
+                <p>Anstatt die angesprochene Modularisierung von Docker zu nutzen wird eine gesamte Applikation in einen Container gepackt. In diesem Fall könnte man genauso eine VM verwenden.</p>
+              
+              <h4>GUI</h4>
+                <p>Docker ist für Server konzipiert. Deshalb ist die Unterstützung für Applikationen mit einer GUI wie bspw. X11 video forwarding sehr schlecht. Anwendungen wie Photoshop können nicht mit Docker umgesetzt werden.</p>
+              
+              <h4>Root Rechte</h4>
+                <p>Die Engine von Docker, der Docker Daemon, benötigt für den Einsatz root Rechte. Das ist im Prinzip das gleiche wie Administratorrechte auf einem Windows Systemen. Da der Daemon als root läuft, hat jeder Benutzer, der Container starten kann, im Prinzip root-Rechte auf dem System. So kann auf Verzeichnisse zugegriffen werden, in dem bspw. Passwörter gespeichert werden.</p>
+              
+              <h4>Sicherheit</h4>
+                <p>Da Docker eine Entwicklungsumgebung für Software bereitstellt sollte man denken, dass alle Risiken behoben sind, jedoch darf der Sicherheitsaspekt nicht vernachlässigt werden. Da Anwendungen direkt auf den Host OS-Kernel zugreifen muss können leichter Sicherheitslücken auftreten als bspw. bei einer VM. Deshalb ist ein gewisses Grundvertrauen in die Entwickler einer Applikation nötig. Docker ist außerdem keine Wunderwaffe für die Sicherheit des Gesamtsystems, sondern nur eine zusätzliche Ebene.</p>
 
-            <header class="header text-center py-8 shadow-none mx-0" style="background-color: #f1f6fa">
-              <div class="container">
-                <h1>Typography</h1>
-                <p class="lead mb-0">Documentation and examples for typography, including global settings, headings, body text, lists, and more.</p>
-              </div>
-            </header>
-
-            <p>In reasonable compliment favourable is connection dispatched in terminated. Do esteem object we called father excuse remove. So dear real on like more it. Laughing for two families addition expenses surprise the. If sincerity he to curiosity arranging. Learn taken terms be as. Scarcely mrs produced too removing new old. </p>
+              <h4>Docker ersetzt nicht VMs</h4>
+                <p>Auch wenn Docker immer populärer wird werden Virtuelle Maschinen nicht gleich in großem Maß aussterben. Experten sehen die Zukunft von zwei komplementären Technologien. Docker ist leichter und agiler, als Anwendungen auf VMs. Lorenzo Fontana drückt es so aus: „Container sind Prozesse, VMs sind Server.“</p>
 
 
             <hr class="hr-dash my-7">
@@ -224,19 +204,18 @@
             |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
             !-->
             <h2 id="use">Wer nutzt Docker?</h2>
-            <p class="lead-2">Components and options for laying out your Bootstrap project, including wrapping containers, a powerful grid system, a flexible media object, and responsive utility classes.</p>
+            <p class="lead-2">Dieser Abschnitt zeigt, wie populär Docker ist und welche bekannte Unternehmen Docker in ihrem Alltag nutzen.</p>
 
 
             <hr class="hr-dash my-7">
-
-
-            <h3 id="use_u1">Unterüberschrift 1</h3>
-            <p>Some sample text to just fill up the space. The him father parish looked has sooner. Attachment frequently gay terminated son. You greater nay use prudent placing. Passage to so distant behaved natural between do talking. Friends off her windows painful. Still gay event you being think nay for. In three if aware he point it. Effects warrant me by no on feeling settled resolve. </p>
-            <hr class="hr-dash my-7">
-
-
-            <h3 id="use_u2">Unterüberschrift 2</h3>
-            <p>Some sample text to just fill up the space. The him father parish looked has sooner. Attachment frequently gay terminated son. You greater nay use prudent placing. Passage to so distant behaved natural between do talking. Friends off her windows painful. Still gay event you being think nay for. In three if aware he point it. Effects warrant me by no on feeling settled resolve. </p>
+            <p>Docker ist ein Erfolgsmodell. Dafür sprechen auch die offiziellen Daten der Website des Unternehmens. Über 80 Milliarden Container wurden bisher heruntergeladen. Des Weiteren findet man über 2 Millionen Anwendungen in Docker Hub. Doch nicht nur die über 100.000 Third-Party-Projekte nutzen die Container Software, Docker kann auch über 650 kommerzielle Kunden vorweisen. Dazu zählen auch namhafte Kunden wie beispielsweise PayPal, Visa oder GSK.</p><br>
+            <p>Die Popularität von Docker lässt sich am besten mit dem folgenden Diagramm zeigen. Man sieht das Interesse von Docker und der beliebtesten virtuellen Maschine (Virtual Box) im Verlauf der letzten Jahre. Docker, das erst 2013 veröffentlicht wurde, schaffte es innerhalb von nur drei Jahren das Interesse auf das gleiche Level anzuheben wie virtuelle Maschinen.</p><br>
+            <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/1754_RC01/embed_loader.js"></script>
+            <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/1754_RC01/embed_loader.js"></script>
+            <script type="text/javascript">
+              trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"/m/0wkcjgj","geo":"","time":"2010-01-01 2019-04-15"},{"keyword":"/m/027q8xw","geo":"","time":"2010-01-01 2019-04-15"}],"category":0,"property":""}, {"exploreQuery":"date=2010-01-01%202019-04-15&q=%2Fm%2F0wkcjgj,%2Fm%2F027q8xw","guestPath":"https://trends.google.de:443/trends/embed/"});
+            </script>      
+            <p>Ein wichtiger Faktor dafür ist auch die Docker-Community. Mit 32.000 Sternen auf GitHub und über 200 Meetups hat Docker eine solide Basis an Beitragenden. Jährlich findet auch aus diesem Grund eine DockerCon statt, auf der Neuerungen vorgestellt werden und Workshops stattfinden. Bei Docker handelt es also längst nicht mehr um ein Nischenprodukt, sondern um eine Lösung, die lange Zeit gesucht wurde. Das zeigt auch die Zahl der Docker Job Angebote, die seit Veröffentlichung um 77.000% gestiegen ist.</p>          
             <hr class="hr-dash my-7">
           </div>
 
