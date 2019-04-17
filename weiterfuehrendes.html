@@ -161,79 +161,159 @@
 
 
             <h3 id="docker-compose_u2">Einleitung</h3>
-            <p>For who thoroughly her boy estimating conviction. Removed demands expense account in outward tedious do. Particular way thoroughly unaffected projection favourable mrs can projecting own. Thirty it matter enable become admire in giving. See resolved goodness felicity shy civility domestic had but. Drawings offended yet answered jennings perceive laughing six did far. </p>
-            <br>
-            <p><a class="btn btn-outline-primary" href="#">Download</a></p>
+            
+<!-- <pre class="line-numbers language-yaml"><code class="">version: 7.7
+services:
+  wd: null
+    - test
+</code></pre> -->
+            <p> Sobald das passende Container-Image gefunden ist, kann man diesen mit <code>docker run &lt;Name des Images&gt;</Name></code> starten. Wir haben ebenfalls schon gesehen dass der docker run Command allerlei Parameter akzeptiert. Die Parameter ermöglichen es den Container nach belieben zu personalisieren, man kann ihm einen Namen zuweisen, ein Port auf der Host-Maschine verfügbar machen oder ein Volumen anhängen. Leider ergibt das schon bei einfachen Aufgaben wie ein Webserver, einen langen, unleserlichen Befehl. Genauso unpraktisch wird es, wenn der Container abhängigkeiten aufweist und mit anderen Containern zusammenarbeitet.
+            Mit Docker-Compose wird der auszuführende Container in einer Yaml-Datei definiert. Name, Volumen, Ports und Abhängigkeiten werden hier definiert. Anschließend kann die Komposition mit docker-composer up ausgeführt werden.
+              </p>
+            
 
 
             <hr class="hr-dash my-7">
             <h3 id="docker-compose_u3">Docker-Compose installieren</h3>
-            <p>For who thoroughly her boy estimating conviction. Removed demands expense account in outward tedious do. Particular way thoroughly unaffected projection favourable mrs can projecting own. Thirty it matter enable become admire in giving. See resolved goodness felicity shy civility domestic had but. Drawings offended yet answered jennings perceive laughing six did far. </p>
-            <br>
-            <p><a class="btn btn-outline-primary" href="#">Download</a></p>
+            <p>Bevor es losgehen kann, benötigen Sie das Programm Docker-Compose. Windows- und macOS-Nutzer müssen nur Docker für ihr Betriebssystem installieren und bekommen Docker-Compose direkt mitgeliefert. Unter Linux müssen Sie es eigens installieren – und die Paketquellen sind nicht immer eine geeignete Anlaufstelle. So bietet Debian im Februar 2019 noch Docker-Compose 1.8.0 aus dem Sommer 2016 an, obwohl Version 1.23.2 aktuell ist. Weil sich in der Docker-Welt in zwei Jahren viel verändert hat, lohnt die Installation der neuen Version. Sie sollten daher auf den Installationsweg setzen, den Docker vorschlägt. Folgender Befehl lädt automatisch die richtige Version für Ihr Betriebssystem herunter: </p>
+            <pre class="language-bash"><code class="language-bash">
+sudo curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose</code></pre>
+            <p>Jetzt muss das Programm ausführbar gemacht werden:</p>
+            <pre class="language-bash"><code class="language-bash">sudo chmod +x /usr/local/bin/docker-compose</code></pre>
+            
 
 
             <hr class="hr-dash my-7">
             <h3 id="docker-compose_u4">Text-Editor für YAML einrichten</h3>
-            <p>For who thoroughly her boy estimating conviction. Removed demands expense account in outward tedious do. Particular way thoroughly unaffected projection favourable mrs can projecting own. Thirty it matter enable become admire in giving. See resolved goodness felicity shy civility domestic had but. Drawings offended yet answered jennings perceive laughing six did far. </p>
-            <br>
-            <p><a class="btn btn-outline-primary" href="#">Download</a></p>
-
+            <p>Bevor es weiter mit Docker-Compose geht, sollten wir uns die docker-compose.yml Datei näher anschauen. YAML ist ein rekursives Akronym das für “YAML Ain’t Markup Language” steht. Dieses Dateiformat wird von vielen Applikationen verwendet, sowohl für die Konfiguration als auch für das Strukturieren von Daten. </p>
+            <p>Die Docker-Compose-Datei wird im Yaml-Format verfasst, das jeder Texteditor erzeugen kann – mit einer IDE können Sie sich das Leben aber deutlich erleichtern. </p>
+            <p>In Yaml wird die Struktur der Daten über Einrückungen festgelegt, eine Unterebene wird durch zwei Leerzeichen am Zeilenanfang eingeleitet. Hat Ihr bevorzugter Editor eine Möglichkeit, Leerzeichen sichtbar zu machen, sollten Sie diese Funktion nutzen. Empfehlenswert ist die Open-Source-IDE Visual Studio Code. Mit Strg+Umschalt+P öffnen Sie die Befehlseingabe. Tippen Sie dort den Begriff „Rendern“ ein und wählen Sie „Ansicht: Rendern von Leerzeichen umschalten“. Leerzeichen sind jetzt nicht mehr unsichtbar. Wer viel mit Docker-Compose und Visual Studio Code arbeitet, kann sich zusätzlich die Erweiterung „Docker Compose“ installieren. Sie fügt eine kleine GUI für Docker-Compose in der Oberﬂäche der IDE hinzu, über die man einzelne Container inspizieren und verwalten kann.</p>
 
             <hr class="hr-dash my-7">
             <h3 id="docker-compose_u5">Erstes Projekt</h3>
-            <p>For who thoroughly her boy estimating conviction. Removed demands expense account in outward tedious do. Particular way thoroughly unaffected projection favourable mrs can projecting own. Thirty it matter enable become admire in giving. See resolved goodness felicity shy civility domestic had but. Drawings offended yet answered jennings perceive laughing six did far. </p>
-            <br>
-            <p><a class="btn btn-outline-primary" href="#">Download</a></p>
+            <p>Für das erste Compose-Projekt legen Sie einen neuen Ordner an und erstellen hier die Datei docker-compose.yml. Der Ordnername landet später in den Containernamen, sollte also nicht zu lang sein. </p>
+            <p>Eine Compose-Datei beginnt immer mit der Angabe <code>version:</code>, die die Version der Compose-Deﬁnition angibt. Welche Version Sie verwenden können, hängt von der eingesetzten Docker-Version (nicht etwa der Docker-Compose-Version) zusammen. Wenn Sie jetzt einsteigen und die aktuelle Docker-Version 18.09 nutzen, können Sie direkt version: 3.7 fordern. </p>
+            <p>Im nächsten Abschnitt werden unsere Container definiert. Dieser Abschnitt nennt sich <code>services</code> Es nimmt folgendes Format an: </p>
+<pre class="line-numbers language-yaml"><code>services:
+--> Containername:
+-----> Container-Optionen
+--> Containername:
+-----> Container-Optionen</code></pre>
+            <p>Als Beispiel soll ein WordPress-Blog dienen. Damit das läuft, braucht es einen Container mit WordPress und einem Webserver. Der erste Service bekommt den Namen <code>wordpress</code> und das Image <code>wordpress:latest</code>. Zum Ablegen der Daten braucht WordPress eine MySQL- oder MariaDB-Datenbank. Sie bekommt den Namen <code>db</code> und soll aus dem Image <code>mysql:5.7</code> entstehen. Die Compose-Datei beginnt mit folgenden Zeilen:</p>
+<pre class="line-numbers language-yaml"><code>version: '3.3'
+services:
+  db:
+    image: mysql:5.7
+  wordpress:
+    image: wordpress:latest</code></pre>
+            <p>Yaml-Neulinge müssen sich neben der Einrückung daran gewöhnen, nach dem Doppelpunkt hinter dem Namen eines Attributs ein Leerzeichen zu setzen. Schreiben Sie statt <code>mysql: 5.7</code> nur <code>mysql:5.7</code> wird Docker-Compose mit einer Fehlermeldung abbrechen.</p>
+            <p>Dieses Grundgerüst für das WordPress-Setup wird jetzt Stück für Stück ausgebaut – die vollständige Variante finden Sie weiter unten.
+            </p>
 
 
             <hr class="hr-dash my-7">
             <h3 id="docker-compose_u6">Ports und Netzwerke</h3>
-            <p>For who thoroughly her boy estimating conviction. Removed demands expense account in outward tedious do. Particular way thoroughly unaffected projection favourable mrs can projecting own. Thirty it matter enable become admire in giving. See resolved goodness felicity shy civility domestic had but. Drawings offended yet answered jennings perceive laughing six did far. </p>
-            <br>
-            <p><a class="btn btn-outline-primary" href="#">Download</a></p>
+            <p>Netzwerken ist unter Docker-Containern aus der gleichen Docker-Compose-Datei sehr einfach. Wenn Sie keine weiteren Angaben machen, richtet Docker-Compose ein Netzwerk für alle Container einer Compose-Datei ein. Das Netzwerk heißt dann <code>ordnername_default</code>. In diesem Netzwerk kann jeder Container jeden anderen über den Service-Namen erreichen – Docker stellt einen internen DNS bereit und löst die Hostnamen, im Beispiel wordpress und db, auf. </p>
+            <p>Mit IP-Adressen müssen und sollten Sie nicht hantieren, sie werden dynamisch zugewiesen. </p>
+            <p>Das Standard-Netzwerk ist vom Typ „Bridge“. Das bedeutet, dass Docker sich mit NAT-Regeln darum kümmert, dass die Pakete, die an den Netzwerkkarten des unterliegenden Systems ankommen, an Container weitergereicht werden. Der Container wordpress soll auf Port 8000 lauschen und HTTP-Anfragen beantworten. Der Webserver im Container hört auf Port 80 – eine Information, die man in der  Dokumentation des Containers oder beim Studium des zugehörigen Dockerﬁles ﬁndet. Um den Port von außen erreichbar zu machen, wird eine Liste von Zuordnungen in der Liste ports: übergeben. </p>
+            <p>Mit der Zuweisung 8000:80 reserviert Docker den Port 8000 auf allen Netzwerkkarten des Systems und lauscht darauf.</p>
+            <pre class="line-numbers language-yaml"><code>version: '3.3'
+services:
+  db:
+    image: mysql:5.7
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: some wordpress
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+
+  wordpress:
+    depends_on:
+      - db
+    image: wordpress:latest
+    ports:
+      - "8000:80"
+    restart: always
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+      WORDPRESS_DB_NAME: wordpress
+volumes:
+    db_data: {}</code></pre>
+            
 
 
             <hr class="hr-dash my-7">
             <h3 id="docker-compose_u7">Restart: always</h3>
-            <p>For who thoroughly her boy estimating conviction. Removed demands expense account in outward tedious do. Particular way thoroughly unaffected projection favourable mrs can projecting own. Thirty it matter enable become admire in giving. See resolved goodness felicity shy civility domestic had but. Drawings offended yet answered jennings perceive laughing six did far. </p>
-            <br>
-            <p><a class="btn btn-outline-primary" href="#">Download</a></p>
+            <p>Sinnvoll für Container, die ständig laufen sollen –wie eine Datenbank oder ein Webserver – ist die Anweisung: <code>restart: always</code>. Steigt das Programm wegen eines Fehlers aus, fährt Docker-Compose den Container sofort wieder hoch. </p>
+            <p>Die Anweisung <code>depends_on:</code> teilt Docker-Compose mit, in welcher Reihenfolge die Container gestartet werden sollen. Da das WordPress-Blog ohne Datenbankanbindung Fehlermeldungen auswirft, soll sein Container erst anlaufen, wenn die Datenbank bereit ist. In komplexeren Setups können das auch mehrere Abhängigkeiten pro Container sein, bei Zirkelschlüssen beschwert sich Docker-Compose.</p>
+            
+            
 
 
             <hr class="hr-dash my-7">
             <h3 id="docker-compose_u8">Umgebungsvariablen</h3>
-            <p>For who thoroughly her boy estimating conviction. Removed demands expense account in outward tedious do. Particular way thoroughly unaffected projection favourable mrs can projecting own. Thirty it matter enable become admire in giving. See resolved goodness felicity shy civility domestic had but. Drawings offended yet answered jennings perceive laughing six did far. </p>
-            <br>
-            <p><a class="btn btn-outline-primary" href="#">Download</a></p>
+            <p>Gute Docker-Container erwarten Umgebungsvariablen, um Konfigurationen zu übertragen. Welche das sind, erfährt man in der Dokumentation des Container-Abbilds. Der Datenbank-Container im WordPress-Beispiel erfährt über Umgebungsvariablen, wie die Datenbank und der Datenbankbenutzer heißen. Die gleichen Informationen bekommt der WordPress-Container. <p>
+            <p>Umgebungsvariablen müssen Sie aber nicht in der Compose-Datei lagern. Wenn Sie zum Beispiel eine Test- und eine Produktivumgebung mit unterschiedlichen Datenbank-Kennwörtern starten möchten, ohne immer die Compose-Datei zu ändern, können Sie einfach eine Datei mit dem Namen <code>.env</code> in das gleiche Verzeichnis legen und darin alle Umgebungsvariablen in einer neuen Zeile im Format <code>VARIABLE=Inhalt</code> an. Ebenfalls möglich ist es, die Variable vor dem Starten der Container mit <code>export VARIABLE=Inhalt</code> festzulegen. Gibt es mehrere Angaben zur gleichen Umgebungsvariable, priorisiert Docker in folgender Reihenfolge: <p>
+            <ol>
+              <li>Compose-Datei</li>
+              <li>Festlegung mit export</li>
+              <li>.env-Datei</li>
+            </ol>
+            <p>Die Angabe in der Compose-Datei überschreibt also alle anderen Verfahren.</p>
+            
+            
+            
 
 
             <hr class="hr-dash my-7">
             <h3 id="docker-compose_u9">Volumes - Laufwerke anhängen</h3>
-            <p>For who thoroughly her boy estimating conviction. Removed demands expense account in outward tedious do. Particular way thoroughly unaffected projection favourable mrs can projecting own. Thirty it matter enable become admire in giving. See resolved goodness felicity shy civility domestic had but. Drawings offended yet answered jennings perceive laughing six did far. </p>
-            <br>
-            <p><a class="btn btn-outline-primary" href="#">Download</a></p>
+            <p>Ein Docker-Container wird bei jedem Start wieder zurückgesetzt – alle Daten, die im Betrieb angefallen sind, werden wieder gelöscht. Das ist für den Datenbank-Container, der den WordPress-Blog enthält, nicht sinnvoll. Und auch der Ordner wordpress-content im WordPress-Container sollte einen Neustart überdauern. Damit die Daten erhalten bleiben, muss man sie auf das Dateisystem des Hosts legen. </p>
+            <p>Docker kennt dafür zwei Verfahren: benannte Volumes und eine Ordnerzuordnung. Ein benanntes Volume muss im Abschnitt des Containers mit einem Pfad im Container verbunden werden, getrennt mit einem Doppelpunkt. Außerdem muss es im Abschnitt <code>volumes:</code> auf der obersten Ebene angelegt werden. Das WordPress-Beispiel sähe mit benannten Volumes wie folgt aus:</p>
+            <pre class="line-numbers language-yaml"><code>services:
+db:
+  image: mysql:5.7
+  volumes:
+    - db_data:/var/lib/mysql</code></pre>
+            <p>Setzen Sie ein solches benanntes Volume ein, kümmert sich Docker darum, die Daten auf der Festplatte zu speichern. Dazu legt Docker in seinem Datenverzeichnis Ordner mit kryptischen Namen an. In diese Ordner sollten Sie nie per Hand eingreifen, das Verfahren ist also nur praktikabel, wenn Sie die Daten nicht über das Dateisystem des Hosts bearbeiten möchten. </p>
+            <p> Alternativ verwenden Sie, eine Pfadangabe auf dem Host-Dateisystem. Entweder absolut (beginnend mit „/“) oder relativ, ausgehend vom Compose-File. Auch einzelne Dateien können als „Volume“ übergeben werden. Das ist zum Beispiel für Konﬁgurationsdateien sinnvoll. Mit <code>:ro</code> am Ende markieren Sie das Volume als read-only, der Container kann es also nicht verändern. </p>
+            <p>Soll ein Container auf ein Hardwaregerät des Hosts zugreifen, zum Beispiel ein USB-Gerät, übergeben Sie das nach der gleichen Syntax wie ein Volume, allerdings im Abschnitt devices.</p>
+            
 
 
             <hr class="hr-dash my-7">
             <h3 id="docker-compose_u10">Container starten und stoppen</h3>
-            <p>For who thoroughly her boy estimating conviction. Removed demands expense account in outward tedious do. Particular way thoroughly unaffected projection favourable mrs can projecting own. Thirty it matter enable become admire in giving. See resolved goodness felicity shy civility domestic had but. Drawings offended yet answered jennings perceive laughing six did far. </p>
-            <br>
-            <p><a class="btn btn-outline-primary" href="#">Download</a></p>
+            <p>Ist die Container-Zusammenstellung fertig, müssen Sie sie nur noch starten. Navigieren Sie auf der Kommandozeile in das Verzeichnis mit dem Compose-File und führen Sie <code>docker-compose up</code> aus. Auf der Kommandozeile können Sie beobachten, wie die beiden Container hochfahren und ihre Einrichtungsprozeduren durchlaufen. Die Datenbank bemerkt, dass das Datenverzeichnis noch leer ist und legt eine Datenbank anhand der Umgebungs -variablen an. Rufen Sie http://localhost:8000 im Browser auf, begrüßt Sie der Einrichtungsassistent von WordPress und möchte mit Ihnen den Blog einrichten. </p>
+            <p> Für Entwicklungsarbeit ist ein einfaches up sehr nützlich, da Sie jede Aktivität in den Containern live verfolgen können (jeder HTTP-Aufruf erzeugt zum Beispiel eine Zeile). Allerdings ist die Kommando-zeile jetzt belegt und die Container leben nur, bis Sie Docker-Compose mit Strg+C beenden. Sinnvoller ist es, den Parameter -d (für „detached“) anzuhängen. Dann landen die Ausgaben nicht mehr auf der Kommandozeile. Mit docker-compose logs kann man dann nach Bedarf anzeigen, was in den Containern vor sich gegangen ist. Haben die Container die Anweisung <code>restart: always</code> bekommen, können Sie den Server jetzt auch neu starten. Docker-Compose kümmert sich nach dem Boot darum, dass sie wieder starten. Erst ein <code>docker-compose down</code>, ausgeführt im Ordner mit der Compose-Datei, schaltet sie aus. </p>
+            <p> Manchmal ist es sinnvoll, nicht alle Container hochzufahren, die in der Compose-Datei deﬁniert sind. Um nur ausgewählte Container zu starten, übergibt man deren Namen (wie unter services angegeben) als Paramter: <code>docker-compose up wordpress db</code>. In diesem Beispiel würde “wordpress” ausreichen, da Docker-Compose die Abhängigkeiten automatisch berücksichtigt. </p>
+            <p> Mit der Angabe dieser kurzen Namen kann man auch andere Docker-Compose-Befehle auf einzelne Container zuschneiden. So führt <code>docker-compose restart wordpress</code> einen Neustart aus. Diese kurzen Namen existieren aber nur in der Welt von Docker-Compose. Mit <code>docker ps</code> erfahren Sie, welchen Namen der Container vom Docker-Daemon bekommen hat. Das Namensschema ist immer gleich: der Name des Ordners, in dem die Compose-Datei liegt, der Name des Services, eine Ziffer, beginnend bei 1, jeweils durch einen Unterstrich getrennt. </p>
+            <p>Wenn Sie mit Docker-Compose experimentieren und die Volumes ändern, müssen Sie die Container herunterfahren und Docker überzeugen, die neuen Volumes zu nutzen. Dazu hängen Sie den Parameter <code>--force-recreate</code> an <code>docker-compose up</code> an. </p>
+            <p>Manchmal ist es sinnvoll, Container aus anderen Compose-Projekten verfügbar zu machen. Betreibt man zum Beispiel mehrere Webseiten auf einem Server, kann jede Seite ein eigenes Compose-Projekt bekommen. In einer eigenen Compose-Datei wird ein Webproxy angelegt, die alle eingehenden Anfragen verteilt und sich um die Beschaffung von Zertiﬁkaten beschäftigt.</p>
+            <p>Sie können den von Docker-Compose generierten Container-Namen leicht verwenden, um Container aus anderen Compose-Projekten erreichbar zu machen. Dazu reicht die Angabe von <code>external_links:</code> mit einer Liste der anzubindenden Container.</p>
+            
+            
 
 
             <hr class="hr-dash my-7">
             <h3 id="docker-compose_u11">docker-compose.yml benennen</h3>
-            <p>For who thoroughly her boy estimating conviction. Removed demands expense account in outward tedious do. Particular way thoroughly unaffected projection favourable mrs can projecting own. Thirty it matter enable become admire in giving. See resolved goodness felicity shy civility domestic had but. Drawings offended yet answered jennings perceive laughing six did far. </p>
-            <br>
-            <p><a class="btn btn-outline-primary" href="#">Download</a></p>
+            <p>Die Compose-Datei muss nicht docker-compose.yml heißen. Nach einer Datei mit diesem Namen sucht Docker-Compose aber, wenn Sie ihm keinen anderen Dateinamen übergeben. Dafür dient der Parameter -f, dem Sie hintereinander einen oder mehrere Dateinamen übergeben dürfen. Geben Sie mehrere Dateien an, kombiniert Docker-Compose ihre Inhalte. Das kann man ausnutzen, um zum Beispiel eine alternative Entwickler-Umgebung einzurichten. Zusätzlich zur docker-compose.yml legen Sie eine docker-compose.dev.yml an: </p>
+            <pre class="line-numbers language-yaml"><code>wordpress:
+  image: wordpress:4-php7.2-apache</code></pre>
+            <p>Mit docker-compose -f docker-compose.yml docker-compose.dev.yml up fahren die beiden Container fast genauso wie zuvor hoch – geändert wurde nur das Image des WordPress-Containers. Die Angaben der letztgenannten Datei ersetzen immer die zuvor gesetzten Werte, zusätzliche Attribute werden hinzugefügt.</p>
+            
+            
 
 
             <hr class="hr-dash my-7">
             <h3 id="docker-compose_u12">Im Swarm</h3>
-            <p>For who thoroughly her boy estimating conviction. Removed demands expense account in outward tedious do. Particular way thoroughly unaffected projection favourable mrs can projecting own. Thirty it matter enable become admire in giving. See resolved goodness felicity shy civility domestic had but. Drawings offended yet answered jennings perceive laughing six did far. </p>
-            <br>
-            <p><a class="btn btn-outline-primary" href="#">Download</a></p>
+            <p>Docker-Compose ist nicht nur ein nützliches Werkzeug für Docker-Anwender, es ist auch die Voraussetzung, um mehrere Docker-Hosts im Swarm Mode zu betreiben. Damit ist es möglich, mehrere Instanzen eines Containers zu starten und die Last zu verteilen. </p>
+            <p> Die Docker-Dokumentation liefert unter „Swarm Mode“ einen Einstieg in das Thema. Wie ein Docker-Schwarm in der Praxis aussieht und welche Besonderheiten in dieser Betriebsart zu berücksichtigen sind, zeigen wir Ihnen im nächsten Abschnitt.</p>
+            
+            
 
 
             <hr class="hr-dash my-7">
@@ -252,26 +332,7 @@
 
 
             <h3 id="swarm_u1">Einleitung</h3>
-            <p>Here's some notes to know how our navbar works, before getting deeper into it.</p>
-
-            <ul>
-              <li>Most of the basics can be find in the <a href="https://getbootstrap.com/docs/4.0/components/navbar/" target="blank">official documentation of navbar</a> component. It's highly recommended to get start from there.</li>
-              <li>Our color scheme classes works inverse of the Bootstrap definition. For example, <code>.navbar-dark</code> makes the text dark colored and <code>.navbar-light</code> makes the colors lighter.</li>
-              <li>You can have a different color scheme for the navbar once it's stick at the top by adding one of the <code>.navbar-stick-dark</code> or <code>.navbar-stick-light</code> classes.</li>
-              <li>Inside the <em>.navbar-brand</em>, you can specify two logos; <code>.logo-dark</code> to display for <em>.navbar-dark</em>; and <code>.logo-light</code> to be display with <em>.navbar-light</em>.</li>
-              <li>
-                You should set the placement of navbar using <code>data-navbar</code> attribute. It can has one of the following values:
-                <ul>
-                  <li><code>static</code>: Only at top, don't move with scroll.</li>
-                  <li><code>fixed</code>: Always at top of the screen and moves with scrolling down.</li>
-                  <li><code>sticky</code>: First at top, hides after a small scroll down, so it won't obscure the header. Once the user scrolls down and passes the header, navbar become fixed/sticky at the top again.</li>
-                  <li><code>smart</code>: It's like sticky navbar, but it only becomes sticky when the visitor scrolls up.</li>
-                </ul>
-              </li>
-              <li>Our template adds few classes to the body tag to detect when the scrollbar passed an element which is to use by CSS. Those classes are <code>.body-scrolled</code>, <code>.navbar-scrolled</code> and <code>.header-scrolled</code></li>
-              <li>In mobile devices, the content inside <code>.navbar-mobile</code> will display to the user.</li>
-              <li>We have defined few utility classes to make your coding easier for different situations. Those classes can categorized into <code>.d-mobile-*</code> —change display value on mobile devices— and <code>.d-stick-*</code> —when the navbar sticks to the top— which <strong>*</strong> can be one of the <code>none</code> | <code>block</code> | <code>inline-block</code> | <code>flex</code> | <code>inline-flex</code> values. So <code>.d-stick-none</code> will hide an element when the navbar has sticked at the top.</li>
-            </ul>
+            <p>Docker kann mit Hilfe von “Docker Swarm” über mehrere Systeme arbeiten. Der Vorteil ist, dass Kapazitäten effizient genutzt werden und Ausfälle vermieden. Der Docker Daemon koordiniert hierbei nicht nur das eigene System sondern kümmert sich um einen Schwarm an Systemen, auf denen Docker läuft.</p>
 
 
             <hr class="hr-dash my-7">
@@ -279,72 +340,92 @@
 
 
             <h3 id="swarm_u2">Bestandteile und Funktionsweise</h3>
-            <p>Their could can widen ten she any. As so we smart those money in. Am wrote up whole so tears sense oh. Absolute required of reserved in offering no. How sense found our those gay again taken the. Had mrs outweigh desirous sex overcame. Improved property reserved disposal do offering me.</p>
-
-            <header class="header text-center py-8 shadow-none mx-0" style="background-color: #f1f6fa">
-              <div class="container">
-                <h1>Typography</h1>
-                <p class="lead mb-0">Documentation and examples for typography, including global settings, headings, body text, lists, and more.</p>
-              </div>
-            </header>
-
-            <p>In reasonable compliment favourable is connection dispatched in terminated. Do esteem object we called father excuse remove. So dear real on like more it. Laughing for two families addition expenses surprise the. If sincerity he to curiosity arranging. Learn taken terms be as. Scarcely mrs produced too removing new old. </p>
+            <p>Ein Schwarm besteht aus zwei unterschiedlichen Komponenten: mindestens einem Manager und nach Belieben unterschiedliche viele Arbeiterknoten. Der Manager hat als zentrale Einheit die Aufgabe, den Schwarm zu koordinieren. So werden von ihm bestimmte Aufgaben verteilt. Der Arbeiterknoten bekommt seine Aufgaben vom Manager zugeteilt und führt dann die ihm genannten Docker Container aus. Es kann mehr als einen Manager geben, dies ist empfehlenswert, wenn man bei einem Ausfall eines Managers einen anderen als Backup haben möchte. </p>
+        
+            <p>Docker Swarm baut auf dem Modell von Docker Compose auf. Laufende Container heißen in diesem Zusammenhang jedoch Tasks. Eine Beschreibung gibt an, wie häufig diese Tasks ausgeführt werden sollen. Die Tasks zusammen mit der Beschreibung werden “Service” genannt. Eine Möglichkeit ist, dass jeder Knoten einen Task ausführt. Eine andere Möglichkeit ist, dass eine genau definierte Anzahl von Knoten dies tut. Beispielsweise kann der Nutzer bei einem Manager fünf Nginx Server angefordern. Der Manager startet darauf auf fünf freien Knoten diese dann jeweils als Task. Als “Stack” oder Anwendung bezeichnet man eine Vielzahl von Services. </p>
+            <p>Eine Stärke von Docker Swarm ist, dass virtuelle Netzwerke zum Organisieren der Zusammenarbeit automatisch aufgebaut werden. So können beispielsweise die anderen Knoten auf Ports, die von einem Service genutzt werden, zugreifen. Sobald der Schwarm erst einmal eingerichtet ist, muss man sich um nichts weiter kümmern. Eine Anwendungen kann über mehrere Knoten ausgeführt werden und wenn man beispielsweise Knoten wegnimmt, werden die Aufgaben auf die verbleibenden Arbeiterknoten automatisch verteilt. Leider hat Docker Swarm keinen gemeinsamen Datenspeicher, was bedeutet, dass sich nicht alle Container für den Schwarm direkt eignen wie z.B. ein MySQL Image. Den Speicher kann man über umwege jedoch selber erstellen. Verschiedene Ansätze (die hier nicht weiter erläutert werden) sind Rex-Ray, GlusterFs oder Portworx. Alternativ kann man die Container, die Zustandsdaten haben auf dem Manager behalten. Die Container, die ohne diese klarkommen, kann man dem Schwarm übergeben.</p>
 
 
             <hr class="hr-dash my-7">
             <h3 id="swarm_u3">Einen Swarm erstellen</h3>
-            <p>Their could can widen ten she any. As so we smart those money in. Am wrote up whole so tears sense oh. Absolute required of reserved in offering no. How sense found our those gay again taken the. Had mrs outweigh desirous sex overcame. Improved property reserved disposal do offering me.</p>
-
-            <header class="header text-center py-8 shadow-none mx-0" style="background-color: #f1f6fa">
-              <div class="container">
-                <h1>Typography</h1>
-                <p class="lead mb-0">Documentation and examples for typography, including global settings, headings, body text, lists, and more.</p>
-              </div>
-            </header>
-
-            <p>In reasonable compliment favourable is connection dispatched in terminated. Do esteem object we called father excuse remove. So dear real on like more it. Laughing for two families addition expenses surprise the. If sincerity he to curiosity arranging. Learn taken terms be as. Scarcely mrs produced too removing new old. </p>
+            <p>Mit folgendem Befehl wird der Computer als Manager eingerichtet und Docker Swarm in Betrieb genommen:</p>
+            <pre class="language-bash"><code class="language-bash">docker swarm init --advertise-addr xxx.xx.x.xx</code></pre>
+            <p>Mit “docker swarm init” initialisiert Docker einen neuen Schwarm und macht das System zum ersten Manager. Der Befehl “--advertise-addr” ist die IP Adresse und der Port, den andere Knoten nutzen sollen um sich mit dem Manager zu verbinden. Docker gibt nach Eingabe des Befehls eine Antwort zurück, die dieser ähnelt:</p>
+            <pre class="language-bash"><code class="language-bash">$ docker swarm init --advertise-addr 172.18.0.51
+  Swarm initialized: current node (sol4lngdnaidtywpo0boipmqp) isnow a manager.
+  To add a worker to this swarm, run the following command:
+  docker swarm join --token SWMTKN-1-1fuq7n6tnvltfq4xcn5sp3aak1zeflmmmim1w3stgyrlkxt89z-6c2l1zfkqz3xm43tv7gl9axlg 172.18.0.51:2377
+  To add a manager to this swarm, run 'docker swarm join-token manager' and follow the instructions.</code></pre>
 
 
             <hr class="hr-dash my-7">
             <h3 id="swarm_u4">Einem Schwarm beitreten</h3>
-            <p>Their could can widen ten she any. As so we smart those money in. Am wrote up whole so tears sense oh. Absolute required of reserved in offering no. How sense found our those gay again taken the. Had mrs outweigh desirous sex overcame. Improved property reserved disposal do offering me.</p>
-
-            <header class="header text-center py-8 shadow-none mx-0" style="background-color: #f1f6fa">
-              <div class="container">
-                <h1>Typography</h1>
-                <p class="lead mb-0">Documentation and examples for typography, including global settings, headings, body text, lists, and more.</p>
-              </div>
-            </header>
-
-            <p>In reasonable compliment favourable is connection dispatched in terminated. Do esteem object we called father excuse remove. So dear real on like more it. Laughing for two families addition expenses surprise the. If sincerity he to curiosity arranging. Learn taken terms be as. Scarcely mrs produced too removing new old. </p>
+            <p>Mit dem folgenden Befehl tritt ein System unserem erstellen Swarm bei und wird zum Arbeiterknoten:</p>
+            <pre class="language-bash"><code class="language-bash">docker swarm join --token &lt;hier der Token&gt; xxx.xx.xxx.x:xxxx</code></pre>
+            <p>Docker gibt daraufhin folgende Antwort zurück, falls die Eingabe erfolgreich war:</p>
+            <pre class="language-bash"><code class="language-bash">This node joined a swarm as a worker.</code></pre>
 
 
             <hr class="hr-dash my-7">
             <h3 id="swarm_u5">Den Schwarm nutzen</h3>
-            <p>Their could can widen ten she any. As so we smart those money in. Am wrote up whole so tears sense oh. Absolute required of reserved in offering no. How sense found our those gay again taken the. Had mrs outweigh desirous sex overcame. Improved property reserved disposal do offering me.</p>
-
+            <p>Mit dem folgenden Befehl kann man auf dem System des Managers überprüfen welche Knoten Teil des Schwarm sind und welche Rollen sie erfüllen:</p>
+            <pre class="language-bash"><code class="language-bash">docker node ls</code></pre>
+            <p>Eine Rückgabe könnte folgendermaßen aussehen:</p>
             <header class="header text-center py-8 shadow-none mx-0" style="background-color: #f1f6fa">
-              <div class="container">
-                <h1>Typography</h1>
-                <p class="lead mb-0">Documentation and examples for typography, including global settings, headings, body text, lists, and more.</p>
-              </div>
+                <div class="container">
+                  <h1>Hier könnte Ihre Werbung stehen!</h1>
+                  <p class="lead mb-0">Ole, bitte hier noch ein Screenshot einfügen :)</p>
+                </div>
             </header>
-
-            <p>In reasonable compliment favourable is connection dispatched in terminated. Do esteem object we called father excuse remove. So dear real on like more it. Laughing for two families addition expenses surprise the. If sincerity he to curiosity arranging. Learn taken terms be as. Scarcely mrs produced too removing new old. </p>
-
+            <p>Ist dies der Fall und die hinzugefügten Knoten werden aufgelistet, dann kann der Schwarm genutzt werden.</p>
+            <p>In folgendem Beispiel starten wir drei Tasks eines kleinen Webservers.</p>
+            <pre class="language-bash"><code class="language-bash">docker service create --detach=false --name www --replicas 3 --constraint node.role==worker --publish 80:80 containous/whoami</code></pre>
+            <header class="header text-center py-8 shadow-none mx-0" style="background-color: #f1f6fa">
+                <div class="container">
+                  <h1>Hier könnte Ihre Werbung stehen!</h1>
+                  <p class="lead mb-0">Ole, bitte hier noch Screenshot Nr. 2 einfügen :)</p>
+                </div>
+            </header>
+            <p>Mit folgendem Befehl kann überprüft werden welcher Knoten unseren Service ausführt:</p>
+            <pre class="language-bash"><code class="language-bash">docker service ps www</code></pre>
+            <header class="header text-center py-8 shadow-none mx-0" style="background-color: #f1f6fa">
+                <div class="container">
+                  <h1>Hier könnte Ihre Werbung stehen!</h1>
+                  <p class="lead mb-0">Ole, bitte hier noch Screenshot Nr. 3 einfügen :)</p>
+                </div>
+            </header>
+            <p>Der folgende Befehl ändert die Anzahl der Tasks auf eins:</p>
+            <pre class="language-bash"><code class="language-bash">docker service scale www=1</code></pre>
+            <p>Ein bestimmter Knoten kann von seinen Aufgaben erlöst werden mit folgendem Befehl:</p>
+            <pre class="language-bash"><code class="language-bash">docker node update--availability drain swarm2</code></pre>
+            
 
             <hr class="hr-dash my-7">
             <h3 id="swarm_u6">Die Nutzung vereinfachen</h3>
-            <p>Their could can widen ten she any. As so we smart those money in. Am wrote up whole so tears sense oh. Absolute required of reserved in offering no. How sense found our those gay again taken the. Had mrs outweigh desirous sex overcame. Improved property reserved disposal do offering me.</p>
+            <p>Mithilfe von YAML Dateien kann die Verwendung von Docker Swarm vereinfacht werden. So kann man alle Services einer Anwendung zu einem Stack zusammenführen. </p>
+            <p>Für unser Beispiel von oben sähe das dann so aus:</p>
+            <pre class="line-numbers language-yaml"><code>version: "3.3"
+services:
+  whoami:
+    image: containous/whoami
+    deploy:
+      replicas: 3
+      restart_policy:
+        condition: on-failure
+      ports:
+        80:80</code></pre>
+            <p>Gestartet wird die Datei mit folgendem Befehl:</p>
+            <pre class="language-bash"><code class="language-bash">docker-stack deploy -c ./datei.yml testname</code></pre>
+            <p>Es besteht die Möglichkeit Umgebungsvariablen in eine .env Datei auszulagern, was üblich ist, wenn man mehrere Container mit Docker Compose auf einmal starten möchte. Mit folgendem Befehl können diese verwertet werden:</p>
+            <pre class="language-bash"><code class="language-bash">docker-compose up</code></pre>
+            <p>Der Befehl “docker create stack” ignoriert die .env Dateien und liest nur die YAML Datei ein. </p>
+            <p>Container in einem Schwarm können bestimmte Dateien einbinden. Es gibt die Möglichkeiten diese Dateien als “Docker Secrets” oder als “Docker Configs” anzulegen, je nachdem wie gesichert es passieren soll. Bei “Docker Secrets” werden die Dateien verschlüsselt abgespeichert. Verwaltet und verwendet werden diese mit den uns bereits bekannten Befehlen. Die Dateien sind für alle Knoten unseres Schwarm abrufbar. Sie können während Container auf sie zugreifen nicht verändert werden. Dieses Problem umgeht man, indem man eine neue Datei anlegt und diese zur Laufzeit hinzugefügt mit “service update --secret-add”. Es besteht nicht die Möglichkeit, dass Container sie bearbeiten. Sie haben nur die Möglichkeit die Dateien zu lesen.</p>
+            <pre class="language-bash"><code class="language-bash">$ docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer</code></pre>
+            <p>Nun wird auf Docker Hub nach der neuesten Version von Portainer geschaut und diese heruntergeladen. Du kannst mit <code>docker ps</code> bereits sehen, dass der Container in betrieb ist. Wie in dem Befehl oben festgelegt ist für die Portainer-Seite der Port 9000 festgesetzt, dies kannst du auch aus dem docker ps auslesen. Dort ist sogar der vollständige Port 0.0.0.0:9000 beschrieben. Wenn du diesen in die URL-Leiste deines Browsers eingibst solltest du zum ersten mal das Portainer UI erreichen. Hier wird nun ein Benutzername und ein Passwort verlangt. Nach der Registrierung solltest du auf deiner individuellen Portainer.io Seite sein. </p>
+            <p>Unter Dashboard siehst du eine Übersicht aller Dienste. Eine der nützlichsten Funktionen sollte das Verwalten von Containern oder Images sein. So bekommt man erstmals eine Übersicht der schieren Anzahl totgeglaubter, vergessener zu testzwecken angelegter images oder container.</p>
 
-            <header class="header text-center py-8 shadow-none mx-0" style="background-color: #f1f6fa">
-              <div class="container">
-                <h1>Typography</h1>
-                <p class="lead mb-0">Documentation and examples for typography, including global settings, headings, body text, lists, and more.</p>
-              </div>
-            </header>
 
-            <p>In reasonable compliment favourable is connection dispatched in terminated. Do esteem object we called father excuse remove. So dear real on like more it. Laughing for two families addition expenses surprise the. If sincerity he to curiosity arranging. Learn taken terms be as. Scarcely mrs produced too removing new old. </p>
+
 
 
             <hr class="hr-dash my-7">
@@ -357,26 +438,28 @@
             |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
             !-->
             <h2 id="gui">Grafische Oberflächen - GUI in Docker</h2>
-            <p class="lead-2">Components and options for laying out your Bootstrap project, including wrapping containers, a powerful grid system, a flexible media object, and responsive utility classes.</p>
+            <p class="lead-2">In diesem Kapitel lernst du was die Vorteile und Möglichkeiten mit GUIs in Docker sind und wie man so eine Grafische Oberfläche einrichtet.</p>
 
 
             <hr class="hr-dash my-7">
 
 
             <h3 id="gui_u1">Einleitung</h3>
-            <p>Some sample text to just fill up the space. The him father parish looked has sooner. Attachment frequently gay terminated son. You greater nay gui prudent placing. Passage to so distant behaved natural between do talking. Friends off her windows painful. Still gay event you being think nay for. In three if aware he point it. Effects warrant me by no on feeling settled resolve. </p>
+            <p>Die meisten Prozesse von Docker lassen sich über die Kommandozeile verwalten. Dies hat den Vorteil, dass man sehr flexibel, code-nah und kompatibel über verschiedene Setups ist. Allerdings verliert man als Laie schnell die Übersicht und braucht sehr lange zum einarbeiten. Auch wenn beim richtigen lernen und Arbeiten mit Docker kein Weg an der Kommandozeile vorbeiführt lohnt sich ein Blick auf eine grafische Oberfläche für Container. Gerade zum Behalten der Ordnung über viele Container oder auch wenn es darum geht sich das Eintippen ellenlanger Befehle zu sparen ist ein Blick auf solch ein Tool wert.</p>
             <hr class="hr-dash my-7">
 
 
             <h3 id="gui_u2">Portainer</h3>
-            <p>Some sample text to just fill up the space. The him father parish looked has sooner. Attachment frequently gay terminated son. You greater nay use prudent placing. Passage to so distant behaved natural between do talking. Friends off her windows painful. Still gay event you being think nay for. In three if aware he point it. Effects warrant me by no on feeling settled resolve. </p>
+            <p>Eine der populärsten GUIs für Docker ist Portainer. Portainer ist ein Open Sourrce Projekt, das wie Docker selbst über eine kostenlose Community und eine kostenpflichtige Enterprice Version verfügt. Die Installation per Docker-Container ist vergleichsweise simpel und der Betrieb ressourcen-sparend. Man erreicht das grafik-interface per Browser und besonders die gute usability und Übersicht über alle Container, Images und andere Anwendungen sind hier als Pluspunkt zu erwähnen. 
+
+                Die Installation läuft hier per Docker-Container. Dafür einfach folgenden Befehl eingeben:
+                 </p>
             <hr class="hr-dash my-7">
 
-            <h3 id="gui_u2">Kitematic</h3>
-            <p>Some sample text to just fill up the space. The him father parish looked has sooner. Attachment frequently gay terminated son. You greater nay use prudent placing. Passage to so distant behaved natural between do talking. Friends off her windows painful. Still gay event you being think nay for. In three if aware he point it. Effects warrant me by no on feeling settled resolve. </p>
+            <h3 id="gui_u3">Kitematic</h3>
+            <p>Eine Alternative, die besonders für die Mac und Windows-User interessant sein könnte ist Kitematic. Dieses wurde vor einiger Zeit von Docker inc. übernommen und wird somit besonders von der Docker-Desktop version aktiv unterstützt. Gehe einfach in der Taskleiste auf den Dockerwal und auf Kitematic. Bei erstmaliger Installation sollte nun eine  Meldung mit kurzer Beschreibung und Download-Link auftauchen. Nach der Installation einfach starten und schon hast du eine Übersicht über alle Container. Außerdem hast du direkt Zugriff auf Docker Hub und kannst einfach nach images suchen, diese installieren und wertvolle Informationen herauslesen.</p>
             <hr class="hr-dash my-7">
           </div>
-
         </div>
       </div>
     </main><!-- /.main-content -->

@@ -38,7 +38,7 @@
     "node-sass-tilde-importer": "^1.0.2",
     "perfect-scrollbar": "^1.4.0",
     "popper.js": "^1.14.6",
-    "prismjs": "1.15.0",
+    "prismjs": "1.16.0",
     "run-sequence": "^2.2.1",
     "smoothscroll-for-websites": "^1.4.8",
     "themify-icons": "^1.0.0",

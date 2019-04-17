@@ -70,6 +70,8 @@ require('prismjs/components/prism-perl');
 require('prismjs/components/prism-php');
 require('prismjs/components/prism-python');
 require('prismjs/components/prism-ruby');
+require('prismjs/components/prism-docker');
+require('prismjs/components/prism-yaml');
 require('prismjs/components/prism-sass');
 require('prismjs/components/prism-scss');
 require('prismjs/components/prism-sql');
