@@ -360,15 +360,15 @@ db:
             <hr class="hr-dash my-7">
             <h3 id="swarm_u4">Einem Schwarm beitreten</h3>
             <p>Mit dem folgenden Befehl tritt ein System unserem erstellen Swarm bei und wird zum Arbeiterknoten:</p>
-            <pre class="language-bash"><code class="language-bash">docker swarm join --token &lt;hier der Token&gt; xxx.xx.xxx.x:xxxx</code></pre>
+            <pre class="language-docker"><code class="language-docker">docker swarm join --token &lt;hier der Token&gt; xxx.xx.xxx.x:xxxx</code></pre>
             <p>Docker gibt daraufhin folgende Antwort zurück, falls die Eingabe erfolgreich war:</p>
-            <pre class="language-bash"><code class="language-bash">This node joined a swarm as a worker.</code></pre>
+            <pre class="language-docker"><code class="language-docker">This node joined a swarm as a worker.</code></pre>
 
 
             <hr class="hr-dash my-7">
             <h3 id="swarm_u5">Den Schwarm nutzen</h3>
             <p>Mit dem folgenden Befehl kann man auf dem System des Managers überprüfen welche Knoten Teil des Schwarm sind und welche Rollen sie erfüllen:</p>
-            <pre class="language-bash"><code class="language-bash">docker node ls</code></pre>
+            <pre class="language-docker"><code class="language-docker">docker node ls</code></pre>
             <p>Eine Rückgabe könnte folgendermaßen aussehen:</p>
             <header class="header text-center py-8 shadow-none mx-0" style="background-color: #f1f6fa">
                 <div class="container">
@@ -378,7 +378,7 @@ db:
             </header>
             <p>Ist dies der Fall und die hinzugefügten Knoten werden aufgelistet, dann kann der Schwarm genutzt werden.</p>
             <p>In folgendem Beispiel starten wir drei Tasks eines kleinen Webservers.</p>
-            <pre class="language-bash"><code class="language-bash">docker service create --detach=false --name www --replicas 3 --constraint node.role==worker --publish 80:80 containous/whoami</code></pre>
+            <pre class="language-docker"><code class="language-docker">docker service create --detach=false --name www --replicas 3 --constraint node.role==worker --publish 80:80 containous/whoami</code></pre>
             <header class="header text-center py-8 shadow-none mx-0" style="background-color: #f1f6fa">
                 <div class="container">
                   <h1>Hier könnte Ihre Werbung stehen!</h1>
@@ -386,7 +386,7 @@ db:
                 </div>
             </header>
             <p>Mit folgendem Befehl kann überprüft werden welcher Knoten unseren Service ausführt:</p>
-            <pre class="language-bash"><code class="language-bash">docker service ps www</code></pre>
+            <pre class="language-docker"><code class="language-docker">docker service ps www</code></pre>
             <header class="header text-center py-8 shadow-none mx-0" style="background-color: #f1f6fa">
                 <div class="container">
                   <h1>Hier könnte Ihre Werbung stehen!</h1>
@@ -394,9 +394,9 @@ db:
                 </div>
             </header>
             <p>Der folgende Befehl ändert die Anzahl der Tasks auf eins:</p>
-            <pre class="language-bash"><code class="language-bash">docker service scale www=1</code></pre>
+            <pre class="language-docker"><code class="language-docker">docker service scale www=1</code></pre>
             <p>Ein bestimmter Knoten kann von seinen Aufgaben erlöst werden mit folgendem Befehl:</p>
-            <pre class="language-bash"><code class="language-bash">docker node update--availability drain swarm2</code></pre>
+            <pre class="language-docker"><code class="language-docker">docker node update--availability drain swarm2</code></pre>
             
 
             <hr class="hr-dash my-7">
@@ -414,12 +414,12 @@ services:
       ports:
         80:80</code></pre>
             <p>Gestartet wird die Datei mit folgendem Befehl:</p>
-            <pre class="language-bash"><code class="language-bash">docker-stack deploy -c ./datei.yml testname</code></pre>
+            <pre class="language-docker"><code class="language-docker">docker-stack deploy -c ./datei.yml testname</code></pre>
             <p>Es besteht die Möglichkeit Umgebungsvariablen in eine .env Datei auszulagern, was üblich ist, wenn man mehrere Container mit Docker Compose auf einmal starten möchte. Mit folgendem Befehl können diese verwertet werden:</p>
-            <pre class="language-bash"><code class="language-bash">docker-compose up</code></pre>
+            <pre class="language-docker"><code class="language-docker">docker-compose up</code></pre>
             <p>Der Befehl “docker create stack” ignoriert die .env Dateien und liest nur die YAML Datei ein. </p>
             <p>Container in einem Schwarm können bestimmte Dateien einbinden. Es gibt die Möglichkeiten diese Dateien als “Docker Secrets” oder als “Docker Configs” anzulegen, je nachdem wie gesichert es passieren soll. Bei “Docker Secrets” werden die Dateien verschlüsselt abgespeichert. Verwaltet und verwendet werden diese mit den uns bereits bekannten Befehlen. Die Dateien sind für alle Knoten unseres Schwarm abrufbar. Sie können während Container auf sie zugreifen nicht verändert werden. Dieses Problem umgeht man, indem man eine neue Datei anlegt und diese zur Laufzeit hinzugefügt mit “service update --secret-add”. Es besteht nicht die Möglichkeit, dass Container sie bearbeiten. Sie haben nur die Möglichkeit die Dateien zu lesen.</p>
-            <pre class="language-bash"><code class="language-bash">$ docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer</code></pre>
+            <pre class="language-docker"><code class="language-docker">$ docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer</code></pre>
             <p>Nun wird auf Docker Hub nach der neuesten Version von Portainer geschaut und diese heruntergeladen. Du kannst mit <code>docker ps</code> bereits sehen, dass der Container in betrieb ist. Wie in dem Befehl oben festgelegt ist für die Portainer-Seite der Port 9000 festgesetzt, dies kannst du auch aus dem docker ps auslesen. Dort ist sogar der vollständige Port 0.0.0.0:9000 beschrieben. Wenn du diesen in die URL-Leiste deines Browsers eingibst solltest du zum ersten mal das Portainer UI erreichen. Hier wird nun ein Benutzername und ein Passwort verlangt. Nach der Registrierung solltest du auf deiner individuellen Portainer.io Seite sein. </p>
             <p>Unter Dashboard siehst du eine Übersicht aller Dienste. Eine der nützlichsten Funktionen sollte das Verwalten von Containern oder Images sein. So bekommt man erstmals eine Übersicht der schieren Anzahl totgeglaubter, vergessener zu testzwecken angelegter images oder container.</p>
 
