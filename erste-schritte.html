@@ -57,11 +57,12 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#">Weiterführendes <span class="arrow"></span></a>
+              <a class="nav-link" href="weiterfuehrendes.html">Weiterführendes <span class="arrow"></span></a>
               <ul class="nav">
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Composer</a>
-                  <a class="nav-link" href="#">Docker Swarm</a>
+                  <a class="nav-link" href="weiterfuehrendes.html#docker-compose">Composer</a>
+                  <a class="nav-link" href="weiterfuehrendes.html#swarm">Docker Swarm</a>
+                  <a class="nav-link" href="weiterfuehrendes.html#gui">GUI in Docker</a>
                 </li>
               </ul>
             </li>
@@ -78,6 +79,7 @@
 
       </div>
     </nav><!-- /.navbar -->
+
 
 
     <!-- Header -->
@@ -107,17 +109,13 @@
                   <li class="nav-item">
                     <a class="nav-link" href="#setup">Docker einrichten <i class="nav-angle"></i></a>
                     <div class="nav">
-                      <a class="nav-link" href="#setup_u1">Unterüberschrift 1</a>
-                      <a class="nav-link" href="#setup_u2">Unterüberschrift 2</a>
+                      <a class="nav-link" href="#setup_u1">Docker auf Linux installieren</a>
+                      <a class="nav-link" href="#setup_u2">Docker auf Windows/Mac installieren</a>
                     </div>
                   </li>
 
                   <li class="nav-item">
-                    <a class="nav-link" href="#images">Images und Container <i class="nav-angle"></i></a>
-                    <div class="nav">
-                      <a class="nav-link" href="#images_u1">Unterüberschrift 1</a>
-                      <a class="nav-link" href="#images_u2">Unterüberschrift 2</a>
-                    </div>
+                    <a class="nav-link" href="#images">Images und Container</a>
                   </li>
 
                   <li class="nav-item">
@@ -140,23 +138,58 @@
           !-->
           <div class="col-md-7 col-xl-8 ml-md-auto py-8">
             <h2 id="setup">Docker einrichten</h2>
-            <p class="lead-2">Get started with Bootstrap, the world’s most popular framework for building responsive, mobile-first sites, with BootstrapCDN and a template starter page.</p>
+            <p class="lead-2">Im folgenden Kapitel erfährst du, wie Docker auf den gängigen Betriebssystemen installiert wird.</p>
 
 
             <hr class="hr-dash my-7">
 
 
-            <h3 id="setup_u1">Unterüberschrift 1</h3>
-            <p>Looking to quickly add Bootstrap to your project? Use BootstrapCDN, provided for free by the folks at StackPath. Using a package manager or need to download the source files? Head to the downloads page.</p>
+            <h3 id="setup_u1">Docker auf Linux installieren</h3>
+              <h4>Möglichkeit 1 - Per Installationsskript</h4>
+                <p>Am einfachsten und sichersten kannst du Docker auf deinem Linux-Rechner per installations-script einrichten.  Lade das Installationsskript einfach mit folgendem Befehl per cURL auf deinen Rechner:</p>
+                  <kbd>$ curl -fsSL https://get.docker.com -o get-docker.sh</kbd>
+                <p>Solltest du noch kein cURL auf deinem Rechner installiert haben kannst du es per apt herunterladen. Hierfür solltest du zunächst schauen, ob dein apt-system aktuell ist und im Anschluss die Installation von cURL ausführen:</p>
+                  <kbd>$ sudo apt-get update</kbd><br>
+                  <kbd>$ sudo apt-get install curl</kbd>
+                <p>Wenn du nun per <code>$ ls</code>  dein aktuelles Verzeichnis durchsuchst solltest du das Installationsscript (get-docker.sh) entdecken. Führe dies zur Installation nun mit Root-Rechten aus:</p>
+                  <kbd>$ sudo sh get-docker.sh </kbd><br>
+                <p>Nun sollte Docker installiert sein, damit du auch als normaler User Docker benutzen kannst, füge den aktuellen Benutzer zur Gruppe Docker hinzu (anschließend einmal ab- und anmelden dass Änderungen übernommen werden):</p>
+                  <kbd>$ sudo usermod -aG docker $USER</kbd>
+                <p>Als letzten Schritt solltest du noch Docker Compose installieren, dies wird benötigt, um später Docker-Setups mit vielen Containern zu betreiben (Aktuelle Version beachten).</p>
+                  <kbd>$ sudo curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-compose-$(uname-s)-$(uname -m)" -o /usr/local/bin/docker-compose</kbd><br>
+                <p>Dass Compose später auch problemlos ausführbar ist empfiehlt es sich vor erster Benutzung noch die Zugriffsrechte zu ändern:</p>
+                  <kbd>$ sudo chmod +x /usr/local/bin/docker-compose</kbd>
+                
+            <hr class="hr-dash my-7">
+              
+               <h4>Möglichkeit 2 - direkte Installation per apt</h4>
+                <p>Die offizielle Docker-Dokumentation empfiehlt die Installation per apt von deren Seite. Hierfür solltest du zunächst dein apt-manager updaten:</p>
+                  <kbd>$ sudo apt-get update</kbd>
+                <p>Im Anschluss kannst du Docker und die dependencies herunterladen:</p>
+                  <kbd>$ sudo apt-get install docker-ce docker-ce-cli containerd.io</kbd>
+                <p>Auch hier musst du im Anschluss den normalen User mit Docker verknüpfen und mit einem Neustart bestätigen:</p>
+                  <kbd>$ sudo usermod -aG docker $USER</kbd>
+                <p>Nun kannst du mit einem der folgenden Befehle testen, ob alles richtig eingerichtet wurde:</p>
+                  <kbd>$ docker run hello world</kbd><br>
+                  <kbd>$ docker --version</kbd>
 
 
             <hr class="hr-dash my-7">
 
 
-            <h3 id="setup_u2">Unterüberschrift 2</h3>
-            <p>For who thoroughly her boy estimating conviction. Removed demands expense account in outward tedious do. Particular way thoroughly unaffected projection favourable mrs can projecting own. Thirty it matter enable become admire in giving. See resolved goodness felicity shy civility domestic had but. Drawings offended yet answered jennings perceive laughing six did far. </p>
+            <h3 id="setup_u2">Docker auf Windows/Mac installieren</h3>
+            <p>Für Windows und Mac stellt Docker eine Desktop-Version mit verschiedenen Vorteilen bereit. So ist Docker Compose bereits in der Installation inbegriffen, Updates müssen nicht von Hand installiert werden und die Installation ist im Allgemeinen deutlich einfacher.
+              Für die Installation ist eine Anmeldung bei Docker Hub erforderlich, dies ist allerdings nicht schlimm, da man für den späteren Arbeitsverlauf mit Docker sowieso ein Account benötigt.
+              Unter folgendem <a href="https://www.docker.com/products/docker-desktop" target="blank">Link</a> kannst du Docker Desktop für Mac oder Windows herunterladen.</p>
             <br>
-            <p><a class="btn btn-outline-primary" href="#">Download</a></p>
+            <p>Unter Windows kann es je nach Alter oder Konfiguration deines Gerätes zu schwierigkeiten kommen. Wichtig ist, dass Windows Hypervisor (Hyper-V) von deinem Prozessor unterstützt wird. Dies siehst du am besten, wenn du unter “Ausführen” (windows + R)  nach “optionalFeatures” suchst. 
+              Ist in dem anschließend zu sehenden Fenster die Option “Hyper-V” ausgegraut kannst du Docker nur bedingt benutzen (Modus für Windows-Container). Ein problemloses Arbeiten über verschiedene Setups hinaus ist dadurch nicht möglich.
+              Wird Hyper-V von deinem Prozessor allerdings unterstützt kannst du nach der Installation ohne große Einrichtung loslegen. 
+              Auch Mac benötigt einige Voraussetzungen. Dein Gerät sollte mindestens aus dem Jahr 2010 sein und mindestens mit macOS yosemite laufen. 
+              Als Test kannst du im Terminal einfach mal folgende Befehle zum Test ausführen:</p>
+            <kbd>$ docker --version</kbd><br>
+            <kbd>$ docker-compose --version</kbd><br>
+            <kbd>$ docker-machine --version</kbd><br>
 
 
             <hr class="hr-dash my-7">
