@@ -141,20 +141,35 @@
             <ol class="toc bg-light b-1 px-5 py-3" data-caption="Fragen">
               <li><a href="#q01">Was ist Docker?</a></li>
               <li><a href="#q02">Ist Docker kostenlos?</a></li>
-              <li><a href="#q03">Kann ich über Docker Photoshop laufen lassen?</a></li>
+              <li><a href="#q03">Was ist der Unterschied zwischen Images und Container?</a></li>
+              <li><a href="#q04">Wie kann meine Daten aus einem Container erhalten?</a></li>
+              <li><a href="#q05">Kann ich über Docker Photoshop laufen lassen?</a></li>
+              <li><a href="#q06">Ich habe kein WLAN mehr, wenn ich Docker in der Deutschen Bahn nutze.</a></li>
             </ol>
   
   
             <h5 id="q01">Was ist Docker?</h5>
-            <p>Docker ist eine Containerisierungstechnologie. Wir haben eine genauere Definition auf unserer Seite <a href="was-ist-docker.html">Was ist Docker?</a>.</p>
+            <p>Docker ist eine Containerisierungstechnologie. Wir haben eine genauere Definition auf unserer Seite <a href="was-ist-docker.html#definition">Was ist Docker?</a></p>
             <hr class="hr-dash my-7">
 
             <h5 id="q02">Ist Docker kostenlos?</h5>
             <p>Docker gibt es in zwei Versionen: der kostenlosen Community-Edition und der kommerziellen Enterprise-Edition. Für unsere Beispiele genügt die kostenlose Variante.</p>
             <hr class="hr-dash my-7">
 
-            <h5 id="q03">Kann ich über Docker Photoshop laufen lassen?</h5>
+            <h5 id="q03">Was ist der Unterschied zwischen Images und Container?</h5>
+            <p>Ein Docker Image ist die Vorlage für einen Container, also einen Prozess. Images kann man entweder selbst bauen oder aus einer Registry (z.B. Docker Hub) herunterladen. Container werden gestartet und dann konfiguriert.</p>
+            <hr class="hr-dash my-7">
+
+            <h5 id="q04">Wie kann meine Daten aus einem Container erhalten?</h5>
+            <p>Container verlieren nach dem Beenden alle Ihre Daten. Möchte man jedoch Daten sichern muss man dies über sogenannte Volumes machen. Der neu erstellte Container kann dann auf diese Volumes zurückgreifen. Weiter Informationen findest du unter <a href="https://dockerdock.github.io/weiterfuehrendes.html#docker-compose_u9">Volumes - Laufwerke anhängen</a>.</p>
+            <hr class="hr-dash my-7">
+
+            <h5 id="q05">Kann ich über Docker Photoshop laufen lassen?</h5>
             <p>Nein. Docker ist für den Serverbetrieb entwickelt worden und ausgelegt. Große Programme mit einer GUI sind daher nicht für Docker gedacht. Will man allerdings eine Website aufbauen lohnt sich in jedem Fall ein Blick auf Docker.</p>
+            <hr class="hr-dash my-7">
+
+            <h5 id="q06">Ich habe kein WLAN mehr, wenn ich Docker in der Deutschen Bahn nutze.</h5>
+            <p>Docker nutzt den gleichen IP-Adressbereich wie die Deutsche Bahn. Deswegen blockiert Docker's Netzwerkkonfiguration den Zugang. Nach dem Beenden der Software und dessen virtuellen Netzwerke sollte wieder eine Verbindung aufgebaut werden. Alternativ empfehlen wir einen Neustart.</p>
             <hr class="hr-dash my-7">
 
 
