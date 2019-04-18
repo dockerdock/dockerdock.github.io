@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <title>Docker Doc(k) — Gestrandet? - Hilfe</title>
+
+    <!-- Styles -->
+    <link href="assets/css/page.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+    <link rel="icon" href="assets/img/favicon.png">
+  </head>
+
+  <body data-spy="scroll" data-target=".nav-sidebar" data-offset="100">
+
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-stick-dark" data-navbar="sticky">
+      <div class="container">
+
+        <div class="navbar-left">
+          <button class="navbar-toggler" type="button">&#9776;</button>
+          <a class="navbar-brand" href="index.html">
+            <img class="logo-dark" src="assets/img/logo-dark.png" alt="logo">
+            <img class="logo-light" src="assets/img/logo-light.png" alt="logo">
+          </a>
+        </div>
+
+        <section class="navbar-mobile">
+          <span class="navbar-divider d-mobile-none"></span>
+
+          <ul class="nav nav-navbar">
+            <li class="nav-item">
+              <a class="nav-link" href="was-ist-docker.html">Was ist Docker? <span class="arrow"></span></a>
+              <nav class="nav">
+                <a class="nav-link" href="was-ist-docker.html#definition">Definition</a>
+                <a class="nav-link" href="was-ist-docker.html#reason">Warum Docker?</a>
+                <a class="nav-link" href="was-ist-docker.html#use">Wer nutzt Docker?</a>
+              </nav>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="erste-schritte.html">Erste Schritte <span class="arrow"></span></a>
+              <ul class="nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="erste-schritte.html#setup">Docker einrichten</a>
+                  <a class="nav-link" href="erste-schritte.html#images">Images und Container</a>
+                  <a class="nav-link" href="erste-schritte.html#helloworld">Hello World</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="weiterfuehrendes.html">Weiterführendes <span class="arrow"></span></a>
+              <ul class="nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="weiterfuehrendes.html#docker-compose">Composer</a>
+                  <a class="nav-link" href="weiterfuehrendes.html#swarm">Docker Swarm</a>
+                  <a class="nav-link" href="weiterfuehrendes.html#gui">GUI in Docker</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="hilfe.html">Hilfe <span class="arrow"></span></a>
+              <nav class="nav">
+                <a class="nav-link" href="hilfe.html#faq">FAQ</a>
+                <a class="nav-link" href="hilfe.html#glossar">Glossar</a>
+                <a class="nav-link" href="hilfe.html#commands">Häufige Kommandos</a>
+              </nav>
+            </li>
+          </ul>
+        </section>
+
+      </div>
+    </nav><!-- /.navbar -->
+
+
+
+    <!-- Header -->
+    <header class="header" style="background-color: #f1f6fa">
+      <div class="container">
+        <h1>Gestrandet? - Hilfe</h1>
+        <p class="lead">Lead Text</p>
+      </div>
+    </header><!-- /.header -->
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="container">
+        <div class="row">
+
+
+          <!--
+          |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+          | Sidebar
+          |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+          !-->
+          <div class="col-md-4 col-xl-3">
+            <aside class="sidebar sidebar-expand-md sidebar-sticky pr-md-4 br-1">
+              <div class="sidebar-body">
+                <ul class="nav nav-sidebar nav-sidebar-hero nav-sidebar-pill">
+                 
+                  <li class="nav-item">
+                    <a class="nav-link" href="#faq">FAQ</a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="#glossar">Glossar</a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="#commands">Häufige Kommandos</a>
+                  </li>
+
+                </ul>
+              </div>
+            </aside>
+          </div>
+
+
+          <!--
+          |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+          | FAQ
+          |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+          !-->
+          <div class="col-md-7 col-xl-8 ml-md-auto py-8">
+            <h2 id="faq">FAQ</h2>
+            <p class="lead-2">Hier findest du die am häufig gestelltesten Fragen.</p>
+
+
+            <hr class="hr-dash my-7">
+
+            <ol class="toc bg-light b-1 px-5 py-3" data-caption="Fragen">
+              <li><a href="#q01">Was ist Docker?</a></li>
+              <li><a href="#q02">Ist Docker kostenlos?</a></li>
+              <li><a href="#q03">Kann ich über Docker Photoshop laufen lassen?</a></li>
+            </ol>
+  
+  
+            <h5 id="q01">Was ist Docker?</h5>
+            <p>Docker ist eine Containerisierungstechnologie. Wir haben eine genauere Definition auf unserer Seite <a href="was-ist-docker.html">Was ist Docker?</a>.</p>
+            <hr class="hr-dash my-7">
+
+            <h5 id="q02">Ist Docker kostenlos?</h5>
+            <p>Docker gibt es in zwei Versionen: der kostenlosen Community-Edition und der kommerziellen Enterprise-Edition. Für unsere Beispiele genügt die kostenlose Variante.</p>
+            <hr class="hr-dash my-7">
+
+            <h5 id="q03">Kann ich über Docker Photoshop laufen lassen?</h5>
+            <p>Nein. Docker ist für den Serverbetrieb entwickelt worden und ausgelegt. Große Programme mit einer GUI sind daher nicht für Docker gedacht. Will man allerdings eine Website aufbauen lohnt sich in jedem Fall ein Blick auf Docker.</p>
+            <hr class="hr-dash my-7">
+
+
+            <!--
+            |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+            | Glossar
+            |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+            !-->
+            <h2 id="glossar">Glossar</h2>
+            <p class="lead-2">Häufig genutzte Wörter sind in diesem Glossar zusammengefasst.</p>
+
+
+            <hr class="hr-dash my-7">
+
+
+            <table class="table table-bordered table-striped table-responsive-md table-detail">
+              <thead class="thead-light">
+                <tr>
+                  <th>Begriff</th>
+                  <th>Erklärung</th>
+                </tr>
+              </thead>
+              <tbody>
+
+                <tr>
+                  <td>Container</td>
+                  <td>Ein Container ist ein laufender Prozess auf dem HostOS. Container werden aus Abbildern (Images) erstellt und können nach Belieben gestartet und gestoppt werden.</td>
+                </tr>
+
+                <tr>
+                  <td>Image</td>
+                  <td>Ein Image ist ein “Bauplan”, aus dem sich Container erzeugen lässt. Das Image enthält alle notwendigen Abhängigkeiten, welche die Anwendung benötigt um ordnungsgemäß zu funktionieren.</td>
+                </tr>
+
+                <tr>
+                  <td>Virtual Machine (VM)</td>
+                  <td>Eine virtuelle Maschine ist ein Programm, dass einen virtuellen PC erzeugt, der sich wie ein eigenständiger PC verhält. Dafür werden jedoch Ressourcen des physischen PCs verwendet. Eine Unterscheidung zwischen VMs und Container gibt es findet sich unter <a href="was-ist-docker.html#reason">Warum Docker?</a></td>
+                </tr>
+
+                <tr>
+                  <td>Terminal<br>Kommandozeile</td>
+                  <td>Das Terminal ist ein Programm, dass euch erlaubt auf Docker zuzugreifen und durch Befehle Container zu manipulieren.</a></td>
+                </tr>
+
+              </tbody>
+            </table>
+
+
+            <hr class="hr-dash my-7">
+
+
+
+            <!--
+            |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+            | Häufige Kommandos
+            |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+            !-->
+            <h2 id="commands">Häufige Kommandos</h2>
+            <p class="lead-2">Neben häufig genutzten Wörtern gibt es bei Docker auch ein paar Standardbefehle, die hier zu finden sind.</p>
+
+
+            <hr class="hr-dash my-7">
+
+
+            <table class="table table-bordered table-striped table-responsive-md">
+              <thead class="thead-light">
+                <tr>
+                  <th>Kommandos</th>
+                  <th>Erklärung</th>
+                </tr>
+              </thead>
+              <tbody>
+
+                <tr>
+                  <td><code>$ docker build</code></td>
+                  <td>Erstellt neuen Docker Container im aktuellen Verzeichnis.</td>
+                </tr>
+
+                <tr>
+                  <td><code>$ docker ps</code><br><code>$ docker container ls</code></td>
+                  <td>Zeigt alle laufenden Docker Container.</td>
+                </tr>
+
+                <tr>
+                  <td><code>$ docker ps -a</code><br><code>$ docker container ls --all</code></td>
+                  <td>Zeigt eine Übersicht aller Container inklusive Status</td>
+                </tr>
+
+                <tr>
+                  <td><code>$ docker</code></td>
+                  <td>Zeigt alle Docker Kommandos an (Help-Ansicht).</td>
+                </tr>
+
+                <tr>
+                  <td><code>$ docker run <i>container</i></code></td>
+                  <td>Erstellt einen Docker Container und startet ihn.</td>
+                </tr>
+
+                <tr>
+                  <td><code>$ docker stop <i>container</i></code></td>
+                  <td>Der Docker Container wird gestoppt.</td>
+                </tr>
+
+                <tr>
+                  <td><code>$ docker restart <i>container</i></code></td>
+                  <td>Der Docker Container wird neu gestartet. Falls kein Volume erstellt wurde sind alle Änderungen ungesichert.</td>
+                </tr>
+
+                <tr>
+                  <td><code>$ docker rm <i>container</i></code></td>
+                  <td>Der Docker Container wird gelöscht.</td>
+                </tr>
+
+                <tr>
+                  <td><code>$ docker exec <i>container</i></code></td>
+                  <td>Der laufende Docker Container wird betreten.</td>
+                </tr>
+
+                <tr>
+                  <td><code>$ docker images</code></td>
+                  <td>Zeigt eine Übersicht über alle erstellten Images.</td>
+                </tr>
+
+                <tr>
+                  <td><code>$ docker image rm <i>image-id</i></code></td>
+                  <td>Löscht das Image der ausgewählten ID.</td>
+                </tr>
+
+                <tr>
+                  <td><code>$ apt-get update</code></td>
+                  <td>apt (advanced packaging tool) ist ein Paketmanager, ähnlich wie Composer. Dieser Befehl updatet das Tool.</td>
+                </tr>
+
+                <tr>
+                  <td><code>$ docker run -it —name <i>container</i> ubuntu:14.04 /bin/bash</code></td>
+                  <td>Docker Container mit Ubuntu ditribution erstellen<br>&rarr; virtuelle Ubuntu-Distribution durch <code>-it</code> in interaktiven terminale (bash)</td>
+                </tr>
+
+                <tr>
+                  <td><code>$ apt-get install curl</code></td>
+                  <td>installiert cURL (client for URL)<br>
+                      Kommandozeilen-Werkzeug zum Herunter- oder Hochladen von Dateien über eine Internetadresse.<br>
+                      &rarr; dadurch wird basisimage um ein weiteres image (cURL) erweitert.
+                      </td>
+                </tr>
+
+                <tr>
+                  <td><code>$ docker run -it -v ~/webroot/mapdir:/home/daten --name <i>container</i> ubuntu:14.04 /bin/bash</code></td>
+                  <td>Verzeichnis auf Host mappen: <code>/mapdir</code> stellt hierbei das gewünschte Verzeichnis auf dem host-rechner dar. <code>/home/daten</code> das gewünschte Zielverzeichnis in der Ubuntu-bash
+                    </td>
+                </tr>
+
+              </tbody>
+            </table>
+
+
+            <hr class="hr-dash my-7">
+          </div>
+
+        </div>
+      </div>
+    </main><!-- /.main-content -->
+
+
+     <!-- Footer -->
+     <footer class="footer">
+      <div class="container">
+        <div class="row gap-y align-items-center">
+
+          <div class="col-md-9">
+            <div class="nav justify-content-center justify-content-md-start">
+              <a class="nav-link" href="index.html">Home</a>
+              <a class="nav-link" href="impressum.html">Impressum</a>
+            </div>
+          </div>
+
+          <div class="col-md-3 text-center text-md-right">
+            <a href="index.html">© Docker Doc(k)</a>
+          </div>
+        </div>
+      </div>
+    </footer><!-- /.footer -->
+
+
+    <!-- Scripts -->
+    <script src="assets/js/page.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
+  </body>
+</html>
