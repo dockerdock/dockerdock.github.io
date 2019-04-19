@@ -122,8 +122,10 @@
                   <li class="nav-item">
                     <a class="nav-link" href="#helloworld">Hello World <i class="nav-angle"></i></a>
                     <div class="nav">
-                      <a class="nav-link" href="#helloworld _u1">Unterüberschrift 1</a>
-                      <a class="nav-link" href="#helloworld _u2">Unterüberschrift 2</a>
+                      <a class="nav-link" href="#helloworld_u1">Der Hello-World-Container</a>
+                      <a class="nav-link" href="#helloworld_u2">Eigenes Images erstellen</a>
+                      <a class="nav-link" href="#helloworld_u3">Dateien mappen</a>
+                      <a class="nav-link" href="#helloworld_u4">Dockerfiles</a>
                     </div>
                   </li>
                 </ul>
@@ -202,50 +204,22 @@
             |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
             !-->
             <h2 id="images">Images und Container</h2>
-            <p class="lead-2">Components and options for laying out your Bootstrap project, including wrapping containers, a powerful grid system, a flexible media object, and responsive utility classes.</p>
+            <p class="lead-2">In diesem Kapitel lernst du was der Unterschied von Container und Images ist und wie diese funktionieren.</p>
 
 
             <hr class="hr-dash my-7">
 
+            <p>Bevor man die Funktionsweise von Docker-Containern beschreibt ist es wichtig zuerst zwischen einem Docker-Container und einem Docker-Image zu unterscheiden. Grundsätzlich beruhen alle Docker-Container auf Images. Images sind sozusagen der Bauplan für den späteren Container. In dem Image sind alle Abhängigkeiten, die ein Container für den ordnungsgemäßen Betrieb braucht, hinterlegt. Die Images können ganz einfach über Docker Hub oder auch GitHub heruntergeladen werden. Nachdem das Image auf dem lokalen PC liegt kann es gestartet werden. Der nun laufende Prozess wird jetzt aber als Container bezeichnet. Es handelt sich also ähnlich wie bei der Magma/Lava Thematik nur um eine Eigenschaft, die zu der Namensänderung führt. Container können jedoch noch beliebig angepasst und manipuliert werden. Wird ein Container gestoppt und ein neuer Container aus dem gleichen Image erzeugt nimmt er die Veränderungen, die im Container gemacht wurden jedoch nicht an.</p>
 
-            <h3 id="images_u1">Unterüberschrift 1</h3>
-            <p>Here's some notes to know how our navbar works, before getting deeper into it.</p>
+            <p>Kurz gesagt: Docker-Container sind laufende Prozesse, die auf dem Abbild von Docker-Images basieren. Im nächsten Kapitel wird das erste Image ausgeführt.</p>
 
-            <ul>
-              <li>Most of the basics can be find in the <a href="https://getbootstrap.com/docs/4.0/components/navbar/" target="blank">official documentation of navbar</a> component. It's highly recommended to get start from there.</li>
-              <li>Our color scheme classes works inverse of the Bootstrap definition. For example, <code>.navbar-dark</code> makes the text dark colored and <code>.navbar-light</code> makes the colors lighter.</li>
-              <li>You can have a different color scheme for the navbar once it's stick at the top by adding one of the <code>.navbar-stick-dark</code> or <code>.navbar-stick-light</code> classes.</li>
-              <li>Inside the <em>.navbar-brand</em>, you can specify two logos; <code>.logo-dark</code> to display for <em>.navbar-dark</em>; and <code>.logo-light</code> to be display with <em>.navbar-light</em>.</li>
-              <li>
-                You should set the placement of navbar using <code>data-navbar</code> attribute. It can has one of the following values:
-                <ul>
-                  <li><code>static</code>: Only at top, don't move with scroll.</li>
-                  <li><code>fixed</code>: Always at top of the screen and moves with scrolling down.</li>
-                  <li><code>sticky</code>: First at top, hides after a small scroll down, so it won't obscure the header. Once the user scrolls down and passes the header, navbar become fixed/sticky at the top again.</li>
-                  <li><code>smart</code>: It's like sticky navbar, but it only becomes sticky when the visitor scrolls up.</li>
-                </ul>
-              </li>
-              <li>Our template adds few classes to the body tag to detect when the scrollbar passed an element which is to use by CSS. Those classes are <code>.body-scrolled</code>, <code>.navbar-scrolled</code> and <code>.header-scrolled</code></li>
-              <li>In mobile devices, the content inside <code>.navbar-mobile</code> will display to the user.</li>
-              <li>We have defined few utility classes to make your coding easier for different situations. Those classes can categorized into <code>.d-mobile-*</code> —change display value on mobile devices— and <code>.d-stick-*</code> —when the navbar sticks to the top— which <strong>*</strong> can be one of the <code>none</code> | <code>block</code> | <code>inline-block</code> | <code>flex</code> | <code>inline-flex</code> values. So <code>.d-stick-none</code> will hide an element when the navbar has sticked at the top.</li>
-            </ul>
-
-
-            <hr class="hr-dash my-7">
-
-
-
-            <h3 id="images_u2">Unterüberschrift 2</h3>
-            <p>Their could can widen ten she any. As so we smart those money in. Am wrote up whole so tears sense oh. Absolute required of reserved in offering no. How sense found our those gay again taken the. Had mrs outweigh desirous sex overcame. Improved property reserved disposal do offering me.</p>
 
             <header class="header text-center py-8 shadow-none mx-0" style="background-color: #f1f6fa">
               <div class="container">
-                <h1>Typography</h1>
-                <p class="lead mb-0">Documentation and examples for typography, including global settings, headings, body text, lists, and more.</p>
+                <h1>Hier könnte Ihr Video stehen!</h1>
+                <p class="lead mb-0">@Pascal hier bitte das zweite Video einfügen.</p>
               </div>
             </header>
-
-            <p>In reasonable compliment favourable is connection dispatched in terminated. Do esteem object we called father excuse remove. So dear real on like more it. Laughing for two families addition expenses surprise the. If sincerity he to curiosity arranging. Learn taken terms be as. Scarcely mrs produced too removing new old. </p>
 
 
             <hr class="hr-dash my-7">
@@ -258,19 +232,98 @@
             |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
             !-->
             <h2 id="helloworld">Hello World</h2>
-            <p class="lead-2">Components and options for laying out your Bootstrap project, including wrapping containers, a powerful grid system, a flexible media object, and responsive utility classes.</p>
-
+            <p class="lead-2">In diesem Abschnitt wirst du die ersten Praxis-Schritte mit Docker machen. Im Details lernst du:</p>
+              <ul class="lead-2">
+                <li>Das Ausführen eines Hello-World-Containers</li>
+                <li>Das Erstellen eines eigenen Images</li>
+                <li>Das Mappen von Dateien</li>
+                <li>Der Aufbau eines Dockerfile</li>
+                <li>Das Arbeiten mit Datencontainern</li>
+              </ul>
+            
 
             <hr class="hr-dash my-7">
 
+            <p>Mit der Installation von Docker wurde auch das Command-Line-Interface (Docker-cli) installiert. Es handelt sich hierbei und eine Befehlsbibliothek mit allen Funktionen rund um Docker. Dieses macht das Arbeiten mit Container, Images und Co erst möglich. Aufrufen kannst du das Docker-cli mit dem Schlagwort <code>$ docker</code>. Darauf folgt dann der eigentliche Command. Die Docker Befehle lassen sich in drei Gruppen aufteilen:</p>
+            <ul>
+              <li>Das Arbeiten mit Containern (z.B. <code>$ docker run</code> oder <code>$ docker  ps</code>)</li>
+              <li>Das Manipulieren von Images (z.B. <code>$ docker build</code>)</li>
+              <li>Das Verbinden mit Docker-Hub (z.B. <code>$ docker pull</code> oder <code>$ docker login</code>)</li>
+            </ul>
+            <p>Nach den Command folgen meist noch Parameter oder Argumente. Für was genau die einzelnen Befehle stehen erfährst du natürlich mit dem Bearbeiten der einzelnen Kapitel.</p>
+            <hr class="hr-dash my-7">
 
-            <h3 id="helloworld _u1">Unterüberschrift 1</h3>
-            <p>Some sample text to just fill up the space. The him father parish looked has sooner. Attachment frequently gay terminated son. You greater nay use prudent placing. Passage to so distant behaved natural between do talking. Friends off her windows painful. Still gay event you being think nay for. In three if aware he point it. Effects warrant me by no on feeling settled resolve. </p>
+            <h3 id="helloworld_u1">So führst du ein Hello-World-Container aus</h3>
+            <p>Zum besseren Einstieg in Docker gibt es ein vorgefertigtes Image mit dem Namen hello-world. Mit folgenden Befehl startest du aus dem Image heraus einen Container:</p>
+              <kbd>$ docker run hello-world</kbd>
+            <p>Darauf hin dürfte folgende message zu sehen sein:</p>
+              <kbd>Hello from Docker!<br>
+                This message shows that your installation appears to be working correctly.<br>
+                To generate this message, Docker took the following steps:<br>
+                1. The Docker client contacted the Docker daemon.<br>
+                2. The Docker daemon pulled the "hello-world" image from the Docker Hub.<br>
+                3. The Docker daemon created a new container from that image which runs the executable that produces the output you are currently reading.<br>
+                4. The Docker daemon streamed that output to the Docker client, which sent it to your terminal.<br>
+                To try something more ambitious, you can run an Ubuntu container with:<br>
+                $ docker run -it ubuntu bash<br>
+                Share images, automate workflows, and more with a free Docker ID:<br>
+                https://hub.docker.com/<br>
+                For more examples and ideas, visit:<br>
+                https://docs.docker.com/get-started/
+              </kbd>
+            <p>Wie in der zweiten Zeile zu lesen ist, verlief die Installation von Docker problemlos. Außerdem wird beschrieben, wie das hello-world image von Docker-Hub gepullt und ausgeführt wurde. Dies ist ein Workflow, der dir auf deinem weiteren Weg mit Docker noch öfters über den Weg läuft.<br>
+              Alle deine Docker-Container anzeigen kannst du mit diesem Befehl:
+            </p>
+              <kbd>$ docker ps</kbd>
+            <p>Dein eben ausgeführtes hello-world wird nun nicht angezeigt werden, da es nach dem Ausführen direkt wieder beendet wurde.<br>
+               Mit dem Befehl <code>$ docker images</code> kannst du alle auf deinem Setup existierenden images anzeigen. Dort sollte nun auch das hello-world image zu sehen sein.<br>
+               Außerdem kannst du mit dem Befehl <code>$ docker ps -a</code> auch die gestoppten Container sehen. Wenn du nun noch einmal den hello-world-Container mit docker run erzeugst und dir im Anschluss alle Container anzeigen lässt siehst du, dass durch jeden docker run befehl ein neuer Container erzeugt wird, allerdings beide auf dem gleichen Image beruhen.
+            </p>
+              
             <hr class="hr-dash my-7">
 
 
-            <h3 id="helloworld _u2">Unterüberschrift 2</h3>
-            <p>Some sample text to just fill up the space. The him father parish looked has sooner. Attachment frequently gay terminated son. You greater nay use prudent placing. Passage to so distant behaved natural between do talking. Friends off her windows painful. Still gay event you being think nay for. In three if aware he point it. Effects warrant me by no on feeling settled resolve. </p>
+            <h3 id="helloworld_u2">So erstellst du dein eigenes Image</h3>
+            <p>Wie du nun schon gelernt hast kannst du mit dem Befehl <code>$ docker run</code> Container starten. Hierbei gibt es noch einige Parameter, die diesen Schritt etwas umfänglicher machen. So kannst du beispielsweise mit <code>--name</code> deinem Container einen Namen geben. Mit dem Parameter <code>-it</code> wird ein sog. interactive terminal geöffnet.<br>
+               In der Praxis kann das ganze dann folgendermaßen aussehen:
+            </p>
+              <kbd>$ docker run -it --name containername ubuntu:14.04 /bin/bash</kbd>
+            <p>Der Container wird gestartet. Lässt man sich nun mit ls -la die Inhalte des Containers ausgeben, in dem man sich nun befindest erkennt man, dass es sich um eine isolierte Linux-umgebung handelt (ubuntu 14.04). Durch das bash am Ende des Befehls wird definiert, dass sich das ganze in einer bash-shell öffnen soll.<br>
+               Dies ist nun unser Basis-Image, das wir um ein darauf aufbauendes Image erweitern wollen. Das zweite Image soll Curl beinhalten. Dies wird wie üblich per apt installiert. Du solltest hierzu natürlich sichergehen, dass du dich noch in der Ubuntu-Umgebung befindest.<br>
+               Das ganze sieht dann wie folgt aus:
+            </p>
+              <kbd>
+                root@43f656d835f4:/# apt-get update<br>
+                …<br>
+                root@43f656d835f4:/# apt-get install curl
+              </kbd>
+            <p>Nun kannst du mit exit die Shell verlassen. Im folgenden werden wir die Änderungen aus der Shell committen und daraus ein neues Image erstellen.<br>
+               Dies sieht Syntax-technisch zunächst aus wie bei einem Commit bei git. Der Unterschied ist allerdings, dass bei Docker nach der Commit-message noch die ID des betreffenden Containers und der Name des neuen Images anzugeben sind:
+            </p>
+              <kbd>$ docker commit -m “Commit-Message - Curl hinzugefügt” 1234567890AB curl-image</kbd>
+            <p>Bei erfolgreicher Eingabe sollte nun die neu erzeugte Image-ID ausgegeben werden. Außerdem kannst du mit <code>$ docker image</code> sehen, ob das Image angelegt wurde.</p>
+           
+            <hr class="hr-dash my-7">
+
+
+            <h3 id="helloworld_u3">Dateien mappen</h3>
+            <p>Eines der wichtigsten features in Docker ist natürlich auch das Teilen von Daten. Den Anfang macht hier das Mappen von Daten auf Lokaler Ebene. So kann man Daten vom Host-Rechner ganz einfach in das Docker-Setup teilen oder anders herum. Wie das genau aussieht lernst du im folgenden Kapitel.</p>
+            <p>Das Mappen von Daten ist eine gängige Methode für Test- oder Entwicklungsumgebungen auf lokaler Ebene. Für größere Projekte mit mehreren Setups eignet sich diese Technik nicht besonders. Eine deutlich mobilere und bessere Methode ist hier der Einsatz von Datencontainern, was dies genau ist erfährst du später.  Als ersten Schritt benötigst du eine Datei, die du mappen willst. Im Beispiel wird mit einer einfachen .txt-datei gearbeitet. Diese befindet sich auf dem Host-Rechner in einem eigenen Ordner.<br>
+              Die Grundlegende Syntax zu Mappen von Dateien sieht so aus:
+            </p>
+              <kbd>$ docker run -v hostverzeichnis:dockerverzeichnis</kbd>
+            <p>Wie du siehst wird hierfür ein Container erzeugt. Um das ganze etwas anschaulicher zu machen arbeiten wir im folgenden Beispiel mit ein paar Parametern mehr.</p>
+              <kbd>$ docker run -it -v ~/webroot/lokal:/home/daten --name Datenparty ubuntu:14.04 /bin/bash</kbd>
+            <p>Wie du feststellen kannst öffnen wir das ganze wieder in einer isolierten Linux-Umgebung. So können wir feststellen, ob die Daten auch wirklich geteilt wurden. Außerdem nennen wir den Container zur besseren Übersicht um. Der Parameter <code>-v</code> leitet hier das Mapping ein. Darauf folgt der Pfad zum Ordner mit der gemappten Datei. Nach dem Doppelpunkt wird das Zielverzeichnis im Container definiert. Wichtig hierbei ist, dass der Ordner “daten” erst mit diesem Befehl erzeugt wird und die Daten aus dem im Befehl angegeben Host-Pfad in diesen verknüpft werden.</p>
+            <p>Dass die Daten wirklich aktiv gemappt werden und nicht bloß in den Container kopiert werden kannst du auch testen. Wenn du die Datei lokal durch beispielsweise Umbenennen manipulierst und durch ein einfaches <code>$ ls</code> das Verzeichnis in deinem Container aktualisierst siehst du, dass die Dateien wirklich verknüpft sind. Natürlich funktioniert dies auch in die andere Richtung, also von Docker-Container auf Host-Verzeichnis.</p>
+            
+            <hr class="hr-dash my-7">
+
+
+            <h3 id="helloworld_u4">Dockerfiles</h3>
+            <p>Das Dockerfile ist ein wichtiges Werkzeug zum automatischen Bauen von Images. Bei einem Dockerfile handelt es sich um eine simple Textdatei mit Instruktionen und Argumenten zum Aufbau der Images. Die Syntax sieht dabei wie folgt aus:</p>
+              <kbd>INSTRUKTION Argument</kbd>
+            <p>Die Instruktionen sind festgelegte Begriffe. Eine vollständige Übersicht zu allen Instruktionen findest du in der offiziellen Docker-Dokumentation. Einige Beispiel-Instruktionen sind “FROM” zum festlegen des Basis-image, mit “ENV” kann man Variablen setzen oder mit “RUN” Programme oder Dienste starten, die zum Erstellen des Images notwendig sind.</p>
             <hr class="hr-dash my-7">
           </div>
 
