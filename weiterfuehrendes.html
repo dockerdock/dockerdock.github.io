@@ -168,7 +168,7 @@ services:
   wd: null
     - test
 </code></pre> -->
-            <p> Sobald das passende Container-Image gefunden ist, kann man diesen mit <code>docker run &lt;Name des Images&gt;</Name></code> starten. Wir haben ebenfalls schon gesehen dass der docker run Command allerlei Parameter akzeptiert. Die Parameter ermöglichen es den Container nach belieben zu personalisieren, man kann ihm einen Namen zuweisen, ein Port auf der Host-Maschine verfügbar machen oder ein Volumen anhängen. Leider ergibt das schon bei einfachen Aufgaben wie ein Webserver, einen langen, unleserlichen Befehl. Genauso unpraktisch wird es, wenn der Container abhängigkeiten aufweist und mit anderen Containern zusammenarbeitet.
+            <p> Sobald das passende Container-Image gefunden ist, kann man diesen mit <code>$ docker run &lt;Name des Images&gt;</Name></code> starten. Wir haben ebenfalls schon gesehen dass der docker run Command allerlei Parameter akzeptiert. Die Parameter ermöglichen es den Container nach belieben zu personalisieren, man kann ihm einen Namen zuweisen, ein Port auf der Host-Maschine verfügbar machen oder ein Volumen anhängen. Leider ergibt das schon bei einfachen Aufgaben wie ein Webserver, einen langen, unleserlichen Befehl. Genauso unpraktisch wird es, wenn der Container abhängigkeiten aufweist und mit anderen Containern zusammenarbeitet.
             Mit Docker-Compose wird der auszuführende Container in einer Yaml-Datei definiert. Name, Volumen, Ports und Abhängigkeiten werden hier definiert. Anschließend kann die Komposition mit docker-composer up ausgeführt werden.
               </p>
             
@@ -287,11 +287,11 @@ db:
 
             <hr class="hr-dash my-7">
             <h3 id="docker-compose_u10">Container starten und stoppen</h3>
-            <p>Ist die Container-Zusammenstellung fertig, musst du sie nur noch starten. Navigiere auf der Kommandozeile in das Verzeichnis mit dem Compose-File und führe <code>docker-compose up</code> aus. Auf der Kommandozeile kannst du beobachten, wie die beiden Container hochfahren und ihre Einrichtungsprozeduren durchlaufen. Die Datenbank bemerkt, dass das Datenverzeichnis noch leer ist und legt eine Datenbank anhand der Umgebungs -variablen an. Rufst du http://localhost:8000 im Browser auf, begrüßt dich der Einrichtungsassistent von WordPress und möchte mit Ihnen den Blog einrichten. </p>
-            <p> Für Entwicklungsarbeit ist ein einfaches up sehr nützlich, da du jede Aktivität in den Containern live verfolgen kannst (jeder HTTP-Aufruf erzeugt zum Beispiel eine Zeile). Allerdings ist die Kommando-zeile jetzt belegt und die Container leben nur, bis du Docker-Compose mit Strg+C beendest. Sinnvoller ist es, den Parameter -d (für „detached“) anzuhängen. Dann landen die Ausgaben nicht mehr auf der Kommandozeile. Mit docker-compose logs kann man dann nach Bedarf anzeigen, was in den Containern vor sich gegangen ist. Haben die Container die Anweisung <code>restart: always</code> bekommen, kannst du den Server jetzt auch neu starten. Docker-Compose kümmert sich nach dem Boot darum, dass sie wieder starten. Erst ein <code>docker-compose down</code>, ausgeführt im Ordner mit der Compose-Datei, schaltet sie aus. </p>
-            <p> Manchmal ist es sinnvoll, nicht alle Container hochzufahren, die in der Compose-Datei deﬁniert sind. Um nur ausgewählte Container zu starten, übergibt man deren Namen (wie unter services angegeben) als Paramter: <code>docker-compose up wordpress db</code>. In diesem Beispiel würde “wordpress” ausreichen, da Docker-Compose die Abhängigkeiten automatisch berücksichtigt. </p>
-            <p> Mit der Angabe dieser kurzen Namen kann man auch andere Docker-Compose-Befehle auf einzelne Container zuschneiden. So führt <code>docker-compose restart wordpress</code> einen Neustart aus. Diese kurzen Namen existieren aber nur in der Welt von Docker-Compose. Mit <code>docker ps</code> erfährst du, welchen Namen der Container vom Docker-Daemon bekommen hat. Das Namensschema ist immer gleich: der Name des Ordners, in dem die Compose-Datei liegt, der Name des Services, eine Ziffer, beginnend bei 1, jeweils durch einen Unterstrich getrennt. </p>
-            <p>Wenn du mit Docker-Compose experimentierst und die Volumes änderst, musst du die Container herunterfahren und Docker überzeugen, die neuen Volumes zu nutzen. Dazu hängst du den Parameter <code>--force-recreate</code> an <code>docker-compose up</code> an. </p>
+            <p>Ist die Container-Zusammenstellung fertig, musst du sie nur noch starten. Navigiere auf der Kommandozeile in das Verzeichnis mit dem Compose-File und führe <code>$ docker-compose up</code> aus. Auf der Kommandozeile kannst du beobachten, wie die beiden Container hochfahren und ihre Einrichtungsprozeduren durchlaufen. Die Datenbank bemerkt, dass das Datenverzeichnis noch leer ist und legt eine Datenbank anhand der Umgebungs -variablen an. Rufst du http://localhost:8000 im Browser auf, begrüßt dich der Einrichtungsassistent von WordPress und möchte mit Ihnen den Blog einrichten. </p>
+            <p> Für Entwicklungsarbeit ist ein einfaches up sehr nützlich, da du jede Aktivität in den Containern live verfolgen kannst (jeder HTTP-Aufruf erzeugt zum Beispiel eine Zeile). Allerdings ist die Kommando-zeile jetzt belegt und die Container leben nur, bis du Docker-Compose mit Strg+C beendest. Sinnvoller ist es, den Parameter -d (für „detached“) anzuhängen. Dann landen die Ausgaben nicht mehr auf der Kommandozeile. Mit docker-compose logs kann man dann nach Bedarf anzeigen, was in den Containern vor sich gegangen ist. Haben die Container die Anweisung <code>restart: always</code> bekommen, kannst du den Server jetzt auch neu starten. Docker-Compose kümmert sich nach dem Boot darum, dass sie wieder starten. Erst ein <code>$ docker-compose down</code>, ausgeführt im Ordner mit der Compose-Datei, schaltet sie aus. </p>
+            <p> Manchmal ist es sinnvoll, nicht alle Container hochzufahren, die in der Compose-Datei deﬁniert sind. Um nur ausgewählte Container zu starten, übergibt man deren Namen (wie unter services angegeben) als Paramter: <code>$ docker-compose up wordpress db</code>. In diesem Beispiel würde “wordpress” ausreichen, da Docker-Compose die Abhängigkeiten automatisch berücksichtigt. </p>
+            <p> Mit der Angabe dieser kurzen Namen kann man auch andere Docker-Compose-Befehle auf einzelne Container zuschneiden. So führt <code>$ docker-compose restart wordpress</code> einen Neustart aus. Diese kurzen Namen existieren aber nur in der Welt von Docker-Compose. Mit <code>$ docker ps</code> erfährst du, welchen Namen der Container vom Docker-Daemon bekommen hat. Das Namensschema ist immer gleich: der Name des Ordners, in dem die Compose-Datei liegt, der Name des Services, eine Ziffer, beginnend bei 1, jeweils durch einen Unterstrich getrennt. </p>
+            <p>Wenn du mit Docker-Compose experimentierst und die Volumes änderst, musst du die Container herunterfahren und Docker überzeugen, die neuen Volumes zu nutzen. Dazu hängst du den Parameter <code>--force-recreate</code> an <code>$ docker-compose up</code> an. </p>
             <p>Manchmal ist es sinnvoll, Container aus anderen Compose-Projekten verfügbar zu machen. Betreibt man zum Beispiel mehrere Webseiten auf einem Server, kann jede Seite ein eigenes Compose-Projekt bekommen. In einer eigenen Compose-Datei wird ein Webproxy angelegt, die alle eingehenden Anfragen verteilt und sich um die Beschaffung von Zertiﬁkaten beschäftigt.</p>
             <p>Du kannst den von Docker-Compose generierten Container-Namen leicht verwenden, um Container aus anderen Compose-Projekten erreichbar zu machen. Dazu reicht die Angabe von <code>external_links:</code> mit einer Liste der anzubindenden Container.</p>
             
@@ -349,9 +349,9 @@ db:
             <hr class="hr-dash my-7">
             <h3 id="swarm_u3">Einen Swarm erstellen</h3>
             <p>Mit folgendem Befehl wird der Computer als Manager eingerichtet und Docker Swarm in Betrieb genommen:</p>
-            <pre class="language-bash"><code class="language-bash">docker swarm init --advertise-addr xxx.xx.x.xx</code></pre>
+            <pre class="language-docker"><code class="language-docker">$ docker swarm init --advertise-addr xxx.xx.x.xx</code></pre>
             <p>Mit “docker swarm init” initialisiert Docker einen neuen Schwarm und macht das System zum ersten Manager. Der Befehl “--advertise-addr” ist die IP Adresse und der Port, den andere Knoten nutzen sollen um sich mit dem Manager zu verbinden. Docker gibt nach Eingabe des Befehls eine Antwort zurück, die dieser ähnelt:</p>
-            <pre class="language-bash"><code class="language-bash">$ docker swarm init --advertise-addr 172.18.0.51
+            <pre class="language-docker"><code class="language-docker">$ docker swarm init --advertise-addr 172.18.0.51
   Swarm initialized: current node (sol4lngdnaidtywpo0boipmqp) isnow a manager.
   To add a worker to this swarm, run the following command:
   docker swarm join --token SWMTKN-1-1fuq7n6tnvltfq4xcn5sp3aak1zeflmmmim1w3stgyrlkxt89z-6c2l1zfkqz3xm43tv7gl9axlg 172.18.0.51:2377
@@ -361,7 +361,7 @@ db:
             <hr class="hr-dash my-7">
             <h3 id="swarm_u4">Einem Schwarm beitreten</h3>
             <p>Mit dem folgenden Befehl tritt ein System unserem erstellen Swarm bei und wird zum Arbeiterknoten:</p>
-            <pre class="language-docker"><code class="language-docker">docker swarm join --token &lt;hier der Token&gt; xxx.xx.xxx.x:xxxx</code></pre>
+            <pre class="language-docker"><code class="language-docker">$ docker swarm join --token &lt;hier der Token&gt; xxx.xx.xxx.x:xxxx</code></pre>
             <p>Docker gibt daraufhin folgende Antwort zurück, falls die Eingabe erfolgreich war:</p>
             <pre class="language-docker"><code class="language-docker">This node joined a swarm as a worker.</code></pre>
 
@@ -369,7 +369,7 @@ db:
             <hr class="hr-dash my-7">
             <h3 id="swarm_u5">Den Schwarm nutzen</h3>
             <p>Mit dem folgenden Befehl kann man auf dem System des Managers überprüfen welche Knoten Teil des Schwarm sind und welche Rollen sie erfüllen:</p>
-            <pre class="language-docker"><code class="language-docker">docker node ls</code></pre>
+            <pre class="language-docker"><code class="language-docker">$ docker node ls</code></pre>
             <p>Eine Rückgabe könnte folgendermaßen aussehen:</p>
             <header class="header text-center py-8 shadow-none mx-0" style="background-color: #f1f6fa">
                 <div class="container">
@@ -379,7 +379,7 @@ db:
             </header>
             <p>Ist dies der Fall und die hinzugefügten Knoten werden aufgelistet, dann kann der Schwarm genutzt werden.</p>
             <p>In folgendem Beispiel starten wir drei Tasks eines kleinen Webservers.</p>
-            <pre class="language-docker"><code class="language-docker">docker service create --detach=false --name www --replicas 3 --constraint node.role==worker --publish 80:80 containous/whoami</code></pre>
+            <pre class="language-docker"><code class="language-docker">$ docker service create --detach=false --name www --replicas 3 --constraint node.role==worker --publish 80:80 containous/whoami</code></pre>
             <header class="header text-center py-8 shadow-none mx-0" style="background-color: #f1f6fa">
                 <div class="container">
                   <h1>Hier könnte Ihre Werbung stehen!</h1>
@@ -387,7 +387,7 @@ db:
                 </div>
             </header>
             <p>Mit folgendem Befehl kann überprüft werden welcher Knoten unseren Service ausführt:</p>
-            <pre class="language-docker"><code class="language-docker">docker service ps www</code></pre>
+            <pre class="language-docker"><code class="language-docker">$ docker service ps www</code></pre>
             <header class="header text-center py-8 shadow-none mx-0" style="background-color: #f1f6fa">
                 <div class="container">
                   <h1>Hier könnte Ihre Werbung stehen!</h1>
@@ -395,9 +395,9 @@ db:
                 </div>
             </header>
             <p>Der folgende Befehl ändert die Anzahl der Tasks auf eins:</p>
-            <pre class="language-docker"><code class="language-docker">docker service scale www=1</code></pre>
+            <pre class="language-docker"><code class="language-docker">$ docker service scale www=1</code></pre>
             <p>Ein bestimmter Knoten kann von seinen Aufgaben erlöst werden mit folgendem Befehl:</p>
-            <pre class="language-docker"><code class="language-docker">docker node update--availability drain swarm2</code></pre>
+            <pre class="language-docker"><code class="language-docker">$ docker node update--availability drain swarm2</code></pre>
             
 
             <hr class="hr-dash my-7">
@@ -415,13 +415,13 @@ services:
       ports:
         80:80</code></pre>
             <p>Gestartet wird die Datei mit folgendem Befehl:</p>
-            <pre class="language-docker"><code class="language-docker">docker-stack deploy -c ./datei.yml testname</code></pre>
+            <pre class="language-docker"><code class="language-docker">$ docker-stack deploy -c ./datei.yml testname</code></pre>
             <p>Es besteht die Möglichkeit Umgebungsvariablen in eine .env Datei auszulagern, was üblich ist, wenn man mehrere Container mit Docker Compose auf einmal starten möchte. Mit folgendem Befehl können diese verwertet werden:</p>
-            <pre class="language-docker"><code class="language-docker">docker-compose up</code></pre>
+            <pre class="language-docker"><code class="language-docker">$ docker-compose up</code></pre>
             <p>Der Befehl “docker create stack” ignoriert die .env Dateien und liest nur die YAML Datei ein. </p>
             <p>Container in einem Schwarm können bestimmte Dateien einbinden. Es gibt die Möglichkeiten diese Dateien als “Docker Secrets” oder als “Docker Configs” anzulegen, je nachdem wie gesichert es passieren soll. Bei “Docker Secrets” werden die Dateien verschlüsselt abgespeichert. Verwaltet und verwendet werden diese mit den uns bereits bekannten Befehlen. Die Dateien sind für alle Knoten unseres Schwarm abrufbar. Sie können während Container auf sie zugreifen nicht verändert werden. Dieses Problem umgeht man, indem man eine neue Datei anlegt und diese zur Laufzeit hinzugefügt mit “service update --secret-add”. Es besteht nicht die Möglichkeit, dass Container sie bearbeiten. Sie haben nur die Möglichkeit die Dateien zu lesen.</p>
             <pre class="language-docker"><code class="language-docker">$ docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer</code></pre>
-            <p>Nun wird auf Docker Hub nach der neuesten Version von Portainer geschaut und diese heruntergeladen. Du kannst mit <code>docker ps</code> bereits sehen, dass der Container in betrieb ist. Wie in dem Befehl oben festgelegt ist für die Portainer-Seite der Port 9000 festgesetzt, dies kannst du auch aus dem docker ps auslesen. Dort ist sogar der vollständige Port 0.0.0.0:9000 beschrieben. Wenn du diesen in die URL-Leiste deines Browsers eingibst solltest du zum ersten mal das Portainer UI erreichen. Hier wird nun ein Benutzername und ein Passwort verlangt. Nach der Registrierung solltest du auf deiner individuellen Portainer.io Seite sein. </p>
+            <p>Nun wird auf Docker Hub nach der neuesten Version von Portainer geschaut und diese heruntergeladen. Du kannst mit <code>$ docker ps</code> bereits sehen, dass der Container in betrieb ist. Wie in dem Befehl oben festgelegt ist für die Portainer-Seite der Port 9000 festgesetzt, dies kannst du auch aus dem docker ps auslesen. Dort ist sogar der vollständige Port 0.0.0.0:9000 beschrieben. Wenn du diesen in die URL-Leiste deines Browsers eingibst solltest du zum ersten mal das Portainer UI erreichen. Hier wird nun ein Benutzername und ein Passwort verlangt. Nach der Registrierung solltest du auf deiner individuellen Portainer.io Seite sein. </p>
             <p>Unter Dashboard siehst du eine Übersicht aller Dienste. Eine der nützlichsten Funktionen sollte das Verwalten von Containern oder Images sein. So bekommt man erstmals eine Übersicht der schieren Anzahl totgeglaubter, vergessener zu testzwecken angelegter images oder container.</p>
 
 
@@ -434,7 +434,7 @@ services:
 
             <!--
             |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
-            | Wer nutzt Docker?
+            | GUI in Docker
             |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
             !-->
             <h2 id="gui">Grafische Oberflächen - GUI in Docker</h2>

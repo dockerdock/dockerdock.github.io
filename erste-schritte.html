@@ -150,31 +150,32 @@
             <h3 id="setup_u1">Docker auf Linux installieren</h3>
               <h4>Möglichkeit 1 - Per Installationsskript</h4>
                 <p>Am einfachsten und sichersten kannst du Docker auf deinem Linux-Rechner per installations-script einrichten.  Lade das Installationsskript einfach mit folgendem Befehl per cURL auf deinen Rechner:</p>
-                  <kbd>$ curl -fsSL https://get.docker.com -o get-docker.sh</kbd>
+                  <pre><code class="language-bash">$ curl -fsSL https://get.docker.com -o get-docker.sh</code></pre>
                 <p>Solltest du noch kein cURL auf deinem Rechner installiert haben kannst du es per apt herunterladen. Hierfür solltest du zunächst schauen, ob dein apt-system aktuell ist und im Anschluss die Installation von cURL ausführen:</p>
-                  <kbd>$ sudo apt-get update</kbd><br>
-                  <kbd>$ sudo apt-get install curl</kbd>
+                  <pre class="line-numbers"><code class="language-bash">
+                    $ sudo apt-get update
+                    $ sudo apt-get install curl</code></pre>
                 <p>Wenn du nun per <code>$ ls</code>  dein aktuelles Verzeichnis durchsuchst solltest du das Installationsscript (get-docker.sh) entdecken. Führe dies zur Installation nun mit Root-Rechten aus:</p>
-                  <kbd>$ sudo sh get-docker.sh </kbd><br>
+                  <pre><code class="language-bash">$ sudo sh get-docker.sh</code></pre>
                 <p>Nun sollte Docker installiert sein, damit du auch als normaler User Docker benutzen kannst, füge den aktuellen Benutzer zur Gruppe Docker hinzu (anschließend einmal ab- und anmelden dass Änderungen übernommen werden):</p>
-                  <kbd>$ sudo usermod -aG docker $USER</kbd>
+                  <pre><code class="language-bash">$ sudo usermod -aG docker $USER</code></pre>
                 <p>Als letzten Schritt solltest du noch Docker Compose installieren, dies wird benötigt, um später Docker-Setups mit vielen Containern zu betreiben (Aktuelle Version beachten).</p>
-                  <kbd>$ sudo curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-compose-$(uname-s)-$(uname -m)" -o /usr/local/bin/docker-compose</kbd><br>
+                  <pre><code class="language-bash">$ sudo curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-compose-$(uname-s)-$(uname -m)" -o /usr/local/bin/docker-compose</code></pre>
                 <p>Dass Compose später auch problemlos ausführbar ist empfiehlt es sich vor erster Benutzung noch die Zugriffsrechte zu ändern:</p>
-                  <kbd>$ sudo chmod +x /usr/local/bin/docker-compose</kbd>
+                  <pre><code class="language-bash">$ sudo chmod +x /usr/local/bin/docker-compose</code></pre>
                 
             <hr class="hr-dash my-7">
               
                <h4>Möglichkeit 2 - direkte Installation per apt</h4>
                 <p>Die offizielle Docker-Dokumentation empfiehlt die Installation per apt von deren Seite. Hierfür solltest du zunächst dein apt-manager updaten:</p>
-                  <kbd>$ sudo apt-get update</kbd>
+                  <pre><code class="language-bash">$ sudo apt-get update</code></pre>
                 <p>Im Anschluss kannst du Docker und die dependencies herunterladen:</p>
-                  <kbd>$ sudo apt-get install docker-ce docker-ce-cli containerd.io</kbd>
+                  <pre><code class="language-bash">$ sudo apt-get install docker-ce docker-ce-cli containerd.io</code></pre>
                 <p>Auch hier musst du im Anschluss den normalen User mit Docker verknüpfen und mit einem Neustart bestätigen:</p>
-                  <kbd>$ sudo usermod -aG docker $USER</kbd>
+                  <pre><code class="language-bash">$ sudo usermod -aG docker $USER</code></pre>
                 <p>Nun kannst du mit einem der folgenden Befehle testen, ob alles richtig eingerichtet wurde:</p>
-                  <kbd>$ docker run hello world</kbd><br>
-                  <kbd>$ docker --version</kbd>
+                  <pre class="line-numbers"><code class="language-docker">$ docker run hello world
+$ docker --version</code></pre>
 
 
             <hr class="hr-dash my-7">
@@ -190,9 +191,9 @@
               Wird Hyper-V von deinem Prozessor allerdings unterstützt kannst du nach der Installation ohne große Einrichtung loslegen. 
               Auch Mac benötigt einige Voraussetzungen. Dein Gerät sollte mindestens aus dem Jahr 2010 sein und mindestens mit macOS yosemite laufen. 
               Als Test kannst du im Terminal einfach mal folgende Befehle zum Test ausführen:</p>
-            <kbd>$ docker --version</kbd><br>
-            <kbd>$ docker-compose --version</kbd><br>
-            <kbd>$ docker-machine --version</kbd><br>
+            <pre class="line-numbers"><code class="language-docker">$ docker --version
+$ docker-compose --version
+$ docker-machine --version</code></pre>
 
 
             <hr class="hr-dash my-7">
@@ -255,26 +256,32 @@
 
             <h3 id="helloworld_u1">So führst du ein Hello-World-Container aus</h3>
             <p>Zum besseren Einstieg in Docker gibt es ein vorgefertigtes Image mit dem Namen hello-world. Mit folgenden Befehl startest du aus dem Image heraus einen Container:</p>
-              <kbd>$ docker run hello-world</kbd>
+              <pre><code class="language-docker">$ docker run hello-world</code></pre>
             <p>Darauf hin dürfte folgende message zu sehen sein:</p>
-              <kbd>Hello from Docker!<br>
-                This message shows that your installation appears to be working correctly.<br>
-                To generate this message, Docker took the following steps:<br>
-                1. The Docker client contacted the Docker daemon.<br>
-                2. The Docker daemon pulled the "hello-world" image from the Docker Hub.<br>
-                3. The Docker daemon created a new container from that image which runs the executable that produces the output you are currently reading.<br>
-                4. The Docker daemon streamed that output to the Docker client, which sent it to your terminal.<br>
-                To try something more ambitious, you can run an Ubuntu container with:<br>
-                $ docker run -it ubuntu bash<br>
-                Share images, automate workflows, and more with a free Docker ID:<br>
-                https://hub.docker.com/<br>
-                For more examples and ideas, visit:<br>
-                https://docs.docker.com/get-started/
-              </kbd>
+              <pre class="line-numbers"><code class="language-docker">Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+  1. The Docker client contacted the Docker daemon.
+  2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+  3. The Docker daemon created a new container from that image which runs the 
+     executable that produces the output you are currently reading.
+  4. The Docker daemon streamed that output to the Docker client, which sent it 
+     to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+  $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+  https://hub.docker.com/
+
+For more examples and ideas, visit:
+  https://docs.docker.com/get-started/</code></pre>
+
             <p>Wie in der zweiten Zeile zu lesen ist, verlief die Installation von Docker problemlos. Außerdem wird beschrieben, wie das hello-world image von Docker-Hub gepullt und ausgeführt wurde. Dies ist ein Workflow, der dir auf deinem weiteren Weg mit Docker noch öfters über den Weg läuft.<br>
               Alle deine Docker-Container anzeigen kannst du mit diesem Befehl:
             </p>
-              <kbd>$ docker ps</kbd>
+              <pre><code class="language-docker">$ docker ps</code></pre>
             <p>Dein eben ausgeführtes hello-world wird nun nicht angezeigt werden, da es nach dem Ausführen direkt wieder beendet wurde.<br>
                Mit dem Befehl <code>$ docker images</code> kannst du alle auf deinem Setup existierenden images anzeigen. Dort sollte nun auch das hello-world image zu sehen sein.<br>
                Außerdem kannst du mit dem Befehl <code>$ docker ps -a</code> auch die gestoppten Container sehen. Wenn du nun noch einmal den hello-world-Container mit docker run erzeugst und dir im Anschluss alle Container anzeigen lässt siehst du, dass durch jeden docker run befehl ein neuer Container erzeugt wird, allerdings beide auf dem gleichen Image beruhen.
@@ -287,20 +294,18 @@
             <p>Wie du nun schon gelernt hast kannst du mit dem Befehl <code>$ docker run</code> Container starten. Hierbei gibt es noch einige Parameter, die diesen Schritt etwas umfänglicher machen. So kannst du beispielsweise mit <code>--name</code> deinem Container einen Namen geben. Mit dem Parameter <code>-it</code> wird ein sog. interactive terminal geöffnet.<br>
                In der Praxis kann das ganze dann folgendermaßen aussehen:
             </p>
-              <kbd>$ docker run -it --name containername ubuntu:14.04 /bin/bash</kbd>
+              <pre><code class="language-docker">$ docker run -it --name containername ubuntu:14.04 /bin/bash</code></pre>
             <p>Der Container wird gestartet. Lässt man sich nun mit ls -la die Inhalte des Containers ausgeben, in dem man sich nun befindest erkennt man, dass es sich um eine isolierte Linux-umgebung handelt (ubuntu 14.04). Durch das bash am Ende des Befehls wird definiert, dass sich das ganze in einer bash-shell öffnen soll.<br>
                Dies ist nun unser Basis-Image, das wir um ein darauf aufbauendes Image erweitern wollen. Das zweite Image soll Curl beinhalten. Dies wird wie üblich per apt installiert. Du solltest hierzu natürlich sichergehen, dass du dich noch in der Ubuntu-Umgebung befindest.<br>
                Das ganze sieht dann wie folgt aus:
             </p>
-              <kbd>
-                root@43f656d835f4:/# apt-get update<br>
-                …<br>
-                root@43f656d835f4:/# apt-get install curl
-              </kbd>
+              <pre class="line-numbers"><code class="language-docker">root@43f656d835f4:/# apt-get update
+…
+root@43f656d835f4:/# apt-get install curl</code></pre>
             <p>Nun kannst du mit exit die Shell verlassen. Im folgenden werden wir die Änderungen aus der Shell committen und daraus ein neues Image erstellen.<br>
                Dies sieht Syntax-technisch zunächst aus wie bei einem Commit bei git. Der Unterschied ist allerdings, dass bei Docker nach der Commit-message noch die ID des betreffenden Containers und der Name des neuen Images anzugeben sind:
             </p>
-              <kbd>$ docker commit -m “Commit-Message - Curl hinzugefügt” 1234567890AB curl-image</kbd>
+              <pre><code class="language-docker">$ docker commit -m “Commit-Message - Curl hinzugefügt” 1234567890AB curl-image</code></pre>
             <p>Bei erfolgreicher Eingabe sollte nun die neu erzeugte Image-ID ausgegeben werden. Außerdem kannst du mit <code>$ docker image</code> sehen, ob das Image angelegt wurde.</p>
            
             <hr class="hr-dash my-7">
@@ -311,9 +316,9 @@
             <p>Das Mappen von Daten ist eine gängige Methode für Test- oder Entwicklungsumgebungen auf lokaler Ebene. Für größere Projekte mit mehreren Setups eignet sich diese Technik nicht besonders. Eine deutlich mobilere und bessere Methode ist hier der Einsatz von Datencontainern, was dies genau ist erfährst du später.  Als ersten Schritt benötigst du eine Datei, die du mappen willst. Im Beispiel wird mit einer einfachen .txt-datei gearbeitet. Diese befindet sich auf dem Host-Rechner in einem eigenen Ordner.<br>
               Die Grundlegende Syntax zu Mappen von Dateien sieht so aus:
             </p>
-              <kbd>$ docker run -v hostverzeichnis:dockerverzeichnis</kbd>
+              <pre><code class="language-docker">$ docker run -v hostverzeichnis:dockerverzeichnis</code></pre>
             <p>Wie du siehst wird hierfür ein Container erzeugt. Um das ganze etwas anschaulicher zu machen arbeiten wir im folgenden Beispiel mit ein paar Parametern mehr.</p>
-              <kbd>$ docker run -it -v ~/webroot/lokal:/home/daten --name Datenparty ubuntu:14.04 /bin/bash</kbd>
+              <pre><code class="language-docker">$ docker run -it -v ~/webroot/lokal:/home/daten --name Datenparty ubuntu:14.04 /bin/bash</code></pre>
             <p>Wie du feststellen kannst öffnen wir das ganze wieder in einer isolierten Linux-Umgebung. So können wir feststellen, ob die Daten auch wirklich geteilt wurden. Außerdem nennen wir den Container zur besseren Übersicht um. Der Parameter <code>-v</code> leitet hier das Mapping ein. Darauf folgt der Pfad zum Ordner mit der gemappten Datei. Nach dem Doppelpunkt wird das Zielverzeichnis im Container definiert. Wichtig hierbei ist, dass der Ordner “daten” erst mit diesem Befehl erzeugt wird und die Daten aus dem im Befehl angegeben Host-Pfad in diesen verknüpft werden.</p>
             <p>Dass die Daten wirklich aktiv gemappt werden und nicht bloß in den Container kopiert werden kannst du auch testen. Wenn du die Datei lokal durch beispielsweise Umbenennen manipulierst und durch ein einfaches <code>$ ls</code> das Verzeichnis in deinem Container aktualisierst siehst du, dass die Dateien wirklich verknüpft sind. Natürlich funktioniert dies auch in die andere Richtung, also von Docker-Container auf Host-Verzeichnis.</p>
             
@@ -322,7 +327,7 @@
 
             <h3 id="helloworld_u4">Dockerfiles</h3>
             <p>Das Dockerfile ist ein wichtiges Werkzeug zum automatischen Bauen von Images. Bei einem Dockerfile handelt es sich um eine simple Textdatei mit Instruktionen und Argumenten zum Aufbau der Images. Die Syntax sieht dabei wie folgt aus:</p>
-              <kbd>INSTRUKTION Argument</kbd>
+              <pre><code class="language-docker">INSTRUKTION Argument</code></pre>
             <p>Die Instruktionen sind festgelegte Begriffe. Eine vollständige Übersicht zu allen Instruktionen findest du in der offiziellen Docker-Dokumentation. Einige Beispiel-Instruktionen sind “FROM” zum festlegen des Basis-image, mit “ENV” kann man Variablen setzen oder mit “RUN” Programme oder Dienste starten, die zum Erstellen des Images notwendig sind.</p>
             <hr class="hr-dash my-7">
           </div>
