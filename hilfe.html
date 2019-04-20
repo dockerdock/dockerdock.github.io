@@ -145,6 +145,8 @@
               <li><a href="#q04">Wie kann meine Daten aus einem Container erhalten?</a></li>
               <li><a href="#q05">Kann ich über Docker Photoshop laufen lassen?</a></li>
               <li><a href="#q06">Ich habe kein WLAN mehr, wenn ich Docker in der Deutschen Bahn nutze.</a></li>
+              <li><a href="#q07">Was ist YAML?</a></li>
+              <li><a href="#q08">Wie deinstalliert man Docker?</a></li>
             </ol>
   
   
@@ -170,6 +172,20 @@
 
             <h5 id="q06">Ich habe kein WLAN mehr, wenn ich Docker in der Deutschen Bahn nutze.</h5>
             <p>Docker nutzt den gleichen IP-Adressbereich wie die Deutsche Bahn. Deswegen blockiert Docker's Netzwerkkonfiguration den Zugang. Nach dem Beenden der Software und dessen virtuellen Netzwerke sollte wieder eine Verbindung aufgebaut werden. Alternativ empfehlen wir einen Neustart.</p>
+            <hr class="hr-dash my-7">
+
+            <h5 id="q07">Was ist YAML?</h5>
+            <p>Bevor es weiter mit Docker-Compose geht, sollten wir uns die docker-compose.yml Datei näher anschauen. YAML ist ein rekursives Akronym das für “YAML Ain’t Markup Language” steht. Dieses Dateiformat wird von vielen Applikationen verwendet, sowohl für die Konfiguration als auch für das Strukturieren von Daten.<br>
+               Die Docker-Compose-Datei wird im Yaml-Format verfasst, das jeder Texteditor erzeugen kann – mit einer IDE können Sie sich das Leben aber deutlich erleichtern.</p>
+            <h6>Text-Editor für Yaml-Datei einrichten</h6>
+            <p>In Yaml wird die Struktur der Daten über Einrückungen festgelegt, eine Unterebene wird durch zwei Leerzeichen am Zeilenanfang eingeleitet. Hat dein bevorzugter Editor eine Möglichkeit, Leerzeichen sichtbar zu machen, solltest du diese Funktion nutzen. Empfehlenswert ist die Open-Source-IDE Visual Studio Code. Mit Strg+Umschalt+P öffnest du die Befehlseingabe. Tippe dort den Begriff „Rendern“ ein und wähle „Ansicht: Rendern von Leerzeichen umschalten“. Leerzeichen sind jetzt nicht mehr unsichtbar. Wer viel mit Docker-Compose und Visual Studio Code arbeitet, kann sich zusätzlich die Erweiterung „Docker Compose“ installieren. Sie fügt eine kleine GUI für Docker-Compose in der Oberﬂäche der IDE hinzu, über die man einzelne Container inspizieren und verwalten kann.</p>
+            <hr class="hr-dash my-7">
+
+            <h5 id="q08">Wie deinstalliert man Docker?</h5>
+            <p>Wenn du noch über eine der älteren Versionen von Docker verfügst hat diese vermutlich einen anderen Namen, was das Deinstallieren erschwert. Mit folgendem Befehl werden die älteren Versionen mit eingeschlossen und sollten auch deinstalliert werden:</p>
+              <pre><code class="language-bash">$ sudo apt-get remove docker docker-engine docker.io containerd runc</code></pre>
+            <p>Ob die Installation erfolgreich verlief siehst du, wenn du den Versions-Befehl von oben ausführst. Falls der Befehl immer noch fehlerfrei reagiert bedeutet das, dass die Deinstallation nicht erfolgreich verlief. In diesem Falle kann es bedeuten, dass du die neuere Version von Docker (Docker-CE) hast. Du kannst natürlich auch die Versionen einzeln zu Deinstallation ansprechen:</p>
+              <pre><code class="language-bash">$ sudo apt-get purge docker-ce</code></pre>
             <hr class="hr-dash my-7">
 
 
