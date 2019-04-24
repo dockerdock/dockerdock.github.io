@@ -115,7 +115,6 @@
                       <a class="nav-link" href="#docker-compose_u5">Erstes Projekt</a>
                       <a class="nav-link" href="#docker-compose_u6">Ports und Netzwerke</a>
                       <a class="nav-link" href="#docker-compose_u7">restart:always</a>
-                      <a class="nav-link" href="#docker-compose_u8">Umgebungsvariablen</a>
                       <a class="nav-link" href="#docker-compose_u9">Volumes</a>
                       <a class="nav-link" href="#docker-compose_u10">Up and Down</a>
                       <a class="nav-link" href="#docker-compose_u11">Namensgebung</a>
@@ -192,15 +191,15 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-
 
             <hr class="hr-dash my-7">
             <h3 id="docker-compose_u5">Erstes Projekt</h3>
-            <p>Für das erste Compose-Projekt lege einen neuen Ordner an und erstelle hier die Datei docker-compose.yml. Der Ordnername landet später in den Containernamen, sollte also nicht zu lang sein. </p>
-            <p>Eine Compose-Datei beginnt immer mit der Angabe <code>version:</code>, die die Version der Compose-Deﬁnition angibt. Welche Version du verwenden kannst, hängt von der eingesetzten Docker-Version (nicht etwa der Docker-Compose-Version) zusammen. Wenn du jetzt einsteigst und die aktuelle Docker-Version 18.09 nutztst, kannst du direkt version: 3.7 fordern. </p>
+            <p>Für das erste Projekt lege, einen Ordner an. Der Ordnername bestimmt nachher den Namen des Containers, deswegen sollte dieser aus praktischen Gründen nicht zu lang sein. Erstelle hier die Datei docker-compose.yml. </p>
+            <p>Eine Compose-Datei beginnt immer mit der Angabe der <code>version:</code>, die die Version der Compose-Version angibt. Welche Version du nutzen kannst, hängt von deiner Docker-Version ab. Zum Zeitpunkt des Schreibens ist Docker-Version 18.09 die aktuellste. Falls du gerade einsteigst, dann hast du sehr wahrscheinlich diese Version installiert und kannst in der Yaml-Datei version 3.7 fordern. Um sicher zu gehen, kannst du mit <code>docker -v</code> deine Docker-Version herausfinden.</p>
             <p>Im nächsten Abschnitt werden unsere Container definiert. Dieser Abschnitt nennt sich <code>services</code> Es nimmt folgendes Format an: </p>
 <pre class="line-numbers language-yaml"><code>services:
 --> Containername:
 -----> Container-Optionen
 --> Containername:
 -----> Container-Optionen</code></pre>
-            <p>Als Beispiel soll ein WordPress-Blog dienen. Damit das läuft, braucht es einen Container mit WordPress und einem Webserver. Der erste Service bekommt den Namen <code>wordpress</code> und das Image <code>wordpress:latest</code>. Zum Ablegen der Daten braucht WordPress eine MySQL- oder MariaDB-Datenbank. Sie bekommt den Namen <code>db</code> und soll aus dem Image <code>mysql:5.7</code> entstehen. Die Compose-Datei beginnt mit folgenden Zeilen:</p>
+            <p>Das erste Projekt soll ein WordPress-Blog sein. Damit wir diesen erfolgreich starten können brauchen wir zwei Services: Wordpress und ein Webserver. Um herauszufinden wie der Name des benötigten Images heißt, empfiehlt es sich unter hub.docker.com danach zu suchen. Wie wir unserer Service nennen ist dem uns überlassen. Der erste Service bekommt den Namen <code>wordpress</code> und das Image <code>wordpress:latest</code>. Der Tag <code>:latest</code> gibt an, dass die aktuellste Version des Images verwendet werden soll. Zum Ablegen der Daten braucht WordPress eine MySQL- oder MariaDB-Datenbank. Sie bekommt den Namen <code>db</code> und soll aus dem Image <code>mysql:5.7</code> entstehen. Die Compose-Datei beginnt mit folgenden Zeilen:</p>
 <pre class="line-numbers language-yaml"><code>version: '3.3'
 services:
   db:
@@ -251,29 +250,12 @@ volumes:
             <h3 id="docker-compose_u7">Restart: always</h3>
             <p>Sinnvoll für Container, die ständig laufen sollen –wie eine Datenbank oder ein Webserver – ist die Anweisung: <code>restart: always</code>. Steigt das Programm wegen eines Fehlers aus, fährt Docker-Compose den Container sofort wieder hoch. </p>
             <p>Die Anweisung <code>depends_on:</code> teilt Docker-Compose mit, in welcher Reihenfolge die Container gestartet werden sollen. Da das WordPress-Blog ohne Datenbankanbindung Fehlermeldungen auswirft, soll sein Container erst anlaufen, wenn die Datenbank bereit ist. In komplexeren Setups können das auch mehrere Abhängigkeiten pro Container sein, bei Zirkelschlüssen beschwert sich Docker-Compose.</p>
-            
-            
-
-
-            <hr class="hr-dash my-7">
-            <h3 id="docker-compose_u8">Umgebungsvariablen</h3>
-            <p>Gute Docker-Container erwarten Umgebungsvariablen, um Konfigurationen zu übertragen. Welche das sind, erfährt man in der Dokumentation des Container-Abbilds. Der Datenbank-Container im WordPress-Beispiel erfährt über Umgebungsvariablen, wie die Datenbank und der Datenbankbenutzer heißen. Die gleichen Informationen bekommt der WordPress-Container. <p>
-            <p>Umgebungsvariablen musst du aber nicht in der Compose-Datei lagern. Wenn du zum Beispiel eine Test- und eine Produktivumgebung mit unterschiedlichen Datenbank-Kennwörtern starten möchtst, ohne immer die Compose-Datei zu ändern, kannst du einfach eine Datei mit dem Namen <code>.env</code> in das gleiche Verzeichnis legen und darin alle Umgebungsvariablen in einer neuen Zeile im Format <code>VARIABLE=Inhalt</code> anlegen. Ebenfalls möglich ist es, die Variable vor dem Starten der Container mit <code>export VARIABLE=Inhalt</code> festzulegen. Gibt es mehrere Angaben zur gleichen Umgebungsvariable, priorisiert Docker in folgender Reihenfolge: <p>
-            <ol>
-              <li>Compose-Datei</li>
-              <li>Festlegung mit export</li>
-              <li>.env-Datei</li>
-            </ol>
-            <p>Die Angabe in der Compose-Datei überschreibt also alle anderen Verfahren.</p>
-            
-            
-            
-
+          
 
             <hr class="hr-dash my-7">
             <h3 id="docker-compose_u9">Volumes - Laufwerke anhängen</h3>
-            <p>Ein Docker-Container wird bei jedem Start wieder zurückgesetzt – alle Daten, die im Betrieb angefallen sind, werden wieder gelöscht. Das ist für den Datenbank-Container, der den WordPress-Blog enthält, nicht sinnvoll. Und auch der Ordner wordpress-content im WordPress-Container sollte einen Neustart überdauern. Damit die Daten erhalten bleiben, muss man sie auf das Dateisystem des Hosts legen. </p>
-            <p>Docker kennt dafür zwei Verfahren: benannte Volumes und eine Ordnerzuordnung. Ein benanntes Volume muss im Abschnitt des Containers mit einem Pfad im Container verbunden werden, getrennt mit einem Doppelpunkt. Außerdem muss es im Abschnitt <code>volumes:</code> auf der obersten Ebene angelegt werden. Das WordPress-Beispiel sähe mit benannten Volumes wie folgt aus:</p>
+            <p>Wird ein Docker-Container gestoppt, gehen alle gesammelten Daten des Prozesses verloren. Somit werden auch die Daten in unserem Datenbank-Container zurückgesetzt. Dies ist für den WordPress-Blog nicht sinnvoll. Damit die Daten einen Container-Neustart überdauern kann man die Daten auf dem Host mit sogenannten Volumes ablegen. Diese Volumes, auch Laufwerke genannt, sind Verzeichnisse auf dem Host Rechner auf den ein Container zugreifen kann.</p>
+            <p>Ein benanntes Volume muss im Abschnitt des Containers mit einem Pfad im Container verbunden werden, getrennt mit einem Doppelpunkt. Außerdem muss es im Abschnitt <code>volumes:</code> auf der obersten Ebene angelegt werden. Ein benanntes Volume kann man wie folgt der Yaml-Datei hinzufügen:</p>
             <pre class="line-numbers language-yaml"><code>services:
 db:
   image: mysql:5.7
