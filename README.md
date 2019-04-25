@@ -4,7 +4,7 @@ This repository is supposed to be a German introduction website to Docker softwa
 ### Was ist Docker?
 Basic explanation of the software, benefits and downsides and popular users.
 ### Erste Schritte
-Installing of Docker and first container.
+Installation of Docker and first container.
 ### Weiterführendes
 Further topics with Docker like Docker compose or Docker Swarm.
 ### Hilfe
