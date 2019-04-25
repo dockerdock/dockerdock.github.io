@@ -89,7 +89,7 @@
     <header class="header" style="background-color: #f1f6fa">
       <div class="container">
         <h1>Anker lichten - Was ist Docker?</h1>
-        <p class="lead">Auf dieser Seite geht behandeln wir das Thema Docker von Anfang an. Es wird erklärt was Docker ist, warum man es nutzen sollte und wer Docker alles nutzt.</p>
+        <p class="lead">Wenn du dich fragst was Docker eigentlich ist, dann bist du hier genau richtig. Zudem wird erklärt wofür es verwendet wird und wer Docker alles nutzt.</p>
       </div>
     </header><!-- /.header -->
 
@@ -143,7 +143,7 @@
             <hr class="hr-dash my-7">
             <p>Ein Beispiel: Wenn auf einem Mac wird mit einer bestimmten Version von PHP Software entwickelt wird, kann es sein, dass diese auf einem Linux Server nicht gleichermaßen läuft. Selbst wenn beide Systeme mit derselben Version von PHP arbeiten, unterscheiden sich beispielsweise Konfigurationen. Dies kann Probleme verursachen und die Behebung dieser Barrieren eine Menge Arbeitsaufwand bedeuten. Docker wird zunehmend populär, weil es für diese Problematik eine Lösung findet.</p>
             <br>
-            <p>Docker ist ein Open Source-Projekt zur Automatisierung der Bereitstellung von Anwendungen, die in der Cloud oder lokal ausgeführt werden können. Dazu nutzt Docker sogenannte Container und grenzt sich so auch gegenüber virtuellen Maschinen ab. Docker-Container enthalten eine Software mit all ihren Abhängigkeiten. Dadurch braucht ein Container weniger Ressourcen als virtuelle Maschinen und ermöglicht das plattformunabhängige Arbeiten. Docker sorgt dafür, dass sich die entwickelte Software auf jedem Gerät exakt gleich verhält. Diese und viele weitere nützliche Eigenschaften, tragen zu dem Erfolg von Docker bei und sorgen dafür, dass die Nutzeranzahl über die letzten Jahre stetig gestiegen ist - Tendenz steigend.</p>
+            <p>Docker ist ein Open Source-Projekt zur automatisierten Bereitstellung von Anwendungen, die in der Cloud oder lokal ausgeführt werden können. Dazu nutzt Docker sogenannte Container und grenzt sich hiermit unteranderem gegenüber virtuellen Maschinen ab. Docker-Container enthalten eine Software mit all ihren Abhängigkeiten. Dadurch braucht ein Container weniger Ressourcen als eine virtuelle Maschine und ermöglicht das plattformunabhängige Arbeiten. Docker sorgt dafür, dass sich die entwickelte Software auf jedem Gerät exakt gleich verhält. Diese und viele weitere nützliche Eigenschaften, tragen zu dem Erfolg von Docker bei und sorgen dafür, dass die Nutzeranzahl über die letzten Jahre stetig gestiegen ist.</p>
 
 
             <hr class="hr-dash my-7">
@@ -155,7 +155,7 @@
             |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
             !-->
             <h2 id="reason">Warum Docker?</h2>
-            <p class="lead-2">Hier erfährst du wozu man Docker verwenden sollte und wo die Vor- und Nachteile der Containerisierungstechnologie liegen. Es soll auch klar gemacht werden, dass Docker sich grundsätzlich von Virtuellen Maschinen unterscheidet.</p>
+            <p class="lead-2">Hier erfährst du wozu man Docker verwenden sollte und welche Vor- und Nachteile die Containerisierungstechnologie bietet. Es wird auch deutlich, inwiefern sich Docker von virtuellen Maschinen unterscheidet.</p>
 
 
             <hr class="hr-dash my-7">
@@ -163,7 +163,7 @@
 
             <h3 id="reason_u1">Vorteile</h3>
               <h4>Container-Technik</h4>
-               <p>Docker stellt für die jeweiligen Container und Images immer die passende Entwicklungsumgebung her. So werden Frameworks und Libraries geladen, aber unnötige Elemente ignoriert. Durch die Benutzung des Host OS-Kernels fällt auch der Hypervisor weg und wird durch die Docker Engine ersetzt. So können Ressourcen gespart werden, da der Server besser genutzt wird.</p>
+               <p>Docker stellt für die jeweiligen Container und Images immer die passende Entwicklungsumgebung her. So werden Frameworks und Libraries geladen, aber nicht benötigte Elemente ignoriert. Durch die Benutzung des Host OS-Kernels fällt auch der Hypervisor weg und wird durch die Docker Engine ersetzt. So können Ressourcen gespart werden, da der Server effizienter genutzt wird.</p>
                <h4>Docker vs Virtuelle Maschine</h4>
                <img src="assets/img/dockervsvm.jpeg" class="img-fluid" alt="Responsive image">
 
@@ -171,10 +171,10 @@
                <p>Container sind in der Regel nicht größer als 100 MB. Virtuelle Maschinen benötigen durch das eigene Betriebssystem mehrere Gigabyte. So kann ein Server viel mehr Container hosten als VM. Dadurch werden Ressourcen gespart.</p>
 
               <h4>Boot-Zeit</h4>
-               <p>Da die Container kein eigenes OS besitzen und recht klein sind benötigen sie nur wenige Augenblicke zum Start, während VM einige Minuten brauchen, bis sie betriebsbereit sind. Dadurch könnte man theoretisch Container beenden um Strom zu sparen und bei Bedarf wieder schnell booten.</p>
+               <p>Da die Container kein eigenes OS besitzen und recht klein sind benötigen sie nur wenige Augenblicke zum Start, während VM einige Minuten brauchen bis sie betriebsbereit sind. Dadurch könnte man theoretisch Container beenden um Strom zu sparen und bei Bedarf wieder schnell booten.</p>
 
               <h4>Modularisierung</h4>
-               <p>Statt eine komplette und komplexe Applikation in einem Container zu betreiben arbeiten verschiedene Modul-Container zusammen. Dieser sogenannte Mircoservice-Ansatz ermöglicht die Aufteilung von bspw. einer Datenbank. So können auch einfach Komponenten geändert oder ausgetauscht werden ohne die gesamte Applikation umzuschreiben.</p>
+               <p>Statt eine komplette und komplexe Applikation in einem Container zu betreiben, arbeiten verschiedene Modul-Container zusammen. Dieser sogenannte Mircoservice-Ansatz ermöglicht die Aufteilung von bspw. einer Datenbank. So können auch einfach Komponenten geändert oder ausgetauscht werden, ohne die gesamte Applikation umzuschreiben.</p>
 
               <h4>Versionierung</h4>
                 <p>Mit Docker können verschiedene Versionen eines Containers erstellt, untersucht und wiederhergestellt werden. Außerdem werden Komponenten aus den vorhergehenden Schichten wiederverwendet, umso den Container schlank zu halten.</p>
@@ -185,19 +185,19 @@
 
             <h3 id="reason_u2">Nachteile</h3>
               <h4>“Hauptsache Container” (Hype)</h4>
-                <p>Anstatt die angesprochene Modularisierung von Docker zu nutzen wird eine gesamte Applikation in einen Container gepackt. In diesem Fall könnte man genauso eine VM verwenden.</p>
+                <p>Anstatt die angesprochene Modularisierung von Docker zu nutzen, wird eine gesamte Applikation in einen Container gepackt. In diesem Fall wird nicht das Potenzial von Docker genutzt.</p>
               
               <h4>GUI</h4>
-                <p>Docker ist für Server konzipiert. Deshalb ist die Unterstützung für Applikationen mit einer GUI wie bspw. X11 video forwarding sehr schlecht. Anwendungen wie Photoshop können nicht mit Docker umgesetzt werden.</p>
+                <p>Docker ist für Server konzipiert, deshalb ist die Unterstützung für Applikationen mit einer GUI wie bspw. X11 video forwarding sehr schlecht. Anwendungen wie Photoshop können nicht mit Docker genutzt werden.</p>
               
               <h4>Root Rechte</h4>
-                <p>Die Engine von Docker, der Docker Daemon, benötigt für den Einsatz root Rechte. Das ist im Prinzip das gleiche wie Administratorrechte auf einem Windows Systemen. Da der Daemon als root läuft, hat jeder Benutzer, der Container starten kann, im Prinzip root-Rechte auf dem System. So kann auf Verzeichnisse zugegriffen werden, in dem bspw. Passwörter gespeichert werden.</p>
+                <p>Die Engine von Docker, der Docker Daemon, benötigt für den Einsatz root Rechte. Das ist im Prinzip das gleiche wie Administratorrechte auf einem Windows System. Da der Daemon als root läuft, hat jeder Benutzer, der Container starten kann, im Prinzip root-Rechte auf dem System. So kann auf Verzeichnisse zugegriffen werden, in dem bspw. Passwörter gespeichert werden.</p>
               
               <h4>Sicherheit</h4>
-                <p>Da Docker eine Entwicklungsumgebung für Software bereitstellt sollte man denken, dass alle Risiken behoben sind, jedoch darf der Sicherheitsaspekt nicht vernachlässigt werden. Da Anwendungen direkt auf den Host OS-Kernel zugreifen muss können leichter Sicherheitslücken auftreten als bspw. bei einer VM. Deshalb ist ein gewisses Grundvertrauen in die Entwickler einer Applikation nötig. Docker ist außerdem keine Wunderwaffe für die Sicherheit des Gesamtsystems, sondern nur eine zusätzliche Ebene.</p>
+                <p>Da Docker Open Source ist und eine Menge Entwickler auch an den verschiedenen Images arbeiten, erwartet man, dass es kaum Risiken gibt. Da Anwendungen direkt auf den Host OS-Kernel zugreifen, können jedoch leichter Sicherheitslücken auftreten als bspw. bei einer VM. Deshalb ist ein gewisses Grundvertrauen in die Entwickler eines Images nötig. Teilweise werden Images von Docker auf Docker Hub verifiziert. Diese können bedenkenlos genutzt werden.</p>
 
               <h4>Docker ersetzt nicht VMs</h4>
-                <p>Auch wenn Docker immer populärer wird werden Virtuelle Maschinen nicht gleich in großem Maß aussterben. Experten sehen die Zukunft von zwei komplementären Technologien. Docker ist leichter und agiler, als Anwendungen auf VMs. Lorenzo Fontana drückt es so aus: „Container sind Prozesse, VMs sind Server.“</p>
+                <p>Auch wenn Docker immer populärer wird werden Virtuelle Maschinen nicht gleich in großem Maß aussterben. Experten sehen die Zukunft in beiden Technologien, die sich teilweise ergänzen. Docker ist leichter und agiler zu verwenden, als Anwendungen auf VMs. Lorenzo Fontana drückt es so aus: „Container sind Prozesse, VMs sind Server.“</p>
 
 
             <hr class="hr-dash my-7">
@@ -214,13 +214,13 @@
 
 
             <hr class="hr-dash my-7">
-            <p>Docker ist ein Erfolgsmodell. Dafür sprechen auch die offiziellen Daten der Website des Unternehmens. Über 80 Milliarden Container wurden bisher heruntergeladen. Des Weiteren findet man über 2 Millionen Anwendungen in Docker Hub. Doch nicht nur die über 100.000 Third-Party-Projekte nutzen die Container Software, Docker kann auch über 650 kommerzielle Kunden vorweisen. Dazu zählen auch namhafte Kunden wie beispielsweise PayPal, Visa oder GSK.</p><br>
-            <p>Die Popularität von Docker lässt sich am besten mit dem folgenden Diagramm zeigen. Man sieht das Interesse von Docker und der beliebtesten virtuellen Maschine (Virtual Box) im Verlauf der letzten Jahre. Docker, das erst 2013 veröffentlicht wurde, schaffte es innerhalb von nur drei Jahren das Interesse auf das gleiche Level anzuheben wie virtuelle Maschinen.</p><br>
+            <p>Docker ist sehr vielversprechend und der Erfolg unbestreitbar. Dafür sprechen die offiziellen Daten der Website des Open Source Projekts. Über 80 Milliarden Container wurden bisher heruntergeladen und heute befinden sich über 2 Millionen Images im Docker Hub. Doch nicht nur die über 100.000 Third-Party-Projekte nutzen die Container Software, Docker hat über 650 kommerzielle Kunden. Dazu zählen auch namenhafte Kunden wie PayPal, Visa oder GSK.</p><br>
+            <p>Die Popularität von Docker lässt sich am besten mit dem folgenden Diagramm zeigen. Man sieht die Suchhäufigkeit des jeweiligen Begriffs "Docker" und "virtuelle Maschine (Virtual Box)" im Verlauf der letzten Jahre. Docker, das erst 2013 veröffentlicht wurde, schaffte es innerhalb von nur drei Jahren auf ein ähnlich hohes Suchinteresse wie die virtuelle Maschinen.</p><br>
             <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/1754_RC01/embed_loader.js"></script>
             <script type="text/javascript">
               trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"/m/0wkcjgj","geo":"","time":"2010-01-01 2019-04-15"},{"keyword":"/m/027q8xw","geo":"","time":"2010-01-01 2019-04-15"}],"category":0,"property":""}, {"exploreQuery":"date=2010-01-01%202019-04-15&q=%2Fm%2F0wkcjgj,%2Fm%2F027q8xw","guestPath":"https://trends.google.de:443/trends/embed/"});
             </script>      
-            <p>Ein wichtiger Faktor dafür ist auch die Docker-Community. Mit 32.000 Sternen auf GitHub und über 200 Meetups hat Docker eine solide Basis an Beitragenden. Jährlich findet auch aus diesem Grund eine DockerCon statt, auf der Neuerungen vorgestellt werden und Workshops stattfinden. Bei Docker handelt es also längst nicht mehr um ein Nischenprodukt, sondern um eine Lösung, die lange Zeit gesucht wurde. Das zeigt auch die Zahl der Docker Job Angebote, die seit Veröffentlichung um 77.000% gestiegen ist.</p>          
+            <p>Ein wichtiger Faktor dafür ist auch die Docker-Community. Mit 32.000 Sternen auf GitHub und über 200 Meetups hat Docker eine solide Basis an Beitragenden. Jährlich findet auch aus diesem Grund eine DockerCon statt, auf der Neuerungen vorgestellt werden und Workshops stattfinden. Bei Docker handelt es sich also längst nicht mehr um ein Nischenprodukt, sondern um eine Lösung, die lange Zeit gesucht wurde. Das zeigt auch die Zahl der Docker Job Angebote, die seit Veröffentlichung um 77.000% gestiegen sind.</p>          
             <hr class="hr-dash my-7">
           </div>
 
