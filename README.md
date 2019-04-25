@@ -1,5 +1,5 @@
 # Docker Doc(k) :whale:
-This repository is supposed to be a German introduction website to Docker software. It was created as a student work of the Baden-Wuerttemberg Cooperative State University Mosbach under direction of Prof. Dr. Arnulf Mester.
+This repository is a German introduction website to Docker software. It was created as a student work of the Baden-Wuerttemberg Cooperative State University Mosbach under direction of Prof. Dr. Arnulf Mester.
 ## Content :book:
 ### Was ist Docker?
 Basic explanation of the software, benefits and downsides and popular users.
