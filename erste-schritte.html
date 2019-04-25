@@ -90,7 +90,7 @@
     <header class="header" style="background-color: #f1f6fa">
       <div class="container">
         <h1>Kurs setzen - Erste Schritte</h1>
-        <p class="lead">Lead Text</p>
+        <p class="lead">Nach dem theoretischen Einstieg geht es auf dieser Seite nun praktisch los. Nach der Einrichtung von Docker können schon die ersten Container ausgeführt werden.</p>
       </div>
     </header><!-- /.header -->
 
@@ -235,13 +235,6 @@ $ docker-machine --version</code></pre>
             <p>Kurz gesagt: Docker-Container sind laufende Prozesse, die auf dem Abbild von Docker-Images basieren. Im nächsten Kapitel wird das erste Image ausgeführt.</p>
 
 
-            <header class="header text-center py-8 shadow-none mx-0" style="background-color: #f1f6fa">
-              <div class="container">
-                <h1>Hier könnte Ihr Video stehen!</h1>
-                <p class="lead mb-0">@Pascal hier bitte das zweite Video einfügen.</p>
-              </div>
-            </header>
-
 
             <hr class="hr-dash my-7">
 
@@ -311,8 +304,13 @@ For more examples and ideas, visit:
             <hr class="hr-dash my-7">
 
 
+             <!--
+            |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+            | Eigenes Image erstellen
+            |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+            !-->
             <h2 id="image_erstellen">Eigenes Image erstellen</h2>
-            <p class="lead-2">Lerinhalte einfügen</p>
+            <p class="lead-2">In diesem Abschnitt erfährst du wie du ein eigenes Docker-Images erstellst.</p>
 
             <hr class="hr-dash my-7">
 
@@ -320,7 +318,7 @@ For more examples and ideas, visit:
                In der Praxis kann das ganze dann folgendermaßen aussehen:
             </p>
               <pre><code class="language-docker">$ docker run -it --name containername ubuntu:14.04 /bin/bash</code></pre>
-            <p>Der Container wird gestartet. Lässt man sich nun mit ls -la die Inhalte des Containers ausgeben, in dem man sich nun befindest erkennt man, dass es sich um eine isolierte Linux-umgebung handelt (ubuntu 14.04). Durch das bash am Ende des Befehls wird definiert, dass sich das ganze in einer bash-shell öffnen soll.<br>
+            <p>Der Container wird gestartet. Lässt man sich nun mit <code>ls -la</code> die Inhalte des Containers ausgeben, in dem man sich nun befindest erkennt man, dass es sich um eine isolierte Linux-umgebung handelt (ubuntu 14.04). Durch das bash am Ende des Befehls wird definiert, dass sich das ganze in einer bash-shell öffnen soll.<br>
                Dies ist nun unser Basis-Image, das wir um ein darauf aufbauendes Image erweitern wollen. Das zweite Image soll Curl beinhalten. Dies wird wie üblich per apt installiert. Du solltest hierzu natürlich sichergehen, dass du dich noch in der Ubuntu-Umgebung befindest.<br>
                Das ganze sieht dann wie folgt aus:
             </p>
@@ -335,8 +333,14 @@ root@43f656d835f4:/# apt-get install curl</code></pre>
            
             <hr class="hr-dash my-7">
 
+             
+            <!--
+            |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+            | Bind-Mounts
+            |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+            !-->
             <h2 id="bind_mounts">Bind-Mounts</h2>
-            <p class="lead-2">Eines der wichtigsten features in Docker ist natürlich auch das Teilen von Daten. Den Anfang macht hier das Mappen von Daten auf Lokaler Ebene. So kann man Daten vom Host-Rechner ganz einfach in das Docker-Setup teilen oder anders herum. Wie das genau aussieht lernst du im folgenden Kapitel.</p>
+            <p class="lead-2">Eines der wichtigsten Features in Docker ist natürlich auch das Teilen von Daten. Den Anfang macht hier das Mappen von Daten auf Lokaler Ebene. So kann man Daten vom Host-Rechner ganz einfach in das Docker-Setup teilen oder anders herum. Wie das genau aussieht lernst du im folgenden Kapitel.</p>
 
             <hr class="hr-dash my-7">
 
@@ -352,8 +356,14 @@ root@43f656d835f4:/# apt-get install curl</code></pre>
             
             <hr class="hr-dash my-7">
 
+            
+            <!--
+            |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+            | Docker Volumes
+            |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+            !-->
             <h2 id="volumes">Docker Volumes</h2>
-            <p class="lead-2">Lerinhalt einfügen</p>
+            <p class="lead-2">In diesem Abscnitt lernst du was Volumes sind und wie diese erstellt, befüllt und entfernt werden. </p>
 
             <hr class="hr-dash my-7">
             <p>Docker Volumes ist der präferierte Weg für persistente Daten die von Docker Containern generiert und verwendet werden. Während Bind-Mounts (das Mappen von Dateien) von der Verzeichnisstruktur der Host-Maschine abhängig sind, werden die Volumes vollständig von Docker verwaltet. Volumes haben mehrere Vorteile gegenüber Bind-Mounts.</p>
@@ -406,10 +416,15 @@ root@43f656d835f4:/# apt-get install curl</code></pre>
             <h3 id="volumes_u4">Entfernen aller Volumes</h3>
             <p>So entfernst du alle nicht verwendeten Volumes und geben Speicherplatz frei:</p>
             <pre><code class="language-docker">$ docker volume prune</code></pre>
+            <hr class="hr-dash my-7">
 
 
 
-
+            <!--
+            |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+            | Dockerfile
+            |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+            !-->
             <h2 id="dockerfile">Dockerfile</h2>
             <p class="lead-2">In diesem Abschnitt lernst du warum das Dockerfile gebraucht wird und welche gängigen Befehle du kennen solltest. Außerdem erfährst du, wie dein erstes Image anhand des Dockerfiles konfigurieren, bauen und ausführen kannst.</p>
 
