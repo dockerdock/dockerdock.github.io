@@ -52,6 +52,9 @@
                   <a class="nav-link" href="erste-schritte.html#setup">Docker einrichten</a>
                   <a class="nav-link" href="erste-schritte.html#images">Images und Container</a>
                   <a class="nav-link" href="erste-schritte.html#helloworld">Hello World</a>
+                  <a class="nav-link" href="erste-schritte.html#bind_mounts">Bind Mounts</a>
+                  <a class="nav-link" href="erste-schritte.html#volumes">Volumes</a>
+                  <a class="nav-link" href="erste-schritte.html#helloworld">Dockerfiles</a>
                 </li>
               </ul>
             </li>
@@ -110,8 +113,8 @@
                   <li class="nav-item">
                     <a class="nav-link" href="#setup">Docker einrichten <i class="nav-angle"></i></a>
                     <div class="nav">
-                      <a class="nav-link" href="#setup_u1">Docker auf Linux installieren</a>
-                      <a class="nav-link" href="#setup_u2">Docker auf Windows/Mac installieren</a>
+                      <a class="nav-link" href="#setup_u1">Linux Installation</a>
+                      <a class="nav-link" href="#setup_u2">Windows/Mac Installation</a>
                     </div>
                   </li>
 
@@ -122,11 +125,25 @@
                   <li class="nav-item">
                     <a class="nav-link" href="#helloworld">Hello World <i class="nav-angle"></i></a>
                     <div class="nav">
-                      <a class="nav-link" href="#helloworld_u1">Der Hello-World-Container</a>
-                      <a class="nav-link" href="#helloworld_u2">Eigenes Images erstellen</a>
-                      <a class="nav-link" href="#helloworld_u3">Dateien mappen</a>
-                      <a class="nav-link" href="#helloworld_u4">Dockerfiles</a>
+                      <a class="nav-link" href="#helloworld_u1">Hello World</a>
+                      <a class="nav-link" href="#helloworld_u2">Image erstellen</a>
+                      <a class="nav-link" href="#helloworld_u3">Datein Mappen</a>
+                      <a class="nav-link" href="#helloworld_u3">Volumes</a>
+                      <a class="nav-link" href="#helloworld_u4">Dockerfile</a>
                     </div>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="#image_erstellen">Image erstellen</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#bind_mounts">Bind-Mounts</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#volumes">Volumes</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#dockerfile">Dockerfile</a>
                   </li>
                 </ul>
               </div>
@@ -237,7 +254,8 @@ $ docker-machine --version</code></pre>
               <ul class="lead-2">
                 <li>Das Ausführen eines Hello-World-Containers</li>
                 <li>Das Erstellen eines eigenen Images</li>
-                <li>Das Mappen von Dateien</li>
+                <li>Dateien Mappen</li>
+                <li>Docker Volumes</li>
                 <li>Der Aufbau eines Dockerfile</li>
                 <li>Das Arbeiten mit Datencontainern</li>
               </ul>
@@ -290,7 +308,11 @@ For more examples and ideas, visit:
             <hr class="hr-dash my-7">
 
 
-            <h3 id="helloworld_u2">So erstellst du dein eigenes Image</h3>
+            <h2 id="image_erstellen">Eigenes Image erstellen</h2>
+            <p class="lead-2">Lerinhalte einfügen</p>
+
+            <hr class="hr-dash my-7">
+
             <p>Wie du nun schon gelernt hast kannst du mit dem Befehl <code>$ docker run</code> Container starten. Hierbei gibt es noch einige Parameter, die diesen Schritt etwas umfänglicher machen. So kannst du beispielsweise mit <code>--name</code> deinem Container einen Namen geben. Mit dem Parameter <code>-it</code> wird ein sog. interactive terminal geöffnet.<br>
                In der Praxis kann das ganze dann folgendermaßen aussehen:
             </p>
@@ -310,8 +332,27 @@ root@43f656d835f4:/# apt-get install curl</code></pre>
            
             <hr class="hr-dash my-7">
 
+            <h2 id="bind_mounts">Bind-Mounts</h2>
+            <p class="lead-2">Eines der wichtigsten features in Docker ist natürlich auch das Teilen von Daten. Den Anfang macht hier das Mappen von Daten auf Lokaler Ebene. So kann man Daten vom Host-Rechner ganz einfach in das Docker-Setup teilen oder anders herum. Wie das genau aussieht lernst du im folgenden Kapitel.</p>
 
-            <h3 id="helloworld_u3">Dateien mappen</h3>
+            <hr class="hr-dash my-7">
+
+            <p>Eines der wichtigsten features in Docker ist natürlich auch das Teilen von Daten. Den Anfang macht hier das Mappen von Daten auf Lokaler Ebene. So kann man Daten vom Host-Rechner ganz einfach in das Docker-Setup teilen oder anders herum. Wie das genau aussieht lernst du im folgenden Kapitel.</p>
+            <p>Das Mappen von Daten ist eine gängige Methode für Test- oder Entwicklungsumgebungen auf lokaler Ebene. Dieser Vorgang wird im englischen auch "Bind-Mounts" genannt. Für größere Projekte mit mehreren Setups eignet sich diese Technik nicht besonders. Eine deutlich mobilere und bessere Methode ist hier der Einsatz von Volumes, was dies genau ist erfährst du später.  Als ersten Schritt benötigst du eine Datei, die du mappen willst. Im Beispiel wird mit einer einfachen .txt-datei gearbeitet. Diese befindet sich auf dem Host-Rechner in einem eigenen Ordner.<br>
+              Die Grundlegende Syntax zu Mappen von Dateien sieht so aus:
+            </p>
+              <pre><code class="language-docker">$ docker run -v hostverzeichnis:dockerverzeichnis</code></pre>
+            <p>Wie du siehst wird hierfür ein Container erzeugt. Um das ganze etwas anschaulicher zu machen arbeiten wir im folgenden Beispiel mit ein paar Parametern mehr.</p>
+              <pre><code class="language-docker">$ docker run -it -v ~/webroot/lokal:/home/daten --name Datenparty ubuntu:14.04 /bin/bash</code></pre>
+            <p>Wie du feststellen kannst öffnen wir das ganze wieder in einer isolierten Linux-Umgebung. So können wir feststellen, ob die Daten auch wirklich geteilt wurden. Außerdem nennen wir den Container zur besseren Übersicht um. Der Parameter <code>-v</code> leitet hier das Mapping ein. Darauf folgt der Pfad zum Ordner mit der gemappten Datei. Nach dem Doppelpunkt wird das Zielverzeichnis im Container definiert. Wichtig hierbei ist, dass der Ordner “daten” erst mit diesem Befehl erzeugt wird und die Daten aus dem im Befehl angegeben Host-Pfad in diesen verknüpft werden.</p>
+            <p>Dass die Daten wirklich aktiv gemappt werden und nicht bloß in den Container kopiert werden kannst du auch testen. Wenn du die Datei lokal durch beispielsweise Umbenennen manipulierst und durch ein einfaches <code>$ ls</code> das Verzeichnis in deinem Container aktualisierst siehst du, dass die Dateien wirklich verknüpft sind. Natürlich funktioniert dies auch in die andere Richtung, also von Docker-Container auf Host-Verzeichnis.</p>
+            
+            <hr class="hr-dash my-7">
+
+            <h2 id="volumes">Docker Volumes</h2>
+            <p class="lead-2">Lerinhalt einfügen</p>
+
+            <hr class="hr-dash my-7">
             <p>Eines der wichtigsten features in Docker ist natürlich auch das Teilen von Daten. Den Anfang macht hier das Mappen von Daten auf Lokaler Ebene. So kann man Daten vom Host-Rechner ganz einfach in das Docker-Setup teilen oder anders herum. Wie das genau aussieht lernst du im folgenden Kapitel.</p>
             <p>Das Mappen von Daten ist eine gängige Methode für Test- oder Entwicklungsumgebungen auf lokaler Ebene. Für größere Projekte mit mehreren Setups eignet sich diese Technik nicht besonders. Eine deutlich mobilere und bessere Methode ist hier der Einsatz von Datencontainern, was dies genau ist erfährst du später.  Als ersten Schritt benötigst du eine Datei, die du mappen willst. Im Beispiel wird mit einer einfachen .txt-datei gearbeitet. Diese befindet sich auf dem Host-Rechner in einem eigenen Ordner.<br>
               Die Grundlegende Syntax zu Mappen von Dateien sieht so aus:
@@ -325,7 +366,10 @@ root@43f656d835f4:/# apt-get install curl</code></pre>
             <hr class="hr-dash my-7">
 
 
-            <h3 id="helloworld_u4">Dockerfiles</h3>
+            <h2 id="dockerfile">Dockerfile</h2>
+            <p class="lead-2">Lerinhalt einfügen</p>
+
+            <hr class="hr-dash my-7">
             <p>Das Dockerfile ist ein wichtiges Werkzeug zum automatischen Bauen von Images. Bei einem Dockerfile handelt es sich um eine simple Textdatei mit Instruktionen und Argumenten zum Aufbau der Images. Die Syntax sieht dabei wie folgt aus:</p>
               <pre><code class="language-docker">INSTRUKTION Argument</code></pre>
             <p>Die Instruktionen sind festgelegte Begriffe. Eine vollständige Übersicht zu allen Instruktionen findest du in der offiziellen Docker-Dokumentation. Einige Beispiel-Instruktionen sind “FROM” zum festlegen des Basis-image, mit “ENV” kann man Variablen setzen oder mit “RUN” Programme oder Dienste starten, die zum Erstellen des Images notwendig sind.</p>
