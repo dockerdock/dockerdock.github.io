@@ -198,6 +198,10 @@ $ docker --version</code></pre>
 
 
             <h3 id="setup_u2">Docker auf Windows/Mac installieren</h3>
+            <div class="video-wrapper ratio-16x9">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/AzXzZqIgmkE?controls=0&showinfo=0&rel=0" frameborder="0" modestbranding="1" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture " allowfullscreen></iframe>
+              </div>
+              
             <p>Für Windows und Mac stellt Docker eine Desktop-Version mit verschiedenen Vorteilen bereit. So ist Docker Compose bereits in der Installation inbegriffen, Updates müssen nicht von Hand installiert werden und die Installation ist im Allgemeinen deutlich einfacher.
               Für die Installation ist eine Anmeldung bei Docker Hub erforderlich, dies ist allerdings nicht schlimm, da man für den späteren Arbeitsverlauf mit Docker sowieso ein Account benötigt.
               Unter folgendem <a href="https://www.docker.com/products/docker-desktop" target="blank">Link</a> kannst du Docker Desktop für Mac oder Windows herunterladen.</p>
@@ -360,12 +364,7 @@ root@43f656d835f4:/# apt-get install curl</code></pre>
               <li>Du kannst Volumes mithilfe von Docker-CLI-Befehlen oder der Docker-API verwalten.</li>
               <li>Volumes funktionieren sowohl auf Linux- als auch auf Windows-Containern.</li>
             </ul>
-            <header class="header text-center py-8 shadow-none mx-0" style="background-color: #f1f6fa">
-              <div class="container">
-                <h1>Hier könnte Ihre Grafik stehen!</h1>
-                <p class="lead mb-0">Ole, bitte hier noch die Grafik einfügen :)</p>
-              </div>
-            </header>
+            <img src="assets/img/volumes.jpeg" class="img-fluid" alt="Responsive image">
             <p>Wenn dein Container nicht persistente Daten generiert, solltest du die Verwendung eines tmpfs-Mount in Betracht ziehen, um zu vermeiden, dass die Daten dauerhaft irgendwo gespeichert werden, und um die Leistung des Containers zu erhöhen. Weiteres über tmpfs-Mounts findest du unter docs.docker.com/storage/tmpfs/.</p>
 
             <h3 id="volumes_u1">Volume erstellen und verwalten</h3>
