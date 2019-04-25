@@ -117,22 +117,15 @@
                       <a class="nav-link" href="#setup_u2">Windows/Mac Installation</a>
                     </div>
                   </li>
-
+                  
                   <li class="nav-item">
                     <a class="nav-link" href="#images">Images und Container</a>
                   </li>
-
+                  
                   <li class="nav-item">
-                    <a class="nav-link" href="#helloworld">Hello World <i class="nav-angle"></i></a>
-                    <div class="nav">
-                      <a class="nav-link" href="#helloworld_u1">Hello World</a>
-                      <a class="nav-link" href="#helloworld_u2">Image erstellen</a>
-                      <a class="nav-link" href="#helloworld_u3">Datein Mappen</a>
-                      <a class="nav-link" href="#helloworld_u3">Volumes</a>
-                      <a class="nav-link" href="#helloworld_u4">Dockerfile</a>
-                    </div>
+                    <a class="nav-link" href="#helloworld">Hello World</a>
                   </li>
-
+                  
                   <li class="nav-item">
                     <a class="nav-link" href="#image_erstellen">Image erstellen</a>
                   </li>
@@ -140,7 +133,13 @@
                     <a class="nav-link" href="#bind_mounts">Bind-Mounts</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#volumes">Volumes</a>
+                    <a class="nav-link" href="#volumes">Volumes<i class="nav-angle"></i></a>
+                    <div class="nav">
+                      <a class="nav-link" href="#volumes_u1">Erstellen und verwalten</a>
+                      <a class="nav-link" href="#volumes_u2">Mit Container starten</a>
+                      <a class="nav-link" href="#volumes_u3">Volume befüllen</a>
+                      <a class="nav-link" href="#volumes_u4">Volumes entfernen</a>
+                    </div>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#dockerfile">Dockerfile</a>
@@ -353,17 +352,63 @@ root@43f656d835f4:/# apt-get install curl</code></pre>
             <p class="lead-2">Lerinhalt einfügen</p>
 
             <hr class="hr-dash my-7">
-            <p>Eines der wichtigsten features in Docker ist natürlich auch das Teilen von Daten. Den Anfang macht hier das Mappen von Daten auf Lokaler Ebene. So kann man Daten vom Host-Rechner ganz einfach in das Docker-Setup teilen oder anders herum. Wie das genau aussieht lernst du im folgenden Kapitel.</p>
-            <p>Das Mappen von Daten ist eine gängige Methode für Test- oder Entwicklungsumgebungen auf lokaler Ebene. Für größere Projekte mit mehreren Setups eignet sich diese Technik nicht besonders. Eine deutlich mobilere und bessere Methode ist hier der Einsatz von Datencontainern, was dies genau ist erfährst du später.  Als ersten Schritt benötigst du eine Datei, die du mappen willst. Im Beispiel wird mit einer einfachen .txt-datei gearbeitet. Diese befindet sich auf dem Host-Rechner in einem eigenen Ordner.<br>
-              Die Grundlegende Syntax zu Mappen von Dateien sieht so aus:
-            </p>
-              <pre><code class="language-docker">$ docker run -v hostverzeichnis:dockerverzeichnis</code></pre>
-            <p>Wie du siehst wird hierfür ein Container erzeugt. Um das ganze etwas anschaulicher zu machen arbeiten wir im folgenden Beispiel mit ein paar Parametern mehr.</p>
-              <pre><code class="language-docker">$ docker run -it -v ~/webroot/lokal:/home/daten --name Datenparty ubuntu:14.04 /bin/bash</code></pre>
-            <p>Wie du feststellen kannst öffnen wir das ganze wieder in einer isolierten Linux-Umgebung. So können wir feststellen, ob die Daten auch wirklich geteilt wurden. Außerdem nennen wir den Container zur besseren Übersicht um. Der Parameter <code>-v</code> leitet hier das Mapping ein. Darauf folgt der Pfad zum Ordner mit der gemappten Datei. Nach dem Doppelpunkt wird das Zielverzeichnis im Container definiert. Wichtig hierbei ist, dass der Ordner “daten” erst mit diesem Befehl erzeugt wird und die Daten aus dem im Befehl angegeben Host-Pfad in diesen verknüpft werden.</p>
-            <p>Dass die Daten wirklich aktiv gemappt werden und nicht bloß in den Container kopiert werden kannst du auch testen. Wenn du die Datei lokal durch beispielsweise Umbenennen manipulierst und durch ein einfaches <code>$ ls</code> das Verzeichnis in deinem Container aktualisierst siehst du, dass die Dateien wirklich verknüpft sind. Natürlich funktioniert dies auch in die andere Richtung, also von Docker-Container auf Host-Verzeichnis.</p>
-            
+            <p>Docker Volumes ist der präferierte Weg für persistente Daten die von Docker Containern generiert und verwendet werden. Während Bind-Mounts (das Mappen von Dateien) von der Verzeichnisstruktur der Host-Maschine abhängig sind, werden die Volumes vollständig von Docker verwaltet. Volumes haben mehrere Vorteile gegenüber Bind-Mounts.</p>
+            <ul>
+              <li>Volumes können sicherer von mehreren Containern gemeinsam genutzt werden.</li>
+              <li>Volumes sind einfacher zu sichern oder zu migrieren als Bind-Mounts.</li>
+              <li>Für neue Volumes kann der Inhalt vorab mit einem Container gefüllt werden.</li>
+              <li>Du kannst Volumes mithilfe von Docker-CLI-Befehlen oder der Docker-API verwalten.</li>
+              <li>Volumes funktionieren sowohl auf Linux- als auch auf Windows-Containern.</li>
+            </ul>
+            <header class="header text-center py-8 shadow-none mx-0" style="background-color: #f1f6fa">
+              <div class="container">
+                <h1>Hier könnte Ihre Grafik stehen!</h1>
+                <p class="lead mb-0">Ole, bitte hier noch die Grafik einfügen :)</p>
+              </div>
+            </header>
+            <p>Wenn dein Container nicht persistente Daten generiert, solltest du die Verwendung eines tmpfs-Mount in Betracht ziehen, um zu vermeiden, dass die Daten dauerhaft irgendwo gespeichert werden, und um die Leistung des Containers zu erhöhen. Weiteres über tmpfs-Mounts findest du unter docs.docker.com/storage/tmpfs/.</p>
+
+            <h3 id="volumes_u1">Volume erstellen und verwalten</h3>
+            <p>Im Gegensatz zu einem Bind-Mount kannst du Volumes außerhalb des Bereichs eines beliebigen Containers erstellen und verwalten. Hier ist eine Auflistung den gängigsten Befehlen:</p>
+            <p>Erstellen eines Volumes:</p>
+            <pre><code class="language-docker">$ docker volume create mein-volume</code></pre>
+            <p>Volumes auflisten:</p>
+            <pre><code class="language-docker">$ docker volume ls</code></pre>
+            <p>Volume inspizieren:</p>
+            <pre><code class="line-numbers language-bash">$ docker volume inspect my-vol
+[
+    {
+        "Driver": "local",
+        "Labels": {},
+        "Mountpoint": "/var/lib/docker/volumes/my-vol/_data",
+        "Name": "my-vol",
+        "Options": {},
+        "Scope": "local"
+    }
+]</code></pre>
+            <p>Ein Volume entfernen:</p>
+            <pre><code class="language-docker">$ docker volume rm my-vol</code></pre>
             <hr class="hr-dash my-7">
+            
+            <h3 id="volumes_u2">Volume mit Container starten</h3>
+            <p>Wenn du einen Container mit einem noch nicht vorhandenen Volume starten, erstellt Docker das Volume für dich. Das folgende Beispiel lädt das Volume <code>html </code> in das Verzeichnis <code>/app/</code> des Containers. <code>vol-nginx</code> ist der Name des Containers.</p>
+            <pre><code class="language-docker">$ docker run -d --name vol-nginx -v mein_vol:/app  nginx:latest</code></pre>
+            <p>Um den Container zu stoppen und zu entfernen sind zwei Kommandos nötig. Zu beachten ist auch, dass das entfernen von einem Volume ein weiterer separater Schritt ist.</p>
+            <pre><code class="language-docker">$ docker container stop vol-nginx</code></pre>
+            <pre><code class="language-docker">$ docker container rm vol-nginx</code></pre>
+            <pre><code class="language-docker">$ docker volume rm vol-nginx</code></pre>
+            <hr class="hr-dash my-7">
+            <h3 id="volumes_u3">Ein Container benutzen um ein Volume zu füllen</h3>
+            <p>Wenn Sie einen Container starten, der ein neues Volume erstellt, wie oben beschrieben, und der Container Dateien oder Verzeichnisse in dem Verzeichnis hat, das gemountet werden sollen (wie <code>/app/</code> oben), wird der Inhalt des Verzeichnisses in das Volume kopiert. Der Container stellt dann das Volume bereit und verwendet es, und andere Container, die das Volume verwenden, haben auch Zugriff auf den vorgefüllten Inhalt. </p>
+            <p>Um dies zu veranschaulichen, startet dieses Beispiel einen nginx Container und füllt das neue Volume <code>html</code> mit dem Inhalt des Containerverzeichnisses <code>/usr/share/nginx/html</code>, in dem Nginx seinen Standard-HTML-Inhalt speichert.</p>
+            <pre><code class="language-docker">$ docker run -d --name=mein-nginx -v html:/usr/share/nginx/html nginx:latest</code></pre>
+            <p>Um nach dem Ausführen des Beispiels den Container und das Volume zu löschen, kann man wieder dieselben Befehle ausführen wie im oberen Abschnitt.</p>
+            <hr class="hr-dash my-7">
+            <h3 id="volumes_u4">Entfernen aller Volumes</h3>
+            <p>So entfernst du alle nicht verwendeten Volumes und geben Speicherplatz frei:</p>
+            <pre><code class="language-docker">$ docker volume prune</code></pre>
+
+
 
 
             <h2 id="dockerfile">Dockerfile</h2>
