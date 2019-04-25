@@ -356,29 +356,29 @@ db:
             <p>Mit dem folgenden Befehl kann man auf dem System des Managers überprüfen welche Knoten Teil des Schwarm sind und welche Rollen sie erfüllen:</p>
             <pre class="language-docker"><code class="language-docker">$ docker node ls</code></pre>
             <p>Eine Rückgabe könnte folgendermaßen aussehen:</p>
-            <header class="header text-center py-8 shadow-none mx-0" style="background-color: #f1f6fa">
-                <div class="container">
-                  <h1>Hier könnte Ihre Werbung stehen!</h1>
-                  <p class="lead mb-0">Ole, bitte hier noch ein Screenshot einfügen :)</p>
-                </div>
-            </header>
+            <pre><code class="language-bash">
+              ID                            HOSTNAME            STATUS       AVAILABILITY        MANAGER STATUS      ENGINE VERSION
+              r3761tjtwpv81kbltx7tib9a4 *   node1               Ready        Active              Leader              18.09.4
+              r1i697r13mva25675tksrvakn     node2               Ready        Active                                  18.09.4
+              ki37sv9l6u2yurex7yjsrwksa     node3               Ready        Active                                  18.09.4</code></pre>
             <p>Ist dies der Fall und die hinzugefügten Knoten werden aufgelistet, dann kann der Schwarm genutzt werden.</p>
             <p>In folgendem Beispiel starten wir drei Tasks eines kleinen Webservers.</p>
-            <pre class="language-docker"><code class="language-docker">$ docker service create --detach=false --name www --replicas 3 --constraint node.role==worker --publish 80:80 containous/whoami</code></pre>
-            <header class="header text-center py-8 shadow-none mx-0" style="background-color: #f1f6fa">
-                <div class="container">
-                  <h1>Hier könnte Ihre Werbung stehen!</h1>
-                  <p class="lead mb-0">Ole, bitte hier noch Screenshot Nr. 2 einfügen :)</p>
-                </div>
-            </header>
+            <pre class="language-bash"><code class="language-bash">$ docker service create --detach=false --name www --replicas 3 --constraint node.role==worker --publish 80:80 containous/whoami
+rcx8etkzkk03wb4gu2aoh27tf
+overall progress: 3 out of 3 tasks
+1/3: running
+2/3: running
+3/3: running
+verify: Service converged
+            </code></pre>
+            
             <p>Mit folgendem Befehl kann überprüft werden welcher Knoten unseren Service ausführt:</p>
-            <pre class="language-docker"><code class="language-docker">$ docker service ps www</code></pre>
-            <header class="header text-center py-8 shadow-none mx-0" style="background-color: #f1f6fa">
-                <div class="container">
-                  <h1>Hier könnte Ihre Werbung stehen!</h1>
-                  <p class="lead mb-0">Ole, bitte hier noch Screenshot Nr. 3 einfügen :)</p>
-                </div>
-            </header>
+            <pre><code class="language-bash">$ docker service ps www
+ID                  NAME                IMAGE                      NODE                DESIRED STATE       CURRENT STATE           ERROR               PORTS
+wfb9pbqu23l1        www.1               containous/whoami:latest   node2               Running             Running 6 minutes ago
+pdfe8yrrwy0w        www.2               containous/whoami:latest   node3               Running             Running 6 minutes ago
+xs8c7w6s5nr3        www.3               containous/whoami:latest   node3               Running             Running 6 minutes ago</code></pre>
+            
             <p>Der folgende Befehl ändert die Anzahl der Tasks auf eins:</p>
             <pre class="language-docker"><code class="language-docker">$ docker service scale www=1</code></pre>
             <p>Ein bestimmter Knoten kann von seinen Aufgaben erlöst werden mit folgendem Befehl:</p>

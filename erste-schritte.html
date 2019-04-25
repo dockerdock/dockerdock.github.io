@@ -304,8 +304,13 @@ For more examples and ideas, visit:
             <hr class="hr-dash my-7">
 
 
+             <!--
+            |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+            | Eigenes Image erstellen
+            |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+            !-->
             <h2 id="image_erstellen">Eigenes Image erstellen</h2>
-            <p class="lead-2">Lerinhalte einfügen</p>
+            <p class="lead-2">In diesem Abschnitt erfährst du wie du ein eigenes Docker-Images erstellst.</p>
 
             <hr class="hr-dash my-7">
 
@@ -313,7 +318,7 @@ For more examples and ideas, visit:
                In der Praxis kann das ganze dann folgendermaßen aussehen:
             </p>
               <pre><code class="language-docker">$ docker run -it --name containername ubuntu:14.04 /bin/bash</code></pre>
-            <p>Der Container wird gestartet. Lässt man sich nun mit ls -la die Inhalte des Containers ausgeben, in dem man sich nun befindest erkennt man, dass es sich um eine isolierte Linux-umgebung handelt (ubuntu 14.04). Durch das bash am Ende des Befehls wird definiert, dass sich das ganze in einer bash-shell öffnen soll.<br>
+            <p>Der Container wird gestartet. Lässt man sich nun mit <code>ls -la</code> die Inhalte des Containers ausgeben, in dem man sich nun befindest erkennt man, dass es sich um eine isolierte Linux-umgebung handelt (ubuntu 14.04). Durch das bash am Ende des Befehls wird definiert, dass sich das ganze in einer bash-shell öffnen soll.<br>
                Dies ist nun unser Basis-Image, das wir um ein darauf aufbauendes Image erweitern wollen. Das zweite Image soll Curl beinhalten. Dies wird wie üblich per apt installiert. Du solltest hierzu natürlich sichergehen, dass du dich noch in der Ubuntu-Umgebung befindest.<br>
                Das ganze sieht dann wie folgt aus:
             </p>
@@ -328,8 +333,14 @@ root@43f656d835f4:/# apt-get install curl</code></pre>
            
             <hr class="hr-dash my-7">
 
+             
+            <!--
+            |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+            | Bind-Mounts
+            |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+            !-->
             <h2 id="bind_mounts">Bind-Mounts</h2>
-            <p class="lead-2">Eines der wichtigsten features in Docker ist natürlich auch das Teilen von Daten. Den Anfang macht hier das Mappen von Daten auf Lokaler Ebene. So kann man Daten vom Host-Rechner ganz einfach in das Docker-Setup teilen oder anders herum. Wie das genau aussieht lernst du im folgenden Kapitel.</p>
+            <p class="lead-2">Eines der wichtigsten Features in Docker ist natürlich auch das Teilen von Daten. Den Anfang macht hier das Mappen von Daten auf Lokaler Ebene. So kann man Daten vom Host-Rechner ganz einfach in das Docker-Setup teilen oder anders herum. Wie das genau aussieht lernst du im folgenden Kapitel.</p>
 
             <hr class="hr-dash my-7">
 
@@ -345,8 +356,14 @@ root@43f656d835f4:/# apt-get install curl</code></pre>
             
             <hr class="hr-dash my-7">
 
+            
+            <!--
+            |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+            | Docker Volumes
+            |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+            !-->
             <h2 id="volumes">Docker Volumes</h2>
-            <p class="lead-2">Lerinhalt einfügen</p>
+            <p class="lead-2">In diesem Abscnitt lernst du was Volumes sind und wie diese erstellt, befüllt und entfernt werden. </p>
 
             <hr class="hr-dash my-7">
             <p>Docker Volumes ist der präferierte Weg für persistente Daten die von Docker Containern generiert und verwendet werden. Während Bind-Mounts (das Mappen von Dateien) von der Verzeichnisstruktur der Host-Maschine abhängig sind, werden die Volumes vollständig von Docker verwaltet. Volumes haben mehrere Vorteile gegenüber Bind-Mounts.</p>
@@ -399,17 +416,49 @@ root@43f656d835f4:/# apt-get install curl</code></pre>
             <h3 id="volumes_u4">Entfernen aller Volumes</h3>
             <p>So entfernst du alle nicht verwendeten Volumes und geben Speicherplatz frei:</p>
             <pre><code class="language-docker">$ docker volume prune</code></pre>
+            <hr class="hr-dash my-7">
 
 
 
-
+            <!--
+            |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+            | Dockerfile
+            |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+            !-->
             <h2 id="dockerfile">Dockerfile</h2>
-            <p class="lead-2">Lerinhalt einfügen</p>
+            <p class="lead-2">In diesem Abschnitt lernst du warum das Dockerfile gebraucht wird und welche gängigen Befehle du kennen solltest. Außerdem erfährst du, wie dein erstes Image anhand des Dockerfiles konfigurieren, bauen und ausführen kannst.</p>
 
             <hr class="hr-dash my-7">
             <p>Das Dockerfile ist ein wichtiges Werkzeug zum automatischen Bauen von Images. Bei einem Dockerfile handelt es sich um eine simple Textdatei mit Instruktionen und Argumenten zum Aufbau der Images. Die Syntax sieht dabei wie folgt aus:</p>
               <pre><code class="language-docker">INSTRUKTION Argument</code></pre>
-            <p>Die Instruktionen sind festgelegte Begriffe. Eine vollständige Übersicht zu allen Instruktionen findest du in der offiziellen Docker-Dokumentation. Einige Beispiel-Instruktionen sind “FROM” zum festlegen des Basis-image, mit “ENV” kann man Variablen setzen oder mit “RUN” Programme oder Dienste starten, die zum Erstellen des Images notwendig sind.</p>
+            <p>Die Instruktionen sind festgelegte Begriffe. Eine vollständige Übersicht zu allen Instruktionen findest du in der offiziellen Docker-Dokumentation. Einige Beispiel-Instruktionen sind <code>FROM</code> zum festlegen des Basis-image, mit <code>ENV</code> kann man Variablen setzen oder mit <code>RUN</code> Programme oder Dienste starten, die zum Erstellen des Images notwendig sind.</p>
+            <p>Am häufigsten generierst du vermutlich Images aus bereits bestehenden Dockerfiles beispielsweise aus dem Dockerhub. Dies geschieht mit folgendem Befehl:</p>
+            <pre><code class="language-docker">$ docker build -f /dockerfile .</code></pre>
+            <p>Der Parameter <code>-f</code> und der Dahinter gestellte Pfad geben den Ort des Dockerfiles an. Der Punkt am Ende des Befehls sorgt dafür, dass das Image im gleichen Verzeichnis wie das Dockerfile erzeugt wird</p>
+            <p>Eine weitergeführte Alternative ist der Parameter <code>-t</code>. Mit diesem kann man das daraus erstellte Image beliebig benennen.</p>
+            <p>In der Praxis sieht das folgendermaßen aus:</p>
+            <pre><code class="language-docker">$ docker build -t repository/tag  .</code></pre>
+            <p>Um besser zu verstehen wie der Workflow rund um so ein Dockerfile abläuft wird im Folgenden erklärt, wie ein einfaches Dockerfile geschrieben und ausgeführt wird.</p>
+            <p>Gehe zunächst in ein beliebiges Verzeichnis auf deinem Computer. Dort wird nun das Dockerfile erstellt und mit einem beliebigen Editor (in diesem Fall vim) geöffnet:</p>
+            <pre><code class="language-docker">$ touch Dockerfile</code></pre>
+            <pre><code class="language-docker">$ vim Dockerfile</code></pre>
+            <p>Nun wird das Dockerfile wie oben beschrieben mit Instructions und Argumenten gefüllt. Da Docker das File von Oben nach Unten abarbeitet ist es wichtig die einzelnen Instruktionen in der richtigen Reihenfolge zu setzen: </p>
+            <pre class="line-numbers"><code class="language-docker">FROM ubuntu:14.04
+MAINTAINER Max Mustermann <max.muster@mail.de>
+RUN apt-get update
+RUN apt-get install -y curl apache2
+ENV MyVar="Irgendein Wert"
+WORKDIR /home
+VOLUME ["/var/www"]
+ENTRYPOINT ["top"]</code></pre>
+            <p>Natürlich gibt es durch die große Anzahl der Instruktionen auch viele Wege so ein Dockerfile aufzubauen. In unserem Beispiel wird zunächst das Basisimage mit <code>FROM</code> definiert. als zweiten Schritt wird der Urheber des Images genannt, dies ist nur konventionsbedingt, allerdings keine Pflicht. Mit <code>RUN</code> werden nun einige Dienste gestartet und mit ENV eine Umgebungsvariable initialisiert, hier könnte man beispielsweise direkt einen Port angeben.</p>
+            <p>Mit <code>WORKDIR</code> wird das Arbeitsverzeichnis gesetzt und alle darauf folgenden Befehle von dort aus ausgeführt. Mit <code>VOLUME</code> kann man Verzeichnisse definieren, die nach Außen zur Verfügung gestellt werden. Am Ende setzen wir mit <code>ENTRYPOINT</code> fest, was beim Starten des Containers zuerst ausgeführt wird, in unserem Beispiel starten wir das Programm “top”. </p>
+            <p>Wenn das Dokument beschrieben und gespeichert ist kann man es direkt mit dem bereits kennengelernten Befehl ausführen:</p>
+            <pre><code class="language-docker">$ docker build -t repository/image .</code></pre>
+            <p>Wenn alles gut läuft wird nun der build-prozess sichtbar und man erkennt, wie da Dockerfile schritt für schritt abgearbeitet wird.</p>
+            <p>Mit <code>$ docker images</code> sollte jetzt auch das neu angelegte image angezeigt werden. </p>
+            <p>Im nächten Schritt kannst du mit <code>$ docker run -it repository/image</code> den Container starten. Hier zeigen sich die Vorteile des Dockerfiles, da du ansonsten nichts angeben musst. Wie im File beschrieben wird nun das Programm top gestartet. Top zeigt alle laufende Prozesse und einige Metadaten an. In unserem Beispiel allerdings nur einen laufenden Prozess, und zwar der Container, in dem es ausgeführt wird. </p>
+            
             <hr class="hr-dash my-7">
           </div>
 
