@@ -1,6 +1,27 @@
 
-// Write your custom style. Feel free to split your code to several files
-body {
-  //color: blue;
-}
+.btn-info {
+  color: #fff;
+  background-color: #0075b4;
+  border-color: #0075b4; }
+  .btn-info:hover {
+    color: #fff;
+    background-color: #006aa3;
+    border-color: #006aa3;
+    -webkit-box-shadow: 0 1px 10px rgba(0, 117, 180, 0.4);
+            box-shadow: 0 1px 10px rgba(0, 117, 180, 0.4); }
+  .btn-info:focus, .btn-info.focus {
+    color: #fff;
+    -webkit-box-shadow: 0 0 0 0rem rgba(0, 117, 180, 0.4);
+            box-shadow: 0 0 0 0rem rgba(0, 117, 180, 0.4); }
+  .btn-info.disabled, .btn-info:disabled {
+    background-color: #0075b4;
+    border-color: #0075b4; }
+  .btn-info:not([disabled]):not(.disabled):active, .btn-info:not([disabled]):not(.disabled).active,
+  .show > .btn-info.dropdown-toggle {
+    color: #fff;
+    background-color: #0075b4;
+    border-color: #0075b4;
+    -webkit-box-shadow: 0 0 0 0rem rgba(0, 117, 180, 0.4);
+            box-shadow: 0 0 0 0rem rgba(0, 117, 180, 0.4); }
+
 
