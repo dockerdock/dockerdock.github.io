@@ -436,6 +436,7 @@ root@43f656d835f4:/# apt-get install curl</code></pre>
             <p>Das Dockerfile ist ein wichtiges Werkzeug zum automatischen Bauen von Images. Bei einem Dockerfile handelt es sich um eine simple Textdatei mit Instruktionen und Argumenten zum Aufbau der Images. Die Syntax sieht dabei wie folgt aus:</p>
               <pre><code class="language-docker">INSTRUKTION Argument</code></pre>
             <p>Die Instruktionen sind festgelegte Begriffe. Eine vollständige Übersicht zu allen Instruktionen findest du in der offiziellen Docker-Dokumentation. Einige Beispiel-Instruktionen sind <code>FROM</code> zum festlegen des Basis-image, mit <code>ENV</code> kann man Variablen setzen oder mit <code>RUN</code> Programme oder Dienste starten, die zum Erstellen des Images notwendig sind.</p>
+            <img src="assets/img/dockerfile.jpeg" class="img-fluid" alt="Responsive image">
             <p>Am häufigsten generierst du vermutlich Images aus bereits bestehenden Dockerfiles beispielsweise aus dem Dockerhub. Dies geschieht mit folgendem Befehl:</p>
             <pre><code class="language-docker">$ docker build -f /dockerfile .</code></pre>
             <p>Der Parameter <code>-f</code> und der Dahinter gestellte Pfad geben den Ort des Dockerfiles an. Der Punkt am Ende des Befehls sorgt dafür, dass das Image im gleichen Verzeichnis wie das Dockerfile erzeugt wird</p>
@@ -461,7 +462,9 @@ ENTRYPOINT ["top"]</code></pre>
             <pre><code class="language-docker">$ docker build -t repository/image .</code></pre>
             <p>Wenn alles gut läuft wird nun der build-prozess sichtbar und man erkennt, wie da Dockerfile schritt für schritt abgearbeitet wird.</p>
             <p>Mit <code>$ docker images</code> sollte jetzt auch das neu angelegte image angezeigt werden. </p>
-            <p>Im nächten Schritt kannst du mit <code>$ docker run -it repository/image</code> den Container starten. Hier zeigen sich die Vorteile des Dockerfiles, da du ansonsten nichts angeben musst. Wie im File beschrieben wird nun das Programm top gestartet. Top zeigt alle laufende Prozesse und einige Metadaten an. In unserem Beispiel allerdings nur einen laufenden Prozess, und zwar der Container, in dem es ausgeführt wird. </p>
+            <p>Im nächten Schritt kannst du mit <code>docker run</code> den Container starten:
+            <pre><code class="language-docker">$ docker build -t repository/image .</code></pre>
+            <p> Hier zeigen sich die Vorteile des Dockerfiles, da du ansonsten nichts angeben musst. Wie im File beschrieben wird nun das Programm top gestartet. Top zeigt alle laufende Prozesse und einige Metadaten an. In unserem Beispiel allerdings nur einen laufenden Prozess, und zwar der Container, in dem es ausgeführt wird.</p>
             
             <hr class="hr-dash my-7">
           </div>
