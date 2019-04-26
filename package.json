@@ -1,7 +1,7 @@
 {
-  "name": "TheDocs",
+  "name": "Docker Doc(k)",
   "version": "2.0.2",
-  "description": "Online documentation template",
+  "description": "Docker Doc(k), Docker einfach und verständlich auf Deutsch",
   "private": true,
   "keywords": [
     "documentation",
@@ -9,8 +9,8 @@
     "docs",
     "manual"
   ],
-  "author": "TheThemeio",
-  "homepage": "http://thetheme.io/thedocs",
+  "author": "Felix Keller, Nils Eisenhauer, Ole Mantei, Pascal Walter",
+  "homepage": "https://dockerdock.github.io/",
   "license": "ISC",
   "devDependencies": {
     "ajv": "^6.6.2",
