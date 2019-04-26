@@ -1,7 +1,7 @@
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
-/******/ console.log("test33")
+/******/
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
 /******/
@@ -81,10 +81,1942 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/assets/js/src/page.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./assets/js/src/page.js");
 /******/ })
 /************************************************************************/
 /******/ ({
+
+/***/ "./assets/js/src/config.js":
+/*!*********************************!*\
+  !*** ./assets/js/src/config.js ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+$(function() {
+
+
+  /*
+  |--------------------------------------------------------------------------
+  | Configure your website
+  |--------------------------------------------------------------------------
+  |
+  | We provided several configuration variables for your ease of development.
+  | Read their complete description and modify them based on your need.
+  |
+  */
+
+  page.config({
+
+    /*
+    |--------------------------------------------------------------------------
+    | Google Analytics Tracking
+    |--------------------------------------------------------------------------
+    |
+    | If you want to use Google Analytics, you can specify your Tracking ID in
+    | this option. Your key would be a value like: UA-12345678-9
+    |
+    */
+
+    googleAnalyticsId: '',
+
+    /*
+    |--------------------------------------------------------------------------
+    | Smooth Scroll
+    |--------------------------------------------------------------------------
+    |
+    | If true, the browser's scrollbar moves smoothly on scroll and gives your
+    | visitor a better experience for scrolling.
+    |
+    */
+
+    smoothScroll: true,
+
+  });
+
+});
+
+
+/***/ }),
+
+/***/ "./assets/js/src/page.js":
+/*!*******************************!*\
+  !*** ./assets/js/src/page.js ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+/*
+|--------------------------------------------------------------------------
+| Core
+|--------------------------------------------------------------------------
+|
+| The start point of the project. Include jQuery, Bootstrap and required
+| plugins and define page object. This file is required.
+|
+*/
+__webpack_require__(/*! ../../plugin/thedocs/js/loaders/core.js */ "./assets/plugin/thedocs/js/loaders/core.js");
+
+
+/*
+|--------------------------------------------------------------------------
+| Partials
+|--------------------------------------------------------------------------
+|
+| Split the application code to several files. This file is required.
+|
+*/
+__webpack_require__(/*! ../../plugin/thedocs/js/loaders/partials.js */ "./assets/plugin/thedocs/js/loaders/partials.js");
+
+
+/*
+|--------------------------------------------------------------------------
+| Configure
+|--------------------------------------------------------------------------
+|
+| Modify some variables to personalize your project. This file is required.
+|
+*/
+__webpack_require__(/*! ./config.js */ "./assets/js/src/config.js");
+
+
+/*
+|--------------------------------------------------------------------------
+| Custom script
+|--------------------------------------------------------------------------
+|
+| Write your custom JavaScrip code. Feel free to split your code to several
+| files and import the other files here or inside script.js.
+|
+*/
+__webpack_require__(/*! ./script.js */ "./assets/js/src/script.js");
+
+
+/***/ }),
+
+/***/ "./assets/js/src/script.js":
+/*!*********************************!*\
+  !*** ./assets/js/src/script.js ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+/*
+|--------------------------------------------------------------------------
+| Custom Javascript code
+|--------------------------------------------------------------------------
+|
+| Now that you configured your website, you can write additional Javascript
+| code inside the following function. You might want to add more plugins and
+| initialize them in this file.
+|
+*/
+
+$(function() {
+
+
+
+});
+
+
+/***/ }),
+
+/***/ "./assets/plugin/thedocs/js/loaders/core.js":
+/*!**************************************************!*\
+  !*** ./assets/plugin/thedocs/js/loaders/core.js ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+/*
+|--------------------------------------------------------------------------
+| Main
+|--------------------------------------------------------------------------
+|
+| The start point of the project. Include jQuery, Bootstrap and required
+| plugins and define page object. These files are mandatory.
+|
+*/
+__webpack_require__(/*! ../partials/main.js */ "./assets/plugin/thedocs/js/partials/main.js");
+
+__webpack_require__(/*! ../vendors/jquery.js */ "./assets/plugin/thedocs/js/vendors/jquery.js");
+__webpack_require__(/*! ../vendors/bootstrap.js */ "./assets/plugin/thedocs/js/vendors/bootstrap.js");
+
+
+/***/ }),
+
+/***/ "./assets/plugin/thedocs/js/loaders/partials.js":
+/*!******************************************************!*\
+  !*** ./assets/plugin/thedocs/js/loaders/partials.js ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+/*
+|--------------------------------------------------------------------------
+| Partials
+|--------------------------------------------------------------------------
+|
+| Split the application code to several files. Almost all of the following
+| files are required for the application to work properly.
+|
+*/
+__webpack_require__(/*! ../partials/config.js */ "./assets/plugin/thedocs/js/partials/config.js");
+__webpack_require__(/*! ../partials/bind.js */ "./assets/plugin/thedocs/js/partials/bind.js");
+__webpack_require__(/*! ../partials/drawer.js */ "./assets/plugin/thedocs/js/partials/drawer.js");
+__webpack_require__(/*! ../partials/file-tree.js */ "./assets/plugin/thedocs/js/partials/file-tree.js");
+__webpack_require__(/*! ../partials/font.js */ "./assets/plugin/thedocs/js/partials/font.js");
+__webpack_require__(/*! ../partials/form.js */ "./assets/plugin/thedocs/js/partials/form.js");
+__webpack_require__(/*! ../partials/mailer.js */ "./assets/plugin/thedocs/js/partials/mailer.js");
+__webpack_require__(/*! ../partials/map.js */ "./assets/plugin/thedocs/js/partials/map.js");
+__webpack_require__(/*! ../partials/modal.js */ "./assets/plugin/thedocs/js/partials/modal.js");
+__webpack_require__(/*! ../partials/navbar.js */ "./assets/plugin/thedocs/js/partials/navbar.js");
+__webpack_require__(/*! ../partials/offcanvas.js */ "./assets/plugin/thedocs/js/partials/offcanvas.js");
+__webpack_require__(/*! ../partials/popup.js */ "./assets/plugin/thedocs/js/partials/popup.js");
+__webpack_require__(/*! ../partials/recaptcha.js */ "./assets/plugin/thedocs/js/partials/recaptcha.js");
+__webpack_require__(/*! ../partials/scroll.js */ "./assets/plugin/thedocs/js/partials/scroll.js");
+__webpack_require__(/*! ../partials/section.js */ "./assets/plugin/thedocs/js/partials/section.js");
+__webpack_require__(/*! ../partials/sidebar.js */ "./assets/plugin/thedocs/js/partials/sidebar.js");
+__webpack_require__(/*! ../partials/video.js */ "./assets/plugin/thedocs/js/partials/video.js");
+__webpack_require__(/*! ../partials/util.js */ "./assets/plugin/thedocs/js/partials/util.js");
+
+
+/***/ }),
+
+/***/ "./assets/plugin/thedocs/js/partials/bind.js":
+/*!***************************************************!*\
+  !*** ./assets/plugin/thedocs/js/partials/bind.js ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+/**
+ * Bind input changes to data attributes
+ */
+
++function($){
+
+  page.initBind = function() {
+
+    $('[data-bind-radio]').each(function(){
+      var e     = $(this),
+          radio = e.data('bind-radio'),
+          value = $('input[name="'+ radio +'"]:checked').val();
+      e.text( e.dataAttr(value, e.text()) );
+
+      $('input[name="'+ radio +'"]').on('change', function() {
+        var value = $('input[name="'+ radio +'"]:checked').val();
+        $('[data-bind-radio="'+ radio +'"]').each(function(){
+          var e = $(this);
+          e.text( e.dataAttr(value, e.text()) );
+        });
+      });
+    });
+
+  }
+
+}(jQuery);
+
+
+
+/***/ }),
+
+/***/ "./assets/plugin/thedocs/js/partials/config.js":
+/*!*****************************************************!*\
+  !*** ./assets/plugin/thedocs/js/partials/config.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+/**
+ * Config the application behaviour.
+ */
+
++function($){
+
+  page.config = function(options) {
+
+    // Return config value
+    if ( typeof options === 'string' ) {
+      return page.defaults[options];
+    }
+
+    // Save configs
+    $.extend(true, page.defaults, options);
+
+    // Make necessary changes
+    //
+    if ( ! page.defaults.smoothScroll ) {
+      SmoothScroll.destroy();
+    }
+
+    // Google map
+    //
+    if ( $('[data-provide~="map"]').length && window["google.maps.Map"] === undefined ) {
+      $.getScript("https://maps.googleapis.com/maps/api/js?key="+ page.defaults.googleApiKey +"&callback=page.initMap");
+    }
+
+    // Google Analytics
+    //
+    if ( page.defaults.googleAnalyticsId ) {
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', page.defaults.googleAnalyticsId, 'auto');
+      ga('send', 'pageview');
+    }
+
+
+    // Google reCAPTCHA
+    //
+    if ( $('[data-provide~="recaptcha"]').length && window["grecaptcha"] === undefined ) {
+      var url = "https://www.google.com/recaptcha/api.js?onload=recaptchaLoadCallback";
+      if ( page.defaults.reCaptchaLanguage != '' ) {
+        url += '&hl=' + page.defaults.reCaptchaLanguage;
+      }
+      $.getScript(url);
+    }
+
+    // DOM is loaded, let's init the page.
+    //
+    page.init();
+
+  }
+
+}(jQuery);
+
+
+
+
+
+/***/ }),
+
+/***/ "./assets/plugin/thedocs/js/partials/drawer.js":
+/*!*****************************************************!*\
+  !*** ./assets/plugin/thedocs/js/partials/drawer.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+/**
+ *
+ */
+
++function($){
+
+  page.initDrawer = function() {
+
+    $(document).on( 'click', '.drawer-toggler, .drawer-close, .backdrop-drawer', function() {
+      $('body').toggleClass( 'drawer-open' );
+    });
+
+  }
+
+}(jQuery);
+
+
+
+/***/ }),
+
+/***/ "./assets/plugin/thedocs/js/partials/file-tree.js":
+/*!********************************************************!*\
+  !*** ./assets/plugin/thedocs/js/partials/file-tree.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+/**
+ *
+ */
+
++function($){
+
+  page.initFileTree = function() {
+
+    $(document).on('click', '.file-tree li.is-file', function(e){
+      e.stopPropagation();
+    });
+
+    $(document).on('click', '.file-tree li.is-folder', function(e){
+      $(this).find('ul:first').slideToggle(400, function(){
+        $(this).parent('li').toggleClass('open');
+      });
+      e.stopPropagation();
+    });
+
+  }
+
+}(jQuery);
+
+
+/***/ }),
+
+/***/ "./assets/plugin/thedocs/js/partials/font.js":
+/*!***************************************************!*\
+  !*** ./assets/plugin/thedocs/js/partials/font.js ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+/**
+ *
+ */
+
++function($){
+
+  page.initFont = function() {
+
+    var fonts = [];
+
+    $('[data-font]').each(function(){
+      var tag  = $(this),
+          font = tag.data('font')
+          part = font.split(':');
+
+      fonts.push(font);
+      tag.css({'font-family': part[0], 'font-weight': part[1]});
+    });
+
+    if (fonts.length > 0) {
+      $("head").append("<link href='https://fonts.googleapis.com/css?family=" + fonts.join('|') + "' rel='stylesheet'>");
+    }
+
+  }
+
+}(jQuery);
+
+
+
+/***/ }),
+
+/***/ "./assets/plugin/thedocs/js/partials/form.js":
+/*!***************************************************!*\
+  !*** ./assets/plugin/thedocs/js/partials/form.js ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+/**
+ * All the form related methods.
+ */
+
++function($){
+
+  page.initForm = function() {
+
+
+    /**
+     * Add/remove .focus to .input-group
+     */
+    $(document).on('focusin', '.input-group', function() {
+      $(this).addClass('focus');
+    });
+
+    $(document).on('focusout', '.input-group', function() {
+      $(this).removeClass('focus');
+    });
+
+
+    // Upload
+    //
+    $(document).on('click', '.file-browser', function() {
+      var browser = $(this);
+      var file = browser.closest('.file-group').find('[type="file"]');
+      if ( browser.hasClass('form-control') ) {
+        setTimeout(function(){
+          file.trigger('click');
+        },300);
+      }
+      else {
+        file.trigger('click');
+      }
+    });
+
+    // Event to change file name after file selection
+    $(document).on('change', '.file-group [type="file"]', function(){
+      var input = $(this);
+      var filename = input.val().split('\\').pop();
+      input.closest('.file-group').find('.file-value').val(filename).text(filename).focus();
+    });
+
+
+  }
+
+}(jQuery);
+
+
+/***/ }),
+
+/***/ "./assets/plugin/thedocs/js/partials/mailer.js":
+/*!*****************************************************!*\
+  !*** ./assets/plugin/thedocs/js/partials/mailer.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+/**
+ * Send a form details to the sendmail.php file.
+ */
+
++function($){
+
+  page.initMailer = function() {
+
+    var validEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+    $('[data-form="mailer"]').each(function(){
+
+      var form = $(this);
+      var email = form.find('[name="email"]');
+      var message = form.find('[name="message"]');
+
+      form.on('submit', function(){
+
+        form.children('.alert-danger').remove();
+
+        if ( email.length ) {
+          if ( email.val().length < 1 || ! validEmail.test( email.val() ) ) {
+            email.addClass('is-invalid');
+            return false;
+          }
+        }
+
+
+        if ( message.length ) {
+          if ( message.val().length < 1 ) {
+            message.addClass('is-invalid');
+            return false;
+          }
+        }
+
+
+        $.ajax({
+          type: "POST",
+          url: form.attr('action'),
+          data: form.serializeArray(),
+        })
+        .done( function( data ) {
+          var response = $.parseJSON( data );
+          if ( 'success' == response.status ) {
+            form.find('.alert-success').fadeIn(1000);
+            form.find(':input').val('');
+          }
+          else {
+            form.prepend('<div class="alert alert-danger">'+ response.message +'</div>');
+            console.log( response.reason )
+          }
+        });
+
+        return false;
+      });
+
+      email.on('focus', function() {
+        $(this).removeClass('is-invalid');
+      });
+
+      message.on('focus', function() {
+        $(this).removeClass('is-invalid');
+      });
+
+    });
+
+  }
+
+}(jQuery);
+
+
+
+/***/ }),
+
+/***/ "./assets/plugin/thedocs/js/partials/main.js":
+/*!***************************************************!*\
+  !*** ./assets/plugin/thedocs/js/partials/main.js ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+/**
+ * Load required plugins.
+ */
+window.$ = window.jQuery = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+window.Popper = __webpack_require__(/*! popper.js/dist/umd/popper */ "./node_modules/popper.js/dist/umd/popper.js");
+__webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.js");
+window.SmoothScroll = __webpack_require__(/*! smoothscroll-for-websites */ "./node_modules/smoothscroll-for-websites/SmoothScroll.js");
+window.PerfectScrollbar = __webpack_require__(/*! perfect-scrollbar/dist/perfect-scrollbar.min.js */ "./node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js");
+
+__webpack_require__(/*! clipboard */ "./node_modules/clipboard/dist/clipboard.js");
+__webpack_require__(/*! prismjs */ "./node_modules/prismjs/prism.js");
+/*
+// It doesn't work with Prism v1.15.0
+var loadLanguages = require('prismjs/components/index');
+loadLanguages([
+  'aspnet',
+  'bash',
+  'c',
+  'coffeescript',
+  'cpp',
+  'csharp',
+  'git',
+  'go',
+  'http',
+  'java',
+  'json',
+  'jsx',
+  'latex',
+  'less',
+  'markdown',
+  'matlab',
+  'objectivec',
+  'perl',
+  'php',
+  'python',
+  'ruby',
+  'sass',
+  'scss',
+  'sql',
+  'swift',
+]);
+*/
+/*
+require('prismjs/components/prism-markup.min.js');
+require('prismjs/components/prism-css.min.js');
+require('prismjs/components/prism-clike.min.js');
+require('prismjs/components/prism-javascript.min.js');
+*/
+
+__webpack_require__(/*! prismjs/components/prism-aspnet */ "./node_modules/prismjs/components/prism-aspnet.js");
+__webpack_require__(/*! prismjs/components/prism-bash */ "./node_modules/prismjs/components/prism-bash.js");
+__webpack_require__(/*! prismjs/components/prism-c */ "./node_modules/prismjs/components/prism-c.js");
+__webpack_require__(/*! prismjs/components/prism-coffeescript */ "./node_modules/prismjs/components/prism-coffeescript.js");
+__webpack_require__(/*! prismjs/components/prism-cpp */ "./node_modules/prismjs/components/prism-cpp.js");
+__webpack_require__(/*! prismjs/components/prism-csharp */ "./node_modules/prismjs/components/prism-csharp.js");
+__webpack_require__(/*! prismjs/components/prism-git */ "./node_modules/prismjs/components/prism-git.js");
+__webpack_require__(/*! prismjs/components/prism-go */ "./node_modules/prismjs/components/prism-go.js");
+__webpack_require__(/*! prismjs/components/prism-http */ "./node_modules/prismjs/components/prism-http.js");
+__webpack_require__(/*! prismjs/components/prism-java */ "./node_modules/prismjs/components/prism-java.js");
+__webpack_require__(/*! prismjs/components/prism-json */ "./node_modules/prismjs/components/prism-json.js");
+__webpack_require__(/*! prismjs/components/prism-jsx */ "./node_modules/prismjs/components/prism-jsx.js");
+__webpack_require__(/*! prismjs/components/prism-latex */ "./node_modules/prismjs/components/prism-latex.js");
+__webpack_require__(/*! prismjs/components/prism-less */ "./node_modules/prismjs/components/prism-less.js");
+__webpack_require__(/*! prismjs/components/prism-markup-templating */ "./node_modules/prismjs/components/prism-markup-templating.js");
+__webpack_require__(/*! prismjs/components/prism-markdown */ "./node_modules/prismjs/components/prism-markdown.js");
+__webpack_require__(/*! prismjs/components/prism-matlab */ "./node_modules/prismjs/components/prism-matlab.js");
+__webpack_require__(/*! prismjs/components/prism-objectivec */ "./node_modules/prismjs/components/prism-objectivec.js");
+__webpack_require__(/*! prismjs/components/prism-perl */ "./node_modules/prismjs/components/prism-perl.js");
+__webpack_require__(/*! prismjs/components/prism-php */ "./node_modules/prismjs/components/prism-php.js");
+__webpack_require__(/*! prismjs/components/prism-python */ "./node_modules/prismjs/components/prism-python.js");
+__webpack_require__(/*! prismjs/components/prism-ruby */ "./node_modules/prismjs/components/prism-ruby.js");
+__webpack_require__(/*! prismjs/components/prism-docker */ "./node_modules/prismjs/components/prism-docker.js");
+__webpack_require__(/*! prismjs/components/prism-yaml */ "./node_modules/prismjs/components/prism-yaml.js");
+__webpack_require__(/*! prismjs/components/prism-sass */ "./node_modules/prismjs/components/prism-sass.js");
+__webpack_require__(/*! prismjs/components/prism-scss */ "./node_modules/prismjs/components/prism-scss.js");
+__webpack_require__(/*! prismjs/components/prism-sql */ "./node_modules/prismjs/components/prism-sql.js");
+__webpack_require__(/*! prismjs/components/prism-swift */ "./node_modules/prismjs/components/prism-swift.js");
+
+
+__webpack_require__(/*! prismjs/plugins/toolbar/prism-toolbar.min.js */ "./node_modules/prismjs/plugins/toolbar/prism-toolbar.min.js");
+__webpack_require__(/*! prismjs/plugins/line-highlight/prism-line-highlight.min.js */ "./node_modules/prismjs/plugins/line-highlight/prism-line-highlight.min.js");
+__webpack_require__(/*! prismjs/plugins/line-numbers/prism-line-numbers.min.js */ "./node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.js");
+__webpack_require__(/*! prismjs/plugins/show-language/prism-show-language.min.js */ "./node_modules/prismjs/plugins/show-language/prism-show-language.min.js");
+__webpack_require__(/*! prismjs/plugins/unescaped-markup/prism-unescaped-markup.min.js */ "./node_modules/prismjs/plugins/unescaped-markup/prism-unescaped-markup.min.js");
+__webpack_require__(/*! prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js */ "./node_modules/prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js");
+
+
+/**
+ * Create window.page and init the application.
+ */
+
++function($, window){
+
+  var page = {
+    name:       'TheDocs',
+    version:    '2.0.1',
+    vendors:    [],
+
+    // Cache popular elements
+    body:       $('body'),
+    navbar:     $('.navbar'),
+    header:     $('.header'),
+    footer:     $('.footer'),
+  }
+
+  page.defaults = {
+    googleApiKey:       null,
+    googleAnalyticsKey: null,
+    reCaptchaSiteKey:   null,
+    reCaptchaLanguage:  null,
+    disableAOSonMobile: true,
+    smoothScroll:       false,
+  }
+
+  /**
+   * Call all the required initializers.
+   */
+  page.init = function() {
+
+    // Vendors
+    //
+    page.initVendors();
+
+    // Partials
+    //
+    page.initBind();
+    page.initDrawer();
+    page.initFileTree();
+    page.initFont();
+    page.initForm();
+    page.initMailer();
+    page.initModal();
+    page.initNavbar();
+    page.initOffcanvas();
+    page.initPopup();
+    page.initScroll();
+    page.initSection();
+    page.initSidebar();
+    page.initVideo();
+
+    $(document).on('click', '.switch', function() {
+      var input = $(this).children('.switch-input').not(':disabled');
+      input.prop('checked', ! input.prop('checked'));
+    });
+
+
+    // Anchor for headings
+    //
+    $('h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]').each(function() {
+      var heading = $(this);
+
+      if (heading.hasClass('no-anchor')) {
+        return;
+      }
+
+      heading.append('<a class="anchor" href="#'+ heading.attr('id') +'"></a>');
+    });
+  }
+
+
+  /**
+   * Initialize all of the loaded vendors.
+   */
+  page.initVendors = function() {
+    page.vendors.forEach(function(vendor) {
+      var fn = window.page[ "init"+ vendor ];
+      if(typeof fn === 'function') {
+        fn();
+      }
+    });
+  }
+
+  /**
+   * Register loaded vendor to be initialized after DOM load.
+   * It's case sensitive, since it calls "initVendorName" method.
+   */
+  page.registerVendor = function($name) {
+    page.vendors.push($name);
+  }
+
+  window.page = page;
+}(jQuery, window);
+
+
+/**
+ * Once the DOM is loaded, start the magic.
+ */
+$(function () {
+  //page.init();
+});
+
+
+
+
+/***/ }),
+
+/***/ "./assets/plugin/thedocs/js/partials/map.js":
+/*!**************************************************!*\
+  !*** ./assets/plugin/thedocs/js/partials/map.js ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+/**
+ * Display google map.
+ */
+
++function($){
+
+  page.initMap = function() {
+
+    $('[data-provide~="map"]').each(function() {
+      var tag = $(this),
+          setting = {
+            lat: '',
+            lng: '',
+            zoom: 13,
+            markerLat: '',
+            markerLng: '',
+            markerIcon: '',
+            markers: '',
+            style: ''
+          };
+
+      setting = $.extend(setting, page.getDataOptions(tag));
+
+      var map = new google.maps.Map( tag[0], {
+        center: {
+          lat: Number(setting.lat),
+          lng: Number(setting.lng)
+        },
+        zoom: Number(setting.zoom)
+      });
+
+      // Multiple locations
+      //
+      if (setting.markers != '') {
+
+        var locations = JSON.parse("[" + setting.markers.replace(/'/g, '"') + "]"),
+            infowindow = new google.maps.InfoWindow(),
+            marker, i;
+
+        for (i = 0; i < locations.length; i++) {
+          var markerIcon = setting.markerIcon;
+
+          if ( locations[i].length > 3 && locations[i][3] != '' ) {
+            markerIcon = locations[i][3];
+          }
+
+          marker = new google.maps.Marker({
+            position: {
+              lat: Number(locations[i][0]),
+              lng: Number(locations[i][1])
+            },
+            map: map,
+            animation: google.maps.Animation.DROP,
+            icon: markerIcon
+          });
+
+          if ( locations[i].length > 2 && locations[i][2] != '' ) {
+            google.maps.event.addListener(marker, 'click', (function(marker, i) {
+              return function() {
+                infowindow.setContent(locations[i][2]);
+                infowindow.open(map, marker);
+              }
+            })(marker, i));
+          }
+
+        }
+
+      }
+
+      // Single location
+      //
+      else {
+
+        var marker = new google.maps.Marker({
+          position: {
+            lat: Number(setting.markerLat),
+            lng: Number(setting.markerLng)
+          },
+          map: map,
+          animation: google.maps.Animation.DROP,
+          icon: setting.markerIcon
+        });
+
+        if (tag.is('[data-info]')) {
+          var infowindow = new google.maps.InfoWindow({
+            content: tag.dataAttr('info', '')
+          });
+
+          marker.addListener('click', function() {
+            infowindow.open(map, marker);
+          });
+        }
+
+      }
+
+
+      switch (setting.style) {
+        case 'light':
+          map.set('styles', [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#e9e9e9"},{"lightness":17}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":20}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffffff"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#ffffff"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":16}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":21}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#dedede"},{"lightness":21}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"lightness":16}]},{"elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#333333"},{"lightness":40}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#f2f2f2"},{"lightness":19}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#fefefe"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#fefefe"},{"lightness":17},{"weight":1.2}]}]);
+          break;
+
+        case 'dark':
+          map.set('styles', [{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":17}]}])
+          break;
+
+        default:
+          if ( Array.isArray(setting.style) ) {
+            map.set('styles', setting.style);
+          }
+      }
+
+    });
+
+  }
+
+}(jQuery);
+
+
+
+/***/ }),
+
+/***/ "./assets/plugin/thedocs/js/partials/modal.js":
+/*!****************************************************!*\
+  !*** ./assets/plugin/thedocs/js/partials/modal.js ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+/**
+ * All the modal related methods.
+ */
+
++function($){
+
+  page.initModal = function() {
+    var body = page.body;
+
+    /**
+     * Autoshow
+     */
+    $('.modal[data-autoshow]').each(function(){
+      var modal = $(this),
+          delay = parseInt( modal.dataAttr('autoshow') );
+      setTimeout( function() { modal.modal('show') }, delay);
+    });
+
+
+     /**
+      * Exit
+      */
+    $('.modal[data-exitshow]').each(function(){
+      var modal  = $(this),
+          delay  = parseInt( modal.dataAttr('delay', 0) ),
+          target = modal.dataAttr('exitshow');
+
+      if ( $(target).length ) {
+        $(document).one('mouseleave', target, function() {
+          setTimeout( function() { modal.modal('show') }, delay);
+        });
+      }
+
+    });
+
+  }
+
+}(jQuery);
+
+
+/***/ }),
+
+/***/ "./assets/plugin/thedocs/js/partials/navbar.js":
+/*!*****************************************************!*\
+  !*** ./assets/plugin/thedocs/js/partials/navbar.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+/**
+ * All the navbar related methods.
+ */
+
++function($){
+
+  page.initNavbar = function() {
+
+    /**
+     * Toggle navbar
+     */
+    $(document).on('click', '.navbar-toggler', function() {
+      page.navbarToggle();
+    });
+
+
+    /**
+     * Tapping on the backdrop will close the navbar
+     */
+    $(document).on('click', '.backdrop-navbar', function() {
+      page.navbarClose();
+    });
+
+
+    /**
+     * Toggle menu open on small screen devices
+     */
+    $(document).on('click', '.navbar-open .nav-navbar > .nav-item > .nav-link', function() {
+      $(this).closest('.nav-item').siblings('.nav-item').find('> .nav:visible').slideUp(333, 'linear');
+      $(this).next('.nav').slideToggle(333, 'linear');
+    });
+
+  }
+
+
+  page.navbarToggle = function() {
+    var body   = page.body,
+        navbar = page.navbar;
+
+    body.toggleClass('navbar-open');
+    if (body.hasClass('navbar-open')) {
+      navbar.prepend('<div class="backdrop backdrop-navbar"></div>');
+    }
+  }
+
+  page.navbarClose = function() {
+    page.body.removeClass('navbar-open');
+    $('.backdrop-navbar').remove();
+  }
+
+}(jQuery);
+
+
+/***/ }),
+
+/***/ "./assets/plugin/thedocs/js/partials/offcanvas.js":
+/*!********************************************************!*\
+  !*** ./assets/plugin/thedocs/js/partials/offcanvas.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+/**
+ * All the popup related methods.
+ */
+
++function($){
+
+  page.initOffcanvas = function() {
+
+    /**
+     * Toggle
+     */
+    $(document).on('click', '[data-toggle="offcanvas"]', function() {
+      var target     = $(this).data('target'),
+          offcanvas  = $(target);
+
+      if ( target !== undefined && offcanvas.length ) {
+        if (offcanvas.hasClass('show')) {
+          $('.backdrop-offcanvas').remove();
+          offcanvas.removeClass('show');
+        }
+        else {
+          offcanvas.before('<div class="backdrop backdrop-offcanvas"></div>');
+          offcanvas.addClass('show');
+          setTimeout(function() { offcanvas.find('input:text:visible:first').focus(); }, 300);
+        }
+      }
+    });
+
+
+    /**
+     * Dismiss
+     */
+    $(document).on('click', '.offcanvas [data-dismiss], .backdrop-offcanvas', function() {
+      $('.offcanvas.show').removeClass('show');
+      $('.backdrop-offcanvas').remove();
+    });
+
+
+    /**
+     * Esc key
+     */
+    $(document).on('keyup', function(e) {
+      if ($('.offcanvas.show').length && e.keyCode == 27) { // esc keycode
+        $('.offcanvas.show').removeClass('show');
+        $('.backdrop-offcanvas').remove();
+      }
+    });
+  }
+
+}(jQuery);
+
+
+/***/ }),
+
+/***/ "./assets/plugin/thedocs/js/partials/popup.js":
+/*!****************************************************!*\
+  !*** ./assets/plugin/thedocs/js/partials/popup.js ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+/**
+ * All the popup related methods.
+ */
+
++function($){
+
+  page.initPopup = function() {
+    var body = page.body;
+
+
+    /**
+     * Toggle
+     */
+    $(document).on('click', '[data-toggle="popup"]', function() {
+      var target = $(this).data('target'),
+          popup  = $(target);
+
+      if ( target !== undefined && popup.length ) {
+        if (popup.hasClass('show')) {
+          popup.removeClass('show');
+        }
+        else {
+          popupShow(popup);
+        }
+      }
+    });
+
+
+    /**
+     * Dismiss
+     */
+    $(document).on('click', '.popup [data-dismiss]', function() {
+      $(this).closest('.popup').removeClass('show');
+    });
+
+
+    /**
+     * Autoshow
+     */
+    $('.popup[data-autoshow]').each(function(){
+      var popup = $(this),
+          delay = parseInt( popup.dataAttr('autoshow') );
+      setTimeout( function() { popupShow(popup) }, delay);
+    });
+
+
+    /**
+     * Exit
+     */
+    $('.popup[data-exitshow]').each(function(){
+      var popup  = $(this),
+          delay  = parseInt( popup.dataAttr('delay', 0) ),
+          target = popup.dataAttr('exitshow');
+
+      if ( $(target).length ) {
+        $(document).one('mouseleave', target, function() {
+          setTimeout( function() { popupShow(popup) }, delay);
+        });
+      }
+
+    });
+
+
+    /**
+     * Show
+     */
+    var popupShow = function(popup) {
+
+      var autohide = parseInt( popup.dataAttr('autohide', 0) ),
+          once_key = popup.dataAttr('once', '');
+
+      // Check if it was a once popup
+      if (once_key != '') {
+        if (localStorage.getItem(once_key) == 'displayed') {
+          return;
+        }
+
+        var once_btn = popup.find('[data-once-button="true"]');
+        if (once_btn.length) {
+          once_btn.on('click', function() {
+            localStorage.setItem(once_key, 'displayed');
+          });
+        }
+        else {
+          localStorage.setItem(once_key, 'displayed');
+        }
+      }
+
+      popup.addClass('show');
+      setTimeout(function() { popup.find('input:text:visible:first').focus(); }, 300);
+
+      if (autohide > 0) {
+        setTimeout( function() { popup.removeClass('show') }, autohide);
+      }
+    }
+  }
+
+}(jQuery);
+
+
+/***/ }),
+
+/***/ "./assets/plugin/thedocs/js/partials/recaptcha.js":
+/*!********************************************************!*\
+  !*** ./assets/plugin/thedocs/js/partials/recaptcha.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+/**
+ *
+ */
+
++function($){
+
+  page.initRecaptcha = function() {
+    $('[data-provide~="recaptcha"]').each(function() {
+
+      var options = {
+        sitekey: page.defaults.reCaptchaSiteKey
+      }
+
+      options = $.extend(options, page.getDataOptions($(this)));
+
+      if (options.enable) {
+        options.callback = function() {
+          $(options.enable).removeAttr('disabled');
+        }
+
+        options['expired-callback'] = function() {
+          $(options.enable).attr('disabled', 'true');
+        }
+      }
+
+      grecaptcha.render( $(this)[0], options);
+    });
+  }
+
+  window.recaptchaLoadCallback = function() {
+    page.initRecaptcha();
+  }
+
+
+}(jQuery);
+
+
+
+/***/ }),
+
+/***/ "./assets/plugin/thedocs/js/partials/scroll.js":
+/*!*****************************************************!*\
+  !*** ./assets/plugin/thedocs/js/partials/scroll.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+/**
+ * All methods related to the page scroll and link click.
+ */
+
++function($){
+
+  var body = page.body,
+      footer = page.footer,
+      hasHeader = page.header.length,
+      navbarHeight  = page.navbar.innerHeight(),
+      headerHeight  = page.header.innerHeight(),
+      mainOffsetTop = $('body>main').offset().top,
+      scrollOffsetTop = 20,
+      prevOffsetTop = 0;
+
+  page.initScroll = function() {
+
+    if ( $('[data-navbar="fixed"], [data-navbar="sticky"], [data-navbar="smart"]').length ) {
+      scrollOffsetTop = navbarHeight;
+    }
+
+
+    $(document).on( 'click', "a[href='#']", function() {
+      return false;
+    });
+
+
+    // Back to top
+    //
+    $(document).on('click', '.scroll-top', function() {
+      smoothlyScrollTo(0);
+      return false;
+    });
+
+
+    // Smooth scroll for anchors
+    //
+    $(document).on( 'click', "a[href^='#']", function() {
+      if ( $(this).attr('href').length < 2 ) {
+        return;
+      }
+
+      if ( $(this)[0].hasAttribute('data-toggle') ) {
+        return;
+      }
+
+      var target = $( $(this).attr('href') );
+      if ( target.length ) {
+        var targetTop = target.offset().top,
+            windowTop = $(window).scrollTop();
+
+        // We don't need offsetTop for scroll down with smart navbar
+        //
+        if ( targetTop > windowTop && $('.navbar[data-navbar="smart"]').length ) {
+          smoothlyScrollTo( targetTop );
+        }
+        else {
+          smoothlyScrollTo( targetTop - scrollOffsetTop );
+        }
+
+        if (body.hasClass('navbar-open')) {
+          page.navbarClose();
+        }
+
+        if (body.hasClass('sidebar-open')) {
+          page.sidebarClose();
+        }
+        return false;
+      }
+    });
+
+
+    // Smoothscroll to anchor in page load
+    //
+    var hash = location.hash.replace('#','');
+    if ( hash != '' ) {
+      var el = $("#"+hash);
+      if (el.length > 0) {
+        smoothlyScrollTo( el.offset().top - scrollOffsetTop );
+      }
+    }
+
+
+    // Actions which are related to the page scroll position
+    windowScrollActions();
+
+    $(window).on('scroll', function() {
+      windowScrollActions()
+    });
+
+
+
+    // In page navigation
+    //
+    if ( $('.nav-page').length ) {
+
+      var tooltip_pos = 'left',
+          tooltip_offset = '0, 12';
+
+      if ( $('.nav-page.nav-page-left').length ) {
+        tooltip_pos = 'right';
+        tooltip_offset = '0, 12';
+      }
+
+      var spy_offset = parseInt( $('.nav-page').dataAttr('spy-offset', 200) );
+
+      // Enable tooltip
+      $('.nav-page .nav-link').tooltip({
+        container: 'body',
+        placement: tooltip_pos,
+        offset: tooltip_offset,
+        trigger: 'hover'
+      });
+
+
+      // Enable Scroll Spy
+      $('body').scrollspy({
+        target: '.nav-page',
+        offset: spy_offset
+      });
+    }
+
+
+    // Sticky sidebar width
+    //
+    $('.sidebar').each(function() {
+      var tag = $(this),
+          width = tag.closest('div').width();
+      tag.css('width', width);
+
+      if (body.width() / width < 1.8) {
+        tag.addClass('is-mobile-wide');
+      }
+    });
+
+
+  }
+
+
+  var windowScrollActions = function() {
+    var window_top = $(window).scrollTop();
+
+    // .body-scrolled
+    //
+    if (window_top > 1) {
+      body.addClass('body-scrolled');
+    }
+    else {
+      body.removeClass('body-scrolled');
+    }
+
+    // .navbar-scrolled
+    //
+
+    if (window_top > navbarHeight) {
+      body.addClass('navbar-scrolled');
+    }
+    else {
+      body.removeClass('navbar-scrolled');
+    }
+
+
+    // .header-scrolled
+    //
+    //if (window_top > headerHeight - navbarHeight - 1) {
+    if (window_top > headerHeight) {
+      body.addClass('header-scrolled');
+    }
+    else {
+      body.removeClass('header-scrolled');
+    }
+
+
+    // .main-scrolled
+    //
+    if (window_top > mainOffsetTop) {
+      body.addClass('main-scrolled');
+    }
+    else {
+      body.removeClass('main-scrolled');
+    }
+
+    // Sticky elements
+    //
+    $('[data-sticky="true"]').each(function() {
+      var tag = $(this),
+          top = tag.offset().top;
+
+      if ( ! tag.hasDataAttr('original-top') ) {
+        tag.attr('data-original-top', top);
+      }
+
+      var stick_start = tag.dataAttr('original-top'),
+          stick_end   = footer.offset().top - tag.outerHeight();
+
+      if (window_top > stick_start) {// && window_top <= stick_end) {
+        tag.addClass('stick');
+      }
+      else {
+        tag.removeClass('stick');
+      }
+    });
+
+    // Smart navbar
+    //
+    $('[data-navbar="smart"]').each(function() {
+      var tag = $(this);
+
+      //toggleFixClass(tag);
+      if (window_top < prevOffsetTop) {
+        toggleStickClass(tag);
+      }
+      else {
+        tag.removeClass('stick');
+      }
+    });
+
+    // Sticky navbar
+    //
+    $('[data-navbar="sticky"]').each(function() {
+      var tag = $(this);
+      toggleStickClass(tag);
+    });
+
+    // Fixed navbar
+    //
+    $('[data-navbar="fixed"]').each(function() {
+      var tag = $(this);
+      if (body.hasClass('body-scrolled')) {
+        tag.addClass('stick');
+      }
+      else {
+        tag.removeClass('stick');
+      }
+    });
+
+    // Sticky sidebar
+    //
+    $('.sidebar-sticky').each(function() {
+      var tag = $(this);
+      toggleStickClass(tag);
+    });
+
+
+    // Fadeout effect
+    //
+    $('.header.fadeout').css('opacity', (1-window_top-200 / window.innerHeight) );
+
+
+    prevOffsetTop = window_top;
+  }
+
+
+  var smoothlyScrollTo = function(pos) {
+    $('html, body').animate({scrollTop: pos}, 600);
+  }
+
+
+  var toggleFixClass = function(tag) {
+    if (body.hasClass('navbar-scrolled')) {
+      tag.addClass('fix');
+    }
+    else {
+      tag.removeClass('fix');
+    }
+  }
+
+  var toggleStickClass = function(tag) {
+    var requiredClass = 'navbar-scrolled';
+    if ( hasHeader ) {
+      requiredClass = 'header-scrolled';
+    }
+
+    if (body.hasClass(requiredClass)) {
+      tag.addClass('stick');
+    }
+    else {
+      tag.removeClass('stick');
+    }
+  }
+
+}(jQuery);
+
+
+/***/ }),
+
+/***/ "./assets/plugin/thedocs/js/partials/section.js":
+/*!******************************************************!*\
+  !*** ./assets/plugin/thedocs/js/partials/section.js ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+/**
+ *
+ */
+
++function($){
+
+  page.initSection = function() {
+
+    // Collapsable
+    //
+    $('.section-collapsable.show .section-content').css('display', 'block');
+    $(document).on('click', '.section-collapsable .section-title', function() {
+      $(this).next('.section-content').slideToggle();
+      $(this).closest('.section-collapsable').toggleClass('show');
+    });
+
+  }
+
+}(jQuery);
+
+
+
+/***/ }),
+
+/***/ "./assets/plugin/thedocs/js/partials/sidebar.js":
+/*!******************************************************!*\
+  !*** ./assets/plugin/thedocs/js/partials/sidebar.js ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+/**
+ *
+ */
+
++function($){
+
+  page.initSidebar = function() {
+    var body = page.body;
+
+    if ( ! $('.sidebar').length ) {
+      return;
+    }
+
+    $(document).on( 'click', '.sidebar-toggler, [data-toggle="sidebar"], .sidebar-close, .backdrop-sidebar', function() {
+      body.toggleClass( 'sidebar-open' );
+      if ( body.hasClass('sidebar-open') ) {
+        body.prepend('<div class="backdrop backdrop-sidebar"></div>')
+      }
+      else {
+        $('.backdrop-sidebar').remove();
+      }
+    });
+
+    // Sidebar nav
+    //
+    var navItemShow = $('.nav-sidebar .nav-item.show');
+    navItemShow.find('> .nav-link .nav-angle').addClass('rotate');
+    navItemShow.find('> .nav').css('display', 'block');
+    navItemShow.removeClass('show');
+
+    var navSidebarIsAccordion = false;
+    if ( 'true' == $('.nav-sidebar').dataAttr('accordion', 'false') ) {
+      navSidebarIsAccordion = true;
+    }
+
+    $(document).on( 'click', '.nav-sidebar > .nav-item > .nav-link', function() {
+      var link = $(this);
+      link.next('.nav').slideToggle();
+      if ( navSidebarIsAccordion ) {
+        link.closest('.nav-item').siblings('.nav-item').children('.nav:visible').slideUp().prev('.nav-link').children('.nav-angle').removeClass('rotate');
+      }
+      link.children('.nav-angle').toggleClass('rotate');
+    });
+
+
+    // Perfect scrollbar
+    //
+    $('.sidebar-body').each(function(e) {
+      var ps = new PerfectScrollbar($(this)[0], {
+        wheelSpeed: 0.4,
+        minScrollbarLength: 20
+      });
+    })
+
+  }
+
+  page.sidebarClose = function() {
+    page.body.removeClass('sidebar-open');
+    $('.backdrop-sidebar').remove();
+  }
+
+}(jQuery);
+
+
+
+/***/ }),
+
+/***/ "./assets/plugin/thedocs/js/partials/util.js":
+/*!***************************************************!*\
+  !*** ./assets/plugin/thedocs/js/partials/util.js ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+/**
+ * Utility functions to be used in the whole application.
+ */
+
++function($){
+
+  // Convert data-attributes options to Javascript object
+  //
+  page.getDataOptions = function(el, castList) {
+    var options = {};
+
+    $.each( $(el).data(), function(key, value){
+
+      key = page.dataToOption(key);
+
+      // Escape data-provide
+      if ( key == 'provide' ) {
+        return;
+      }
+
+      if ( castList != undefined ) {
+        var type = castList[key];
+        switch (type) {
+          case 'bool':
+            value = Boolean(value);
+            break;
+
+          case 'num':
+            value = Number(value);
+            break;
+
+          case 'array':
+            value = value.split(',');
+            break;
+
+          default:
+
+        }
+      }
+
+      options[key] = value;
+    });
+
+    return options;
+  }
+
+
+  // Get target of an action from element.
+  //
+  // It can be 'data-target' or 'href' attribute.
+  // We support 'next' and 'prev' values to target next or previous element. In this case, we return jQuery element.
+  //
+  page.getTarget = function(e) {
+    var target;
+    if ( e.hasDataAttr('target') ) {
+      target = e.data('target');
+    }
+    else {
+      target = e.attr('href');
+    }
+
+    if ( target == 'next' ) {
+      target = $(e).next();
+    }
+    else if ( target == 'prev' ) {
+      target = $(e).prev();
+    }
+
+    if ( target == undefined ) {
+      return false;
+    }
+
+    return target;
+  };
+
+
+
+
+
+  // Get URL of an action from element.
+  //
+  // It can be 'data-url' or 'href' attribute.
+  //
+  page.getURL = function(e) {
+    var url;
+    if ( e.hasDataAttr('url') ) {
+      url = e.data('url');
+    }
+    else {
+      url = e.attr('href');
+    }
+
+    return url;
+  };
+
+
+
+  // Convert fooBarBaz to foo-bar-baz
+  //
+  page.optionToData = function(name) {
+    return name.replace(/([A-Z])/g, "-$1").toLowerCase();
+  }
+
+
+  // Convert foo-bar-baz to fooBarBaz
+  //
+  page.dataToOption = function(name) {
+    return name.replace(/-([a-z])/g, function(x){return x[1].toUpperCase();});
+  }
+
+
+
+}(jQuery);
+
+
+
+/***/ }),
+
+/***/ "./assets/plugin/thedocs/js/partials/video.js":
+/*!****************************************************!*\
+  !*** ./assets/plugin/thedocs/js/partials/video.js ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+/**
+ * All the video related methods.
+ */
+
++function($){
+
+  page.initVideo = function() {
+
+    // Video-wrapper
+    //
+    $(document).on('click', '.video-wrapper .btn', function(){
+      var wrapper = $(this).closest('.video-wrapper');
+      wrapper.addClass('reveal');
+
+      if ( wrapper.find('video').length )
+        wrapper.find('video').get(0).play();
+
+      if ( wrapper.find('iframe').length ) {
+        var iframe = wrapper.find('iframe');
+        var src = iframe.attr('src');
+
+        if ( src.indexOf('?') > 0 )
+          iframe.get(0).src += "&autoplay=1";
+        else
+          iframe.get(0).src += "?autoplay=1";
+      }
+    });
+
+  }
+
+}(jQuery);
+
+
+/***/ }),
+
+/***/ "./assets/plugin/thedocs/js/vendors/bootstrap.js":
+/*!*******************************************************!*\
+  !*** ./assets/plugin/thedocs/js/vendors/bootstrap.js ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+/**
+ * Initialize some of the core Bootstrap components.
+ */
+
++function($){
+  page.registerVendor('Bootstrap');
+
+  page.initBootstrap = function() {
+    $('[data-toggle="tooltip"]').tooltip();
+    $('[data-toggle="popover"]').popover();
+
+
+    // Custom control check
+    //
+    // Since BS4-beta-3, custom-controls needs id and for attributes.
+    // We bypass this requirement.
+    //
+    $(document).on('click', '.custom-checkbox', function() {
+      var input = $(this).children('.custom-control-input').not(':disabled');
+      input.prop('checked', ! input.prop('checked')).trigger( "change" );
+    });
+
+    $(document).on('click', '.custom-radio', function() {
+      var input = $(this).children('.custom-control-input').not(':disabled');
+      input.prop('checked', true).trigger( "change" );
+    });
+
+
+  }
+
+}(jQuery);
+
+
+
+/***/ }),
+
+/***/ "./assets/plugin/thedocs/js/vendors/jquery.js":
+/*!****************************************************!*\
+  !*** ./assets/plugin/thedocs/js/vendors/jquery.js ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+/**
+ * Configure the plugin.
+ */
+
++function($){
+  page.registerVendor('Jquery');
+
+  page.initJquery = function() {
+
+    /**
+     * We will register the CSRF Token as a common header with jQuery so that
+     * all outgoing HTTP requests automatically have it attached. This is just
+     * a simple convenience so we don't have to attach every token manually.
+     */
+
+    let token = document.head.querySelector('meta[name="csrf-token"]');
+
+    if (token) {
+      $.ajaxSetup({
+        headers: { 'X-CSRF-TOKEN': token.content }
+      });
+    }
+
+  }
+
+}(jQuery);
+
+
+
+
+// Check if an element has a specific data attribute
+//
+jQuery.fn.hasDataAttr = function(name) {
+  return $(this)[0].hasAttribute('data-'+ name);
+};
+
+
+
+// Get data attribute. If element doesn't have the attribute, return default value
+//
+jQuery.fn.dataAttr = function(name, def) {
+  if ($(this)[0] == undefined) {
+    return def;
+  }
+  return $(this)[0].getAttribute('data-'+ name) || def;
+};
+
+
+
+// Instance search
+//
+//$.expr[':'] -> $.expr.pseudos
+jQuery.expr[':'].search = function(a, i, m) {
+  return $(a).html().toUpperCase().indexOf(m[3].toUpperCase()) >= 0;
+};
+
+
+// Return outerHTML (inclusing the element) code
+//
+jQuery.fn.outerHTML = function() {
+  var html = '';
+  this.each(function(){
+    html += $(this).prop("outerHTML");
+  })
+  return html;
+};
+
+
+// Return HTML code of all the selected elements
+//
+jQuery.fn.fullHTML = function() {
+  var html = '';
+  $(this).each(function(){
+    html += $(this).outerHTML();
+  });
+  return html;
+};
+
+// Scroll to end
+//
+jQuery.fn.scrollToEnd = function() {
+  $(this).scrollTop( $(this).prop("scrollHeight") );
+  return this;
+};
+
+
+
+/***/ }),
 
 /***/ "./node_modules/bootstrap/dist/js/bootstrap.js":
 /*!*****************************************************!*\
@@ -94,17 +2026,17 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 /*!
-  * Bootstrap v4.2.1 (https://getbootstrap.com/)
-  * Copyright 2011-2018 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
+  * Bootstrap v4.3.1 (https://getbootstrap.com/)
+  * Copyright 2011-2019 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
   */
 (function (global, factory) {
-   true ? factory(exports, __webpack_require__(/*! popper.js */ "./node_modules/popper.js/dist/esm/popper.js"), __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")) :
+   true ? factory(exports, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js"), __webpack_require__(/*! popper.js */ "./node_modules/popper.js/dist/esm/popper.js")) :
   undefined;
-}(this, (function (exports,Popper,$) { 'use strict';
+}(this, function (exports, $, Popper) { 'use strict';
 
-  Popper = Popper && Popper.hasOwnProperty('default') ? Popper['default'] : Popper;
   $ = $ && $.hasOwnProperty('default') ? $['default'] : $;
+  Popper = Popper && Popper.hasOwnProperty('default') ? Popper['default'] : Popper;
 
   function _defineProperties(target, props) {
     for (var i = 0; i < props.length; i++) {
@@ -164,7 +2096,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v4.2.1): util.js
+   * Bootstrap (v4.3.1): util.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -240,7 +2172,11 @@
         selector = hrefAttr && hrefAttr !== '#' ? hrefAttr.trim() : '';
       }
 
-      return selector && document.querySelector(selector) ? selector : null;
+      try {
+        return document.querySelector(selector) ? selector : null;
+      } catch (err) {
+        return null;
+      }
     },
     getTransitionDurationFromElement: function getTransitionDurationFromElement(element) {
       if (!element) {
@@ -320,7 +2256,7 @@
    */
 
   var NAME = 'alert';
-  var VERSION = '4.2.1';
+  var VERSION = '4.3.1';
   var DATA_KEY = 'bs.alert';
   var EVENT_KEY = "." + DATA_KEY;
   var DATA_API_KEY = '.data-api';
@@ -375,8 +2311,8 @@
     _proto.dispose = function dispose() {
       $.removeData(this._element, DATA_KEY);
       this._element = null;
-    }; // Private
-
+    } // Private
+    ;
 
     _proto._getRootElement = function _getRootElement(element) {
       var selector = Util.getSelectorFromElement(element);
@@ -418,8 +2354,8 @@
 
     _proto._destroyElement = function _destroyElement(element) {
       $(element).detach().trigger(Event.CLOSED).remove();
-    }; // Static
-
+    } // Static
+    ;
 
     Alert._jQueryInterface = function _jQueryInterface(config) {
       return this.each(function () {
@@ -485,7 +2421,7 @@
    */
 
   var NAME$1 = 'button';
-  var VERSION$1 = '4.2.1';
+  var VERSION$1 = '4.3.1';
   var DATA_KEY$1 = 'bs.button';
   var EVENT_KEY$1 = "." + DATA_KEY$1;
   var DATA_API_KEY$1 = '.data-api';
@@ -571,8 +2507,8 @@
     _proto.dispose = function dispose() {
       $.removeData(this._element, DATA_KEY$1);
       this._element = null;
-    }; // Static
-
+    } // Static
+    ;
 
     Button._jQueryInterface = function _jQueryInterface(config) {
       return this.each(function () {
@@ -639,7 +2575,7 @@
    */
 
   var NAME$2 = 'carousel';
-  var VERSION$2 = '4.2.1';
+  var VERSION$2 = '4.3.1';
   var DATA_KEY$2 = 'bs.carousel';
   var EVENT_KEY$2 = "." + DATA_KEY$2;
   var DATA_API_KEY$2 = '.data-api';
@@ -834,8 +2770,8 @@
       this._isSliding = null;
       this._activeElement = null;
       this._indicatorsElement = null;
-    }; // Private
-
+    } // Private
+    ;
 
     _proto._getConfig = function _getConfig(config) {
       config = _objectSpread({}, Default, config);
@@ -879,7 +2815,9 @@
         });
       }
 
-      this._addTouchEventListeners();
+      if (this._config.touch) {
+        this._addTouchEventListeners();
+      }
     };
 
     _proto._addTouchEventListeners = function _addTouchEventListeners() {
@@ -1120,8 +3058,8 @@
       if (isCycling) {
         this.cycle();
       }
-    }; // Static
-
+    } // Static
+    ;
 
     Carousel._jQueryInterface = function _jQueryInterface(config) {
       return this.each(function () {
@@ -1148,7 +3086,7 @@
           }
 
           data[action]();
-        } else if (_config.interval) {
+        } else if (_config.interval && _config.ride) {
           data.pause();
           data.cycle();
         }
@@ -1237,7 +3175,7 @@
    */
 
   var NAME$3 = 'collapse';
-  var VERSION$3 = '4.2.1';
+  var VERSION$3 = '4.3.1';
   var DATA_KEY$3 = 'bs.collapse';
   var EVENT_KEY$3 = "." + DATA_KEY$3;
   var DATA_API_KEY$3 = '.data-api';
@@ -1459,8 +3397,8 @@
       this._element = null;
       this._triggerArray = null;
       this._isTransitioning = null;
-    }; // Private
-
+    } // Private
+    ;
 
     _proto._getConfig = function _getConfig(config) {
       config = _objectSpread({}, Default$1, config);
@@ -1504,8 +3442,8 @@
       if (triggerArray.length) {
         $(triggerArray).toggleClass(ClassName$3.COLLAPSED, !isOpen).attr('aria-expanded', isOpen);
       }
-    }; // Static
-
+    } // Static
+    ;
 
     Collapse._getTargetFromElement = function _getTargetFromElement(element) {
       var selector = Util.getSelectorFromElement(element);
@@ -1597,7 +3535,7 @@
    */
 
   var NAME$4 = 'dropdown';
-  var VERSION$4 = '4.2.1';
+  var VERSION$4 = '4.3.1';
   var DATA_KEY$4 = 'bs.dropdown';
   var EVENT_KEY$4 = "." + DATA_KEY$4;
   var DATA_API_KEY$4 = '.data-api';
@@ -1826,8 +3764,8 @@
       if (this._popper !== null) {
         this._popper.scheduleUpdate();
       }
-    }; // Private
-
+    } // Private
+    ;
 
     _proto._addEventListeners = function _addEventListeners() {
       var _this = this;
@@ -1883,24 +3821,28 @@
       return $(this._element).closest('.navbar').length > 0;
     };
 
-    _proto._getPopperConfig = function _getPopperConfig() {
+    _proto._getOffset = function _getOffset() {
       var _this2 = this;
 
-      var offsetConf = {};
+      var offset = {};
 
       if (typeof this._config.offset === 'function') {
-        offsetConf.fn = function (data) {
-          data.offsets = _objectSpread({}, data.offsets, _this2._config.offset(data.offsets) || {});
+        offset.fn = function (data) {
+          data.offsets = _objectSpread({}, data.offsets, _this2._config.offset(data.offsets, _this2._element) || {});
           return data;
         };
       } else {
-        offsetConf.offset = this._config.offset;
+        offset.offset = this._config.offset;
       }
 
+      return offset;
+    };
+
+    _proto._getPopperConfig = function _getPopperConfig() {
       var popperConfig = {
         placement: this._getPlacement(),
         modifiers: {
-          offset: offsetConf,
+          offset: this._getOffset(),
           flip: {
             enabled: this._config.flip
           },
@@ -1918,8 +3860,8 @@
       }
 
       return popperConfig;
-    }; // Static
-
+    } // Static
+    ;
 
     Dropdown._jQueryInterface = function _jQueryInterface(config) {
       return this.each(function () {
@@ -2003,8 +3945,8 @@
       }
 
       return parent || element.parentNode;
-    }; // eslint-disable-next-line complexity
-
+    } // eslint-disable-next-line complexity
+    ;
 
     Dropdown._dataApiKeydownHandler = function _dataApiKeydownHandler(event) {
       // If not input/textarea:
@@ -2119,7 +4061,7 @@
    */
 
   var NAME$5 = 'modal';
-  var VERSION$5 = '4.2.1';
+  var VERSION$5 = '4.3.1';
   var DATA_KEY$5 = 'bs.modal';
   var EVENT_KEY$5 = "." + DATA_KEY$5;
   var DATA_API_KEY$5 = '.data-api';
@@ -2152,6 +4094,7 @@
     CLICK_DATA_API: "click" + EVENT_KEY$5 + DATA_API_KEY$5
   };
   var ClassName$5 = {
+    SCROLLABLE: 'modal-dialog-scrollable',
     SCROLLBAR_MEASURER: 'modal-scrollbar-measure',
     BACKDROP: 'modal-backdrop',
     OPEN: 'modal-open',
@@ -2160,6 +4103,7 @@
   };
   var Selector$5 = {
     DIALOG: '.modal-dialog',
+    MODAL_BODY: '.modal-body',
     DATA_TOGGLE: '[data-toggle="modal"]',
     DATA_DISMISS: '[data-dismiss="modal"]',
     FIXED_CONTENT: '.fixed-top, .fixed-bottom, .is-fixed, .sticky-top',
@@ -2312,8 +4256,8 @@
 
     _proto.handleUpdate = function handleUpdate() {
       this._adjustDialog();
-    }; // Private
-
+    } // Private
+    ;
 
     _proto._getConfig = function _getConfig(config) {
       config = _objectSpread({}, Default$3, config);
@@ -2337,7 +4281,11 @@
 
       this._element.setAttribute('aria-modal', true);
 
-      this._element.scrollTop = 0;
+      if ($(this._dialog).hasClass(ClassName$5.SCROLLABLE)) {
+        this._dialog.querySelector(Selector$5.MODAL_BODY).scrollTop = 0;
+      } else {
+        this._element.scrollTop = 0;
+      }
 
       if (transition) {
         Util.reflow(this._element);
@@ -2507,11 +4455,11 @@
       } else if (callback) {
         callback();
       }
-    }; // ----------------------------------------------------------------------
+    } // ----------------------------------------------------------------------
     // the following methods are used to handle overflowing modals
     // todo (fat): these should probably be refactored out of modal.js
     // ----------------------------------------------------------------------
-
+    ;
 
     _proto._adjustDialog = function _adjustDialog() {
       var isModalOverflowing = this._element.scrollHeight > document.documentElement.clientHeight;
@@ -2596,8 +4544,8 @@
       var scrollbarWidth = scrollDiv.getBoundingClientRect().width - scrollDiv.clientWidth;
       document.body.removeChild(scrollDiv);
       return scrollbarWidth;
-    }; // Static
-
+    } // Static
+    ;
 
     Modal._jQueryInterface = function _jQueryInterface(config, relatedTarget) {
       return this.each(function () {
@@ -2689,18 +4637,140 @@
   };
 
   /**
+   * --------------------------------------------------------------------------
+   * Bootstrap (v4.3.1): tools/sanitizer.js
+   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+   * --------------------------------------------------------------------------
+   */
+  var uriAttrs = ['background', 'cite', 'href', 'itemtype', 'longdesc', 'poster', 'src', 'xlink:href'];
+  var ARIA_ATTRIBUTE_PATTERN = /^aria-[\w-]*$/i;
+  var DefaultWhitelist = {
+    // Global attributes allowed on any supplied element below.
+    '*': ['class', 'dir', 'id', 'lang', 'role', ARIA_ATTRIBUTE_PATTERN],
+    a: ['target', 'href', 'title', 'rel'],
+    area: [],
+    b: [],
+    br: [],
+    col: [],
+    code: [],
+    div: [],
+    em: [],
+    hr: [],
+    h1: [],
+    h2: [],
+    h3: [],
+    h4: [],
+    h5: [],
+    h6: [],
+    i: [],
+    img: ['src', 'alt', 'title', 'width', 'height'],
+    li: [],
+    ol: [],
+    p: [],
+    pre: [],
+    s: [],
+    small: [],
+    span: [],
+    sub: [],
+    sup: [],
+    strong: [],
+    u: [],
+    ul: []
+    /**
+     * A pattern that recognizes a commonly useful subset of URLs that are safe.
+     *
+     * Shoutout to Angular 7 https://github.com/angular/angular/blob/7.2.4/packages/core/src/sanitization/url_sanitizer.ts
+     */
+
+  };
+  var SAFE_URL_PATTERN = /^(?:(?:https?|mailto|ftp|tel|file):|[^&:/?#]*(?:[/?#]|$))/gi;
+  /**
+   * A pattern that matches safe data URLs. Only matches image, video and audio types.
+   *
+   * Shoutout to Angular 7 https://github.com/angular/angular/blob/7.2.4/packages/core/src/sanitization/url_sanitizer.ts
+   */
+
+  var DATA_URL_PATTERN = /^data:(?:image\/(?:bmp|gif|jpeg|jpg|png|tiff|webp)|video\/(?:mpeg|mp4|ogg|webm)|audio\/(?:mp3|oga|ogg|opus));base64,[a-z0-9+/]+=*$/i;
+
+  function allowedAttribute(attr, allowedAttributeList) {
+    var attrName = attr.nodeName.toLowerCase();
+
+    if (allowedAttributeList.indexOf(attrName) !== -1) {
+      if (uriAttrs.indexOf(attrName) !== -1) {
+        return Boolean(attr.nodeValue.match(SAFE_URL_PATTERN) || attr.nodeValue.match(DATA_URL_PATTERN));
+      }
+
+      return true;
+    }
+
+    var regExp = allowedAttributeList.filter(function (attrRegex) {
+      return attrRegex instanceof RegExp;
+    }); // Check if a regular expression validates the attribute.
+
+    for (var i = 0, l = regExp.length; i < l; i++) {
+      if (attrName.match(regExp[i])) {
+        return true;
+      }
+    }
+
+    return false;
+  }
+
+  function sanitizeHtml(unsafeHtml, whiteList, sanitizeFn) {
+    if (unsafeHtml.length === 0) {
+      return unsafeHtml;
+    }
+
+    if (sanitizeFn && typeof sanitizeFn === 'function') {
+      return sanitizeFn(unsafeHtml);
+    }
+
+    var domParser = new window.DOMParser();
+    var createdDocument = domParser.parseFromString(unsafeHtml, 'text/html');
+    var whitelistKeys = Object.keys(whiteList);
+    var elements = [].slice.call(createdDocument.body.querySelectorAll('*'));
+
+    var _loop = function _loop(i, len) {
+      var el = elements[i];
+      var elName = el.nodeName.toLowerCase();
+
+      if (whitelistKeys.indexOf(el.nodeName.toLowerCase()) === -1) {
+        el.parentNode.removeChild(el);
+        return "continue";
+      }
+
+      var attributeList = [].slice.call(el.attributes);
+      var whitelistedAttributes = [].concat(whiteList['*'] || [], whiteList[elName] || []);
+      attributeList.forEach(function (attr) {
+        if (!allowedAttribute(attr, whitelistedAttributes)) {
+          el.removeAttribute(attr.nodeName);
+        }
+      });
+    };
+
+    for (var i = 0, len = elements.length; i < len; i++) {
+      var _ret = _loop(i, len);
+
+      if (_ret === "continue") continue;
+    }
+
+    return createdDocument.body.innerHTML;
+  }
+
+  /**
    * ------------------------------------------------------------------------
    * Constants
    * ------------------------------------------------------------------------
    */
 
   var NAME$6 = 'tooltip';
-  var VERSION$6 = '4.2.1';
+  var VERSION$6 = '4.3.1';
   var DATA_KEY$6 = 'bs.tooltip';
   var EVENT_KEY$6 = "." + DATA_KEY$6;
   var JQUERY_NO_CONFLICT$6 = $.fn[NAME$6];
   var CLASS_PREFIX = 'bs-tooltip';
   var BSCLS_PREFIX_REGEX = new RegExp("(^|\\s)" + CLASS_PREFIX + "\\S+", 'g');
+  var DISALLOWED_ATTRIBUTES = ['sanitize', 'whiteList', 'sanitizeFn'];
   var DefaultType$4 = {
     animation: 'boolean',
     template: 'string',
@@ -2710,10 +4780,13 @@
     html: 'boolean',
     selector: '(string|boolean)',
     placement: '(string|function)',
-    offset: '(number|string)',
+    offset: '(number|string|function)',
     container: '(string|element|boolean)',
     fallbackPlacement: '(string|array)',
-    boundary: '(string|element)'
+    boundary: '(string|element)',
+    sanitize: 'boolean',
+    sanitizeFn: '(null|function)',
+    whiteList: 'object'
   };
   var AttachmentMap$1 = {
     AUTO: 'auto',
@@ -2734,7 +4807,10 @@
     offset: 0,
     container: false,
     fallbackPlacement: 'flip',
-    boundary: 'scrollParent'
+    boundary: 'scrollParent',
+    sanitize: true,
+    sanitizeFn: null,
+    whiteList: DefaultWhitelist
   };
   var HoverState = {
     SHOW: 'show',
@@ -2919,9 +4995,7 @@
         this._popper = new Popper(this.element, tip, {
           placement: attachment,
           modifiers: {
-            offset: {
-              offset: this.config.offset
-            },
+            offset: this._getOffset(),
             flip: {
               behavior: this.config.fallbackPlacement
             },
@@ -3030,8 +5104,8 @@
       if (this._popper !== null) {
         this._popper.scheduleUpdate();
       }
-    }; // Protected
-
+    } // Protected
+    ;
 
     _proto.isWithContent = function isWithContent() {
       return Boolean(this.getTitle());
@@ -3053,19 +5127,27 @@
     };
 
     _proto.setElementContent = function setElementContent($element, content) {
-      var html = this.config.html;
-
       if (typeof content === 'object' && (content.nodeType || content.jquery)) {
         // Content is a DOM node or a jQuery
-        if (html) {
+        if (this.config.html) {
           if (!$(content).parent().is($element)) {
             $element.empty().append(content);
           }
         } else {
           $element.text($(content).text());
         }
+
+        return;
+      }
+
+      if (this.config.html) {
+        if (this.config.sanitize) {
+          content = sanitizeHtml(content, this.config.whiteList, this.config.sanitizeFn);
+        }
+
+        $element.html(content);
       } else {
-        $element[html ? 'html' : 'text'](content);
+        $element.text(content);
       }
     };
 
@@ -3077,8 +5159,25 @@
       }
 
       return title;
-    }; // Private
+    } // Private
+    ;
 
+    _proto._getOffset = function _getOffset() {
+      var _this3 = this;
+
+      var offset = {};
+
+      if (typeof this.config.offset === 'function') {
+        offset.fn = function (data) {
+          data.offsets = _objectSpread({}, data.offsets, _this3.config.offset(data.offsets, _this3.element) || {});
+          return data;
+        };
+      } else {
+        offset.offset = this.config.offset;
+      }
+
+      return offset;
+    };
 
     _proto._getContainer = function _getContainer() {
       if (this.config.container === false) {
@@ -3097,27 +5196,27 @@
     };
 
     _proto._setListeners = function _setListeners() {
-      var _this3 = this;
+      var _this4 = this;
 
       var triggers = this.config.trigger.split(' ');
       triggers.forEach(function (trigger) {
         if (trigger === 'click') {
-          $(_this3.element).on(_this3.constructor.Event.CLICK, _this3.config.selector, function (event) {
-            return _this3.toggle(event);
+          $(_this4.element).on(_this4.constructor.Event.CLICK, _this4.config.selector, function (event) {
+            return _this4.toggle(event);
           });
         } else if (trigger !== Trigger.MANUAL) {
-          var eventIn = trigger === Trigger.HOVER ? _this3.constructor.Event.MOUSEENTER : _this3.constructor.Event.FOCUSIN;
-          var eventOut = trigger === Trigger.HOVER ? _this3.constructor.Event.MOUSELEAVE : _this3.constructor.Event.FOCUSOUT;
-          $(_this3.element).on(eventIn, _this3.config.selector, function (event) {
-            return _this3._enter(event);
-          }).on(eventOut, _this3.config.selector, function (event) {
-            return _this3._leave(event);
+          var eventIn = trigger === Trigger.HOVER ? _this4.constructor.Event.MOUSEENTER : _this4.constructor.Event.FOCUSIN;
+          var eventOut = trigger === Trigger.HOVER ? _this4.constructor.Event.MOUSELEAVE : _this4.constructor.Event.FOCUSOUT;
+          $(_this4.element).on(eventIn, _this4.config.selector, function (event) {
+            return _this4._enter(event);
+          }).on(eventOut, _this4.config.selector, function (event) {
+            return _this4._leave(event);
           });
         }
       });
       $(this.element).closest('.modal').on('hide.bs.modal', function () {
-        if (_this3.element) {
-          _this3.hide();
+        if (_this4.element) {
+          _this4.hide();
         }
       });
 
@@ -3216,7 +5315,13 @@
     };
 
     _proto._getConfig = function _getConfig(config) {
-      config = _objectSpread({}, this.constructor.Default, $(this.element).data(), typeof config === 'object' && config ? config : {});
+      var dataAttributes = $(this.element).data();
+      Object.keys(dataAttributes).forEach(function (dataAttr) {
+        if (DISALLOWED_ATTRIBUTES.indexOf(dataAttr) !== -1) {
+          delete dataAttributes[dataAttr];
+        }
+      });
+      config = _objectSpread({}, this.constructor.Default, dataAttributes, typeof config === 'object' && config ? config : {});
 
       if (typeof config.delay === 'number') {
         config.delay = {
@@ -3234,6 +5339,11 @@
       }
 
       Util.typeCheckConfig(NAME$6, config, this.constructor.DefaultType);
+
+      if (config.sanitize) {
+        config.template = sanitizeHtml(config.template, config.whiteList, config.sanitizeFn);
+      }
+
       return config;
     };
 
@@ -3282,8 +5392,8 @@
       this.hide();
       this.show();
       this.config.animation = initConfigAnimation;
-    }; // Static
-
+    } // Static
+    ;
 
     Tooltip._jQueryInterface = function _jQueryInterface(config) {
       return this.each(function () {
@@ -3371,7 +5481,7 @@
    */
 
   var NAME$7 = 'popover';
-  var VERSION$7 = '4.2.1';
+  var VERSION$7 = '4.3.1';
   var DATA_KEY$7 = 'bs.popover';
   var EVENT_KEY$7 = "." + DATA_KEY$7;
   var JQUERY_NO_CONFLICT$7 = $.fn[NAME$7];
@@ -3454,8 +5564,8 @@
 
       this.setElementContent($tip.find(Selector$7.CONTENT), content);
       $tip.removeClass(ClassName$7.FADE + " " + ClassName$7.SHOW);
-    }; // Private
-
+    } // Private
+    ;
 
     _proto._getContent = function _getContent() {
       return this.element.getAttribute('data-content') || this.config.content;
@@ -3468,8 +5578,8 @@
       if (tabClass !== null && tabClass.length > 0) {
         $tip.removeClass(tabClass.join(''));
       }
-    }; // Static
-
+    } // Static
+    ;
 
     Popover._jQueryInterface = function _jQueryInterface(config) {
       return this.each(function () {
@@ -3558,7 +5668,7 @@
    */
 
   var NAME$8 = 'scrollspy';
-  var VERSION$8 = '4.2.1';
+  var VERSION$8 = '4.3.1';
   var DATA_KEY$8 = 'bs.scrollspy';
   var EVENT_KEY$8 = "." + DATA_KEY$8;
   var DATA_API_KEY$6 = '.data-api';
@@ -3681,8 +5791,8 @@
       this._targets = null;
       this._activeTarget = null;
       this._scrollHeight = null;
-    }; // Private
-
+    } // Private
+    ;
 
     _proto._getConfig = function _getConfig(config) {
       config = _objectSpread({}, Default$6, typeof config === 'object' && config ? config : {});
@@ -3789,8 +5899,8 @@
       }).forEach(function (node) {
         return node.classList.remove(ClassName$8.ACTIVE);
       });
-    }; // Static
-
+    } // Static
+    ;
 
     ScrollSpy._jQueryInterface = function _jQueryInterface(config) {
       return this.each(function () {
@@ -3865,7 +5975,7 @@
    */
 
   var NAME$9 = 'tab';
-  var VERSION$9 = '4.2.1';
+  var VERSION$9 = '4.3.1';
   var DATA_KEY$9 = 'bs.tab';
   var EVENT_KEY$9 = "." + DATA_KEY$9;
   var DATA_API_KEY$7 = '.data-api';
@@ -3973,8 +6083,8 @@
     _proto.dispose = function dispose() {
       $.removeData(this._element, DATA_KEY$9);
       this._element = null;
-    }; // Private
-
+    } // Private
+    ;
 
     _proto._activate = function _activate(element, container, callback) {
       var _this2 = this;
@@ -4016,7 +6126,10 @@
       }
 
       Util.reflow(element);
-      $(element).addClass(ClassName$9.SHOW);
+
+      if (element.classList.contains(ClassName$9.FADE)) {
+        element.classList.add(ClassName$9.SHOW);
+      }
 
       if (element.parentNode && $(element.parentNode).hasClass(ClassName$9.DROPDOWN_MENU)) {
         var dropdownElement = $(element).closest(Selector$9.DROPDOWN)[0];
@@ -4032,8 +6145,8 @@
       if (callback) {
         callback();
       }
-    }; // Static
-
+    } // Static
+    ;
 
     Tab._jQueryInterface = function _jQueryInterface(config) {
       return this.each(function () {
@@ -4097,7 +6210,7 @@
    */
 
   var NAME$a = 'toast';
-  var VERSION$a = '4.2.1';
+  var VERSION$a = '4.3.1';
   var DATA_KEY$a = 'bs.toast';
   var EVENT_KEY$a = "." + DATA_KEY$a;
   var JQUERY_NO_CONFLICT$a = $.fn[NAME$a];
@@ -4212,8 +6325,8 @@
       $.removeData(this._element, DATA_KEY$a);
       this._element = null;
       this._config = null;
-    }; // Private
-
+    } // Private
+    ;
 
     _proto._getConfig = function _getConfig(config) {
       config = _objectSpread({}, Default$7, $(this._element).data(), typeof config === 'object' && config ? config : {});
@@ -4246,8 +6359,8 @@
       } else {
         complete();
       }
-    }; // Static
-
+    } // Static
+    ;
 
     Toast._jQueryInterface = function _jQueryInterface(config) {
       return this.each(function () {
@@ -4281,6 +6394,11 @@
       get: function get() {
         return DefaultType$7;
       }
+    }, {
+      key: "Default",
+      get: function get() {
+        return Default$7;
+      }
     }]);
 
     return Toast;
@@ -4302,7 +6420,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v4.2.1): index.js
+   * Bootstrap (v4.3.1): index.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -4339,7 +6457,7 @@
 
   Object.defineProperty(exports, '__esModule', { value: true });
 
-})));
+}));
 //# sourceMappingURL=bootstrap.js.map
 
 
@@ -15731,7 +17849,7 @@ return jQuery;
 __webpack_require__.r(__webpack_exports__);
 /* WEBPACK VAR INJECTION */(function(global) {/**!
  * @fileOverview Kickass library to create and place poppers near their reference elements.
- * @version 1.14.6
+ * @version 1.14.7
  * @license
  * Copyright (c) 2016 Federico Zivolo and contributors
  *
@@ -16299,7 +18417,11 @@ function isFixed(element) {
   if (getStyleComputedProperty(element, 'position') === 'fixed') {
     return true;
   }
-  return isFixed(getParentNode(element));
+  var parentNode = getParentNode(element);
+  if (!parentNode) {
+    return false;
+  }
+  return isFixed(parentNode);
 }
 
 /**
@@ -16955,18 +19077,23 @@ function getRoundedOffsets(data, shouldRound) {
   var _data$offsets = data.offsets,
       popper = _data$offsets.popper,
       reference = _data$offsets.reference;
+  var round = Math.round,
+      floor = Math.floor;
 
-
-  var isVertical = ['left', 'right'].indexOf(data.placement) !== -1;
-  var isVariation = data.placement.indexOf('-') !== -1;
-  var sameWidthOddness = reference.width % 2 === popper.width % 2;
-  var bothOddWidth = reference.width % 2 === 1 && popper.width % 2 === 1;
   var noRound = function noRound(v) {
     return v;
   };
 
-  var horizontalToInteger = !shouldRound ? noRound : isVertical || isVariation || sameWidthOddness ? Math.round : Math.floor;
-  var verticalToInteger = !shouldRound ? noRound : Math.round;
+  var referenceWidth = round(reference.width);
+  var popperWidth = round(popper.width);
+
+  var isVertical = ['left', 'right'].indexOf(data.placement) !== -1;
+  var isVariation = data.placement.indexOf('-') !== -1;
+  var sameWidthParity = referenceWidth % 2 === popperWidth % 2;
+  var bothOddWidth = referenceWidth % 2 === 1 && popperWidth % 2 === 1;
+
+  var horizontalToInteger = !shouldRound ? noRound : isVertical || isVariation || sameWidthParity ? round : floor;
+  var verticalToInteger = !shouldRound ? noRound : round;
 
   return {
     left: horizontalToInteger(bothOddWidth && !isVariation && shouldRound ? popper.left - 1 : popper.left),
@@ -18315,7 +20442,7 @@ Popper.Defaults = Defaults;
 
 /* WEBPACK VAR INJECTION */(function(global) {/**!
  * @fileOverview Kickass library to create and place poppers near their reference elements.
- * @version 1.14.6
+ * @version 1.14.7
  * @license
  * Copyright (c) 2016 Federico Zivolo and contributors
  *
@@ -18888,7 +21015,11 @@ function isFixed(element) {
   if (getStyleComputedProperty(element, 'position') === 'fixed') {
     return true;
   }
-  return isFixed(getParentNode(element));
+  var parentNode = getParentNode(element);
+  if (!parentNode) {
+    return false;
+  }
+  return isFixed(parentNode);
 }
 
 /**
@@ -19544,18 +21675,23 @@ function getRoundedOffsets(data, shouldRound) {
   var _data$offsets = data.offsets,
       popper = _data$offsets.popper,
       reference = _data$offsets.reference;
+  var round = Math.round,
+      floor = Math.floor;
 
-
-  var isVertical = ['left', 'right'].indexOf(data.placement) !== -1;
-  var isVariation = data.placement.indexOf('-') !== -1;
-  var sameWidthOddness = reference.width % 2 === popper.width % 2;
-  var bothOddWidth = reference.width % 2 === 1 && popper.width % 2 === 1;
   var noRound = function noRound(v) {
     return v;
   };
 
-  var horizontalToInteger = !shouldRound ? noRound : isVertical || isVariation || sameWidthOddness ? Math.round : Math.floor;
-  var verticalToInteger = !shouldRound ? noRound : Math.round;
+  var referenceWidth = round(reference.width);
+  var popperWidth = round(popper.width);
+
+  var isVertical = ['left', 'right'].indexOf(data.placement) !== -1;
+  var isVariation = data.placement.indexOf('-') !== -1;
+  var sameWidthParity = referenceWidth % 2 === popperWidth % 2;
+  var bothOddWidth = referenceWidth % 2 === 1 && popperWidth % 2 === 1;
+
+  var horizontalToInteger = !shouldRound ? noRound : isVertical || isVariation || sameWidthParity ? round : floor;
+  var verticalToInteger = !shouldRound ? noRound : round;
 
   return {
     left: horizontalToInteger(bothOddWidth && !isVariation && shouldRound ? popper.left - 1 : popper.left),
@@ -21009,7 +23145,7 @@ Prism.languages.insertBefore('aspnet', Prism.languages.javascript ? 'script' : '
 		'variable': insideString.variable,
 		// Originally based on http://ss64.com/bash/
 		'function': {
-			pattern: /(^|[\s;|&])(?:alias|apropos|apt-get|aptitude|aspell|awk|basename|bash|bc|bg|builtin|bzip2|cal|cat|cd|cfdisk|chgrp|chmod|chown|chroot|chkconfig|cksum|clear|cmp|comm|command|cp|cron|crontab|csplit|curl|cut|date|dc|dd|ddrescue|df|diff|diff3|dig|dir|dircolors|dirname|dirs|dmesg|du|egrep|eject|enable|env|ethtool|eval|exec|expand|expect|export|expr|fdformat|fdisk|fg|fgrep|file|find|fmt|fold|format|free|fsck|ftp|fuser|gawk|getopts|git|grep|groupadd|groupdel|groupmod|groups|gzip|hash|head|help|hg|history|hostname|htop|iconv|id|ifconfig|ifdown|ifup|import|install|jobs|join|kill|killall|less|link|ln|locate|logname|logout|look|lpc|lpr|lprint|lprintd|lprintq|lprm|ls|lsof|make|man|mkdir|mkfifo|mkisofs|mknod|more|most|mount|mtools|mtr|mv|mmv|nano|netstat|nice|nl|nohup|notify-send|npm|nslookup|open|op|passwd|paste|pathchk|ping|pkill|popd|pr|printcap|printenv|printf|ps|pushd|pv|pwd|quota|quotacheck|quotactl|ram|rar|rcp|read|readarray|readonly|reboot|rename|renice|remsync|rev|rm|rmdir|rsync|screen|scp|sdiff|sed|seq|service|sftp|shift|shopt|shutdown|sleep|slocate|sort|source|split|ssh|stat|strace|su|sudo|sum|suspend|sync|tail|tar|tee|test|time|timeout|times|touch|top|traceroute|trap|tr|tsort|tty|type|ulimit|umask|umount|unalias|uname|unexpand|uniq|units|unrar|unshar|uptime|useradd|userdel|usermod|users|uuencode|uudecode|v|vdir|vi|vmstat|wait|watch|wc|wget|whereis|which|who|whoami|write|xargs|xdg-open|yes|zip)(?=$|[\s;|&])/,
+			pattern: /(^|[\s;|&])(?:add|alias|apropos|apt|apt-cache|apt-get|aptitude|aspell|automysqlbackup|awk|basename|bash|bc|bconsole|bg|builtin|bzip2|cal|cat|cd|cfdisk|chgrp|chkconfig|chmod|chown|chroot|cksum|clear|cmp|comm|command|cp|cron|crontab|csplit|curl|cut|date|dc|dd|ddrescue|debootstrap|df|diff|diff3|dig|dir|dircolors|dirname|dirs|dmesg|du|egrep|eject|enable|env|ethtool|eval|exec|expand|expect|export|expr|fdformat|fdisk|fg|fgrep|file|find|fmt|fold|format|free|fsck|ftp|fuser|gawk|getopts|git|gparted|grep|groupadd|groupdel|groupmod|groups|grub-mkconfig|gzip|halt|hash|head|help|hg|history|host|hostname|htop|iconv|id|ifconfig|ifdown|ifup|import|install|ip|jobs|join|kill|killall|less|link|ln|locate|logname|logout|logrotate|look|lpc|lpr|lprint|lprintd|lprintq|lprm|ls|lsof|lynx|make|man|mc|mdadm|mkconfig|mkdir|mke2fs|mkfifo|mkfs|mkisofs|mknod|mkswap|mmv|more|most|mount|mtools|mtr|mutt|mv|nano|nc|netstat|nice|nl|nohup|notify-send|npm|nslookup|op|open|parted|passwd|paste|pathchk|ping|pkill|pnpm|popd|pr|printcap|printenv|printf|ps|pushd|pv|pwd|quota|quotacheck|quotactl|ram|rar|rcp|read|readarray|readonly|reboot|remsync|rename|renice|rev|rm|rmdir|rpm|rsync|scp|screen|sdiff|sed|sendmail|seq|service|sftp|shift|shopt|shutdown|sleep|slocate|sort|source|split|ssh|stat|strace|su|sudo|sum|suspend|swapon|sync|tail|tar|tee|test|time|timeout|times|top|touch|tr|traceroute|trap|tsort|tty|type|ulimit|umask|umount|unalias|uname|unexpand|uniq|units|unrar|unshar|unzip|update-grub|uptime|useradd|userdel|usermod|users|uudecode|uuencode|vdir|vi|vim|virsh|vmstat|wait|watch|wc|wget|whereis|which|who|whoami|write|xargs|xdg-open|yarn|yes|zip|zypper)(?=$|[\s;|&])/,
 			lookbehind: true
 		},
 		'keyword': {
@@ -21031,10 +23167,10 @@ Prism.languages.insertBefore('aspnet', Prism.languages.javascript ? 'script' : '
 	inside['boolean'] = Prism.languages.bash['boolean'];
 	inside.operator = Prism.languages.bash.operator;
 	inside.punctuation = Prism.languages.bash.punctuation;
-	
+
 	Prism.languages.shell = Prism.languages.bash;
 })(Prism);
-console.log("test");
+
 
 /***/ }),
 
@@ -21046,9 +23182,13 @@ console.log("test");
 /***/ (function(module, exports) {
 
 Prism.languages.c = Prism.languages.extend('clike', {
+	'class-name': {
+		pattern: /(\b(?:enum|struct)\s+)\w+/,
+		lookbehind: true
+	},
 	'keyword': /\b(?:_Alignas|_Alignof|_Atomic|_Bool|_Complex|_Generic|_Imaginary|_Noreturn|_Static_assert|_Thread_local|asm|typeof|inline|auto|break|case|char|const|continue|default|do|double|else|enum|extern|float|for|goto|if|int|long|register|return|short|signed|sizeof|static|struct|switch|typedef|union|unsigned|void|volatile|while)\b/,
-	'operator': /-[>-]?|\+\+?|!=?|<<?=?|>>?=?|==?|&&?|\|\|?|[~^%?*\/]/,
-	'number': /(?:\b0x[\da-f]+|(?:\b\d+\.?\d*|\B\.\d+)(?:e[+-]?\d+)?)[ful]*/i
+	'operator': />>=?|<<=?|->|([-+&|:])\1|[?:~]|[-+*/%&|^!=<>]=?/,
+	'number': /(?:\b0x(?:[\da-f]+\.?[\da-f]*|\.[\da-f]+)(?:p[+-]?\d+)?|(?:\b\d+\.?\d*|\B\.\d+)(?:e[+-]?\d+)?)[ful]*/i
 });
 
 Prism.languages.insertBefore('c', 'string', {
@@ -21076,7 +23216,6 @@ Prism.languages.insertBefore('c', 'string', {
 	'constant': /\b(?:__FILE__|__LINE__|__DATE__|__TIME__|__TIMESTAMP__|__func__|EOF|NULL|SEEK_CUR|SEEK_END|SEEK_SET|stdin|stdout|stderr)\b/
 });
 
-delete Prism.languages.c['class-name'];
 delete Prism.languages.c['boolean'];
 
 
@@ -21179,6 +23318,7 @@ Prism.languages.insertBefore('coffeescript', 'keyword', {
 
 delete Prism.languages.coffeescript['template-string'];
 
+Prism.languages.coffee = Prism.languages.coffeescript;
 }(Prism));
 
 /***/ }),
@@ -21191,16 +23331,13 @@ delete Prism.languages.coffeescript['template-string'];
 /***/ (function(module, exports) {
 
 Prism.languages.cpp = Prism.languages.extend('c', {
+	'class-name': {
+		pattern: /(\b(?:class|enum|struct)\s+)\w+/,
+		lookbehind: true
+	},
 	'keyword': /\b(?:alignas|alignof|asm|auto|bool|break|case|catch|char|char16_t|char32_t|class|compl|const|constexpr|const_cast|continue|decltype|default|delete|do|double|dynamic_cast|else|enum|explicit|export|extern|float|for|friend|goto|if|inline|int|int8_t|int16_t|int32_t|int64_t|uint8_t|uint16_t|uint32_t|uint64_t|long|mutable|namespace|new|noexcept|nullptr|operator|private|protected|public|register|reinterpret_cast|return|short|signed|sizeof|static|static_assert|static_cast|struct|switch|template|this|thread_local|throw|try|typedef|typeid|typename|union|unsigned|using|virtual|void|volatile|wchar_t|while)\b/,
 	'boolean': /\b(?:true|false)\b/,
-	'operator': /--?|\+\+?|!=?|<{1,2}=?|>{1,2}=?|->|:{1,2}|={1,2}|\^|~|%|&{1,2}|\|\|?|\?|\*|\/|\b(?:and|and_eq|bitand|bitor|not|not_eq|or|or_eq|xor|xor_eq)\b/
-});
-
-Prism.languages.insertBefore('cpp', 'keyword', {
-	'class-name': {
-		pattern: /(class\s+)\w+/i,
-		lookbehind: true
-	}
+	'operator': />>=?|<<=?|->|([-+&|:])\1|[?:~]|[-+*/%&|^!=<>]=?|\b(?:and|and_eq|bitand|bitor|not|not_eq|or|or_eq|xor|xor_eq)\b/
 });
 
 Prism.languages.insertBefore('cpp', 'string', {
@@ -21266,7 +23403,9 @@ Prism.languages.csharp = Prism.languages.extend('clike', {
 			}
 		}
 	],
-	'number': /\b0x[\da-f]+\b|(?:\b\d+\.?\d*|\B\.\d+)f?/i
+	'number': /\b0x[\da-f]+\b|(?:\b\d+\.?\d*|\B\.\d+)f?/i,
+	'operator': />>=?|<<=?|[-=]>|([-+&|?])\1|~|[-+*/%&|^!=<>]=?/,
+	'punctuation': /\?\.?|::|[{}[\];(),.:]/
 });
 
 Prism.languages.insertBefore('csharp', 'class-name', {
@@ -21300,6 +23439,29 @@ Prism.languages.insertBefore('csharp', 'class-name', {
 });
 
 Prism.languages.dotnet = Prism.languages.csharp;
+
+
+/***/ }),
+
+/***/ "./node_modules/prismjs/components/prism-docker.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/prismjs/components/prism-docker.js ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+Prism.languages.docker = {
+	'keyword': {
+		pattern: /(^\s*)(?:ADD|ARG|CMD|COPY|ENTRYPOINT|ENV|EXPOSE|FROM|HEALTHCHECK|LABEL|MAINTAINER|ONBUILD|RUN|SHELL|STOPSIGNAL|USER|VOLUME|WORKDIR)(?=\s)/mi,
+		lookbehind: true
+	},
+	'string': /("|')(?:(?!\1)[^\\\r\n]|\\(?:\r\n|[\s\S]))*\1/,
+	'comment': /#.*/,
+	'punctuation': /---|\.\.\.|[:[\]{}\-,|>?]/
+};
+
+Prism.languages.dockerfile = Prism.languages.docker;
+
 
 /***/ }),
 
@@ -21412,56 +23574,85 @@ delete Prism.languages.go['class-name'];
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-Prism.languages.http = {
-	'request-line': {
-		pattern: /^(?:POST|GET|PUT|DELETE|OPTIONS|PATCH|TRACE|CONNECT)\s(?:https?:\/\/|\/)\S+\sHTTP\/[0-9.]+/m,
-		inside: {
-			// HTTP Verb
-			property: /^(?:POST|GET|PUT|DELETE|OPTIONS|PATCH|TRACE|CONNECT)\b/,
-			// Path or query argument
-			'attr-name': /:\w+/
-		}
-	},
-	'response-status': {
-		pattern: /^HTTP\/1.[01] \d+.*/m,
-		inside: {
-			// Status, e.g. 200 OK
-			property: {
-                pattern: /(^HTTP\/1.[01] )\d+.*/i,
-                lookbehind: true
-            }
-		}
-	},
-	// HTTP header name
-	'header-name': {
-        pattern: /^[\w-]+:(?=.)/m,
-        alias: 'keyword'
-    }
-};
-
-// Create a mapping of Content-Type headers to language definitions
-var httpLanguages = {
-	'application/json': Prism.languages.javascript,
-	'application/xml': Prism.languages.markup,
-	'text/xml': Prism.languages.markup,
-	'text/html': Prism.languages.markup
-};
-
-// Insert each content type parser that has its associated language
-// currently loaded.
-for (var contentType in httpLanguages) {
-	if (httpLanguages[contentType]) {
-		var options = {};
-		options[contentType] = {
-			pattern: new RegExp('(content-type:\\s*' + contentType + '[\\w\\W]*?)(?:\\r?\\n|\\r){2}[\\w\\W]*', 'i'),
-			lookbehind: true,
+(function (Prism) {
+	Prism.languages.http = {
+		'request-line': {
+			pattern: /^(?:POST|GET|PUT|DELETE|OPTIONS|PATCH|TRACE|CONNECT)\s(?:https?:\/\/|\/)\S+\sHTTP\/[0-9.]+/m,
 			inside: {
-				rest: httpLanguages[contentType]
+				// HTTP Verb
+				'property': /^(?:POST|GET|PUT|DELETE|OPTIONS|PATCH|TRACE|CONNECT)\b/,
+				// Path or query argument
+				'attr-name': /:\w+/
 			}
-		};
+		},
+		'response-status': {
+			pattern: /^HTTP\/1.[01] \d+.*/m,
+			inside: {
+				// Status, e.g. 200 OK
+				'property': {
+					pattern: /(^HTTP\/1.[01] )\d+.*/i,
+					lookbehind: true
+				}
+			}
+		},
+		// HTTP header name
+		'header-name': {
+			pattern: /^[\w-]+:(?=.)/m,
+			alias: 'keyword'
+		}
+	};
+
+	// Create a mapping of Content-Type headers to language definitions
+	var langs = Prism.languages;
+	var httpLanguages = {
+		'application/javascript': langs.javascript,
+		'application/json': langs.json || langs.javascript,
+		'application/xml': langs.xml,
+		'text/xml': langs.xml,
+		'text/html': langs.html,
+		'text/css': langs.css
+	};
+
+	// Declare which types can also be suffixes
+	var suffixTypes = {
+		'application/json': true,
+		'application/xml': true
+	};
+
+	/**
+	 * Returns a pattern for the given content type which matches it and any type which has it as a suffix.
+	 *
+	 * @param {string} contentType
+	 * @returns {string}
+	 */
+	function getSuffixPattern(contentType) {
+		var suffix = contentType.replace(/^[a-z]+\//, '');
+		var suffixPattern = '\\w+/(?:[\\w.-]+\\+)+' + suffix + '(?![+\\w.-])';
+		return '(?:' + contentType + '|' + suffixPattern + ')';
+	}
+
+	// Insert each content type parser that has its associated language
+	// currently loaded.
+	var options;
+	for (var contentType in httpLanguages) {
+		if (httpLanguages[contentType]) {
+			options = options || {};
+
+			var pattern = suffixTypes[contentType] ? getSuffixPattern(contentType) : contentType;
+			options[contentType] = {
+				pattern: RegExp('(content-type:\\s*' + pattern + '[\\s\\S]*?)(?:\\r?\\n|\\r){2}[\\s\\S]*', 'i'),
+				lookbehind: true,
+				inside: {
+					rest: httpLanguages[contentType]
+				}
+			};
+		}
+	}
+	if (options) {
 		Prism.languages.insertBefore('http', 'header-name', options);
 	}
-}
+
+}(Prism));
 
 
 /***/ }),
@@ -21473,33 +23664,60 @@ for (var contentType in httpLanguages) {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-Prism.languages.java = Prism.languages.extend('clike', {
-	'keyword': /\b(?:abstract|continue|for|new|switch|assert|default|goto|package|synchronized|boolean|do|if|private|this|break|double|implements|protected|throw|byte|else|import|public|throws|case|enum|instanceof|return|transient|catch|extends|int|short|try|char|final|interface|static|void|class|finally|long|strictfp|volatile|const|float|native|super|while)\b/,
-	'number': /\b0b[01]+\b|\b0x[\da-f]*\.?[\da-fp-]+\b|(?:\b\d+\.?\d*|\B\.\d+)(?:e[+-]?\d+)?[df]?/i,
-	'operator': {
-		pattern: /(^|[^.])(?:\+[+=]?|-[-=]?|!=?|<<?=?|>>?>?=?|==?|&[&=]?|\|[|=]?|\*=?|\/=?|%=?|\^=?|[?:~])/m,
-		lookbehind: true
-	}
-});
+(function (Prism) {
 
-Prism.languages.insertBefore('java','function', {
-	'annotation': {
-		alias: 'punctuation',
-		pattern: /(^|[^.])@\w+/,
-		lookbehind: true
-	}
-});
+	var keywords = /\b(?:abstract|continue|for|new|switch|assert|default|goto|package|synchronized|boolean|do|if|private|this|break|double|implements|protected|throw|byte|else|import|public|throws|case|enum|instanceof|return|transient|catch|extends|int|short|try|char|final|interface|static|void|class|finally|long|strictfp|volatile|const|float|native|super|while|var|null|exports|module|open|opens|provides|requires|to|transitive|uses|with)\b/;
 
-Prism.languages.insertBefore('java', 'class-name', {
-	'generics': {
-		pattern: /<\s*\w+(?:\.\w+)?(?:\s*,\s*\w+(?:\.\w+)?)*>/i,
-		alias: 'function',
-		inside: {
-			keyword: Prism.languages.java.keyword,
-			punctuation: /[<>(),.:]/
+	// based on the java naming conventions
+	var className = /\b[A-Z](?:\w*[a-z]\w*)?\b/;
+
+	Prism.languages.java = Prism.languages.extend('clike', {
+		'class-name': [
+			className,
+
+			// variables and parameters
+			// this to support class names (or generic parameters) which do not contain a lower case letter (also works for methods)
+			/\b[A-Z]\w*(?=\s+\w+\s*[;,=())])/
+		],
+		'keyword': keywords,
+		'function': [
+			Prism.languages.clike.function,
+			{
+				pattern: /(\:\:)[a-z_]\w*/,
+				lookbehind: true
+			}
+		],
+		'number': /\b0b[01][01_]*L?\b|\b0x[\da-f_]*\.?[\da-f_p+-]+\b|(?:\b\d[\d_]*\.?[\d_]*|\B\.\d[\d_]*)(?:e[+-]?\d[\d_]*)?[dfl]?/i,
+		'operator': {
+			pattern: /(^|[^.])(?:<<=?|>>>?=?|->|([-+&|])\2|[?:~]|[-+*/%&|^!=<>]=?)/m,
+			lookbehind: true
 		}
-	}
-});
+	});
+
+	Prism.languages.insertBefore('java', 'class-name', {
+		'annotation': {
+			alias: 'punctuation',
+			pattern: /(^|[^.])@\w+/,
+			lookbehind: true
+		},
+		'namespace': {
+			pattern: /(\b(?:exports|import(?:\s+static)?|module|open|opens|package|provides|requires|to|transitive|uses|with)\s+)[a-z]\w*(\.[a-z]\w*)+/,
+			lookbehind: true,
+			inside: {
+				'punctuation': /\./,
+			}
+		},
+		'generics': {
+			pattern: /<(?:[\w\s,.&?]|<(?:[\w\s,.&?]|<(?:[\w\s,.&?]|<[\w\s,.&?]*>)*>)*>)*>/,
+			inside: {
+				'class-name': className,
+				'keyword': keywords,
+				'punctuation': /[<>(),.:]/,
+				'operator': /[?&|]/
+			}
+		}
+	});
+}(Prism));
 
 
 /***/ }),
@@ -21512,19 +23730,24 @@ Prism.languages.insertBefore('java', 'class-name', {
 /***/ (function(module, exports) {
 
 Prism.languages.json = {
-	'property': /"(?:\\.|[^\\"\r\n])*"(?=\s*:)/i,
+	'comment': /\/\/.*|\/\*[\s\S]*?(?:\*\/|$)/,
+	'property': {
+		pattern: /"(?:\\.|[^\\"\r\n])*"(?=\s*:)/,
+		greedy: true
+	},
 	'string': {
 		pattern: /"(?:\\.|[^\\"\r\n])*"(?!\s*:)/,
 		greedy: true
 	},
-	'number': /\b0x[\dA-Fa-f]+\b|(?:\b\d+\.?\d*|\B\.\d+)(?:[Ee][+-]?\d+)?/,
-	'punctuation': /[{}[\]);,]/,
-	'operator': /:/g,
-	'boolean': /\b(?:true|false)\b/i,
-	'null': /\bnull\b/i
+	'number': /-?\d+\.?\d*(e[+-]?\d+)?/i,
+	'punctuation': /[{}[\],]/,
+	'operator': /:/,
+	'boolean': /\b(?:true|false)\b/,
+	'null': {
+		pattern: /\bnull\b/,
+		alias: 'keyword'
+	}
 };
-
-Prism.languages.jsonp = Prism.languages.json;
 
 
 /***/ }),
@@ -21545,6 +23768,7 @@ Prism.languages.jsx.tag.pattern= /<\/?(?:[\w.:-]+\s*(?:\s+(?:[\w.:-]+(?:=(?:("|'
 
 Prism.languages.jsx.tag.inside['tag'].pattern = /^<\/?[^\s>\/]*/i;
 Prism.languages.jsx.tag.inside['attr-value'].pattern = /=(?!\{)(?:("|')(?:\\[\s\S]|(?!\1)[^\\])*\1|[^\s'">]+)/i;
+Prism.languages.jsx.tag.inside['tag'].inside['class-name'] = /^[A-Z]\w*(?:\.[A-Z]\w*)*$/;
 
 Prism.languages.insertBefore('inside', 'attr-name', {
 	'spread': {
@@ -21776,13 +24000,7 @@ Prism.languages.less = Prism.languages.extend('css', {
 	},
 
 	'property': /(?:@\{[\w-]+\}|[\w-])+(?:\+_?)?(?=\s*:)/i,
-	'punctuation': /[{}();:,]/,
 	'operator': /[+\-*\/]/
-});
-
-// Invert function and punctuation positions
-Prism.languages.insertBefore('less', 'punctuation', {
-	'function': Prism.languages.less.function
 });
 
 Prism.languages.insertBefore('less', 'property', {
@@ -21833,6 +24051,24 @@ Prism.languages.insertBefore('markdown', 'prolog', {
 			// ``code``
 			pattern: /``.+?``|`[^`\n]+`/,
 			alias: 'keyword'
+		},
+		{
+			// ```optional language
+			// code block
+			// ```
+			pattern: /^```[\s\S]*?^```$/m,
+			greedy: true,
+			inside: {
+				'code-block': {
+					pattern: /^(```.*(?:\r?\n|\r))[\s\S]+?(?=(?:\r?\n|\r)^```$)/m,
+					lookbehind: true
+				},
+				'code-language': {
+					pattern: /^(```).+/,
+					lookbehind: true
+				},
+				'punctuation': /```/
+			}
 		}
 	],
 	'title': [
@@ -21842,7 +24078,7 @@ Prism.languages.insertBefore('markdown', 'prolog', {
 
 			// title 2
 			// -------
-			pattern: /\w+.*(?:\r?\n|\r)(?:==+|--+)/,
+			pattern: /\S.*(?:\r?\n|\r)(?:==+|--+)/,
 			alias: 'important',
 			inside: {
 				punctuation: /==+$|--+$/
@@ -21900,6 +24136,7 @@ Prism.languages.insertBefore('markdown', 'prolog', {
 		// Allow only one line break
 		pattern: /(^|[^\\])(\*\*|__)(?:(?:\r?\n|\r)(?!\r?\n|\r)|.)+?\2/,
 		lookbehind: true,
+		greedy: true,
 		inside: {
 			'punctuation': /^\*\*|^__|\*\*$|__$/
 		}
@@ -21911,8 +24148,21 @@ Prism.languages.insertBefore('markdown', 'prolog', {
 		// Allow only one line break
 		pattern: /(^|[^\\])([*_])(?:(?:\r?\n|\r)(?!\r?\n|\r)|.)+?\2/,
 		lookbehind: true,
+		greedy: true,
 		inside: {
 			'punctuation': /^[*_]|[*_]$/
+		}
+	},
+	'strike': {
+		// ~~strike through~~
+		// ~strike~
+
+		// Allow only one line break
+		pattern: /(^|[^\\])(~~?)(?:(?:\r?\n|\r)(?!\r?\n|\r)|.)+?\2/,
+		lookbehind: true,
+		greedy: true,
+		inside: {
+			'punctuation': /^~~?|~~?$/
 		}
 	},
 	'url': {
@@ -21931,10 +24181,86 @@ Prism.languages.insertBefore('markdown', 'prolog', {
 	}
 });
 
-Prism.languages.markdown['bold'].inside['url'] = Prism.languages.markdown['url'];
-Prism.languages.markdown['italic'].inside['url'] = Prism.languages.markdown['url'];
-Prism.languages.markdown['bold'].inside['italic'] = Prism.languages.markdown['italic'];
-Prism.languages.markdown['italic'].inside['bold'] = Prism.languages.markdown['bold'];
+['bold', 'italic', 'strike'].forEach(function (token) {
+	['url', 'bold', 'italic', 'strike'].forEach(function (inside) {
+		if (token !== inside) {
+			Prism.languages.markdown[token].inside[inside] = Prism.languages.markdown[inside];
+		}
+	});
+});
+
+Prism.hooks.add('after-tokenize', function (env) {
+	if (env.language !== 'markdown' && env.language !== 'md') {
+		return;
+	}
+
+	function walkTokens(tokens) {
+		if (!tokens || typeof tokens === 'string') {
+			return;
+		}
+
+		for (var i = 0, l = tokens.length; i < l; i++) {
+			var token = tokens[i];
+
+			if (token.type !== 'code') {
+				walkTokens(token.content);
+				continue;
+			}
+
+			var codeLang = token.content[1];
+			var codeBlock = token.content[3];
+
+			if (codeLang && codeBlock &&
+				codeLang.type === 'code-language' && codeBlock.type === 'code-block' &&
+				typeof codeLang.content === 'string') {
+
+				// this might be a language that Prism does not support
+				var alias = 'language-' + codeLang.content.trim().split(/\s+/)[0].toLowerCase();
+
+				// add alias
+				if (!codeBlock.alias) {
+					codeBlock.alias = [alias];
+				} else if (typeof codeBlock.alias === 'string') {
+					codeBlock.alias = [codeBlock.alias, alias];
+				} else {
+					codeBlock.alias.push(alias);
+				}
+			}
+		}
+	}
+
+	walkTokens(env.tokens);
+});
+
+Prism.hooks.add('wrap', function (env) {
+	if (env.type !== 'code-block') {
+		return;
+	}
+
+	var codeLang = '';
+	for (var i = 0, l = env.classes.length; i < l; i++) {
+		var cls = env.classes[i];
+		var match = /language-(.+)/.exec(cls);
+		if (match) {
+			codeLang = match[1];
+			break;
+		}
+	}
+
+	var grammar = Prism.languages[codeLang];
+
+	if (!grammar) {
+		return;
+	}
+
+	// reverse Prism.util.encode
+	var code = env.content.replace(/&lt;/g, '<').replace(/&amp;/g, '&');
+
+	env.content = Prism.highlight(code, grammar, codeLang);
+});
+
+Prism.languages.md = Prism.languages.markdown;
+
 
 /***/ }),
 
@@ -21945,95 +24271,130 @@ Prism.languages.markdown['italic'].inside['bold'] = Prism.languages.markdown['bo
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-Prism.languages['markup-templating'] = {};
+(function (Prism) {
 
-Object.defineProperties(Prism.languages['markup-templating'], {
-	buildPlaceholders: {
-		// Tokenize all inline templating expressions matching placeholderPattern
-		// If the replaceFilter function is provided, it will be called with every match.
-		// If it returns false, the match will not be replaced.
-		value: function (env, language, placeholderPattern, replaceFilter) {
-			if (env.language !== language) {
-				return;
-			}
+	/**
+	 * Returns the placeholder for the given language id and index.
+	 *
+	 * @param {string} language
+	 * @param {string|number} index
+	 * @returns {string}
+	 */
+	function getPlaceholder(language, index) {
+		return '___' + language.toUpperCase() + index + '___';
+	}
 
-			env.tokenStack = [];
-
-			env.code = env.code.replace(placeholderPattern, function(match) {
-				if (typeof replaceFilter === 'function' && !replaceFilter(match)) {
-					return match;
-				}
-				var i = env.tokenStack.length;
-				// Check for existing strings
-				while (env.code.indexOf('___' + language.toUpperCase() + i + '___') !== -1)
-					++i;
-
-				// Create a sparse array
-				env.tokenStack[i] = match;
-
-				return '___' + language.toUpperCase() + i + '___';
-			});
-
-			// Switch the grammar to markup
-			env.grammar = Prism.languages.markup;
-		}
-	},
-	tokenizePlaceholders: {
-		// Replace placeholders with proper tokens after tokenizing
-		value: function (env, language) {
-			if (env.language !== language || !env.tokenStack) {
-				return;
-			}
-
-			// Switch the grammar back
-			env.grammar = Prism.languages[language];
-
-			var j = 0;
-			var keys = Object.keys(env.tokenStack);
-			var walkTokens = function (tokens) {
-				if (j >= keys.length) {
+	Object.defineProperties(Prism.languages['markup-templating'] = {}, {
+		buildPlaceholders: {
+			/**
+			 * Tokenize all inline templating expressions matching `placeholderPattern`.
+			 *
+			 * If `replaceFilter` is provided, only matches of `placeholderPattern` for which `replaceFilter` returns
+			 * `true` will be replaced.
+			 *
+			 * @param {object} env The environment of the `before-tokenize` hook.
+			 * @param {string} language The language id.
+			 * @param {RegExp} placeholderPattern The matches of this pattern will be replaced by placeholders.
+			 * @param {(match: string) => boolean} [replaceFilter]
+			 */
+			value: function (env, language, placeholderPattern, replaceFilter) {
+				if (env.language !== language) {
 					return;
 				}
-				for (var i = 0; i < tokens.length; i++) {
-					var token = tokens[i];
-					if (typeof token === 'string' || (token.content && typeof token.content === 'string')) {
-						var k = keys[j];
-						var t = env.tokenStack[k];
-						var s = typeof token === 'string' ? token : token.content;
 
-						var index = s.indexOf('___' + language.toUpperCase() + k + '___');
-						if (index > -1) {
-							++j;
-							var before = s.substring(0, index);
-							var middle = new Prism.Token(language, Prism.tokenize(t, env.grammar, language), 'language-' + language, t);
-							var after = s.substring(index + ('___' + language.toUpperCase() + k + '___').length);
-							var replacement;
-							if (before || after) {
-								replacement = [before, middle, after].filter(function (v) { return !!v; });
-								walkTokens(replacement);
-							} else {
-								replacement = middle;
-							}
-							if (typeof token === 'string') {
-								Array.prototype.splice.apply(tokens, [i, 1].concat(replacement));
-							} else {
-								token.content = replacement;
-							}
+				var tokenStack = env.tokenStack = [];
 
-							if (j >= keys.length) {
-								break;
-							}
-						}
-					} else if (token.content && typeof token.content !== 'string') {
-						walkTokens(token.content);
+				env.code = env.code.replace(placeholderPattern, function (match) {
+					if (typeof replaceFilter === 'function' && !replaceFilter(match)) {
+						return match;
 					}
-				}
-			};
+					var i = tokenStack.length;
+					var placeholder;
 
-			walkTokens(env.tokens);
+					// Check for existing strings
+					while (env.code.indexOf(placeholder = getPlaceholder(language, i)) !== -1)
+						++i;
+
+					// Create a sparse array
+					tokenStack[i] = match;
+
+					return placeholder;
+				});
+
+				// Switch the grammar to markup
+				env.grammar = Prism.languages.markup;
+			}
+		},
+		tokenizePlaceholders: {
+			/**
+			 * Replace placeholders with proper tokens after tokenizing.
+			 *
+			 * @param {object} env The environment of the `after-tokenize` hook.
+			 * @param {string} language The language id.
+			 */
+			value: function (env, language) {
+				if (env.language !== language || !env.tokenStack) {
+					return;
+				}
+
+				// Switch the grammar back
+				env.grammar = Prism.languages[language];
+
+				var j = 0;
+				var keys = Object.keys(env.tokenStack);
+
+				function walkTokens(tokens) {
+					for (var i = 0; i < tokens.length; i++) {
+						// all placeholders are replaced already
+						if (j >= keys.length) {
+							break;
+						}
+
+						var token = tokens[i];
+						if (typeof token === 'string' || (token.content && typeof token.content === 'string')) {
+							var k = keys[j];
+							var t = env.tokenStack[k];
+							var s = typeof token === 'string' ? token : token.content;
+							var placeholder = getPlaceholder(language, k);
+
+							var index = s.indexOf(placeholder);
+							if (index > -1) {
+								++j;
+
+								var before = s.substring(0, index);
+								var middle = new Prism.Token(language, Prism.tokenize(t, env.grammar), 'language-' + language, t);
+								var after = s.substring(index + placeholder.length);
+
+								var replacement = [];
+								if (before) {
+									replacement.push.apply(replacement, walkTokens([before]));
+								}
+								replacement.push(middle);
+								if (after) {
+									replacement.push.apply(replacement, walkTokens([after]));
+								}
+
+								if (typeof token === 'string') {
+									tokens.splice.apply(tokens, [i, 1].concat(replacement));
+								} else {
+									token.content = replacement;
+								}
+							}
+						} else if (token.content /* && typeof token.content !== 'string' */) {
+							walkTokens(token.content);
+						}
+					}
+
+					return tokens;
+				}
+
+				walkTokens(env.tokens);
+			}
 		}
-	}
-});
+	});
+
+}(Prism));
+
 
 /***/ }),
 
@@ -22075,6 +24436,8 @@ Prism.languages.objectivec = Prism.languages.extend('c', {
 	'string': /("|')(?:\\(?:\r\n|[\s\S])|(?!\1)[^\\\r\n])*\1|@"(?:\\(?:\r\n|[\s\S])|[^"\\\r\n])*"/,
 	'operator': /-[->]?|\+\+?|!=?|<<?=?|>>?=?|==?|&&?|\|\|?|[~^%?*\/@]/
 });
+
+delete Prism.languages.objectivec['class-name'];
 
 
 /***/ }),
@@ -22302,8 +24665,15 @@ Prism.languages.perl = {
  */
 (function (Prism) {
 	Prism.languages.php = Prism.languages.extend('clike', {
-		'keyword': /\b(?:and|or|xor|array|as|break|case|cfunction|class|const|continue|declare|default|die|do|else|elseif|enddeclare|endfor|endforeach|endif|endswitch|endwhile|extends|for|foreach|function|include|include_once|global|if|new|return|static|switch|use|require|require_once|var|while|abstract|interface|public|implements|private|protected|parent|throw|null|echo|print|trait|namespace|final|yield|goto|instanceof|finally|try|catch)\b/i,
-		'constant': /\b[A-Z0-9_]{2,}\b/,
+		'keyword': /\b(?:__halt_compiler|abstract|and|array|as|break|callable|case|catch|class|clone|const|continue|declare|default|die|do|echo|else|elseif|empty|enddeclare|endfor|endforeach|endif|endswitch|endwhile|eval|exit|extends|final|finally|for|foreach|function|global|goto|if|implements|include|include_once|instanceof|insteadof|interface|isset|list|namespace|new|or|parent|print|private|protected|public|require|require_once|return|static|switch|throw|trait|try|unset|use|var|while|xor|yield)\b/i,
+		'boolean': {
+			pattern: /\b(?:false|true)\b/i,
+			alias: 'constant'
+		},
+		'constant': [
+			/\b[A-Z_][A-Z0-9_]*\b/,
+			/\b(?:null)\b/i,
+		],
 		'comment': {
 			pattern: /(^|[^\\])(?:\/\*[\s\S]*?\*\/|\/\/.*)/,
 			lookbehind: true
@@ -22318,11 +24688,14 @@ Prism.languages.perl = {
 		}
 	});
 
-	Prism.languages.insertBefore('php', 'keyword', {
+	Prism.languages.insertBefore('php', 'comment', {
 		'delimiter': {
-			pattern: /\?>|<\?(?:php|=)?/i,
+			pattern: /\?>$|^<\?(?:php(?=\s)|=)?/i,
 			alias: 'important'
-		},
+		}
+	});
+
+	Prism.languages.insertBefore('php', 'keyword', {
 		'variable': /\$+(?:\w+\b|(?={))/i,
 		'package': {
 			pattern: /(\\|namespace\s+|use\s+)[\w\\]+/,
@@ -22340,6 +24713,14 @@ Prism.languages.perl = {
 			lookbehind: true
 		}
 	});
+
+	var string_interpolation = {
+		pattern: /{\$(?:{(?:{[^{}]+}|[^{}]+)}|[^{}])+}|(^|[^\\{])\$+(?:\w+(?:\[.+?]|->\w+)*)/,
+		lookbehind: true,
+		inside: {
+			rest: Prism.languages.php
+		}
+	};
 
 	Prism.languages.insertBefore('php', 'string', {
 		'nowdoc-string': {
@@ -22368,7 +24749,7 @@ Prism.languages.perl = {
 						'punctuation': /^<<<"?|[";]$/
 					}
 				},
-				'interpolation': null // See below
+				'interpolation': string_interpolation // See below
 			}
 		},
 		'single-quoted-string': {
@@ -22381,29 +24762,19 @@ Prism.languages.perl = {
 			greedy: true,
 			alias: 'string',
 			inside: {
-				'interpolation': null // See below
+				'interpolation': string_interpolation // See below
 			}
 		}
 	});
 	// The different types of PHP strings "replace" the C-like standard string
 	delete Prism.languages.php['string'];
 
-	var string_interpolation = {
-		pattern: /{\$(?:{(?:{[^{}]+}|[^{}]+)}|[^{}])+}|(^|[^\\{])\$+(?:\w+(?:\[.+?]|->\w+)*)/,
-		lookbehind: true,
-		inside: {
-			rest: Prism.languages.php
-		}
-	};
-	Prism.languages.php['heredoc-string'].inside['interpolation'] = string_interpolation;
-	Prism.languages.php['double-quoted-string'].inside['interpolation'] = string_interpolation;
-
 	Prism.hooks.add('before-tokenize', function(env) {
-		if (!/(?:<\?php|<\?)/ig.test(env.code)) {
+		if (!/<\?/.test(env.code)) {
 			return;
 		}
 
-		var phpPattern = /(?:<\?php|<\?)[\s\S]*?(?:\?>|$)/ig;
+		var phpPattern = /<\?(?:[^"'/#]|\/(?![*/])|("|')(?:\\[\s\S]|(?!\1)[^\\])*\1|(?:\/\/|#)(?:[^?\n\r]|\?(?!>))*|\/\*[\s\S]*?(?:\*\/|$))*?(?:\?>|$)/ig;
 		Prism.languages['markup-templating'].buildPlaceholders(env, 'php', phpPattern);
 	});
 
@@ -22412,6 +24783,7 @@ Prism.languages.perl = {
 	});
 
 }(Prism));
+
 
 /***/ }),
 
@@ -22427,13 +24799,36 @@ Prism.languages.python = {
 		pattern: /(^|[^\\])#.*/,
 		lookbehind: true
 	},
+	'string-interpolation': {
+		pattern: /(?:f|rf|fr)(?:("""|''')[\s\S]+?\1|("|')(?:\\.|(?!\2)[^\\\r\n])*\2)/i,
+		greedy: true,
+		inside: {
+			'interpolation': {
+				// "{" <expression> <optional "!s", "!r", or "!a"> <optional ":" format specifier> "}"
+				pattern: /((?:^|[^{])(?:{{)*){(?!{)(?:[^{}]|{(?!{)(?:[^{}]|{(?!{)(?:[^{}])+})+})+}/,
+				lookbehind: true,
+				inside: {
+					'format-spec': {
+						pattern: /(:)[^:(){}]+(?=}$)/,
+						lookbehind: true
+					},
+					'conversion-option': {
+						pattern: /![sra](?=[:}]$)/,
+						alias: 'punctuation'
+					},
+					rest: null
+				}
+			},
+			'string': /[\s\S]+/
+		}
+	},
 	'triple-quoted-string': {
-		pattern: /("""|''')[\s\S]+?\1/,
+		pattern: /(?:[rub]|rb|br)?("""|''')[\s\S]+?\1/i,
 		greedy: true,
 		alias: 'string'
 	},
 	'string': {
-		pattern: /("|')(?:\\.|(?!\1)[^\\\r\n])*\1/,
+		pattern: /(?:[rub]|rb|br)?("|')(?:\\.|(?!\1)[^\\\r\n])*\1/i,
 		greedy: true
 	},
 	'function': {
@@ -22444,64 +24839,27 @@ Prism.languages.python = {
 		pattern: /(\bclass\s+)\w+/i,
 		lookbehind: true
 	},
-	'keyword': /\b(?:as|assert|async|await|break|class|continue|def|del|elif|else|except|exec|finally|for|from|global|if|import|in|is|lambda|nonlocal|pass|print|raise|return|try|while|with|yield)\b/,
-	'builtin':/\b(?:__import__|abs|all|any|apply|ascii|basestring|bin|bool|buffer|bytearray|bytes|callable|chr|classmethod|cmp|coerce|compile|complex|delattr|dict|dir|divmod|enumerate|eval|execfile|file|filter|float|format|frozenset|getattr|globals|hasattr|hash|help|hex|id|input|int|intern|isinstance|issubclass|iter|len|list|locals|long|map|max|memoryview|min|next|object|oct|open|ord|pow|property|range|raw_input|reduce|reload|repr|reversed|round|set|setattr|slice|sorted|staticmethod|str|sum|super|tuple|type|unichr|unicode|vars|xrange|zip)\b/,
+	'decorator': {
+		pattern: /(^\s*)@\w+(?:\.\w+)*/i,
+		lookbehind: true,
+		alias: ['annotation', 'punctuation'],
+		inside: {
+			'punctuation': /\./
+		}
+	},
+	'keyword': /\b(?:and|as|assert|async|await|break|class|continue|def|del|elif|else|except|exec|finally|for|from|global|if|import|in|is|lambda|nonlocal|not|or|pass|print|raise|return|try|while|with|yield)\b/,
+	'builtin': /\b(?:__import__|abs|all|any|apply|ascii|basestring|bin|bool|buffer|bytearray|bytes|callable|chr|classmethod|cmp|coerce|compile|complex|delattr|dict|dir|divmod|enumerate|eval|execfile|file|filter|float|format|frozenset|getattr|globals|hasattr|hash|help|hex|id|input|int|intern|isinstance|issubclass|iter|len|list|locals|long|map|max|memoryview|min|next|object|oct|open|ord|pow|property|range|raw_input|reduce|reload|repr|reversed|round|set|setattr|slice|sorted|staticmethod|str|sum|super|tuple|type|unichr|unicode|vars|xrange|zip)\b/,
 	'boolean': /\b(?:True|False|None)\b/,
 	'number': /(?:\b(?=\d)|\B(?=\.))(?:0[bo])?(?:(?:\d|0x[\da-f])[\da-f]*\.?\d*|\.\d+)(?:e[+-]?\d+)?j?\b/i,
-	'operator': /[-+%=]=?|!=|\*\*?=?|\/\/?=?|<[<=>]?|>[=>]?|[&|^~]|\b(?:or|and|not)\b/,
+	'operator': /[-+%=]=?|!=|\*\*?=?|\/\/?=?|<[<=>]?|>[=>]?|[&|^~]/,
 	'punctuation': /[{}[\];(),.:]/
 };
 
+Prism.languages.python['string-interpolation'].inside['interpolation'].inside.rest = Prism.languages.python;
+
+Prism.languages.py = Prism.languages.python;
 
 /***/ }),
-"./node_modules/prismjs/components/prism-yaml.js":
-(function(module, exports) {
-Prism.languages.yaml = {
-	'scalar': {
-		pattern: /([\-:]\s*(?:![^\s]+)?[ \t]*[|>])[ \t]*(?:((?:\r?\n|\r)[ \t]+)[^\r\n]+(?:\2[^\r\n]+)*)/,
-		lookbehind: true,
-		alias: 'string'
-	},
-	'comment': /#.*/,
-	'key': {
-		pattern: /(\s*(?:^|[:\-,[{\r\n?])[ \t]*(?:![^\s]+)?[ \t]*)[^\r\n{[\]},#\s]+?(?=\s*:\s)/,
-		lookbehind: true,
-		alias: 'atrule'
-	},
-	'directive': {
-		pattern: /(^[ \t]*)%.+/m,
-		lookbehind: true,
-		alias: 'important'
-	},
-	'datetime': {
-		pattern: /([:\-,[{]\s*(?:![^\s]+)?[ \t]*)(?:\d{4}-\d\d?-\d\d?(?:[tT]|[ \t]+)\d\d?:\d{2}:\d{2}(?:\.\d*)?[ \t]*(?:Z|[-+]\d\d?(?::\d{2})?)?|\d{4}-\d{2}-\d{2}|\d\d?:\d{2}(?::\d{2}(?:\.\d*)?)?)(?=[ \t]*(?:$|,|]|}))/m,
-		lookbehind: true,
-		alias: 'number'
-	},
-	'boolean': {
-		pattern: /([:\-,[{]\s*(?:![^\s]+)?[ \t]*)(?:true|false)[ \t]*(?=$|,|]|})/im,
-		lookbehind: true,
-		alias: 'important'
-	},
-	'null': {
-		pattern: /([:\-,[{]\s*(?:![^\s]+)?[ \t]*)(?:null|~)[ \t]*(?=$|,|]|})/im,
-		lookbehind: true,
-		alias: 'important'
-	},
-	'string': {
-		pattern: /([:\-,[{]\s*(?:![^\s]+)?[ \t]*)("|')(?:(?!\2)[^\\\r\n]|\\.)*\2(?=[ \t]*(?:$|,|]|}|\s*#))/m,
-		lookbehind: true,
-		greedy: true
-	},
-	'number': {
-		pattern: /([:\-,[{]\s*(?:![^\s]+)?[ \t]*)[+-]?(?:0x[\da-f]+|0o[0-7]+|(?:\d+\.?\d*|\.?\d+)(?:e[+-]?\d+)?|\.inf|\.nan)[ \t]*(?=$|,|]|})/im,
-		lookbehind: true
-	},
-	'tag': /![^\s]+/,
-	'important': /[&*][\w]+/,
-	'punctuation': /---|[:[\]{}\-,|>?]|\.\.\./
-};
-}),
 
 /***/ "./node_modules/prismjs/components/prism-ruby.js":
 /*!*******************************************************!*\
@@ -22521,7 +24879,7 @@ Prism.languages.yaml = {
 		'comment': [
 			/#.*/,
 			{
-				pattern: /^=begin(?:\r?\n|\r)(?:.*(?:\r?\n|\r))*?=end/m,
+				pattern: /^=begin\s[\s\S]*?^=end/m,
 				greedy: true
 			}
 		],
@@ -22538,6 +24896,8 @@ Prism.languages.yaml = {
 			rest: Prism.languages.ruby
 		}
 	};
+
+	delete Prism.languages.ruby.function;
 
 	Prism.languages.insertBefore('ruby', 'keyword', {
 		'regex': [
@@ -22587,6 +24947,14 @@ Prism.languages.yaml = {
 		'symbol': {
 			pattern: /(^|[^:]):[a-zA-Z_]\w*(?:[?!]|\b)/,
 			lookbehind: true
+		},
+		'method-definition': {
+			pattern: /(\bdef\s+)[\w.]+/,
+			lookbehind: true,
+			inside: {
+				'function': /\w+$/,
+				rest: Prism.languages.ruby
+			}
 		}
 	});
 
@@ -22640,7 +25008,10 @@ Prism.languages.yaml = {
 			}
 		}
 	];
+
+	Prism.languages.rb = Prism.languages.ruby;
 }(Prism));
+
 
 /***/ }),
 
@@ -22715,7 +25086,6 @@ Prism.languages.yaml = {
 
 	// Now that whole lines for other patterns are consumed,
 	// what's left should be selectors
-	delete Prism.languages.sass.selector;
 	Prism.languages.insertBefore('sass', 'punctuation', {
 		'selector': {
 			pattern: /([ \t]*)\S(?:,?[^,\r\n]+)*(?:,(?:\r?\n|\r)\1[ \t]+\S(?:,?[^,\r\n]+)*)*/,
@@ -22757,13 +25127,19 @@ Prism.languages.scss = Prism.languages.extend('css', {
 	// this one was hard to do, so please be careful if you edit this one :)
 	'selector': {
 		// Initial look-ahead is used to prevent matching of blank selectors
-		pattern: /(?=\S)[^@;{}()]?(?:[^@;{}()]|&|#\{\$[-\w]+\})+(?=\s*\{(?:\}|\s|[^}]+[:{][^}]+))/m,
+		pattern: /(?=\S)[^@;{}()]?(?:[^@;{}()]|#\{\$[-\w]+\})+(?=\s*\{(?:\}|\s|[^}]+[:{][^}]+))/m,
 		inside: {
 			'parent': {
 				pattern: /&/,
 				alias: 'important'
 			},
 			'placeholder': /%[-\w]+/,
+			'variable': /\$[-\w]+|#\{\$[-\w]+\}/
+		}
+	},
+	'property': {
+		pattern: /(?:[\w-]|\$[-\w]+|#\{\$[-\w]+\})+(?=\s*:)/,
+		inside: {
 			'variable': /\$[-\w]+|#\{\$[-\w]+\}/
 		}
 	}
@@ -22778,13 +25154,6 @@ Prism.languages.insertBefore('scss', 'atrule', {
 		}
 	]
 });
-
-Prism.languages.scss.property = {
-	pattern: /(?:[\w-]|\$[-\w]+|#\{\$[-\w]+\})+(?=\s*:)/i,
-	inside: {
-		'variable': /\$[-\w]+|#\{\$[-\w]+\}/
-	}
-};
 
 Prism.languages.insertBefore('scss', 'important', {
 	// var and interpolated vars
@@ -22801,7 +25170,10 @@ Prism.languages.insertBefore('scss', 'function', {
 		alias: 'keyword'
 	},
 	'boolean': /\b(?:true|false)\b/,
-	'null': /\bnull\b/,
+	'null': {
+		pattern: /\bnull\b/,
+		alias: 'keyword'
+	},
 	'operator': {
 		pattern: /(\s)(?:[-+*\/%]|[=!]=|<=?|>=?|and|or|not)(?=\s)/,
 		lookbehind: true
@@ -22809,6 +25181,7 @@ Prism.languages.insertBefore('scss', 'function', {
 });
 
 Prism.languages.scss['atrule'].inside.rest = Prism.languages.scss;
+
 
 /***/ }),
 
@@ -22819,17 +25192,23 @@ Prism.languages.scss['atrule'].inside.rest = Prism.languages.scss;
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-Prism.languages.sql= {
+Prism.languages.sql = {
 	'comment': {
 		pattern: /(^|[^\\])(?:\/\*[\s\S]*?\*\/|(?:--|\/\/|#).*)/,
 		lookbehind: true
 	},
-	'string' : {
-		pattern: /(^|[^@\\])("|')(?:\\[\s\S]|(?!\2)[^\\])*\2/,
+	'variable': [
+		{
+			pattern: /@(["'`])(?:\\[\s\S]|(?!\1)[^\\])+\1/,
+			greedy: true
+		},
+		/@[\w.$]+/
+	],
+	'string': {
+		pattern: /(^|[^@\\])("|')(?:\\[\s\S]|(?!\2)[^\\]|\2\2)*\2/,
 		greedy: true,
 		lookbehind: true
 	},
-	'variable': /@[\w.$]+|@(["'`])(?:\\[\s\S]|(?!\1)[^\\])+\1/,
 	'function': /\b(?:AVG|COUNT|FIRST|FORMAT|LAST|LCASE|LEN|MAX|MID|MIN|MOD|NOW|ROUND|SUM|UCASE)(?=\s*\()/i, // Should we highlight user defined functions too?
 	'keyword': /\b(?:ACTION|ADD|AFTER|ALGORITHM|ALL|ALTER|ANALYZE|ANY|APPLY|AS|ASC|AUTHORIZATION|AUTO_INCREMENT|BACKUP|BDB|BEGIN|BERKELEYDB|BIGINT|BINARY|BIT|BLOB|BOOL|BOOLEAN|BREAK|BROWSE|BTREE|BULK|BY|CALL|CASCADED?|CASE|CHAIN|CHAR(?:ACTER|SET)?|CHECK(?:POINT)?|CLOSE|CLUSTERED|COALESCE|COLLATE|COLUMNS?|COMMENT|COMMIT(?:TED)?|COMPUTE|CONNECT|CONSISTENT|CONSTRAINT|CONTAINS(?:TABLE)?|CONTINUE|CONVERT|CREATE|CROSS|CURRENT(?:_DATE|_TIME|_TIMESTAMP|_USER)?|CURSOR|CYCLE|DATA(?:BASES?)?|DATE(?:TIME)?|DAY|DBCC|DEALLOCATE|DEC|DECIMAL|DECLARE|DEFAULT|DEFINER|DELAYED|DELETE|DELIMITERS?|DENY|DESC|DESCRIBE|DETERMINISTIC|DISABLE|DISCARD|DISK|DISTINCT|DISTINCTROW|DISTRIBUTED|DO|DOUBLE|DROP|DUMMY|DUMP(?:FILE)?|DUPLICATE|ELSE(?:IF)?|ENABLE|ENCLOSED|END|ENGINE|ENUM|ERRLVL|ERRORS|ESCAPED?|EXCEPT|EXEC(?:UTE)?|EXISTS|EXIT|EXPLAIN|EXTENDED|FETCH|FIELDS|FILE|FILLFACTOR|FIRST|FIXED|FLOAT|FOLLOWING|FOR(?: EACH ROW)?|FORCE|FOREIGN|FREETEXT(?:TABLE)?|FROM|FULL|FUNCTION|GEOMETRY(?:COLLECTION)?|GLOBAL|GOTO|GRANT|GROUP|HANDLER|HASH|HAVING|HOLDLOCK|HOUR|IDENTITY(?:_INSERT|COL)?|IF|IGNORE|IMPORT|INDEX|INFILE|INNER|INNODB|INOUT|INSERT|INT|INTEGER|INTERSECT|INTERVAL|INTO|INVOKER|ISOLATION|ITERATE|JOIN|KEYS?|KILL|LANGUAGE|LAST|LEAVE|LEFT|LEVEL|LIMIT|LINENO|LINES|LINESTRING|LOAD|LOCAL|LOCK|LONG(?:BLOB|TEXT)|LOOP|MATCH(?:ED)?|MEDIUM(?:BLOB|INT|TEXT)|MERGE|MIDDLEINT|MINUTE|MODE|MODIFIES|MODIFY|MONTH|MULTI(?:LINESTRING|POINT|POLYGON)|NATIONAL|NATURAL|NCHAR|NEXT|NO|NONCLUSTERED|NULLIF|NUMERIC|OFF?|OFFSETS?|ON|OPEN(?:DATASOURCE|QUERY|ROWSET)?|OPTIMIZE|OPTION(?:ALLY)?|ORDER|OUT(?:ER|FILE)?|OVER|PARTIAL|PARTITION|PERCENT|PIVOT|PLAN|POINT|POLYGON|PRECEDING|PRECISION|PREPARE|PREV|PRIMARY|PRINT|PRIVILEGES|PROC(?:EDURE)?|PUBLIC|PURGE|QUICK|RAISERROR|READS?|REAL|RECONFIGURE|REFERENCES|RELEASE|RENAME|REPEAT(?:ABLE)?|REPLACE|REPLICATION|REQUIRE|RESIGNAL|RESTORE|RESTRICT|RETURNS?|REVOKE|RIGHT|ROLLBACK|ROUTINE|ROW(?:COUNT|GUIDCOL|S)?|RTREE|RULE|SAVE(?:POINT)?|SCHEMA|SECOND|SELECT|SERIAL(?:IZABLE)?|SESSION(?:_USER)?|SET(?:USER)?|SHARE|SHOW|SHUTDOWN|SIMPLE|SMALLINT|SNAPSHOT|SOME|SONAME|SQL|START(?:ING)?|STATISTICS|STATUS|STRIPED|SYSTEM_USER|TABLES?|TABLESPACE|TEMP(?:ORARY|TABLE)?|TERMINATED|TEXT(?:SIZE)?|THEN|TIME(?:STAMP)?|TINY(?:BLOB|INT|TEXT)|TOP?|TRAN(?:SACTIONS?)?|TRIGGER|TRUNCATE|TSEQUAL|TYPES?|UNBOUNDED|UNCOMMITTED|UNDEFINED|UNION|UNIQUE|UNLOCK|UNPIVOT|UNSIGNED|UPDATE(?:TEXT)?|USAGE|USE|USER|USING|VALUES?|VAR(?:BINARY|CHAR|CHARACTER|YING)|VIEW|WAITFOR|WARNINGS|WHEN|WHERE|WHILE|WITH(?: ROLLUP|IN)?|WORK|WRITE(?:TEXT)?|YEAR)\b/i,
 	'boolean': /\b(?:TRUE|FALSE|NULL)\b/i,
@@ -22837,6 +25216,7 @@ Prism.languages.sql= {
 	'operator': /[-+*\/=%^~]|&&?|\|\|?|!=?|<(?:=>?|<|>)?|>[>=]?|\b(?:AND|BETWEEN|IN|LIKE|NOT|OR|IS|DIV|REGEXP|RLIKE|SOUNDS LIKE|XOR)\b/i,
 	'punctuation': /[;[\]()`,.]/
 };
+
 
 /***/ }),
 
@@ -22876,6 +25256,63 @@ Prism.languages.swift['string'].inside['interpolation'].inside.rest = Prism.lang
 
 /***/ }),
 
+/***/ "./node_modules/prismjs/components/prism-yaml.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/prismjs/components/prism-yaml.js ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+Prism.languages.yaml = {
+	'scalar': {
+		pattern: /([\-:]\s*(?:![^\s]+)?[ \t]*[|>])[ \t]*(?:((?:\r?\n|\r)[ \t]+)[^\r\n]+(?:\2[^\r\n]+)*)/,
+		lookbehind: true,
+		alias: 'string'
+	},
+	'comment': /#.*/,
+	'key': {
+		pattern: /(\s*(?:^|[:\-,[{\r\n?])[ \t]*(?:![^\s]+)?[ \t]*)[^\r\n{[\]},#\s]+?(?=\s*:\s)/,
+		lookbehind: true,
+		alias: 'atrule'
+	},
+	'directive': {
+		pattern: /(^[ \t]*)%.+/m,
+		lookbehind: true,
+		alias: 'important'
+	},
+	'datetime': {
+		pattern: /([:\-,[{]\s*(?:![^\s]+)?[ \t]*)(?:\d{4}-\d\d?-\d\d?(?:[tT]|[ \t]+)\d\d?:\d{2}:\d{2}(?:\.\d*)?[ \t]*(?:Z|[-+]\d\d?(?::\d{2})?)?|\d{4}-\d{2}-\d{2}|\d\d?:\d{2}(?::\d{2}(?:\.\d*)?)?)(?=[ \t]*(?:$|,|]|}))/m,
+		lookbehind: true,
+		alias: 'number'
+	},
+	'boolean': {
+		pattern: /([:\-,[{]\s*(?:![^\s]+)?[ \t]*)(?:true|false)[ \t]*(?=$|,|]|})/im,
+		lookbehind: true,
+		alias: 'important'
+	},
+	'null': {
+		pattern: /([:\-,[{]\s*(?:![^\s]+)?[ \t]*)(?:null|~)[ \t]*(?=$|,|]|})/im,
+		lookbehind: true,
+		alias: 'important'
+	},
+	'string': {
+		pattern: /([:\-,[{]\s*(?:![^\s]+)?[ \t]*)("|')(?:(?!\2)[^\\\r\n]|\\.)*\2(?=[ \t]*(?:$|,|]|}|\s*#))/m,
+		lookbehind: true,
+		greedy: true
+	},
+	'number': {
+		pattern: /([:\-,[{]\s*(?:![^\s]+)?[ \t]*)[+-]?(?:0x[\da-f]+|0o[0-7]+|(?:\d+\.?\d*|\.?\d+)(?:e[+-]?\d+)?|\.inf|\.nan)[ \t]*(?=$|,|]|})/im,
+		lookbehind: true
+	},
+	'tag': /![^\s]+/,
+	'important': /[&*][\w]+/,
+	'punctuation': /---|[:[\]{}\-,|>?]|\.\.\./
+};
+
+Prism.languages.yml = Prism.languages.yaml;
+
+/***/ }),
+
 /***/ "./node_modules/prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js":
 /*!***************************************************************************************!*\
   !*** ./node_modules/prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js ***!
@@ -22883,7 +25320,7 @@ Prism.languages.swift['string'].inside['interpolation'].inside.rest = Prism.lang
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-!function(){if("undefined"!=typeof self&&self.Prism&&self.document){if(!Prism.plugins.toolbar)return console.warn("Copy to Clipboard plugin loaded before Toolbar plugin."),void 0;var o=window.ClipboardJS||void 0;o||"function"!="function"||(o=__webpack_require__(/*! clipboard */ "./node_modules/clipboard/dist/clipboard.js"));var e=[];if(!o){var t=document.createElement("script"),n=document.querySelector("head");t.onload=function(){if(o=window.ClipboardJS)for(;e.length;)e.pop()()},t.src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js",n.appendChild(t)}Prism.plugins.toolbar.registerButton("copy-to-clipboard",function(t){function n(){var e=new o(i,{text:function(){return t.code}});e.on("success",function(){i.textContent="Copied!",r()}),e.on("error",function(){i.textContent="Press Ctrl+C to copy",r()})}function r(){setTimeout(function(){i.textContent="Copy"},5e3)}var i=document.createElement("a");return i.textContent="Copy",o?n():e.push(n),i})}}();
+!function(){if("undefined"!=typeof self&&self.Prism&&self.document)if(Prism.plugins.toolbar){var r=window.ClipboardJS||void 0;r||"function"!="function"||(r=__webpack_require__(/*! clipboard */ "./node_modules/clipboard/dist/clipboard.js"));var i=[];if(!r){var o=document.createElement("script"),e=document.querySelector("head");o.onload=function(){if(r=window.ClipboardJS)for(;i.length;)i.pop()()},o.src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js",e.appendChild(o)}Prism.plugins.toolbar.registerButton("copy-to-clipboard",function(e){var t=document.createElement("a");return t.textContent="Copy",r?o():i.push(o),t;function o(){var o=new r(t,{text:function(){return e.code}});o.on("success",function(){t.textContent="Copied!",n()}),o.on("error",function(){t.textContent="Press Ctrl+C to copy",n()})}function n(){setTimeout(function(){t.textContent="Copy"},5e3)}})}else console.warn("Copy to Clipboard plugin loaded before Toolbar plugin.")}();
 
 /***/ }),
 
@@ -22894,7 +25331,7 @@ Prism.languages.swift['string'].inside['interpolation'].inside.rest = Prism.lang
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-!function(){function e(e,t){return Array.prototype.slice.call((t||document).querySelectorAll(e))}function t(e,t){return t=" "+t+" ",(" "+e.className+" ").replace(/[\n\t]/g," ").indexOf(t)>-1}function n(e,n,i){n="string"==typeof n?n:e.getAttribute("data-line");for(var o,l=n.replace(/\s+/g,"").split(","),a=+e.getAttribute("data-line-offset")||0,s=r()?parseInt:parseFloat,d=s(getComputedStyle(e).lineHeight),u=t(e,"line-numbers"),c=0;o=l[c++];){var p=o.split("-"),m=+p[0],f=+p[1]||m,h=e.querySelector('.line-highlight[data-range="'+o+'"]')||document.createElement("div");if(h.setAttribute("aria-hidden","true"),h.setAttribute("data-range",o),h.className=(i||"")+" line-highlight",u&&Prism.plugins.lineNumbers){var g=Prism.plugins.lineNumbers.getLine(e,m),y=Prism.plugins.lineNumbers.getLine(e,f);g&&(h.style.top=g.offsetTop+"px"),y&&(h.style.height=y.offsetTop-g.offsetTop+y.offsetHeight+"px")}else h.setAttribute("data-start",m),f>m&&h.setAttribute("data-end",f),h.style.top=(m-a-1)*d+"px",h.textContent=new Array(f-m+2).join(" \n");u?e.appendChild(h):(e.querySelector("code")||e).appendChild(h)}}function i(){var t=location.hash.slice(1);e(".temporary.line-highlight").forEach(function(e){e.parentNode.removeChild(e)});var i=(t.match(/\.([\d,-]+)$/)||[,""])[1];if(i&&!document.getElementById(t)){var r=t.slice(0,t.lastIndexOf(".")),o=document.getElementById(r);o&&(o.hasAttribute("data-line")||o.setAttribute("data-line",""),n(o,i,"temporary "),document.querySelector(".temporary.line-highlight").scrollIntoView())}}if("undefined"!=typeof self&&self.Prism&&self.document&&document.querySelector){var r=function(){var e;return function(){if("undefined"==typeof e){var t=document.createElement("div");t.style.fontSize="13px",t.style.lineHeight="1.5",t.style.padding=0,t.style.border=0,t.innerHTML="&nbsp;<br />&nbsp;",document.body.appendChild(t),e=38===t.offsetHeight,document.body.removeChild(t)}return e}}(),o=0;Prism.hooks.add("before-sanity-check",function(t){var n=t.element.parentNode,i=n&&n.getAttribute("data-line");if(n&&i&&/pre/i.test(n.nodeName)){var r=0;e(".line-highlight",n).forEach(function(e){r+=e.textContent.length,e.parentNode.removeChild(e)}),r&&/^( \n)+$/.test(t.code.slice(-r))&&(t.code=t.code.slice(0,-r))}}),Prism.hooks.add("complete",function l(e){var r=e.element.parentNode,a=r&&r.getAttribute("data-line");if(r&&a&&/pre/i.test(r.nodeName)){clearTimeout(o);var s=Prism.plugins.lineNumbers,d=e.plugins&&e.plugins.lineNumbers;t(r,"line-numbers")&&s&&!d?Prism.hooks.add("line-numbers",l):(n(r,a),o=setTimeout(i,1))}}),window.addEventListener("hashchange",i),window.addEventListener("resize",function(){var e=document.querySelectorAll("pre[data-line]");Array.prototype.forEach.call(e,function(e){n(e)})})}}();
+!function(){if("undefined"!=typeof self&&self.Prism&&self.document&&document.querySelector){var t,h=function(){if(void 0===t){var e=document.createElement("div");e.style.fontSize="13px",e.style.lineHeight="1.5",e.style.padding=0,e.style.border=0,e.innerHTML="&nbsp;<br />&nbsp;",document.body.appendChild(e),t=38===e.offsetHeight,document.body.removeChild(e)}return t},l=0;Prism.hooks.add("before-sanity-check",function(e){var t=e.element.parentNode,n=t&&t.getAttribute("data-line");if(t&&n&&/pre/i.test(t.nodeName)){var i=0;r(".line-highlight",t).forEach(function(e){i+=e.textContent.length,e.parentNode.removeChild(e)}),i&&/^( \n)+$/.test(e.code.slice(-i))&&(e.code=e.code.slice(0,-i))}}),Prism.hooks.add("complete",function e(t){var n=t.element.parentNode,i=n&&n.getAttribute("data-line");if(n&&i&&/pre/i.test(n.nodeName)){clearTimeout(l);var r=Prism.plugins.lineNumbers,o=t.plugins&&t.plugins.lineNumbers;g(n,"line-numbers")&&r&&!o?Prism.hooks.add("line-numbers",e):(a(n,i),l=setTimeout(s,1))}}),window.addEventListener("hashchange",s),window.addEventListener("resize",function(){var e=document.querySelectorAll("pre[data-line]");Array.prototype.forEach.call(e,function(e){a(e)})})}function r(e,t){return Array.prototype.slice.call((t||document).querySelectorAll(e))}function g(e,t){return t=" "+t+" ",-1<(" "+e.className+" ").replace(/[\n\t]/g," ").indexOf(t)}function a(e,t,n){for(var i,r=(t="string"==typeof t?t:e.getAttribute("data-line")).replace(/\s+/g,"").split(","),o=+e.getAttribute("data-line-offset")||0,l=(h()?parseInt:parseFloat)(getComputedStyle(e).lineHeight),a=g(e,"line-numbers"),s=0;i=r[s++];){var d=i.split("-"),u=+d[0],c=+d[1]||u,m=e.querySelector('.line-highlight[data-range="'+i+'"]')||document.createElement("div");if(m.setAttribute("aria-hidden","true"),m.setAttribute("data-range",i),m.className=(n||"")+" line-highlight",a&&Prism.plugins.lineNumbers){var p=Prism.plugins.lineNumbers.getLine(e,u),f=Prism.plugins.lineNumbers.getLine(e,c);p&&(m.style.top=p.offsetTop+"px"),f&&(m.style.height=f.offsetTop-p.offsetTop+f.offsetHeight+"px")}else m.setAttribute("data-start",u),u<c&&m.setAttribute("data-end",c),m.style.top=(u-o-1)*l+"px",m.textContent=new Array(c-u+2).join(" \n");a?e.appendChild(m):(e.querySelector("code")||e).appendChild(m)}}function s(){var e=location.hash.slice(1);r(".temporary.line-highlight").forEach(function(e){e.parentNode.removeChild(e)});var t=(e.match(/\.([\d,-]+)$/)||[,""])[1];if(t&&!document.getElementById(e)){var n=e.slice(0,e.lastIndexOf(".")),i=document.getElementById(n);i&&(i.hasAttribute("data-line")||i.setAttribute("data-line",""),a(i,t,"temporary "),document.querySelector(".temporary.line-highlight").scrollIntoView())}}}();
 
 /***/ }),
 
@@ -22905,7 +25342,7 @@ Prism.languages.swift['string'].inside['interpolation'].inside.rest = Prism.lang
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-!function(){if("undefined"!=typeof self&&self.Prism&&self.document){var e="line-numbers",t=/\n(?!$)/g,n=function(e){var n=r(e),s=n["white-space"];if("pre-wrap"===s||"pre-line"===s){var l=e.querySelector("code"),i=e.querySelector(".line-numbers-rows"),a=e.querySelector(".line-numbers-sizer"),o=l.textContent.split(t);a||(a=document.createElement("span"),a.className="line-numbers-sizer",l.appendChild(a)),a.style.display="block",o.forEach(function(e,t){a.textContent=e||"\n";var n=a.getBoundingClientRect().height;i.children[t].style.height=n+"px"}),a.textContent="",a.style.display="none"}},r=function(e){return e?window.getComputedStyle?getComputedStyle(e):e.currentStyle||null:null};window.addEventListener("resize",function(){Array.prototype.forEach.call(document.querySelectorAll("pre."+e),n)}),Prism.hooks.add("complete",function(e){if(e.code){var r=e.element.parentNode,s=/\s*\bline-numbers\b\s*/;if(r&&/pre/i.test(r.nodeName)&&(s.test(r.className)||s.test(e.element.className))&&!e.element.querySelector(".line-numbers-rows")){s.test(e.element.className)&&(e.element.className=e.element.className.replace(s," ")),s.test(r.className)||(r.className+=" line-numbers");var l,i=e.code.match(t),a=i?i.length+1:1,o=new Array(a+1);o=o.join("<span></span>"),l=document.createElement("span"),l.setAttribute("aria-hidden","true"),l.className="line-numbers-rows",l.innerHTML=o,r.hasAttribute("data-start")&&(r.style.counterReset="linenumber "+(parseInt(r.getAttribute("data-start"),10)-1)),e.element.appendChild(l),n(r),Prism.hooks.run("line-numbers",e)}}}),Prism.hooks.add("line-numbers",function(e){e.plugins=e.plugins||{},e.plugins.lineNumbers=!0}),Prism.plugins.lineNumbers={getLine:function(t,n){if("PRE"===t.tagName&&t.classList.contains(e)){var r=t.querySelector(".line-numbers-rows"),s=parseInt(t.getAttribute("data-start"),10)||1,l=s+(r.children.length-1);s>n&&(n=s),n>l&&(n=l);var i=n-s;return r.children[i]}}}}}();
+!function(){if("undefined"!=typeof self&&self.Prism&&self.document){var l="line-numbers",c=/\n(?!$)/g,m=function(e){var t=a(e)["white-space"];if("pre-wrap"===t||"pre-line"===t){var n=e.querySelector("code"),r=e.querySelector(".line-numbers-rows"),s=e.querySelector(".line-numbers-sizer"),i=n.textContent.split(c);s||((s=document.createElement("span")).className="line-numbers-sizer",n.appendChild(s)),s.style.display="block",i.forEach(function(e,t){s.textContent=e||"\n";var n=s.getBoundingClientRect().height;r.children[t].style.height=n+"px"}),s.textContent="",s.style.display="none"}},a=function(e){return e?window.getComputedStyle?getComputedStyle(e):e.currentStyle||null:null};window.addEventListener("resize",function(){Array.prototype.forEach.call(document.querySelectorAll("pre."+l),m)}),Prism.hooks.add("complete",function(e){if(e.code){var t=e.element,n=t.parentNode;if(n&&/pre/i.test(n.nodeName)&&!t.querySelector(".line-numbers-rows")){for(var r=!1,s=/(?:^|\s)line-numbers(?:\s|$)/,i=t;i;i=i.parentNode)if(s.test(i.className)){r=!0;break}if(r){t.className=t.className.replace(s," "),s.test(n.className)||(n.className+=" line-numbers");var l,a=e.code.match(c),o=a?a.length+1:1,u=new Array(o+1).join("<span></span>");(l=document.createElement("span")).setAttribute("aria-hidden","true"),l.className="line-numbers-rows",l.innerHTML=u,n.hasAttribute("data-start")&&(n.style.counterReset="linenumber "+(parseInt(n.getAttribute("data-start"),10)-1)),e.element.appendChild(l),m(n),Prism.hooks.run("line-numbers",e)}}}}),Prism.hooks.add("line-numbers",function(e){e.plugins=e.plugins||{},e.plugins.lineNumbers=!0}),Prism.plugins.lineNumbers={getLine:function(e,t){if("PRE"===e.tagName&&e.classList.contains(l)){var n=e.querySelector(".line-numbers-rows"),r=parseInt(e.getAttribute("data-start"),10)||1,s=r+(n.children.length-1);t<r&&(t=r),s<t&&(t=s);var i=t-r;return n.children[i]}}}}}();
 
 /***/ }),
 
@@ -22916,7 +25353,7 @@ Prism.languages.swift['string'].inside['interpolation'].inside.rest = Prism.lang
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-!function(){if("undefined"!=typeof self&&self.Prism&&self.document){if(!Prism.plugins.toolbar)return console.warn("Show Languages plugin loaded before Toolbar plugin."),void 0;var e={html:"HTML",xml:"XML",svg:"SVG",mathml:"MathML",css:"CSS",clike:"C-like",javascript:"JavaScript",abap:"ABAP",actionscript:"ActionScript",apacheconf:"Apache Configuration",apl:"APL",applescript:"AppleScript",arff:"ARFF",asciidoc:"AsciiDoc",asm6502:"6502 Assembly",aspnet:"ASP.NET (C#)",autohotkey:"AutoHotkey",autoit:"AutoIt",basic:"BASIC",csharp:"C#",cpp:"C++",coffeescript:"CoffeeScript",csp:"Content-Security-Policy","css-extras":"CSS Extras",django:"Django/Jinja2",erb:"ERB",fsharp:"F#",gedcom:"GEDCOM",glsl:"GLSL",graphql:"GraphQL",http:"HTTP",hpkp:"HTTP Public-Key-Pins",hsts:"HTTP Strict-Transport-Security",ichigojam:"IchigoJam",inform7:"Inform 7",json:"JSON",latex:"LaTeX",livescript:"LiveScript",lolcode:"LOLCODE","markup-templating":"Markup templating",matlab:"MATLAB",mel:"MEL",n4js:"N4JS",nasm:"NASM",nginx:"nginx",nsis:"NSIS",objectivec:"Objective-C",ocaml:"OCaml",opencl:"OpenCL",parigp:"PARI/GP",objectpascal:"Object Pascal",php:"PHP","php-extras":"PHP Extras",plsql:"PL/SQL",powershell:"PowerShell",properties:".properties",protobuf:"Protocol Buffers",q:"Q (kdb+ database)",jsx:"React JSX",tsx:"React TSX",renpy:"Ren'py",rest:"reST (reStructuredText)",sas:"SAS",sass:"Sass (Sass)",scss:"Sass (Scss)",sql:"SQL",soy:"Soy (Closure Template)",tap:"TAP",tt2:"Template Toolkit 2",typescript:"TypeScript",vbnet:"VB.Net",vhdl:"VHDL",vim:"vim","visual-basic":"Visual Basic",wasm:"WebAssembly",wiki:"Wiki markup",xojo:"Xojo (REALbasic)",xquery:"XQuery",yaml:"YAML"};Prism.plugins.toolbar.registerButton("show-language",function(a){var t=a.element.parentNode;if(t&&/pre/i.test(t.nodeName)){var s=t.getAttribute("data-language")||e[a.language]||a.language&&a.language.substring(0,1).toUpperCase()+a.language.substring(1);if(s){var i=document.createElement("span");return i.textContent=s,i}}})}}();
+!function(){if("undefined"!=typeof self&&self.Prism&&self.document)if(Prism.plugins.toolbar){var r={html:"HTML",xml:"XML",svg:"SVG",mathml:"MathML",css:"CSS",clike:"C-like",js:"JavaScript",abap:"ABAP",abnf:"Augmented Backus–Naur form",apacheconf:"Apache Configuration",apl:"APL",arff:"ARFF",asciidoc:"AsciiDoc",adoc:"AsciiDoc",asm6502:"6502 Assembly",aspnet:"ASP.NET (C#)",autohotkey:"AutoHotkey",autoit:"AutoIt",shell:"Bash",basic:"BASIC",bnf:"Backus–Naur form",rbnf:"Routing Backus–Naur form",csharp:"C#",dotnet:"C#",cpp:"C++",cil:"CIL",coffee:"CoffeeScript",cmake:"CMake",csp:"Content-Security-Policy","css-extras":"CSS Extras",django:"Django/Jinja2",jinja2:"Django/Jinja2",dockerfile:"Docker",ebnf:"Extended Backus–Naur form",ejs:"EJS",erb:"ERB",fsharp:"F#",gcode:"G-code",gedcom:"GEDCOM",glsl:"GLSL",gml:"GameMaker Language",gamemakerlanguage:"GameMaker Language",graphql:"GraphQL",hs:"Haskell",hcl:"HCL",http:"HTTP",hpkp:"HTTP Public-Key-Pins",hsts:"HTTP Strict-Transport-Security",ichigojam:"IchigoJam",inform7:"Inform 7",javadoc:"JavaDoc",javadoclike:"JavaDoc-like",javastacktrace:"Java stack trace",jsdoc:"JSDoc","js-extras":"JS Extras",json:"JSON",jsonp:"JSONP",json5:"JSON5",latex:"LaTeX",emacs:"Lisp",elisp:"Lisp","emacs-lisp":"Lisp",lolcode:"LOLCODE",md:"Markdown","markup-templating":"Markup templating",matlab:"MATLAB",mel:"MEL",n1ql:"N1QL",n4js:"N4JS",n4jsd:"N4JS","nand2tetris-hdl":"Nand To Tetris HDL",nasm:"NASM",nginx:"nginx",nsis:"NSIS",objectivec:"Objective-C",ocaml:"OCaml",opencl:"OpenCL",parigp:"PARI/GP",objectpascal:"Object Pascal",php:"PHP",phpdoc:"PHPDoc","php-extras":"PHP Extras",plsql:"PL/SQL",powershell:"PowerShell",properties:".properties",protobuf:"Protocol Buffers",py:"Python",q:"Q (kdb+ database)",jsx:"React JSX",tsx:"React TSX",renpy:"Ren'py",rest:"reST (reStructuredText)",rb:"Ruby",sas:"SAS",sass:"Sass (Sass)",scss:"Sass (Scss)",sql:"SQL",soy:"Soy (Closure Template)",tap:"TAP",toml:"TOML",tt2:"Template Toolkit 2",ts:"TypeScript","t4-cs":"T4 Text Templates (C#)",t4:"T4 Text Templates (C#)","t4-vb":"T4 Text Templates (VB)","t4-templating":"T4 templating",vbnet:"VB.Net",vhdl:"VHDL",vim:"vim","visual-basic":"Visual Basic",vb:"Visual Basic",wasm:"WebAssembly",wiki:"Wiki markup",xeoracube:"XeoraCube",xojo:"Xojo (REALbasic)",xquery:"XQuery",yaml:"YAML",yml:"YAML"};Prism.plugins.toolbar.registerButton("show-language",function(e){var a=e.element.parentNode;if(a&&/pre/i.test(a.nodeName)){var s,t=a.getAttribute("data-language")||r[e.language]||((s=e.language)?(s.substring(0,1).toUpperCase()+s.substring(1)).replace(/s(?=cript)/,"S"):s);if(t){var o=document.createElement("span");return o.textContent=t,o}}})}else console.warn("Show Languages plugin loaded before Toolbar plugin.")}();
 
 /***/ }),
 
@@ -22927,7 +25364,7 @@ Prism.languages.swift['string'].inside['interpolation'].inside.rest = Prism.lang
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-!function(){if("undefined"!=typeof self&&self.Prism&&self.document){var t=[],e={},n=function(){};Prism.plugins.toolbar={};var a=Prism.plugins.toolbar.registerButton=function(n,a){var o;o="function"==typeof a?a:function(t){var e;return"function"==typeof a.onClick?(e=document.createElement("button"),e.type="button",e.addEventListener("click",function(){a.onClick.call(this,t)})):"string"==typeof a.url?(e=document.createElement("a"),e.href=a.url):e=document.createElement("span"),e.textContent=a.text,e},t.push(e[n]=o)},o=Prism.plugins.toolbar.hook=function(a){var o=a.element.parentNode;if(o&&/pre/i.test(o.nodeName)&&!o.parentNode.classList.contains("code-toolbar")){var r=document.createElement("div");r.classList.add("code-toolbar"),o.parentNode.insertBefore(r,o),r.appendChild(o);var i=document.createElement("div");i.classList.add("toolbar"),document.body.hasAttribute("data-toolbar-order")&&(t=document.body.getAttribute("data-toolbar-order").split(",").map(function(t){return e[t]||n})),t.forEach(function(t){var e=t(a);if(e){var n=document.createElement("div");n.classList.add("toolbar-item"),n.appendChild(e),i.appendChild(n)}}),r.appendChild(i)}};a("label",function(t){var e=t.element.parentNode;if(e&&/pre/i.test(e.nodeName)&&e.hasAttribute("data-label")){var n,a,o=e.getAttribute("data-label");try{a=document.querySelector("template#"+o)}catch(r){}return a?n=a.content:(e.hasAttribute("data-url")?(n=document.createElement("a"),n.href=e.getAttribute("data-url")):n=document.createElement("span"),n.textContent=o),n}}),Prism.hooks.add("complete",o)}}();
+!function(){if("undefined"!=typeof self&&self.Prism&&self.document){var r=[],i={},n=function(){};Prism.plugins.toolbar={};var t=Prism.plugins.toolbar.registerButton=function(t,n){var e;e="function"==typeof n?n:function(t){var e;return"function"==typeof n.onClick?((e=document.createElement("button")).type="button",e.addEventListener("click",function(){n.onClick.call(this,t)})):"string"==typeof n.url?(e=document.createElement("a")).href=n.url:e=document.createElement("span"),e.textContent=n.text,e},t in i?console.warn('There is a button with the key "'+t+'" registered already.'):r.push(i[t]=e)},e=Prism.plugins.toolbar.hook=function(a){var t=a.element.parentNode;if(t&&/pre/i.test(t.nodeName)&&!t.parentNode.classList.contains("code-toolbar")){var e=document.createElement("div");e.classList.add("code-toolbar"),t.parentNode.insertBefore(e,t),e.appendChild(t);var o=document.createElement("div");o.classList.add("toolbar"),document.body.hasAttribute("data-toolbar-order")&&(r=document.body.getAttribute("data-toolbar-order").split(",").map(function(t){return i[t]||n})),r.forEach(function(t){var e=t(a);if(e){var n=document.createElement("div");n.classList.add("toolbar-item"),n.appendChild(e),o.appendChild(n)}}),e.appendChild(o)}};t("label",function(t){var e=t.element.parentNode;if(e&&/pre/i.test(e.nodeName)&&e.hasAttribute("data-label")){var n,a,o=e.getAttribute("data-label");try{a=document.querySelector("template#"+o)}catch(t){}return a?n=a.content:(e.hasAttribute("data-url")?(n=document.createElement("a")).href=e.getAttribute("data-url"):n=document.createElement("span"),n.textContent=o),n}}),Prism.hooks.add("complete",e)}}();
 
 /***/ }),
 
@@ -22938,7 +25375,7 @@ Prism.languages.swift['string'].inside['interpolation'].inside.rest = Prism.lang
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-!function(){"undefined"!=typeof self&&self.Prism&&self.document&&Prism.languages.markup&&(Prism.plugins.UnescapedMarkup=!0,Prism.hooks.add("before-highlightall",function(e){e.selector+=", [class*='lang-'] script[type='text/plain'], [class*='language-'] script[type='text/plain'], script[type='text/plain'][class*='lang-'], script[type='text/plain'][class*='language-']"}),Prism.hooks.add("before-sanity-check",function(e){if((e.element.matches||e.element.msMatchesSelector).call(e.element,"script[type='text/plain']")){var t=document.createElement("code"),n=document.createElement("pre");return n.className=t.className=e.element.className,e.element.dataset&&Object.keys(e.element.dataset).forEach(function(t){Object.prototype.hasOwnProperty.call(e.element.dataset,t)&&(n.dataset[t]=e.element.dataset[t])}),e.code=e.code.replace(/&lt;\/script(>|&gt;)/gi,"</script>"),t.textContent=e.code,n.appendChild(t),e.element.parentNode.replaceChild(n,e.element),e.element=t,void 0}var n=e.element.parentNode;!e.code&&n&&"pre"==n.nodeName.toLowerCase()&&e.element.childNodes.length&&"#comment"==e.element.childNodes[0].nodeName&&(e.element.textContent=e.code=e.element.childNodes[0].textContent)}))}();
+"undefined"!=typeof self&&self.Prism&&self.document&&Prism.languages.markup&&(Prism.plugins.UnescapedMarkup=!0,Prism.hooks.add("before-highlightall",function(e){e.selector+=", [class*='lang-'] script[type='text/plain'], [class*='language-'] script[type='text/plain'], script[type='text/plain'][class*='lang-'], script[type='text/plain'][class*='language-']"}),Prism.hooks.add("before-sanity-check",function(t){if((t.element.matches||t.element.msMatchesSelector).call(t.element,"script[type='text/plain']")){var e=document.createElement("code");return(a=document.createElement("pre")).className=e.className=t.element.className,t.element.dataset&&Object.keys(t.element.dataset).forEach(function(e){Object.prototype.hasOwnProperty.call(t.element.dataset,e)&&(a.dataset[e]=t.element.dataset[e])}),t.code=t.code.replace(/&lt;\/script(>|&gt;)/gi,"<\/script>"),e.textContent=t.code,a.appendChild(e),t.element.parentNode.replaceChild(a,t.element),void(t.element=e)}var a=t.element.parentNode;!t.code&&a&&"pre"==a.nodeName.toLowerCase()&&t.element.childNodes.length&&"#comment"==t.element.childNodes[0].nodeName&&(t.element.textContent=t.code=t.element.childNodes[0].textContent)}));
 
 /***/ }),
 
@@ -22968,20 +25405,20 @@ var _self = (typeof window !== 'undefined')
  * @author Lea Verou http://lea.verou.me
  */
 
-var Prism = (function(){
+var Prism = (function (_self){
 
 // Private helper vars
 var lang = /\blang(?:uage)?-([\w-]+)\b/i;
 var uniqueId = 0;
 
-var _ = _self.Prism = {
+var _ = {
 	manual: _self.Prism && _self.Prism.manual,
 	disableWorkerMessageHandler: _self.Prism && _self.Prism.disableWorkerMessageHandler,
 	util: {
 		encode: function (tokens) {
 			if (tokens instanceof Token) {
 				return new Token(tokens.type, _.util.encode(tokens.content), tokens.alias);
-			} else if (_.util.type(tokens) === 'Array') {
+			} else if (Array.isArray(tokens)) {
 				return tokens.map(_.util.encode);
 			} else {
 				return tokens.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/\u00a0/g, ' ');
@@ -22989,7 +25426,7 @@ var _ = _self.Prism = {
 		},
 
 		type: function (o) {
-			return Object.prototype.toString.call(o).match(/\[object (\w+)\]/)[1];
+			return Object.prototype.toString.call(o).slice(8, -1);
 		},
 
 		objId: function (obj) {
@@ -23000,41 +25437,44 @@ var _ = _self.Prism = {
 		},
 
 		// Deep clone a language definition (e.g. to extend it)
-		clone: function (o, visited) {
-			var type = _.util.type(o);
+		clone: function deepClone(o, visited) {
+			var clone, id, type = _.util.type(o);
 			visited = visited || {};
 
 			switch (type) {
 				case 'Object':
-					if (visited[_.util.objId(o)]) {
-						return visited[_.util.objId(o)];
+					id = _.util.objId(o);
+					if (visited[id]) {
+						return visited[id];
 					}
-					var clone = {};
-					visited[_.util.objId(o)] = clone;
+					clone = {};
+					visited[id] = clone;
 
 					for (var key in o) {
 						if (o.hasOwnProperty(key)) {
-							clone[key] = _.util.clone(o[key], visited);
+							clone[key] = deepClone(o[key], visited);
 						}
 					}
 
 					return clone;
 
 				case 'Array':
-					if (visited[_.util.objId(o)]) {
-						return visited[_.util.objId(o)];
+					id = _.util.objId(o);
+					if (visited[id]) {
+						return visited[id];
 					}
-					var clone = [];
-					visited[_.util.objId(o)] = clone;
+					clone = [];
+					visited[id] = clone;
 
 					o.forEach(function (v, i) {
-						clone[i] = _.util.clone(v, visited);
+						clone[i] = deepClone(v, visited);
 					});
 
 					return clone;
-			}
 
-			return o;
+				default:
+					return o;
+			}
 		}
 	},
 
@@ -23052,72 +25492,68 @@ var _ = _self.Prism = {
 		/**
 		 * Insert a token before another token in a language literal
 		 * As this needs to recreate the object (we cannot actually insert before keys in object literals),
-		 * we cannot just provide an object, we need anobject and a key.
+		 * we cannot just provide an object, we need an object and a key.
 		 * @param inside The key (or language id) of the parent
-		 * @param before The key to insert before. If not provided, the function appends instead.
+		 * @param before The key to insert before.
 		 * @param insert Object with the key/value pairs to insert
 		 * @param root The object that contains `inside`. If equal to Prism.languages, it can be omitted.
 		 */
 		insertBefore: function (inside, before, insert, root) {
 			root = root || _.languages;
 			var grammar = root[inside];
-
-			if (arguments.length == 2) {
-				insert = arguments[1];
-
-				for (var newToken in insert) {
-					if (insert.hasOwnProperty(newToken)) {
-						grammar[newToken] = insert[newToken];
-					}
-				}
-
-				return grammar;
-			}
-
 			var ret = {};
 
 			for (var token in grammar) {
-
 				if (grammar.hasOwnProperty(token)) {
 
 					if (token == before) {
-
 						for (var newToken in insert) {
-
 							if (insert.hasOwnProperty(newToken)) {
 								ret[newToken] = insert[newToken];
 							}
 						}
 					}
 
-					ret[token] = grammar[token];
+					// Do not insert token which also occur in insert. See #1525
+					if (!insert.hasOwnProperty(token)) {
+						ret[token] = grammar[token];
+					}
 				}
 			}
 
+			var old = root[inside];
+			root[inside] = ret;
+
 			// Update references in other language definitions
 			_.languages.DFS(_.languages, function(key, value) {
-				if (value === root[inside] && key != inside) {
+				if (value === old && key != inside) {
 					this[key] = ret;
 				}
 			});
 
-			return root[inside] = ret;
+			return ret;
 		},
 
 		// Traverse a language definition with Depth First Search
-		DFS: function(o, callback, type, visited) {
+		DFS: function DFS(o, callback, type, visited) {
 			visited = visited || {};
+
+			var objId = _.util.objId;
+
 			for (var i in o) {
 				if (o.hasOwnProperty(i)) {
 					callback.call(o, i, o[i], type || i);
 
-					if (_.util.type(o[i]) === 'Object' && !visited[_.util.objId(o[i])]) {
-						visited[_.util.objId(o[i])] = true;
-						_.languages.DFS(o[i], callback, null, visited);
+					var property = o[i],
+					    propertyType = _.util.type(property);
+
+					if (propertyType === 'Object' && !visited[objId(property)]) {
+						visited[objId(property)] = true;
+						DFS(property, callback, null, visited);
 					}
-					else if (_.util.type(o[i]) === 'Array' && !visited[_.util.objId(o[i])]) {
-						visited[_.util.objId(o[i])] = true;
-						_.languages.DFS(o[i], callback, i, visited);
+					else if (propertyType === 'Array' && !visited[objId(property)]) {
+						visited[objId(property)] = true;
+						DFS(property, callback, i, visited);
 					}
 				}
 			}
@@ -23178,33 +25614,37 @@ var _ = _self.Prism = {
 			code: code
 		};
 
+		var insertHighlightedCode = function (highlightedCode) {
+			env.highlightedCode = highlightedCode;
+
+			_.hooks.run('before-insert', env);
+
+			env.element.innerHTML = env.highlightedCode;
+
+			_.hooks.run('after-highlight', env);
+			_.hooks.run('complete', env);
+			callback && callback.call(env.element);
+		}
+
 		_.hooks.run('before-sanity-check', env);
 
-		if (!env.code || !env.grammar) {
-			if (env.code) {
-				_.hooks.run('before-highlight', env);
-				env.element.textContent = env.code;
-				_.hooks.run('after-highlight', env);
-			}
+		if (!env.code) {
 			_.hooks.run('complete', env);
 			return;
 		}
 
 		_.hooks.run('before-highlight', env);
 
+		if (!env.grammar) {
+			insertHighlightedCode(_.util.encode(env.code));
+			return;
+		}
+
 		if (async && _self.Worker) {
 			var worker = new Worker(_.filename);
 
 			worker.onmessage = function(evt) {
-				env.highlightedCode = evt.data;
-
-				_.hooks.run('before-insert', env);
-
-				env.element.innerHTML = env.highlightedCode;
-
-				callback && callback.call(env.element);
-				_.hooks.run('after-highlight', env);
-				_.hooks.run('complete', env);
+				insertHighlightedCode(evt.data);
 			};
 
 			worker.postMessage(JSON.stringify({
@@ -23214,16 +25654,7 @@ var _ = _self.Prism = {
 			}));
 		}
 		else {
-			env.highlightedCode = _.highlight(env.code, env.grammar, env.language);
-
-			_.hooks.run('before-insert', env);
-
-			env.element.innerHTML = env.highlightedCode;
-
-			callback && callback.call(element);
-
-			_.hooks.run('after-highlight', env);
-			_.hooks.run('complete', env);
+			insertHighlightedCode(_.highlight(env.code, env.grammar, env.language));
 		}
 	},
 
@@ -23240,8 +25671,6 @@ var _ = _self.Prism = {
 	},
 
 	matchGrammar: function (text, strarr, grammar, index, startPos, oneshot, target) {
-		var Token = _.Token;
-
 		for (var token in grammar) {
 			if(!grammar.hasOwnProperty(token) || !grammar[token]) {
 				continue;
@@ -23367,7 +25796,7 @@ var _ = _self.Prism = {
 		}
 	},
 
-	tokenize: function(text, grammar, language) {
+	tokenize: function(text, grammar) {
 		var strarr = [text];
 
 		var rest = grammar.rest;
@@ -23407,24 +25836,28 @@ var _ = _self.Prism = {
 				callback(env);
 			}
 		}
-	}
+	},
+
+	Token: Token
 };
 
-var Token = _.Token = function(type, content, alias, matchedStr, greedy) {
+_self.Prism = _;
+
+function Token(type, content, alias, matchedStr, greedy) {
 	this.type = type;
 	this.content = content;
 	this.alias = alias;
 	// Copy of the full string this token was created from
 	this.length = (matchedStr || "").length|0;
 	this.greedy = !!greedy;
-};
+}
 
 Token.stringify = function(o, language, parent) {
 	if (typeof o == 'string') {
 		return o;
 	}
 
-	if (_.util.type(o) === 'Array') {
+	if (Array.isArray(o)) {
 		return o.map(function(element) {
 			return Token.stringify(element, language, o);
 		}).join('');
@@ -23441,7 +25874,7 @@ Token.stringify = function(o, language, parent) {
 	};
 
 	if (o.alias) {
-		var aliases = _.util.type(o.alias) === 'Array' ? o.alias : [o.alias];
+		var aliases = Array.isArray(o.alias) ? o.alias : [o.alias];
 		Array.prototype.push.apply(env.classes, aliases);
 	}
 
@@ -23458,7 +25891,7 @@ Token.stringify = function(o, language, parent) {
 if (!_self.document) {
 	if (!_self.addEventListener) {
 		// in Node.js
-		return _self.Prism;
+		return _;
 	}
 
 	if (!_.disableWorkerMessageHandler) {
@@ -23476,7 +25909,7 @@ if (!_self.document) {
 		}, false);
 	}
 
-	return _self.Prism;
+	return _;
 }
 
 //Get current script and highlight
@@ -23499,9 +25932,9 @@ if (script) {
 	}
 }
 
-return _self.Prism;
+return _;
 
-})();
+})(_self);
 
 if ( true && module.exports) {
 	module.exports = Prism;
@@ -23523,7 +25956,7 @@ Prism.languages.markup = {
 	'doctype': /<!DOCTYPE[\s\S]+?>/i,
 	'cdata': /<!\[CDATA\[[\s\S]*?]]>/i,
 	'tag': {
-		pattern: /<\/?(?!\d)[^\s>\/=$<%]+(?:\s+[^\s>\/=]+(?:=(?:("|')(?:\\[\s\S]|(?!\1)[^\\])*\1|[^\s'">=]+))?)*\s*\/?>/i,
+		pattern: /<\/?(?!\d)[^\s>\/=$<%]+(?:\s(?:\s*[^\s>\/=]+(?:\s*=\s*(?:"[^"]*"|'[^']*'|[^\s'">=]+(?=[\s>]))|(?=[\s/>])))+)?\s*\/?>/i,
 		greedy: true,
 		inside: {
 			'tag': {
@@ -23534,12 +25967,12 @@ Prism.languages.markup = {
 				}
 			},
 			'attr-value': {
-				pattern: /=(?:("|')(?:\\[\s\S]|(?!\1)[^\\])*\1|[^\s'">=]+)/i,
+				pattern: /=\s*(?:"[^"]*"|'[^']*'|[^\s'">=]+)/i,
 				inside: {
 					'punctuation': [
 						/^=/,
 						{
-							pattern: /(^|[^\\])["']/,
+							pattern: /^(\s*)["']|["']$/,
 							lookbehind: true
 						}
 					]
@@ -23569,7 +26002,51 @@ Prism.hooks.add('wrap', function(env) {
 	}
 });
 
-Prism.languages.xml = Prism.languages.markup;
+Object.defineProperty(Prism.languages.markup.tag, 'addInlined', {
+	/**
+	 * Adds an inlined language to markup.
+	 *
+	 * An example of an inlined language is CSS with `<style>` tags.
+	 *
+	 * @param {string} tagName The name of the tag that contains the inlined language. This name will be treated as
+	 * case insensitive.
+	 * @param {string} lang The language key.
+	 * @example
+	 * addInlined('style', 'css');
+	 */
+	value: function addInlined(tagName, lang) {
+		var includedCdataInside = {};
+		includedCdataInside['language-' + lang] = {
+			pattern: /(^<!\[CDATA\[)[\s\S]+?(?=\]\]>$)/i,
+			lookbehind: true,
+			inside: Prism.languages[lang]
+		};
+		includedCdataInside['cdata'] = /^<!\[CDATA\[|\]\]>$/i;
+
+		var inside = {
+			'included-cdata': {
+				pattern: /<!\[CDATA\[[\s\S]*?\]\]>/i,
+				inside: includedCdataInside
+			}
+		};
+		inside['language-' + lang] = {
+			pattern: /[\s\S]+/,
+			inside: Prism.languages[lang]
+		};
+
+		var def = {};
+		def[tagName] = {
+			pattern: RegExp(/(<__[\s\S]*?>)(?:<!\[CDATA\[[\s\S]*?\]\]>\s*|[\s\S])*?(?=<\/__>)/.source.replace(/__/g, tagName), 'i'),
+			lookbehind: true,
+			greedy: true,
+			inside: inside
+		};
+
+		Prism.languages.insertBefore('markup', 'cdata', def);
+	}
+});
+
+Prism.languages.xml = Prism.languages.extend('markup', {});
 Prism.languages.html = Prism.languages.markup;
 Prism.languages.mathml = Prism.languages.markup;
 Prism.languages.svg = Prism.languages.markup;
@@ -23579,58 +26056,58 @@ Prism.languages.svg = Prism.languages.markup;
      Begin prism-css.js
 ********************************************** */
 
-Prism.languages.css = {
-	'comment': /\/\*[\s\S]*?\*\//,
-	'atrule': {
-		pattern: /@[\w-]+?.*?(?:;|(?=\s*\{))/i,
-		inside: {
-			'rule': /@[\w-]+/
-			// See rest below
-		}
-	},
-	'url': /url\((?:(["'])(?:\\(?:\r\n|[\s\S])|(?!\1)[^\\\r\n])*\1|.*?)\)/i,
-	'selector': /[^{}\s][^{};]*?(?=\s*\{)/,
-	'string': {
-		pattern: /("|')(?:\\(?:\r\n|[\s\S])|(?!\1)[^\\\r\n])*\1/,
-		greedy: true
-	},
-	'property': /[-_a-z\xA0-\uFFFF][-\w\xA0-\uFFFF]*(?=\s*:)/i,
-	'important': /\B!important\b/i,
-	'function': /[-a-z0-9]+(?=\()/i,
-	'punctuation': /[(){};:]/
-};
+(function (Prism) {
 
-Prism.languages.css['atrule'].inside.rest = Prism.languages.css;
+	var string = /("|')(?:\\(?:\r\n|[\s\S])|(?!\1)[^\\\r\n])*\1/;
 
-if (Prism.languages.markup) {
-	Prism.languages.insertBefore('markup', 'tag', {
-		'style': {
-			pattern: /(<style[\s\S]*?>)[\s\S]*?(?=<\/style>)/i,
-			lookbehind: true,
-			inside: Prism.languages.css,
-			alias: 'language-css',
-			greedy: true
-		}
-	});
-
-	Prism.languages.insertBefore('inside', 'attr-value', {
-		'style-attr': {
-			pattern: /\s*style=("|')(?:\\[\s\S]|(?!\1)[^\\])*\1/i,
+	Prism.languages.css = {
+		'comment': /\/\*[\s\S]*?\*\//,
+		'atrule': {
+			pattern: /@[\w-]+?[\s\S]*?(?:;|(?=\s*\{))/i,
 			inside: {
-				'attr-name': {
-					pattern: /^\s*style/i,
-					inside: Prism.languages.markup.tag.inside
+				'rule': /@[\w-]+/
+				// See rest below
+			}
+		},
+		'url': RegExp('url\\((?:' + string.source + '|.*?)\\)', 'i'),
+		'selector': RegExp('[^{}\\s](?:[^{};"\']|' + string.source + ')*?(?=\\s*\\{)'),
+		'string': {
+			pattern: string,
+			greedy: true
+		},
+		'property': /[-_a-z\xA0-\uFFFF][-\w\xA0-\uFFFF]*(?=\s*:)/i,
+		'important': /!important\b/i,
+		'function': /[-a-z0-9]+(?=\()/i,
+		'punctuation': /[(){};:,]/
+	};
+
+	Prism.languages.css['atrule'].inside.rest = Prism.languages.css;
+
+	var markup = Prism.languages.markup;
+	if (markup) {
+		markup.tag.addInlined('style', 'css');
+
+		Prism.languages.insertBefore('inside', 'attr-value', {
+			'style-attr': {
+				pattern: /\s*style=("|')(?:\\[\s\S]|(?!\1)[^\\])*\1/i,
+				inside: {
+					'attr-name': {
+						pattern: /^\s*style/i,
+						inside: markup.tag.inside
+					},
+					'punctuation': /^\s*=\s*['"]|['"]\s*$/,
+					'attr-value': {
+						pattern: /.+/i,
+						inside: Prism.languages.css
+					}
 				},
-				'punctuation': /^\s*=\s*['"]|['"]\s*$/,
-				'attr-value': {
-					pattern: /.+/i,
-					inside: Prism.languages.css
-				}
-			},
-			alias: 'language-css'
-		}
-	}, Prism.languages.markup.tag);
-}
+				alias: 'language-css'
+			}
+		}, markup.tag);
+	}
+
+}(Prism));
+
 
 /* **********************************************
      Begin prism-clike.js
@@ -23661,7 +26138,7 @@ Prism.languages.clike = {
 	},
 	'keyword': /\b(?:if|else|while|do|for|return|in|instanceof|function|new|try|throw|catch|finally|null|break|continue)\b/,
 	'boolean': /\b(?:true|false)\b/,
-	'function': /[a-z0-9_]+(?=\()/i,
+	'function': /\w+(?=\()/,
 	'number': /\b0x[\da-f]+\b|(?:\b\d+\.?\d*|\B\.\d+)(?:e[+-]?\d+)?/i,
 	'operator': /--?|\+\+?|!=?=?|<=?|>=?|==?=?|&&?|\|\|?|\?|\*|\/|~|\^|%/,
 	'punctuation': /[{}[\];(),.:]/
@@ -23673,25 +26150,64 @@ Prism.languages.clike = {
 ********************************************** */
 
 Prism.languages.javascript = Prism.languages.extend('clike', {
-	'keyword': /\b(?:as|async|await|break|case|catch|class|const|continue|debugger|default|delete|do|else|enum|export|extends|finally|for|from|function|get|if|implements|import|in|instanceof|interface|let|new|null|of|package|private|protected|public|return|set|static|super|switch|this|throw|try|typeof|var|void|while|with|yield)\b/,
-	'number': /\b(?:0[xX][\dA-Fa-f]+|0[bB][01]+|0[oO][0-7]+|NaN|Infinity)\b|(?:\b\d+\.?\d*|\B\.\d+)(?:[Ee][+-]?\d+)?/,
+	'class-name': [
+		Prism.languages.clike['class-name'],
+		{
+			pattern: /(^|[^$\w\xA0-\uFFFF])[_$A-Z\xA0-\uFFFF][$\w\xA0-\uFFFF]*(?=\.(?:prototype|constructor))/,
+			lookbehind: true
+		}
+	],
+	'keyword': [
+		{
+			pattern: /((?:^|})\s*)(?:catch|finally)\b/,
+			lookbehind: true
+		},
+		{
+			pattern: /(^|[^.])\b(?:as|async(?=\s*(?:function\b|\(|[$\w\xA0-\uFFFF]|$))|await|break|case|class|const|continue|debugger|default|delete|do|else|enum|export|extends|for|from|function|get|if|implements|import|in|instanceof|interface|let|new|null|of|package|private|protected|public|return|set|static|super|switch|this|throw|try|typeof|undefined|var|void|while|with|yield)\b/,
+			lookbehind: true
+		},
+	],
+	'number': /\b(?:(?:0[xX][\dA-Fa-f]+|0[bB][01]+|0[oO][0-7]+)n?|\d+n|NaN|Infinity)\b|(?:\b\d+\.?\d*|\B\.\d+)(?:[Ee][+-]?\d+)?/,
 	// Allow for all non-ASCII characters (See http://stackoverflow.com/a/2008444)
-	'function': /[_$a-z\xA0-\uFFFF][$\w\xA0-\uFFFF]*(?=\s*\()/i,
+	'function': /[_$a-zA-Z\xA0-\uFFFF][$\w\xA0-\uFFFF]*(?=\s*(?:\.\s*(?:apply|bind|call)\s*)?\()/,
 	'operator': /-[-=]?|\+[+=]?|!=?=?|<<?=?|>>?>?=?|=(?:==?|>)?|&[&=]?|\|[|=]?|\*\*?=?|\/=?|~|\^=?|%=?|\?|\.{3}/
 });
 
+Prism.languages.javascript['class-name'][0].pattern = /(\b(?:class|interface|extends|implements|instanceof|new)\s+)[\w.\\]+/
+
 Prism.languages.insertBefore('javascript', 'keyword', {
 	'regex': {
-		pattern: /((?:^|[^$\w\xA0-\uFFFF."'\])\s])\s*)\/(\[[^\]\r\n]+]|\\.|[^/\\\[\r\n])+\/[gimyu]{0,5}(?=\s*($|[\r\n,.;})\]]))/,
+		pattern: /((?:^|[^$\w\xA0-\uFFFF."'\])\s])\s*)\/(\[(?:[^\]\\\r\n]|\\.)*]|\\.|[^/\\\[\r\n])+\/[gimyu]{0,5}(?=\s*($|[\r\n,.;})\]]))/,
 		lookbehind: true,
 		greedy: true
 	},
 	// This must be declared before keyword because we use "function" inside the look-forward
 	'function-variable': {
-		pattern: /[_$a-z\xA0-\uFFFF][$\w\xA0-\uFFFF]*(?=\s*=\s*(?:function\b|(?:\([^()]*\)|[_$a-z\xA0-\uFFFF][$\w\xA0-\uFFFF]*)\s*=>))/i,
+		pattern: /[_$a-zA-Z\xA0-\uFFFF][$\w\xA0-\uFFFF]*(?=\s*[=:]\s*(?:async\s*)?(?:\bfunction\b|(?:\((?:[^()]|\([^()]*\))*\)|[_$a-zA-Z\xA0-\uFFFF][$\w\xA0-\uFFFF]*)\s*=>))/,
 		alias: 'function'
 	},
-	'constant': /\b[A-Z][A-Z\d_]*\b/
+	'parameter': [
+		{
+			pattern: /(function(?:\s+[_$A-Za-z\xA0-\uFFFF][$\w\xA0-\uFFFF]*)?\s*\(\s*)(?!\s)(?:[^()]|\([^()]*\))+?(?=\s*\))/,
+			lookbehind: true,
+			inside: Prism.languages.javascript
+		},
+		{
+			pattern: /[_$a-z\xA0-\uFFFF][$\w\xA0-\uFFFF]*(?=\s*=>)/i,
+			inside: Prism.languages.javascript
+		},
+		{
+			pattern: /(\(\s*)(?!\s)(?:[^()]|\([^()]*\))+?(?=\s*\)\s*=>)/,
+			lookbehind: true,
+			inside: Prism.languages.javascript
+		},
+		{
+			pattern: /((?:\b|\s|^)(?!(?:as|async|await|break|case|catch|class|const|continue|debugger|default|delete|do|else|enum|export|extends|finally|for|from|function|get|if|implements|import|in|instanceof|interface|let|new|null|of|package|private|protected|public|return|set|static|super|switch|this|throw|try|typeof|undefined|var|void|while|with|yield)(?![$\w\xA0-\uFFFF]))(?:[_$A-Za-z\xA0-\uFFFF][$\w\xA0-\uFFFF]*\s*)\(\s*)(?!\s)(?:[^()]|\([^()]*\))+?(?=\s*\)\s*\{)/,
+			lookbehind: true,
+			inside: Prism.languages.javascript
+		}
+	],
+	'constant': /\b[A-Z](?:[A-Z_]|\dx?)*\b/
 });
 
 Prism.languages.insertBefore('javascript', 'string', {
@@ -23706,25 +26222,16 @@ Prism.languages.insertBefore('javascript', 'string', {
 						pattern: /^\${|}$/,
 						alias: 'punctuation'
 					},
-					rest: null // See below
+					rest: Prism.languages.javascript
 				}
 			},
 			'string': /[\s\S]+/
 		}
 	}
 });
-Prism.languages.javascript['template-string'].inside['interpolation'].inside.rest = Prism.languages.javascript;
 
 if (Prism.languages.markup) {
-	Prism.languages.insertBefore('markup', 'tag', {
-		'script': {
-			pattern: /(<script[\s\S]*?>)[\s\S]*?(?=<\/script>)/i,
-			lookbehind: true,
-			inside: Prism.languages.javascript,
-			alias: 'language-javascript',
-			greedy: true
-		}
-	});
+	Prism.languages.markup.tag.addInlined('script', 'javascript');
 }
 
 Prism.languages.js = Prism.languages.javascript;
@@ -23739,7 +26246,11 @@ Prism.languages.js = Prism.languages.javascript;
 		return;
 	}
 
-	self.Prism.fileHighlight = function() {
+	/**
+	 * @param {Element} [container=document]
+	 */
+	self.Prism.fileHighlight = function(container) {
+		container = container || document;
 
 		var Extensions = {
 			'js': 'javascript',
@@ -23753,7 +26264,13 @@ Prism.languages.js = Prism.languages.javascript;
 			'tex': 'latex'
 		};
 
-		Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach(function (pre) {
+		Array.prototype.slice.call(container.querySelectorAll('pre[data-src]')).forEach(function (pre) {
+			// ignore if already loaded
+			if (pre.hasAttribute('data-src-loaded')) {
+				return;
+			}
+
+			// load current
 			var src = pre.getAttribute('data-src');
 
 			var language, parent = pre;
@@ -23791,6 +26308,8 @@ Prism.languages.js = Prism.languages.javascript;
 						code.textContent = xhr.responseText;
 
 						Prism.highlightElement(code);
+						// mark as loaded
+						pre.setAttribute('data-src-loaded', '');
 					}
 					else if (xhr.status >= 400) {
 						code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
@@ -23821,9 +26340,13 @@ Prism.languages.js = Prism.languages.javascript;
 
 	};
 
-	document.addEventListener('DOMContentLoaded', self.Prism.fileHighlight);
+	document.addEventListener('DOMContentLoaded', function () {
+		// execute inside handler, for dropping Event as argument
+		self.Prism.fileHighlight();
+	});
 
 })();
+
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
 
 /***/ }),
@@ -24646,1936 +27169,6 @@ try {
 // easier to handle this case. if(!global) { ...}
 
 module.exports = g;
-
-
-/***/ }),
-
-/***/ "./src/assets/js/src/config.js":
-/*!*************************************!*\
-  !*** ./src/assets/js/src/config.js ***!
-  \*************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-$(function() {
-
-
-  /*
-  |--------------------------------------------------------------------------
-  | Configure your website
-  |--------------------------------------------------------------------------
-  |
-  | We provided several configuration variables for your ease of development.
-  | Read their complete description and modify them based on your need.
-  |
-  */
-
-  page.config({
-
-    /*
-    |--------------------------------------------------------------------------
-    | Google Analytics Tracking
-    |--------------------------------------------------------------------------
-    |
-    | If you want to use Google Analytics, you can specify your Tracking ID in
-    | this option. Your key would be a value like: UA-12345678-9
-    |
-    */
-
-    googleAnalyticsId: '',
-
-    /*
-    |--------------------------------------------------------------------------
-    | Smooth Scroll
-    |--------------------------------------------------------------------------
-    |
-    | If true, the browser's scrollbar moves smoothly on scroll and gives your
-    | visitor a better experience for scrolling.
-    |
-    */
-
-    smoothScroll: true,
-
-  });
-
-});
-
-
-/***/ }),
-
-/***/ "./src/assets/js/src/page.js":
-/*!***********************************!*\
-  !*** ./src/assets/js/src/page.js ***!
-  \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-/*
-|--------------------------------------------------------------------------
-| Core
-|--------------------------------------------------------------------------
-|
-| The start point of the project. Include jQuery, Bootstrap and required
-| plugins and define page object. This file is required.
-|
-*/
-__webpack_require__(/*! ../../plugin/thedocs/js/loaders/core.js */ "./src/assets/plugin/thedocs/js/loaders/core.js");
-
-
-/*
-|--------------------------------------------------------------------------
-| Partials
-|--------------------------------------------------------------------------
-|
-| Split the application code to several files. This file is required.
-|
-*/
-__webpack_require__(/*! ../../plugin/thedocs/js/loaders/partials.js */ "./src/assets/plugin/thedocs/js/loaders/partials.js");
-
-
-/*
-|--------------------------------------------------------------------------
-| Configure
-|--------------------------------------------------------------------------
-|
-| Modify some variables to personalize your project. This file is required.
-|
-*/
-__webpack_require__(/*! ./config.js */ "./src/assets/js/src/config.js");
-
-
-/*
-|--------------------------------------------------------------------------
-| Custom script
-|--------------------------------------------------------------------------
-|
-| Write your custom JavaScrip code. Feel free to split your code to several
-| files and import the other files here or inside script.js.
-|
-*/
-__webpack_require__(/*! ./script.js */ "./src/assets/js/src/script.js");
-
-
-/***/ }),
-
-/***/ "./src/assets/js/src/script.js":
-/*!*************************************!*\
-  !*** ./src/assets/js/src/script.js ***!
-  \*************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-
-/*
-|--------------------------------------------------------------------------
-| Custom Javascript code
-|--------------------------------------------------------------------------
-|
-| Now that you configured your website, you can write additional Javascript
-| code inside the following function. You might want to add more plugins and
-| initialize them in this file.
-|
-*/
-
-$(function() {
-
-
-
-});
-
-
-/***/ }),
-
-/***/ "./src/assets/plugin/thedocs/js/loaders/core.js":
-/*!******************************************************!*\
-  !*** ./src/assets/plugin/thedocs/js/loaders/core.js ***!
-  \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-/*
-|--------------------------------------------------------------------------
-| Main
-|--------------------------------------------------------------------------
-|
-| The start point of the project. Include jQuery, Bootstrap and required
-| plugins and define page object. These files are mandatory.
-|
-*/
-__webpack_require__(/*! ../partials/main.js */ "./src/assets/plugin/thedocs/js/partials/main.js");
-
-__webpack_require__(/*! ../vendors/jquery.js */ "./src/assets/plugin/thedocs/js/vendors/jquery.js");
-__webpack_require__(/*! ../vendors/bootstrap.js */ "./src/assets/plugin/thedocs/js/vendors/bootstrap.js");
-
-
-/***/ }),
-
-/***/ "./src/assets/plugin/thedocs/js/loaders/partials.js":
-/*!**********************************************************!*\
-  !*** ./src/assets/plugin/thedocs/js/loaders/partials.js ***!
-  \**********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-/*
-|--------------------------------------------------------------------------
-| Partials
-|--------------------------------------------------------------------------
-|
-| Split the application code to several files. Almost all of the following
-| files are required for the application to work properly.
-|
-*/
-__webpack_require__(/*! ../partials/config.js */ "./src/assets/plugin/thedocs/js/partials/config.js");
-__webpack_require__(/*! ../partials/bind.js */ "./src/assets/plugin/thedocs/js/partials/bind.js");
-__webpack_require__(/*! ../partials/drawer.js */ "./src/assets/plugin/thedocs/js/partials/drawer.js");
-__webpack_require__(/*! ../partials/file-tree.js */ "./src/assets/plugin/thedocs/js/partials/file-tree.js");
-__webpack_require__(/*! ../partials/font.js */ "./src/assets/plugin/thedocs/js/partials/font.js");
-__webpack_require__(/*! ../partials/form.js */ "./src/assets/plugin/thedocs/js/partials/form.js");
-__webpack_require__(/*! ../partials/mailer.js */ "./src/assets/plugin/thedocs/js/partials/mailer.js");
-__webpack_require__(/*! ../partials/map.js */ "./src/assets/plugin/thedocs/js/partials/map.js");
-__webpack_require__(/*! ../partials/modal.js */ "./src/assets/plugin/thedocs/js/partials/modal.js");
-__webpack_require__(/*! ../partials/navbar.js */ "./src/assets/plugin/thedocs/js/partials/navbar.js");
-__webpack_require__(/*! ../partials/offcanvas.js */ "./src/assets/plugin/thedocs/js/partials/offcanvas.js");
-__webpack_require__(/*! ../partials/popup.js */ "./src/assets/plugin/thedocs/js/partials/popup.js");
-__webpack_require__(/*! ../partials/recaptcha.js */ "./src/assets/plugin/thedocs/js/partials/recaptcha.js");
-__webpack_require__(/*! ../partials/scroll.js */ "./src/assets/plugin/thedocs/js/partials/scroll.js");
-__webpack_require__(/*! ../partials/section.js */ "./src/assets/plugin/thedocs/js/partials/section.js");
-__webpack_require__(/*! ../partials/sidebar.js */ "./src/assets/plugin/thedocs/js/partials/sidebar.js");
-__webpack_require__(/*! ../partials/video.js */ "./src/assets/plugin/thedocs/js/partials/video.js");
-__webpack_require__(/*! ../partials/util.js */ "./src/assets/plugin/thedocs/js/partials/util.js");
-
-
-/***/ }),
-
-/***/ "./src/assets/plugin/thedocs/js/partials/bind.js":
-/*!*******************************************************!*\
-  !*** ./src/assets/plugin/thedocs/js/partials/bind.js ***!
-  \*******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-
-/**
- * Bind input changes to data attributes
- */
-
-+function($){
-
-  page.initBind = function() {
-
-    $('[data-bind-radio]').each(function(){
-      var e     = $(this),
-          radio = e.data('bind-radio'),
-          value = $('input[name="'+ radio +'"]:checked').val();
-      e.text( e.dataAttr(value, e.text()) );
-
-      $('input[name="'+ radio +'"]').on('change', function() {
-        var value = $('input[name="'+ radio +'"]:checked').val();
-        $('[data-bind-radio="'+ radio +'"]').each(function(){
-          var e = $(this);
-          e.text( e.dataAttr(value, e.text()) );
-        });
-      });
-    });
-
-  }
-
-}(jQuery);
-
-
-
-/***/ }),
-
-/***/ "./src/assets/plugin/thedocs/js/partials/config.js":
-/*!*********************************************************!*\
-  !*** ./src/assets/plugin/thedocs/js/partials/config.js ***!
-  \*********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-
-/**
- * Config the application behaviour.
- */
-
-+function($){
-
-  page.config = function(options) {
-
-    // Return config value
-    if ( typeof options === 'string' ) {
-      return page.defaults[options];
-    }
-
-    // Save configs
-    $.extend(true, page.defaults, options);
-
-    // Make necessary changes
-    //
-    if ( ! page.defaults.smoothScroll ) {
-      SmoothScroll.destroy();
-    }
-
-    // Google map
-    //
-    if ( $('[data-provide~="map"]').length && window["google.maps.Map"] === undefined ) {
-      $.getScript("https://maps.googleapis.com/maps/api/js?key="+ page.defaults.googleApiKey +"&callback=page.initMap");
-    }
-
-    // Google Analytics
-    //
-    if ( page.defaults.googleAnalyticsId ) {
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-      ga('create', page.defaults.googleAnalyticsId, 'auto');
-      ga('send', 'pageview');
-    }
-
-
-    // Google reCAPTCHA
-    //
-    if ( $('[data-provide~="recaptcha"]').length && window["grecaptcha"] === undefined ) {
-      var url = "https://www.google.com/recaptcha/api.js?onload=recaptchaLoadCallback";
-      if ( page.defaults.reCaptchaLanguage != '' ) {
-        url += '&hl=' + page.defaults.reCaptchaLanguage;
-      }
-      $.getScript(url);
-    }
-
-    // DOM is loaded, let's init the page.
-    //
-    page.init();
-
-  }
-
-}(jQuery);
-
-
-
-
-
-/***/ }),
-
-/***/ "./src/assets/plugin/thedocs/js/partials/drawer.js":
-/*!*********************************************************!*\
-  !*** ./src/assets/plugin/thedocs/js/partials/drawer.js ***!
-  \*********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-
-/**
- *
- */
-
-+function($){
-
-  page.initDrawer = function() {
-
-    $(document).on( 'click', '.drawer-toggler, .drawer-close, .backdrop-drawer', function() {
-      $('body').toggleClass( 'drawer-open' );
-    });
-
-  }
-
-}(jQuery);
-
-
-
-/***/ }),
-
-/***/ "./src/assets/plugin/thedocs/js/partials/file-tree.js":
-/*!************************************************************!*\
-  !*** ./src/assets/plugin/thedocs/js/partials/file-tree.js ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-
-/**
- *
- */
-
-+function($){
-
-  page.initFileTree = function() {
-
-    $(document).on('click', '.file-tree li.is-file', function(e){
-      e.stopPropagation();
-    });
-
-    $(document).on('click', '.file-tree li.is-folder', function(e){
-      $(this).find('ul:first').slideToggle(400, function(){
-        $(this).parent('li').toggleClass('open');
-      });
-      e.stopPropagation();
-    });
-
-  }
-
-}(jQuery);
-
-
-/***/ }),
-
-/***/ "./src/assets/plugin/thedocs/js/partials/font.js":
-/*!*******************************************************!*\
-  !*** ./src/assets/plugin/thedocs/js/partials/font.js ***!
-  \*******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-
-/**
- *
- */
-
-+function($){
-
-  page.initFont = function() {
-
-    var fonts = [];
-
-    $('[data-font]').each(function(){
-      var tag  = $(this),
-          font = tag.data('font')
-          part = font.split(':');
-
-      fonts.push(font);
-      tag.css({'font-family': part[0], 'font-weight': part[1]});
-    });
-
-    if (fonts.length > 0) {
-      $("head").append("<link href='https://fonts.googleapis.com/css?family=" + fonts.join('|') + "' rel='stylesheet'>");
-    }
-
-  }
-
-}(jQuery);
-
-
-
-/***/ }),
-
-/***/ "./src/assets/plugin/thedocs/js/partials/form.js":
-/*!*******************************************************!*\
-  !*** ./src/assets/plugin/thedocs/js/partials/form.js ***!
-  \*******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-
-/**
- * All the form related methods.
- */
-
-+function($){
-
-  page.initForm = function() {
-
-
-    /**
-     * Add/remove .focus to .input-group
-     */
-    $(document).on('focusin', '.input-group', function() {
-      $(this).addClass('focus');
-    });
-
-    $(document).on('focusout', '.input-group', function() {
-      $(this).removeClass('focus');
-    });
-
-
-    // Upload
-    //
-    $(document).on('click', '.file-browser', function() {
-      var browser = $(this);
-      var file = browser.closest('.file-group').find('[type="file"]');
-      if ( browser.hasClass('form-control') ) {
-        setTimeout(function(){
-          file.trigger('click');
-        },300);
-      }
-      else {
-        file.trigger('click');
-      }
-    });
-
-    // Event to change file name after file selection
-    $(document).on('change', '.file-group [type="file"]', function(){
-      var input = $(this);
-      var filename = input.val().split('\\').pop();
-      input.closest('.file-group').find('.file-value').val(filename).text(filename).focus();
-    });
-
-
-  }
-
-}(jQuery);
-
-
-/***/ }),
-
-/***/ "./src/assets/plugin/thedocs/js/partials/mailer.js":
-/*!*********************************************************!*\
-  !*** ./src/assets/plugin/thedocs/js/partials/mailer.js ***!
-  \*********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-
-/**
- * Send a form details to the sendmail.php file.
- */
-
-+function($){
-
-  page.initMailer = function() {
-
-    var validEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
-    $('[data-form="mailer"]').each(function(){
-
-      var form = $(this);
-      var email = form.find('[name="email"]');
-      var message = form.find('[name="message"]');
-
-      form.on('submit', function(){
-
-        form.children('.alert-danger').remove();
-
-        if ( email.length ) {
-          if ( email.val().length < 1 || ! validEmail.test( email.val() ) ) {
-            email.addClass('is-invalid');
-            return false;
-          }
-        }
-
-
-        if ( message.length ) {
-          if ( message.val().length < 1 ) {
-            message.addClass('is-invalid');
-            return false;
-          }
-        }
-
-
-        $.ajax({
-          type: "POST",
-          url: form.attr('action'),
-          data: form.serializeArray(),
-        })
-        .done( function( data ) {
-          var response = $.parseJSON( data );
-          if ( 'success' == response.status ) {
-            form.find('.alert-success').fadeIn(1000);
-            form.find(':input').val('');
-          }
-          else {
-            form.prepend('<div class="alert alert-danger">'+ response.message +'</div>');
-            console.log( response.reason )
-          }
-        });
-
-        return false;
-      });
-
-      email.on('focus', function() {
-        $(this).removeClass('is-invalid');
-      });
-
-      message.on('focus', function() {
-        $(this).removeClass('is-invalid');
-      });
-
-    });
-
-  }
-
-}(jQuery);
-
-
-
-/***/ }),
-
-/***/ "./src/assets/plugin/thedocs/js/partials/main.js":
-/*!*******************************************************!*\
-  !*** ./src/assets/plugin/thedocs/js/partials/main.js ***!
-  \*******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-/**
- * Load required plugins.
- */
-window.$ = window.jQuery = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
-window.Popper = __webpack_require__(/*! popper.js/dist/umd/popper */ "./node_modules/popper.js/dist/umd/popper.js");
-__webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.js");
-window.SmoothScroll = __webpack_require__(/*! smoothscroll-for-websites */ "./node_modules/smoothscroll-for-websites/SmoothScroll.js");
-window.PerfectScrollbar = __webpack_require__(/*! perfect-scrollbar/dist/perfect-scrollbar.min.js */ "./node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js");
-
-__webpack_require__(/*! clipboard */ "./node_modules/clipboard/dist/clipboard.js");
-__webpack_require__(/*! prismjs */ "./node_modules/prismjs/prism.js");
-/*
-// It doesn't work with Prism v1.15.0
-var loadLanguages = require('prismjs/components/index');
-loadLanguages([
-  'aspnet',
-  'bash',
-  'c',
-  'coffeescript',
-  'cpp',
-  'csharp',
-  'git',
-  'go',
-  'http',
-  'java',
-  'json',
-  'jsx',
-  'latex',
-  'less',
-  'markdown',
-  'matlab',
-  'objectivec',
-  'perl',
-  'php',
-  'python',
-  'ruby',
-  'sass',
-  'scss',
-  'sql',
-  'swift',
-]);
-*/
-/*
-require('prismjs/components/prism-markup.min.js');
-require('prismjs/components/prism-css.min.js');
-require('prismjs/components/prism-clike.min.js');
-require('prismjs/components/prism-javascript.min.js');
-*/
-
-__webpack_require__(/*! prismjs/components/prism-aspnet */ "./node_modules/prismjs/components/prism-aspnet.js");
-__webpack_require__(/*! prismjs/components/prism-bash */ "./node_modules/prismjs/components/prism-bash.js");
-__webpack_require__(/*! prismjs/components/prism-c */ "./node_modules/prismjs/components/prism-c.js");
-__webpack_require__(/*! prismjs/components/prism-coffeescript */ "./node_modules/prismjs/components/prism-coffeescript.js");
-__webpack_require__(/*! prismjs/components/prism-cpp */ "./node_modules/prismjs/components/prism-cpp.js");
-__webpack_require__(/*! prismjs/components/prism-csharp */ "./node_modules/prismjs/components/prism-csharp.js");
-__webpack_require__(/*! prismjs/components/prism-git */ "./node_modules/prismjs/components/prism-git.js");
-__webpack_require__(/*! prismjs/components/prism-go */ "./node_modules/prismjs/components/prism-go.js");
-__webpack_require__(/*! prismjs/components/prism-http */ "./node_modules/prismjs/components/prism-http.js");
-__webpack_require__(/*! prismjs/components/prism-java */ "./node_modules/prismjs/components/prism-java.js");
-__webpack_require__(/*! prismjs/components/prism-json */ "./node_modules/prismjs/components/prism-json.js");
-__webpack_require__(/*! prismjs/components/prism-jsx */ "./node_modules/prismjs/components/prism-jsx.js");
-__webpack_require__(/*! prismjs/components/prism-latex */ "./node_modules/prismjs/components/prism-latex.js");
-__webpack_require__(/*! prismjs/components/prism-less */ "./node_modules/prismjs/components/prism-less.js");
-__webpack_require__(/*! prismjs/components/prism-markup-templating */ "./node_modules/prismjs/components/prism-markup-templating.js");
-__webpack_require__(/*! prismjs/components/prism-markdown */ "./node_modules/prismjs/components/prism-markdown.js");
-__webpack_require__(/*! prismjs/components/prism-matlab */ "./node_modules/prismjs/components/prism-matlab.js");
-__webpack_require__(/*! prismjs/components/prism-objectivec */ "./node_modules/prismjs/components/prism-objectivec.js");
-__webpack_require__(/*! prismjs/components/prism-perl */ "./node_modules/prismjs/components/prism-perl.js");
-__webpack_require__(/*! prismjs/components/prism-php */ "./node_modules/prismjs/components/prism-php.js");
-__webpack_require__(/*! prismjs/components/prism-python */ "./node_modules/prismjs/components/prism-python.js");
-__webpack_require__(/*! prismjs/components/prism-ruby */ "./node_modules/prismjs/components/prism-ruby.js");
-__webpack_require__(/*! prismjs/components/prism-sass */ "./node_modules/prismjs/components/prism-sass.js");
-__webpack_require__(/*! prismjs/components/prism-scss */ "./node_modules/prismjs/components/prism-scss.js");
-__webpack_require__(/*! prismjs/components/prism-sql */ "./node_modules/prismjs/components/prism-sql.js");
-__webpack_require__(/*! prismjs/components/prism-swift */ "./node_modules/prismjs/components/prism-swift.js");
-
-
-__webpack_require__(/*! prismjs/plugins/toolbar/prism-toolbar.min.js */ "./node_modules/prismjs/plugins/toolbar/prism-toolbar.min.js");
-__webpack_require__(/*! prismjs/plugins/line-highlight/prism-line-highlight.min.js */ "./node_modules/prismjs/plugins/line-highlight/prism-line-highlight.min.js");
-__webpack_require__(/*! prismjs/plugins/line-numbers/prism-line-numbers.min.js */ "./node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.js");
-__webpack_require__(/*! prismjs/plugins/show-language/prism-show-language.min.js */ "./node_modules/prismjs/plugins/show-language/prism-show-language.min.js");
-__webpack_require__(/*! prismjs/plugins/unescaped-markup/prism-unescaped-markup.min.js */ "./node_modules/prismjs/plugins/unescaped-markup/prism-unescaped-markup.min.js");
-__webpack_require__(/*! prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js */ "./node_modules/prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js");
-
-
-/**
- * Create window.page and init the application.
- */
-
-+function($, window){
-
-  var page = {
-    name:       'TheDocs',
-    version:    '2.0.1',
-    vendors:    [],
-
-    // Cache popular elements
-    body:       $('body'),
-    navbar:     $('.navbar'),
-    header:     $('.header'),
-    footer:     $('.footer'),
-  }
-
-  page.defaults = {
-    googleApiKey:       null,
-    googleAnalyticsKey: null,
-    reCaptchaSiteKey:   null,
-    reCaptchaLanguage:  null,
-    disableAOSonMobile: true,
-    smoothScroll:       false,
-  }
-
-  /**
-   * Call all the required initializers.
-   */
-  page.init = function() {
-
-    // Vendors
-    //
-    page.initVendors();
-
-    // Partials
-    //
-    page.initBind();
-    page.initDrawer();
-    page.initFileTree();
-    page.initFont();
-    page.initForm();
-    page.initMailer();
-    page.initModal();
-    page.initNavbar();
-    page.initOffcanvas();
-    page.initPopup();
-    page.initScroll();
-    page.initSection();
-    page.initSidebar();
-    page.initVideo();
-
-    $(document).on('click', '.switch', function() {
-      var input = $(this).children('.switch-input').not(':disabled');
-      input.prop('checked', ! input.prop('checked'));
-    });
-
-
-    // Anchor for headings
-    //
-    $('h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]').each(function() {
-      var heading = $(this);
-
-      if (heading.hasClass('no-anchor')) {
-        return;
-      }
-
-      heading.append('<a class="anchor" href="#'+ heading.attr('id') +'"></a>');
-    });
-  }
-
-
-  /**
-   * Initialize all of the loaded vendors.
-   */
-  page.initVendors = function() {
-    page.vendors.forEach(function(vendor) {
-      var fn = window.page[ "init"+ vendor ];
-      if(typeof fn === 'function') {
-        fn();
-      }
-    });
-  }
-
-  /**
-   * Register loaded vendor to be initialized after DOM load.
-   * It's case sensitive, since it calls "initVendorName" method.
-   */
-  page.registerVendor = function($name) {
-    page.vendors.push($name);
-  }
-
-  window.page = page;
-}(jQuery, window);
-
-
-/**
- * Once the DOM is loaded, start the magic.
- */
-$(function () {
-  //page.init();
-});
-
-
-
-
-/***/ }),
-
-/***/ "./src/assets/plugin/thedocs/js/partials/map.js":
-/*!******************************************************!*\
-  !*** ./src/assets/plugin/thedocs/js/partials/map.js ***!
-  \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-
-/**
- * Display google map.
- */
-
-+function($){
-
-  page.initMap = function() {
-
-    $('[data-provide~="map"]').each(function() {
-      var tag = $(this),
-          setting = {
-            lat: '',
-            lng: '',
-            zoom: 13,
-            markerLat: '',
-            markerLng: '',
-            markerIcon: '',
-            markers: '',
-            style: ''
-          };
-
-      setting = $.extend(setting, page.getDataOptions(tag));
-
-      var map = new google.maps.Map( tag[0], {
-        center: {
-          lat: Number(setting.lat),
-          lng: Number(setting.lng)
-        },
-        zoom: Number(setting.zoom)
-      });
-
-      // Multiple locations
-      //
-      if (setting.markers != '') {
-
-        var locations = JSON.parse("[" + setting.markers.replace(/'/g, '"') + "]"),
-            infowindow = new google.maps.InfoWindow(),
-            marker, i;
-
-        for (i = 0; i < locations.length; i++) {
-          var markerIcon = setting.markerIcon;
-
-          if ( locations[i].length > 3 && locations[i][3] != '' ) {
-            markerIcon = locations[i][3];
-          }
-
-          marker = new google.maps.Marker({
-            position: {
-              lat: Number(locations[i][0]),
-              lng: Number(locations[i][1])
-            },
-            map: map,
-            animation: google.maps.Animation.DROP,
-            icon: markerIcon
-          });
-
-          if ( locations[i].length > 2 && locations[i][2] != '' ) {
-            google.maps.event.addListener(marker, 'click', (function(marker, i) {
-              return function() {
-                infowindow.setContent(locations[i][2]);
-                infowindow.open(map, marker);
-              }
-            })(marker, i));
-          }
-
-        }
-
-      }
-
-      // Single location
-      //
-      else {
-
-        var marker = new google.maps.Marker({
-          position: {
-            lat: Number(setting.markerLat),
-            lng: Number(setting.markerLng)
-          },
-          map: map,
-          animation: google.maps.Animation.DROP,
-          icon: setting.markerIcon
-        });
-
-        if (tag.is('[data-info]')) {
-          var infowindow = new google.maps.InfoWindow({
-            content: tag.dataAttr('info', '')
-          });
-
-          marker.addListener('click', function() {
-            infowindow.open(map, marker);
-          });
-        }
-
-      }
-
-
-      switch (setting.style) {
-        case 'light':
-          map.set('styles', [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#e9e9e9"},{"lightness":17}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":20}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffffff"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#ffffff"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":16}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":21}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#dedede"},{"lightness":21}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"lightness":16}]},{"elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#333333"},{"lightness":40}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#f2f2f2"},{"lightness":19}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#fefefe"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#fefefe"},{"lightness":17},{"weight":1.2}]}]);
-          break;
-
-        case 'dark':
-          map.set('styles', [{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":17}]}])
-          break;
-
-        default:
-          if ( Array.isArray(setting.style) ) {
-            map.set('styles', setting.style);
-          }
-      }
-
-    });
-
-  }
-
-}(jQuery);
-
-
-
-/***/ }),
-
-/***/ "./src/assets/plugin/thedocs/js/partials/modal.js":
-/*!********************************************************!*\
-  !*** ./src/assets/plugin/thedocs/js/partials/modal.js ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-
-/**
- * All the modal related methods.
- */
-
-+function($){
-
-  page.initModal = function() {
-    var body = page.body;
-
-    /**
-     * Autoshow
-     */
-    $('.modal[data-autoshow]').each(function(){
-      var modal = $(this),
-          delay = parseInt( modal.dataAttr('autoshow') );
-      setTimeout( function() { modal.modal('show') }, delay);
-    });
-
-
-     /**
-      * Exit
-      */
-    $('.modal[data-exitshow]').each(function(){
-      var modal  = $(this),
-          delay  = parseInt( modal.dataAttr('delay', 0) ),
-          target = modal.dataAttr('exitshow');
-
-      if ( $(target).length ) {
-        $(document).one('mouseleave', target, function() {
-          setTimeout( function() { modal.modal('show') }, delay);
-        });
-      }
-
-    });
-
-  }
-
-}(jQuery);
-
-
-/***/ }),
-
-/***/ "./src/assets/plugin/thedocs/js/partials/navbar.js":
-/*!*********************************************************!*\
-  !*** ./src/assets/plugin/thedocs/js/partials/navbar.js ***!
-  \*********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-
-/**
- * All the navbar related methods.
- */
-
-+function($){
-
-  page.initNavbar = function() {
-
-    /**
-     * Toggle navbar
-     */
-    $(document).on('click', '.navbar-toggler', function() {
-      page.navbarToggle();
-    });
-
-
-    /**
-     * Tapping on the backdrop will close the navbar
-     */
-    $(document).on('click', '.backdrop-navbar', function() {
-      page.navbarClose();
-    });
-
-
-    /**
-     * Toggle menu open on small screen devices
-     */
-    $(document).on('click', '.navbar-open .nav-navbar > .nav-item > .nav-link', function() {
-      $(this).closest('.nav-item').siblings('.nav-item').find('> .nav:visible').slideUp(333, 'linear');
-      $(this).next('.nav').slideToggle(333, 'linear');
-    });
-
-  }
-
-
-  page.navbarToggle = function() {
-    var body   = page.body,
-        navbar = page.navbar;
-
-    body.toggleClass('navbar-open');
-    if (body.hasClass('navbar-open')) {
-      navbar.prepend('<div class="backdrop backdrop-navbar"></div>');
-    }
-  }
-
-  page.navbarClose = function() {
-    page.body.removeClass('navbar-open');
-    $('.backdrop-navbar').remove();
-  }
-
-}(jQuery);
-
-
-/***/ }),
-
-/***/ "./src/assets/plugin/thedocs/js/partials/offcanvas.js":
-/*!************************************************************!*\
-  !*** ./src/assets/plugin/thedocs/js/partials/offcanvas.js ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-
-/**
- * All the popup related methods.
- */
-
-+function($){
-
-  page.initOffcanvas = function() {
-
-    /**
-     * Toggle
-     */
-    $(document).on('click', '[data-toggle="offcanvas"]', function() {
-      var target     = $(this).data('target'),
-          offcanvas  = $(target);
-
-      if ( target !== undefined && offcanvas.length ) {
-        if (offcanvas.hasClass('show')) {
-          $('.backdrop-offcanvas').remove();
-          offcanvas.removeClass('show');
-        }
-        else {
-          offcanvas.before('<div class="backdrop backdrop-offcanvas"></div>');
-          offcanvas.addClass('show');
-          setTimeout(function() { offcanvas.find('input:text:visible:first').focus(); }, 300);
-        }
-      }
-    });
-
-
-    /**
-     * Dismiss
-     */
-    $(document).on('click', '.offcanvas [data-dismiss], .backdrop-offcanvas', function() {
-      $('.offcanvas.show').removeClass('show');
-      $('.backdrop-offcanvas').remove();
-    });
-
-
-    /**
-     * Esc key
-     */
-    $(document).on('keyup', function(e) {
-      if ($('.offcanvas.show').length && e.keyCode == 27) { // esc keycode
-        $('.offcanvas.show').removeClass('show');
-        $('.backdrop-offcanvas').remove();
-      }
-    });
-  }
-
-}(jQuery);
-
-
-/***/ }),
-
-/***/ "./src/assets/plugin/thedocs/js/partials/popup.js":
-/*!********************************************************!*\
-  !*** ./src/assets/plugin/thedocs/js/partials/popup.js ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-
-/**
- * All the popup related methods.
- */
-
-+function($){
-
-  page.initPopup = function() {
-    var body = page.body;
-
-
-    /**
-     * Toggle
-     */
-    $(document).on('click', '[data-toggle="popup"]', function() {
-      var target = $(this).data('target'),
-          popup  = $(target);
-
-      if ( target !== undefined && popup.length ) {
-        if (popup.hasClass('show')) {
-          popup.removeClass('show');
-        }
-        else {
-          popupShow(popup);
-        }
-      }
-    });
-
-
-    /**
-     * Dismiss
-     */
-    $(document).on('click', '.popup [data-dismiss]', function() {
-      $(this).closest('.popup').removeClass('show');
-    });
-
-
-    /**
-     * Autoshow
-     */
-    $('.popup[data-autoshow]').each(function(){
-      var popup = $(this),
-          delay = parseInt( popup.dataAttr('autoshow') );
-      setTimeout( function() { popupShow(popup) }, delay);
-    });
-
-
-    /**
-     * Exit
-     */
-    $('.popup[data-exitshow]').each(function(){
-      var popup  = $(this),
-          delay  = parseInt( popup.dataAttr('delay', 0) ),
-          target = popup.dataAttr('exitshow');
-
-      if ( $(target).length ) {
-        $(document).one('mouseleave', target, function() {
-          setTimeout( function() { popupShow(popup) }, delay);
-        });
-      }
-
-    });
-
-
-    /**
-     * Show
-     */
-    var popupShow = function(popup) {
-
-      var autohide = parseInt( popup.dataAttr('autohide', 0) ),
-          once_key = popup.dataAttr('once', '');
-
-      // Check if it was a once popup
-      if (once_key != '') {
-        if (localStorage.getItem(once_key) == 'displayed') {
-          return;
-        }
-
-        var once_btn = popup.find('[data-once-button="true"]');
-        if (once_btn.length) {
-          once_btn.on('click', function() {
-            localStorage.setItem(once_key, 'displayed');
-          });
-        }
-        else {
-          localStorage.setItem(once_key, 'displayed');
-        }
-      }
-
-      popup.addClass('show');
-      setTimeout(function() { popup.find('input:text:visible:first').focus(); }, 300);
-
-      if (autohide > 0) {
-        setTimeout( function() { popup.removeClass('show') }, autohide);
-      }
-    }
-  }
-
-}(jQuery);
-
-
-/***/ }),
-
-/***/ "./src/assets/plugin/thedocs/js/partials/recaptcha.js":
-/*!************************************************************!*\
-  !*** ./src/assets/plugin/thedocs/js/partials/recaptcha.js ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-
-/**
- *
- */
-
-+function($){
-
-  page.initRecaptcha = function() {
-    $('[data-provide~="recaptcha"]').each(function() {
-
-      var options = {
-        sitekey: page.defaults.reCaptchaSiteKey
-      }
-
-      options = $.extend(options, page.getDataOptions($(this)));
-
-      if (options.enable) {
-        options.callback = function() {
-          $(options.enable).removeAttr('disabled');
-        }
-
-        options['expired-callback'] = function() {
-          $(options.enable).attr('disabled', 'true');
-        }
-      }
-
-      grecaptcha.render( $(this)[0], options);
-    });
-  }
-
-  window.recaptchaLoadCallback = function() {
-    page.initRecaptcha();
-  }
-
-
-}(jQuery);
-
-
-
-/***/ }),
-
-/***/ "./src/assets/plugin/thedocs/js/partials/scroll.js":
-/*!*********************************************************!*\
-  !*** ./src/assets/plugin/thedocs/js/partials/scroll.js ***!
-  \*********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-
-/**
- * All methods related to the page scroll and link click.
- */
-
-+function($){
-
-  var body = page.body,
-      footer = page.footer,
-      hasHeader = page.header.length,
-      navbarHeight  = page.navbar.innerHeight(),
-      headerHeight  = page.header.innerHeight(),
-      mainOffsetTop = $('body>main').offset().top,
-      scrollOffsetTop = 20,
-      prevOffsetTop = 0;
-
-  page.initScroll = function() {
-
-    if ( $('[data-navbar="fixed"], [data-navbar="sticky"], [data-navbar="smart"]').length ) {
-      scrollOffsetTop = navbarHeight;
-    }
-
-
-    $(document).on( 'click', "a[href='#']", function() {
-      return false;
-    });
-
-
-    // Back to top
-    //
-    $(document).on('click', '.scroll-top', function() {
-      smoothlyScrollTo(0);
-      return false;
-    });
-
-
-    // Smooth scroll for anchors
-    //
-    $(document).on( 'click', "a[href^='#']", function() {
-      if ( $(this).attr('href').length < 2 ) {
-        return;
-      }
-
-      if ( $(this)[0].hasAttribute('data-toggle') ) {
-        return;
-      }
-
-      var target = $( $(this).attr('href') );
-      if ( target.length ) {
-        var targetTop = target.offset().top,
-            windowTop = $(window).scrollTop();
-
-        // We don't need offsetTop for scroll down with smart navbar
-        //
-        if ( targetTop > windowTop && $('.navbar[data-navbar="smart"]').length ) {
-          smoothlyScrollTo( targetTop );
-        }
-        else {
-          smoothlyScrollTo( targetTop - scrollOffsetTop );
-        }
-
-        if (body.hasClass('navbar-open')) {
-          page.navbarClose();
-        }
-
-        if (body.hasClass('sidebar-open')) {
-          page.sidebarClose();
-        }
-        return false;
-      }
-    });
-
-
-    // Smoothscroll to anchor in page load
-    //
-    var hash = location.hash.replace('#','');
-    if ( hash != '' ) {
-      var el = $("#"+hash);
-      if (el.length > 0) {
-        smoothlyScrollTo( el.offset().top - scrollOffsetTop );
-      }
-    }
-
-
-    // Actions which are related to the page scroll position
-    windowScrollActions();
-
-    $(window).on('scroll', function() {
-      windowScrollActions()
-    });
-
-
-
-    // In page navigation
-    //
-    if ( $('.nav-page').length ) {
-
-      var tooltip_pos = 'left',
-          tooltip_offset = '0, 12';
-
-      if ( $('.nav-page.nav-page-left').length ) {
-        tooltip_pos = 'right';
-        tooltip_offset = '0, 12';
-      }
-
-      var spy_offset = parseInt( $('.nav-page').dataAttr('spy-offset', 200) );
-
-      // Enable tooltip
-      $('.nav-page .nav-link').tooltip({
-        container: 'body',
-        placement: tooltip_pos,
-        offset: tooltip_offset,
-        trigger: 'hover'
-      });
-
-
-      // Enable Scroll Spy
-      $('body').scrollspy({
-        target: '.nav-page',
-        offset: spy_offset
-      });
-    }
-
-
-    // Sticky sidebar width
-    //
-    $('.sidebar').each(function() {
-      var tag = $(this),
-          width = tag.closest('div').width();
-      tag.css('width', width);
-
-      if (body.width() / width < 1.8) {
-        tag.addClass('is-mobile-wide');
-      }
-    });
-
-
-  }
-
-
-  var windowScrollActions = function() {
-    var window_top = $(window).scrollTop();
-
-    // .body-scrolled
-    //
-    if (window_top > 1) {
-      body.addClass('body-scrolled');
-    }
-    else {
-      body.removeClass('body-scrolled');
-    }
-
-    // .navbar-scrolled
-    //
-
-    if (window_top > navbarHeight) {
-      body.addClass('navbar-scrolled');
-    }
-    else {
-      body.removeClass('navbar-scrolled');
-    }
-
-
-    // .header-scrolled
-    //
-    //if (window_top > headerHeight - navbarHeight - 1) {
-    if (window_top > headerHeight) {
-      body.addClass('header-scrolled');
-    }
-    else {
-      body.removeClass('header-scrolled');
-    }
-
-
-    // .main-scrolled
-    //
-    if (window_top > mainOffsetTop) {
-      body.addClass('main-scrolled');
-    }
-    else {
-      body.removeClass('main-scrolled');
-    }
-
-    // Sticky elements
-    //
-    $('[data-sticky="true"]').each(function() {
-      var tag = $(this),
-          top = tag.offset().top;
-
-      if ( ! tag.hasDataAttr('original-top') ) {
-        tag.attr('data-original-top', top);
-      }
-
-      var stick_start = tag.dataAttr('original-top'),
-          stick_end   = footer.offset().top - tag.outerHeight();
-
-      if (window_top > stick_start) {// && window_top <= stick_end) {
-        tag.addClass('stick');
-      }
-      else {
-        tag.removeClass('stick');
-      }
-    });
-
-    // Smart navbar
-    //
-    $('[data-navbar="smart"]').each(function() {
-      var tag = $(this);
-
-      //toggleFixClass(tag);
-      if (window_top < prevOffsetTop) {
-        toggleStickClass(tag);
-      }
-      else {
-        tag.removeClass('stick');
-      }
-    });
-
-    // Sticky navbar
-    //
-    $('[data-navbar="sticky"]').each(function() {
-      var tag = $(this);
-      toggleStickClass(tag);
-    });
-
-    // Fixed navbar
-    //
-    $('[data-navbar="fixed"]').each(function() {
-      var tag = $(this);
-      if (body.hasClass('body-scrolled')) {
-        tag.addClass('stick');
-      }
-      else {
-        tag.removeClass('stick');
-      }
-    });
-
-    // Sticky sidebar
-    //
-    $('.sidebar-sticky').each(function() {
-      var tag = $(this);
-      toggleStickClass(tag);
-    });
-
-
-    // Fadeout effect
-    //
-    $('.header.fadeout').css('opacity', (1-window_top-200 / window.innerHeight) );
-
-
-    prevOffsetTop = window_top;
-  }
-
-
-  var smoothlyScrollTo = function(pos) {
-    $('html, body').animate({scrollTop: pos}, 600);
-  }
-
-
-  var toggleFixClass = function(tag) {
-    if (body.hasClass('navbar-scrolled')) {
-      tag.addClass('fix');
-    }
-    else {
-      tag.removeClass('fix');
-    }
-  }
-
-  var toggleStickClass = function(tag) {
-    var requiredClass = 'navbar-scrolled';
-    if ( hasHeader ) {
-      requiredClass = 'header-scrolled';
-    }
-
-    if (body.hasClass(requiredClass)) {
-      tag.addClass('stick');
-    }
-    else {
-      tag.removeClass('stick');
-    }
-  }
-
-}(jQuery);
-
-
-/***/ }),
-
-/***/ "./src/assets/plugin/thedocs/js/partials/section.js":
-/*!**********************************************************!*\
-  !*** ./src/assets/plugin/thedocs/js/partials/section.js ***!
-  \**********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-
-/**
- *
- */
-
-+function($){
-
-  page.initSection = function() {
-
-    // Collapsable
-    //
-    $('.section-collapsable.show .section-content').css('display', 'block');
-    $(document).on('click', '.section-collapsable .section-title', function() {
-      $(this).next('.section-content').slideToggle();
-      $(this).closest('.section-collapsable').toggleClass('show');
-    });
-
-  }
-
-}(jQuery);
-
-
-
-/***/ }),
-
-/***/ "./src/assets/plugin/thedocs/js/partials/sidebar.js":
-/*!**********************************************************!*\
-  !*** ./src/assets/plugin/thedocs/js/partials/sidebar.js ***!
-  \**********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-
-/**
- *
- */
-
-+function($){
-
-  page.initSidebar = function() {
-    var body = page.body;
-
-    if ( ! $('.sidebar').length ) {
-      return;
-    }
-
-    $(document).on( 'click', '.sidebar-toggler, [data-toggle="sidebar"], .sidebar-close, .backdrop-sidebar', function() {
-      body.toggleClass( 'sidebar-open' );
-      if ( body.hasClass('sidebar-open') ) {
-        body.prepend('<div class="backdrop backdrop-sidebar"></div>')
-      }
-      else {
-        $('.backdrop-sidebar').remove();
-      }
-    });
-
-    // Sidebar nav
-    //
-    var navItemShow = $('.nav-sidebar .nav-item.show');
-    navItemShow.find('> .nav-link .nav-angle').addClass('rotate');
-    navItemShow.find('> .nav').css('display', 'block');
-    navItemShow.removeClass('show');
-
-    var navSidebarIsAccordion = false;
-    if ( 'true' == $('.nav-sidebar').dataAttr('accordion', 'false') ) {
-      navSidebarIsAccordion = true;
-    }
-
-    $(document).on( 'click', '.nav-sidebar > .nav-item > .nav-link', function() {
-      var link = $(this);
-      link.next('.nav').slideToggle();
-      if ( navSidebarIsAccordion ) {
-        link.closest('.nav-item').siblings('.nav-item').children('.nav:visible').slideUp().prev('.nav-link').children('.nav-angle').removeClass('rotate');
-      }
-      link.children('.nav-angle').toggleClass('rotate');
-    });
-
-
-    // Perfect scrollbar
-    //
-    $('.sidebar-body').each(function(e) {
-      var ps = new PerfectScrollbar($(this)[0], {
-        wheelSpeed: 0.4,
-        minScrollbarLength: 20
-      });
-    })
-
-  }
-
-  page.sidebarClose = function() {
-    page.body.removeClass('sidebar-open');
-    $('.backdrop-sidebar').remove();
-  }
-
-}(jQuery);
-
-
-
-/***/ }),
-
-/***/ "./src/assets/plugin/thedocs/js/partials/util.js":
-/*!*******************************************************!*\
-  !*** ./src/assets/plugin/thedocs/js/partials/util.js ***!
-  \*******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-
-/**
- * Utility functions to be used in the whole application.
- */
-
-+function($){
-
-  // Convert data-attributes options to Javascript object
-  //
-  page.getDataOptions = function(el, castList) {
-    var options = {};
-
-    $.each( $(el).data(), function(key, value){
-
-      key = page.dataToOption(key);
-
-      // Escape data-provide
-      if ( key == 'provide' ) {
-        return;
-      }
-
-      if ( castList != undefined ) {
-        var type = castList[key];
-        switch (type) {
-          case 'bool':
-            value = Boolean(value);
-            break;
-
-          case 'num':
-            value = Number(value);
-            break;
-
-          case 'array':
-            value = value.split(',');
-            break;
-
-          default:
-
-        }
-      }
-
-      options[key] = value;
-    });
-
-    return options;
-  }
-
-
-  // Get target of an action from element.
-  //
-  // It can be 'data-target' or 'href' attribute.
-  // We support 'next' and 'prev' values to target next or previous element. In this case, we return jQuery element.
-  //
-  page.getTarget = function(e) {
-    var target;
-    if ( e.hasDataAttr('target') ) {
-      target = e.data('target');
-    }
-    else {
-      target = e.attr('href');
-    }
-
-    if ( target == 'next' ) {
-      target = $(e).next();
-    }
-    else if ( target == 'prev' ) {
-      target = $(e).prev();
-    }
-
-    if ( target == undefined ) {
-      return false;
-    }
-
-    return target;
-  };
-
-
-
-
-
-  // Get URL of an action from element.
-  //
-  // It can be 'data-url' or 'href' attribute.
-  //
-  page.getURL = function(e) {
-    var url;
-    if ( e.hasDataAttr('url') ) {
-      url = e.data('url');
-    }
-    else {
-      url = e.attr('href');
-    }
-
-    return url;
-  };
-
-
-
-  // Convert fooBarBaz to foo-bar-baz
-  //
-  page.optionToData = function(name) {
-    return name.replace(/([A-Z])/g, "-$1").toLowerCase();
-  }
-
-
-  // Convert foo-bar-baz to fooBarBaz
-  //
-  page.dataToOption = function(name) {
-    return name.replace(/-([a-z])/g, function(x){return x[1].toUpperCase();});
-  }
-
-
-
-}(jQuery);
-
-
-
-/***/ }),
-
-/***/ "./src/assets/plugin/thedocs/js/partials/video.js":
-/*!********************************************************!*\
-  !*** ./src/assets/plugin/thedocs/js/partials/video.js ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-
-/**
- * All the video related methods.
- */
-
-+function($){
-
-  page.initVideo = function() {
-
-    // Video-wrapper
-    //
-    $(document).on('click', '.video-wrapper .btn', function(){
-      var wrapper = $(this).closest('.video-wrapper');
-      wrapper.addClass('reveal');
-
-      if ( wrapper.find('video').length )
-        wrapper.find('video').get(0).play();
-
-      if ( wrapper.find('iframe').length ) {
-        var iframe = wrapper.find('iframe');
-        var src = iframe.attr('src');
-
-        if ( src.indexOf('?') > 0 )
-          iframe.get(0).src += "&autoplay=1";
-        else
-          iframe.get(0).src += "?autoplay=1";
-      }
-    });
-
-  }
-
-}(jQuery);
-
-
-/***/ }),
-
-/***/ "./src/assets/plugin/thedocs/js/vendors/bootstrap.js":
-/*!***********************************************************!*\
-  !*** ./src/assets/plugin/thedocs/js/vendors/bootstrap.js ***!
-  \***********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-
-/**
- * Initialize some of the core Bootstrap components.
- */
-
-+function($){
-  page.registerVendor('Bootstrap');
-
-  page.initBootstrap = function() {
-    $('[data-toggle="tooltip"]').tooltip();
-    $('[data-toggle="popover"]').popover();
-
-
-    // Custom control check
-    //
-    // Since BS4-beta-3, custom-controls needs id and for attributes.
-    // We bypass this requirement.
-    //
-    $(document).on('click', '.custom-checkbox', function() {
-      var input = $(this).children('.custom-control-input').not(':disabled');
-      input.prop('checked', ! input.prop('checked')).trigger( "change" );
-    });
-
-    $(document).on('click', '.custom-radio', function() {
-      var input = $(this).children('.custom-control-input').not(':disabled');
-      input.prop('checked', true).trigger( "change" );
-    });
-
-
-  }
-
-}(jQuery);
-
-
-
-/***/ }),
-
-/***/ "./src/assets/plugin/thedocs/js/vendors/jquery.js":
-/*!********************************************************!*\
-  !*** ./src/assets/plugin/thedocs/js/vendors/jquery.js ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-
-/**
- * Configure the plugin.
- */
-
-+function($){
-  page.registerVendor('Jquery');
-
-  page.initJquery = function() {
-
-    /**
-     * We will register the CSRF Token as a common header with jQuery so that
-     * all outgoing HTTP requests automatically have it attached. This is just
-     * a simple convenience so we don't have to attach every token manually.
-     */
-
-    let token = document.head.querySelector('meta[name="csrf-token"]');
-
-    if (token) {
-      $.ajaxSetup({
-        headers: { 'X-CSRF-TOKEN': token.content }
-      });
-    }
-
-  }
-
-}(jQuery);
-
-
-
-
-// Check if an element has a specific data attribute
-//
-jQuery.fn.hasDataAttr = function(name) {
-  return $(this)[0].hasAttribute('data-'+ name);
-};
-
-
-
-// Get data attribute. If element doesn't have the attribute, return default value
-//
-jQuery.fn.dataAttr = function(name, def) {
-  if ($(this)[0] == undefined) {
-    return def;
-  }
-  return $(this)[0].getAttribute('data-'+ name) || def;
-};
-
-
-
-// Instance search
-//
-//$.expr[':'] -> $.expr.pseudos
-jQuery.expr[':'].search = function(a, i, m) {
-  return $(a).html().toUpperCase().indexOf(m[3].toUpperCase()) >= 0;
-};
-
-
-// Return outerHTML (inclusing the element) code
-//
-jQuery.fn.outerHTML = function() {
-  var html = '';
-  this.each(function(){
-    html += $(this).prop("outerHTML");
-  })
-  return html;
-};
-
-
-// Return HTML code of all the selected elements
-//
-jQuery.fn.fullHTML = function() {
-  var html = '';
-  $(this).each(function(){
-    html += $(this).outerHTML();
-  });
-  return html;
-};
-
-// Scroll to end
-//
-jQuery.fn.scrollToEnd = function() {
-  $(this).scrollTop( $(this).prop("scrollHeight") );
-  return this;
-};
-
 
 
 /***/ })
