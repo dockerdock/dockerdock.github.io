@@ -165,13 +165,13 @@
 
             <h3 id="setup_u1">Docker auf Linux installieren</h3>
               <h4>Möglichkeit 1 - Per Installationsskript</h4>
-                <p>Am einfachsten und sichersten kannst du Docker auf deinem Linux-Rechner per installations-script einrichten.  Lade das Installationsskript einfach mit folgendem Befehl per cURL auf deinen Rechner:</p>
+                <p>Am einfachsten und sichersten kannst du Docker auf deinem Linux-Rechner per Installationsskript einrichten.  Lade das Installationsskript einfach mit folgendem Befehl per cURL auf deinen Rechner:</p>
                   <pre><code class="language-bash">$ curl -fsSL https://get.docker.com -o get-docker.sh</code></pre>
                 <p>Solltest du noch kein cURL auf deinem Rechner installiert haben kannst du es per apt herunterladen. Hierfür solltest du zunächst schauen, ob dein apt-system aktuell ist und im Anschluss die Installation von cURL ausführen:</p>
                   <pre class="line-numbers"><code class="language-bash">
                     $ sudo apt-get update
                     $ sudo apt-get install curl</code></pre>
-                <p>Wenn du nun per <code>$ ls</code>  dein aktuelles Verzeichnis durchsuchst solltest du das Installationsscript (get-docker.sh) entdecken. Führe dies zur Installation nun mit Root-Rechten aus:</p>
+                <p>Wenn du nun per <code>$ ls</code>  dein aktuelles Verzeichnis durchsuchst solltest du das Installationsskript (get-docker.sh) entdecken. Führe dies zur Installation nun mit Root-Rechten aus:</p>
                   <pre><code class="language-bash">$ sudo sh get-docker.sh</code></pre>
                 <p>Nun sollte Docker installiert sein, damit du auch als normaler User Docker benutzen kannst, füge den aktuellen Benutzer zur Gruppe Docker hinzu (anschließend einmal ab- und anmelden dass Änderungen übernommen werden):</p>
                   <pre><code class="language-bash">$ sudo usermod -aG docker $USER</code></pre>
@@ -418,7 +418,7 @@ root@43f656d835f4:/# apt-get install curl</code></pre>
             <p>Um nach dem Ausführen des Beispiels den Container und das Volume zu löschen, kann man wieder dieselben Befehle ausführen wie im oberen Abschnitt.</p>
             <hr class="hr-dash my-7">
             <h3 id="volumes_u4">Entfernen aller Volumes</h3>
-            <p>So entfernst du alle nicht verwendeten Volumes und geben Speicherplatz frei:</p>
+            <p>So entfernst du alle nicht verwendeten Volumes und gibst Speicherplatz frei:</p>
             <pre><code class="language-docker">$ docker volume prune</code></pre>
             <hr class="hr-dash my-7">
 
@@ -456,11 +456,11 @@ ENV MyVar="Irgendein Wert"
 WORKDIR /home
 VOLUME ["/var/www"]
 ENTRYPOINT ["top"]</code></pre>
-            <p>Natürlich gibt es durch die große Anzahl der Instruktionen auch viele Wege so ein Dockerfile aufzubauen. In unserem Beispiel wird zunächst das Basisimage mit <code>FROM</code> definiert. als zweiten Schritt wird der Urheber des Images genannt, dies ist nur konventionsbedingt, allerdings keine Pflicht. Mit <code>RUN</code> werden nun einige Dienste gestartet und mit ENV eine Umgebungsvariable initialisiert, hier könnte man beispielsweise direkt einen Port angeben.</p>
+            <p>Natürlich gibt es durch die große Anzahl der Instruktionen auch viele Wege so ein Dockerfile aufzubauen. In unserem Beispiel wird zunächst das Basisimage mit <code>FROM</code> definiert. als zweiten Schritt wird der Urheber des Images genannt, dies ist nur konventionsbedingt, allerdings keine Pflicht. Mit <code>RUN</code> werden nun einige Dienste gestartet und mit <code>ENV</code> eine Umgebungsvariable initialisiert, hier könnte man beispielsweise direkt einen Port angeben.</p>
             <p>Mit <code>WORKDIR</code> wird das Arbeitsverzeichnis gesetzt und alle darauf folgenden Befehle von dort aus ausgeführt. Mit <code>VOLUME</code> kann man Verzeichnisse definieren, die nach Außen zur Verfügung gestellt werden. Am Ende setzen wir mit <code>ENTRYPOINT</code> fest, was beim Starten des Containers zuerst ausgeführt wird, in unserem Beispiel starten wir das Programm “top”. </p>
             <p>Wenn das Dokument beschrieben und gespeichert ist kann man es direkt mit dem bereits kennengelernten Befehl ausführen:</p>
             <pre><code class="language-docker">$ docker build -t repository/image .</code></pre>
-            <p>Wenn alles gut läuft wird nun der build-prozess sichtbar und man erkennt, wie da Dockerfile schritt für schritt abgearbeitet wird.</p>
+            <p>Wenn alles gut läuft wird nun der build-prozess sichtbar und man erkennt, wie da Dockerfile Schritt für Schritt abgearbeitet wird.</p>
             <p>Mit <code>$ docker images</code> sollte jetzt auch das neu angelegte image angezeigt werden. </p>
             <p>Im nächten Schritt kannst du mit <code>docker run</code> den Container starten:
             <pre><code class="language-docker">$ docker build -t repository/image .</code></pre>
