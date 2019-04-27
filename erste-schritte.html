@@ -209,8 +209,8 @@ $ docker --version</code></pre>
             <p>Unter Windows kann es je nach Alter oder Konfiguration deines Gerätes zu schwierigkeiten kommen. Wichtig ist, dass Windows Hypervisor (Hyper-V) von deinem Prozessor unterstützt wird. Dies siehst du am besten, wenn du unter “Ausführen” (windows + R)  nach “optionalFeatures” suchst. 
               Ist in dem anschließend zu sehenden Fenster die Option “Hyper-V” ausgegraut kannst du Docker nur bedingt benutzen (Modus für Windows-Container). Ein problemloses Arbeiten über verschiedene Setups hinaus ist dadurch nicht möglich.
               Wird Hyper-V von deinem Prozessor allerdings unterstützt kannst du nach der Installation ohne große Einrichtung loslegen. 
-              Auch Mac benötigt einige Voraussetzungen. Dein Gerät sollte mindestens aus dem Jahr 2010 sein und mindestens mit macOS yosemite laufen. 
-              Als Test kannst du im Terminal einfach mal folgende Befehle zum Test ausführen:</p>
+              Auch Mac benötigt einige Voraussetzungen. Dein Gerät sollte mindestens aus dem Jahr 2010 sein und mindestens mit macOS Yosemite laufen. 
+              Als Test kannst du im Terminal einfach folgende Befehle zum Test ausführen:</p>
             <pre class="line-numbers"><code class="language-docker">$ docker --version
 $ docker-compose --version
 $ docker-machine --version</code></pre>
@@ -298,7 +298,7 @@ For more examples and ideas, visit:
               <pre><code class="language-docker">$ docker ps</code></pre>
             <p>Dein eben ausgeführtes hello-world wird nun nicht angezeigt werden, da es nach dem Ausführen direkt wieder beendet wurde.<br>
                Mit dem Befehl <code>$ docker images</code> kannst du alle auf deinem Setup existierenden images anzeigen. Dort sollte nun auch das hello-world image zu sehen sein.<br>
-               Außerdem kannst du mit dem Befehl <code>$ docker ps -a</code> auch die gestoppten Container sehen. Wenn du nun noch einmal den hello-world-Container mit docker run erzeugst und dir im Anschluss alle Container anzeigen lässt siehst du, dass durch jeden docker run befehl ein neuer Container erzeugt wird, allerdings beide auf dem gleichen Image beruhen.
+               Außerdem kannst du mit dem Befehl <code>$ docker ps -a</code> auch die gestoppten Container sehen. Wenn du nun noch einmal den hello-world-Container mit docker run erzeugst und dir im Anschluss alle Container anzeigen lässt siehst du, dass durch jeden docker run Befehl ein neuer Container erzeugt wird, allerdings beide auf dem gleichen Image beruhen.
             </p>
               
             <hr class="hr-dash my-7">
@@ -318,15 +318,15 @@ For more examples and ideas, visit:
                In der Praxis kann das ganze dann folgendermaßen aussehen:
             </p>
               <pre><code class="language-docker">$ docker run -it --name containername ubuntu:14.04 /bin/bash</code></pre>
-            <p>Der Container wird gestartet. Lässt man sich nun mit <code>ls -la</code> die Inhalte des Containers ausgeben, in dem man sich nun befindest erkennt man, dass es sich um eine isolierte Linux-umgebung handelt (ubuntu 14.04). Durch das bash am Ende des Befehls wird definiert, dass sich das ganze in einer bash-shell öffnen soll.<br>
-               Dies ist nun unser Basis-Image, das wir um ein darauf aufbauendes Image erweitern wollen. Das zweite Image soll Curl beinhalten. Dies wird wie üblich per apt installiert. Du solltest hierzu natürlich sichergehen, dass du dich noch in der Ubuntu-Umgebung befindest.<br>
+            <p>Der Container wird gestartet. Lässt man sich nun mit <code>ls -la</code> die Inhalte des Containers ausgeben, in dem man sich nun befindest erkennt man, dass es sich um eine isolierte Linux-Umgebung handelt (ubuntu 14.04). Durch das <code>bash</code> am Ende des Befehls wird definiert, dass sich das ganze in einer bash-shell öffnen soll.<br>
+               Dies ist nun unser Basis-Image, das wir um ein darauf aufbauendes Image erweitern wollen. Das zweite Image soll cURL beinhalten. Dies wird wie üblich per apt installiert. Du solltest hierzu natürlich sichergehen, dass du dich noch in der Ubuntu-Umgebung befindest.<br>
                Das ganze sieht dann wie folgt aus:
             </p>
               <pre class="line-numbers"><code class="language-docker">root@43f656d835f4:/# apt-get update
 …
 root@43f656d835f4:/# apt-get install curl</code></pre>
-            <p>Nun kannst du mit exit die Shell verlassen. Im folgenden werden wir die Änderungen aus der Shell committen und daraus ein neues Image erstellen.<br>
-               Dies sieht Syntax-technisch zunächst aus wie bei einem Commit bei git. Der Unterschied ist allerdings, dass bei Docker nach der Commit-message noch die ID des betreffenden Containers und der Name des neuen Images anzugeben sind:
+            <p>Nun kannst du mit <code>exit</code> die Shell verlassen. Im folgenden werden wir die Änderungen aus der Shell committen und daraus ein neues Image erstellen.<br>
+               Dies sieht Syntax-technisch zunächst aus wie bei einem Commit bei git. Der Unterschied ist allerdings, dass bei Docker nach der Commit-Message noch die ID des betreffenden Containers und der Name des neuen Images anzugeben sind:
             </p>
               <pre><code class="language-docker">$ docker commit -m “Commit-Message - Curl hinzugefügt” 1234567890AB curl-image</code></pre>
             <p>Bei erfolgreicher Eingabe sollte nun die neu erzeugte Image-ID ausgegeben werden. Außerdem kannst du mit <code>$ docker image</code> sehen, ob das Image angelegt wurde.</p>
@@ -340,18 +340,17 @@ root@43f656d835f4:/# apt-get install curl</code></pre>
             |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
             !-->
             <h2 id="bind_mounts">Bind-Mounts</h2>
-            <p class="lead-2">Eines der wichtigsten Features in Docker ist natürlich auch das Teilen von Daten. Den Anfang macht hier das Mappen von Daten auf Lokaler Ebene. So kann man Daten vom Host-Rechner ganz einfach in das Docker-Setup teilen oder anders herum. Wie das genau aussieht lernst du im folgenden Kapitel.</p>
+            <p class="lead-2">Eines der wichtigsten Features in Docker ist natürlich auch das Teilen von Daten. Den Anfang macht hier das Mappen von Daten auf lokaler Ebene. So kann man Daten vom Host-Rechner ganz einfach in das Docker-Setup teilen oder anders herum. Wie das genau aussieht lernst du im folgenden Kapitel.</p>
 
             <hr class="hr-dash my-7">
 
-            <p>Eines der wichtigsten features in Docker ist natürlich auch das Teilen von Daten. Den Anfang macht hier das Mappen von Daten auf Lokaler Ebene. So kann man Daten vom Host-Rechner ganz einfach in das Docker-Setup teilen oder anders herum. Wie das genau aussieht lernst du im folgenden Kapitel.</p>
-            <p>Das Mappen von Daten ist eine gängige Methode für Test- oder Entwicklungsumgebungen auf lokaler Ebene. Dieser Vorgang wird im englischen auch "Bind-Mounts" genannt. Für größere Projekte mit mehreren Setups eignet sich diese Technik nicht besonders. Eine deutlich mobilere und bessere Methode ist hier der Einsatz von Volumes, was dies genau ist erfährst du später.  Als ersten Schritt benötigst du eine Datei, die du mappen willst. Im Beispiel wird mit einer einfachen .txt-datei gearbeitet. Diese befindet sich auf dem Host-Rechner in einem eigenen Ordner.<br>
+            <p>Das Mappen von Daten ist eine gängige Methode für Test- oder Entwicklungsumgebungen auf lokaler Ebene. Dieser Vorgang wird im Englischen auch „Bind-Mounts“ genannt. Für größere Projekte mit mehreren Setups eignet sich diese Technik nicht besonders. Eine deutlich mobilere und bessere Methode ist hier der Einsatz von Volumes, was dies genau ist erfährst du später.  Als ersten Schritt benötigst du eine Datei, die du mappen willst. Im Beispiel wird mit einer einfachen .txt-datei gearbeitet. Diese befindet sich auf dem Host-Rechner in einem eigenen Ordner.<br>
               Die Grundlegende Syntax zu Mappen von Dateien sieht so aus:
             </p>
               <pre><code class="language-docker">$ docker run -v hostverzeichnis:dockerverzeichnis</code></pre>
             <p>Wie du siehst wird hierfür ein Container erzeugt. Um das ganze etwas anschaulicher zu machen arbeiten wir im folgenden Beispiel mit ein paar Parametern mehr.</p>
               <pre><code class="language-docker">$ docker run -it -v ~/webroot/lokal:/home/daten --name Datenparty ubuntu:14.04 /bin/bash</code></pre>
-            <p>Wie du feststellen kannst öffnen wir das ganze wieder in einer isolierten Linux-Umgebung. So können wir feststellen, ob die Daten auch wirklich geteilt wurden. Außerdem nennen wir den Container zur besseren Übersicht um. Der Parameter <code>-v</code> leitet hier das Mapping ein. Darauf folgt der Pfad zum Ordner mit der gemappten Datei. Nach dem Doppelpunkt wird das Zielverzeichnis im Container definiert. Wichtig hierbei ist, dass der Ordner “daten” erst mit diesem Befehl erzeugt wird und die Daten aus dem im Befehl angegeben Host-Pfad in diesen verknüpft werden.</p>
+            <p>Wie du feststellen kannst öffnen wir das ganze wieder in einer isolierten Linux-Umgebung. So können wir feststellen, ob die Daten auch wirklich geteilt wurden. Außerdem nennen wir den Container zur besseren Übersicht um. Der Parameter <code>-v</code> leitet hier das Mapping ein. Darauf folgt der Pfad zum Ordner mit der gemappten Datei. Nach dem Doppelpunkt wird das Zielverzeichnis im Container definiert. Wichtig hierbei ist, dass der Ordner „daten“ erst mit diesem Befehl erzeugt wird und die Daten aus dem im Befehl angegeben Host-Pfad in diesen verknüpft werden.</p>
             <p>Dass die Daten wirklich aktiv gemappt werden und nicht bloß in den Container kopiert werden kannst du auch testen. Wenn du die Datei lokal durch beispielsweise Umbenennen manipulierst und durch ein einfaches <code>$ ls</code> das Verzeichnis in deinem Container aktualisierst siehst du, dass die Dateien wirklich verknüpft sind. Natürlich funktioniert dies auch in die andere Richtung, also von Docker-Container auf Host-Verzeichnis.</p>
             
             <hr class="hr-dash my-7">
@@ -363,14 +362,14 @@ root@43f656d835f4:/# apt-get install curl</code></pre>
             |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
             !-->
             <h2 id="volumes">Docker Volumes</h2>
-            <p class="lead-2">In diesem Abscnitt lernst du was Volumes sind und wie diese erstellt, befüllt und entfernt werden. </p>
+            <p class="lead-2">In diesem Abscnitt lernst du was Volumes sind und wie diese erstellt, befüllt und entfernt werden.</p>
 
             <hr class="hr-dash my-7">
             <div class="video-wrapper ratio-16x9">
               <iframe width="560" height="315" src="https://www.youtube.com/embed/AZpNa4BneEo?controls=0" frameborder="0" frameborder="0" modestbranding="1" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture " allowfullscreen></iframe>
             </div>
             <br>
-            <p>Docker Volumes ist der präferierte Weg für persistente Daten die von Docker Containern generiert und verwendet werden. Während Bind-Mounts (das Mappen von Dateien) von der Verzeichnisstruktur der Host-Maschine abhängig sind, werden die Volumes vollständig von Docker verwaltet. Volumes haben mehrere Vorteile gegenüber Bind-Mounts.</p>
+            <p>Docker Volumes ist der präferierte Weg für persistente Daten die von Docker Containern generiert und verwendet werden. Während  <a href="#bind_mounts">Bind-Mounts</a> (das Mappen von Dateien) von der Verzeichnisstruktur der Host-Maschine abhängig sind, werden die Volumes vollständig von Docker verwaltet. Volumes haben mehrere Vorteile gegenüber Bind-Mounts.</p>
             <ul>
               <li>Volumes können sicherer von mehreren Containern gemeinsam genutzt werden.</li>
               <li>Volumes sind einfacher zu sichern oder zu migrieren als Bind-Mounts.</li>
@@ -379,7 +378,7 @@ root@43f656d835f4:/# apt-get install curl</code></pre>
               <li>Volumes funktionieren sowohl auf Linux- als auch auf Windows-Containern.</li>
             </ul>
             <img src="assets/img/volumes.jpeg" class="img-fluid" alt="Responsive image">
-            <p>Wenn dein Container nicht persistente Daten generiert, solltest du die Verwendung eines tmpfs-Mount in Betracht ziehen, um zu vermeiden, dass die Daten dauerhaft irgendwo gespeichert werden, und um die Leistung des Containers zu erhöhen. Weiteres über tmpfs-Mounts findest du unter docs.docker.com/storage/tmpfs/.</p>
+            <p>Wenn dein Container nicht persistente Daten generiert, solltest du die Verwendung eines tmpfs-Mount in Betracht ziehen, um zu vermeiden, dass die Daten dauerhaft irgendwo gespeichert werden, und um die Leistung des Containers zu erhöhen. Weiteres über tmpfs-Mounts findest in der offiziellen <a href="https://docs.docker.com/storage/tmpfs/" target="_blank">Docker-Dockumentation</a>.</p>
 
             <h3 id="volumes_u1">Volume erstellen und verwalten</h3>
             <p>Im Gegensatz zu einem Bind-Mount kannst du Volumes außerhalb des Bereichs eines beliebigen Containers erstellen und verwalten. Hier ist eine Auflistung den gängigsten Befehlen:</p>
@@ -406,14 +405,14 @@ root@43f656d835f4:/# apt-get install curl</code></pre>
             <h3 id="volumes_u2">Volume mit Container starten</h3>
             <p>Wenn du einen Container mit einem noch nicht vorhandenen Volume starten, erstellt Docker das Volume für dich. Das folgende Beispiel lädt das Volume <code>html </code> in das Verzeichnis <code>/app/</code> des Containers. <code>vol-nginx</code> ist der Name des Containers.</p>
             <pre><code class="language-docker">$ docker run -d --name vol-nginx -v mein_vol:/app  nginx:latest</code></pre>
-            <p>Um den Container zu stoppen und zu entfernen sind zwei Kommandos nötig. Zu beachten ist auch, dass das entfernen von einem Volume ein weiterer separater Schritt ist.</p>
+            <p>Um den Container zu stoppen und zu entfernen sind zwei Kommandos nötig. Zu beachten ist auch, dass das Entfernen von einem Volume ein weiterer separater Schritt ist.</p>
             <pre><code class="language-docker">$ docker container stop vol-nginx</code></pre>
             <pre><code class="language-docker">$ docker container rm vol-nginx</code></pre>
             <pre><code class="language-docker">$ docker volume rm vol-nginx</code></pre>
             <hr class="hr-dash my-7">
             <h3 id="volumes_u3">Ein Container benutzen um ein Volume zu füllen</h3>
-            <p>Wenn Sie einen Container starten, der ein neues Volume erstellt, wie oben beschrieben, und der Container Dateien oder Verzeichnisse in dem Verzeichnis hat, das gemountet werden sollen (wie <code>/app/</code> oben), wird der Inhalt des Verzeichnisses in das Volume kopiert. Der Container stellt dann das Volume bereit und verwendet es, und andere Container, die das Volume verwenden, haben auch Zugriff auf den vorgefüllten Inhalt. </p>
-            <p>Um dies zu veranschaulichen, startet dieses Beispiel einen nginx Container und füllt das neue Volume <code>html</code> mit dem Inhalt des Containerverzeichnisses <code>/usr/share/nginx/html</code>, in dem Nginx seinen Standard-HTML-Inhalt speichert.</p>
+            <p>Wenn du einen Container startest, der ein neues Volume erstellt, wie oben beschrieben, und der Container Dateien oder Verzeichnisse in dem Verzeichnis hat, das gemountet werden sollen (wie <code>/app/</code> oben), wird der Inhalt des Verzeichnisses in das Volume kopiert. Der Container stellt dann das Volume bereit und verwendet es, und andere Container, die das Volume verwenden, haben auch Zugriff auf den vorgefüllten Inhalt. </p>
+            <p>Um dies zu veranschaulichen, startet dieses Beispiel einen nginx-Container und füllt das neue Volume <code>html</code> mit dem Inhalt des Containerverzeichnisses <code>/usr/share/nginx/html</code>, in dem Nginx seinen Standard-HTML-Inhalt speichert.</p>
             <pre><code class="language-docker">$ docker run -d --name=mein-nginx -v html:/usr/share/nginx/html nginx:latest</code></pre>
             <p>Um nach dem Ausführen des Beispiels den Container und das Volume zu löschen, kann man wieder dieselben Befehle ausführen wie im oberen Abschnitt.</p>
             <hr class="hr-dash my-7">
@@ -435,19 +434,19 @@ root@43f656d835f4:/# apt-get install curl</code></pre>
             <hr class="hr-dash my-7">
             <p>Das Dockerfile ist ein wichtiges Werkzeug zum automatischen Bauen von Images. Bei einem Dockerfile handelt es sich um eine simple Textdatei mit Instruktionen und Argumenten zum Aufbau der Images. Die Syntax sieht dabei wie folgt aus:</p>
               <pre><code class="language-docker">INSTRUKTION Argument</code></pre>
-            <p>Die Instruktionen sind festgelegte Begriffe. Eine vollständige Übersicht zu allen Instruktionen findest du in der offiziellen Docker-Dokumentation. Einige Beispiel-Instruktionen sind <code>FROM</code> zum festlegen des Basis-image, mit <code>ENV</code> kann man Variablen setzen oder mit <code>RUN</code> Programme oder Dienste starten, die zum Erstellen des Images notwendig sind.</p>
+            <p>Die Instruktionen sind festgelegte Begriffe. Eine vollständige Übersicht zu allen Instruktionen findest du in der offiziellen <a href="https://docs.docker.com/engine/reference/builder/" target="_blank">Docker-Dokumentation</a>. Einige Beispiel-Instruktionen sind <code>FROM</code> zum festlegen des Basis-image, mit <code>ENV</code> kann man Variablen setzen oder mit <code>RUN</code> Programme oder Dienste starten, die zum Erstellen des Images notwendig sind.</p>
             <img src="assets/img/dockerfile.jpeg" class="img-fluid" alt="Responsive image">
             <p>Am häufigsten generierst du vermutlich Images aus bereits bestehenden Dockerfiles beispielsweise aus dem Dockerhub. Dies geschieht mit folgendem Befehl:</p>
-            <pre><code class="language-docker">$ docker build -f /dockerfile .</code></pre>
+              <pre><code class="language-docker">$ docker build -f /dockerfile .</code></pre>
             <p>Der Parameter <code>-f</code> und der Dahinter gestellte Pfad geben den Ort des Dockerfiles an. Der Punkt am Ende des Befehls sorgt dafür, dass das Image im gleichen Verzeichnis wie das Dockerfile erzeugt wird</p>
             <p>Eine weitergeführte Alternative ist der Parameter <code>-t</code>. Mit diesem kann man das daraus erstellte Image beliebig benennen.</p>
             <p>In der Praxis sieht das folgendermaßen aus:</p>
-            <pre><code class="language-docker">$ docker build -t repository/tag  .</code></pre>
+              <pre><code class="language-docker">$ docker build -t repository/tag  .</code></pre>
             <p>Um besser zu verstehen wie der Workflow rund um so ein Dockerfile abläuft wird im Folgenden erklärt, wie ein einfaches Dockerfile geschrieben und ausgeführt wird.</p>
             <p>Gehe zunächst in ein beliebiges Verzeichnis auf deinem Computer. Dort wird nun das Dockerfile erstellt und mit einem beliebigen Editor (in diesem Fall vim) geöffnet:</p>
-            <pre><code class="language-docker">$ touch Dockerfile</code></pre>
-            <pre><code class="language-docker">$ vim Dockerfile</code></pre>
-            <p>Nun wird das Dockerfile wie oben beschrieben mit Instructions und Argumenten gefüllt. Da Docker das File von Oben nach Unten abarbeitet ist es wichtig die einzelnen Instruktionen in der richtigen Reihenfolge zu setzen: </p>
+              <pre><code class="language-docker">$ touch Dockerfile</code></pre>
+              <pre><code class="language-docker">$ vim Dockerfile</code></pre>
+            <p>Nun wird das Dockerfile wie oben beschrieben mit Instructions und Argumenten gefüllt. Da Docker das File von Oben nach Unten abarbeitet ist, es wichtig die einzelnen Instruktionen in der richtigen Reihenfolge zu setzen: </p>
             <pre class="line-numbers"><code class="language-docker">FROM ubuntu:14.04
 MAINTAINER Max Mustermann <max.muster@mail.de>
 RUN apt-get update
@@ -457,14 +456,14 @@ WORKDIR /home
 VOLUME ["/var/www"]
 ENTRYPOINT ["top"]</code></pre>
             <p>Natürlich gibt es durch die große Anzahl der Instruktionen auch viele Wege so ein Dockerfile aufzubauen. In unserem Beispiel wird zunächst das Basisimage mit <code>FROM</code> definiert. als zweiten Schritt wird der Urheber des Images genannt, dies ist nur konventionsbedingt, allerdings keine Pflicht. Mit <code>RUN</code> werden nun einige Dienste gestartet und mit <code>ENV</code> eine Umgebungsvariable initialisiert, hier könnte man beispielsweise direkt einen Port angeben.</p>
-            <p>Mit <code>WORKDIR</code> wird das Arbeitsverzeichnis gesetzt und alle darauf folgenden Befehle von dort aus ausgeführt. Mit <code>VOLUME</code> kann man Verzeichnisse definieren, die nach Außen zur Verfügung gestellt werden. Am Ende setzen wir mit <code>ENTRYPOINT</code> fest, was beim Starten des Containers zuerst ausgeführt wird, in unserem Beispiel starten wir das Programm “top”. </p>
-            <p>Wenn das Dokument beschrieben und gespeichert ist kann man es direkt mit dem bereits kennengelernten Befehl ausführen:</p>
-            <pre><code class="language-docker">$ docker build -t repository/image .</code></pre>
+            <p>Mit <code>WORKDIR</code> wird das Arbeitsverzeichnis gesetzt und alle darauf folgenden Befehle von dort aus ausgeführt. Mit <code>VOLUME</code> kann man Verzeichnisse definieren, die nach Außen zur Verfügung gestellt werden. Am Ende setzen wir mit <code>ENTRYPOINT</code> fest, was beim Starten des Containers zuerst ausgeführt wird, in unserem Beispiel starten wir das Programm „top“. </p>
+            <p>Wenn das Dokument beschrieben und gespeichert ist, kann man es direkt mit dem bereits kennengelernten Befehl ausführen:</p>
+              <pre><code class="language-docker">$ docker build -t repository/image .</code></pre>
             <p>Wenn alles gut läuft wird nun der build-prozess sichtbar und man erkennt, wie da Dockerfile Schritt für Schritt abgearbeitet wird.</p>
             <p>Mit <code>$ docker images</code> sollte jetzt auch das neu angelegte image angezeigt werden. </p>
             <p>Im nächten Schritt kannst du mit <code>docker run</code> den Container starten:
-            <pre><code class="language-docker">$ docker build -t repository/image .</code></pre>
-            <p> Hier zeigen sich die Vorteile des Dockerfiles, da du ansonsten nichts angeben musst. Wie im File beschrieben wird nun das Programm top gestartet. Top zeigt alle laufende Prozesse und einige Metadaten an. In unserem Beispiel allerdings nur einen laufenden Prozess, und zwar der Container, in dem es ausgeführt wird.</p>
+              <pre><code class="language-docker">$ docker build -t repository/image .</code></pre>
+            <p> Hier zeigen sich die Vorteile des Dockerfiles, da du ansonsten nichts angeben musst. Wie im File beschrieben wird nun das Programm top gestartet. Top zeigt alle laufende Prozesse und einige Metadaten an. In unserem Beispiel allerdings nur einen laufenden Prozess und zwar der Container, in dem es ausgeführt wird.</p>
             
             <hr class="hr-dash my-7">
           </div>
