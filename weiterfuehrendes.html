@@ -170,7 +170,7 @@ services:
     - test
 </code></pre> -->
             <p> Sobald das passende Container-Image gefunden ist, kann man diesen mit <code>$ docker run &lt;Name des Images&gt;</Name></code> starten. Wir haben ebenfalls schon gesehen dass der docker run Command allerlei Parameter akzeptiert. Die Parameter ermöglichen es den Container nach belieben zu personalisieren, man kann ihm einen Namen zuweisen, ein Port auf der Host-Maschine verfügbar machen oder ein Volumen anhängen. Leider ergibt das schon bei einfachen Aufgaben wie ein Webserver, einen langen, unleserlichen Befehl. Genauso unpraktisch wird es, wenn der Container abhängigkeiten aufweist und mit anderen Containern zusammenarbeitet.
-            Mit Docker-Compose wird der auszuführende Container in einer Yaml-Datei definiert. Name, Volumen, Ports und Abhängigkeiten werden hier definiert. Anschließend kann die Komposition mit docker-composer up ausgeführt werden.
+            Mit Docker-Compose wird der auszuführende Container in einer YAML-Datei definiert. Name, Volumen, Ports und Abhängigkeiten werden hier definiert. Anschließend kann die Komposition mit docker-composer up ausgeführt werden.
               </p>
             
 
@@ -208,7 +208,7 @@ services:
     image: mysql:5.7
   wordpress:
     image: wordpress:latest</code></pre>
-            <p>Yaml-Neulinge müssen sich neben der Einrückung daran gewöhnen, nach dem Doppelpunkt hinter dem Namen eines Attributs ein Leerzeichen zu setzen. Schreibst du statt <code>mysql: 5.7</code> nur <code>mysql:5.7</code> wird Docker-Compose mit einer Fehlermeldung abbrechen.</p>
+            <p>YAML-Neulinge müssen sich neben der Einrückung daran gewöhnen, nach dem Doppelpunkt hinter dem Namen eines Attributs ein Leerzeichen zu setzen. Schreibst du statt <code>mysql: 5.7</code> nur <code>mysql:5.7</code> wird Docker-Compose mit einer Fehlermeldung abbrechen.</p>
             <p>Dieses Grundgerüst für das WordPress-Setup wird jetzt Stück für Stück ausgebaut – die vollständige Variante findest du weiter unten.</p>
 
 
@@ -257,7 +257,7 @@ volumes:
             <hr class="hr-dash my-7">
             <h3 id="docker-compose_u9">Volumes - Laufwerke anhängen</h3>
             <p>Wird ein Docker-Container gestoppt, gehen alle gesammelten Daten des Prozesses verloren. Somit werden auch die Daten in unserem Datenbank-Container zurückgesetzt. Dies ist für den WordPress-Blog nicht sinnvoll. Damit die Daten einen Container-Neustart überdauern kann man die Daten auf dem Host mit sogenannten Volumes ablegen. Diese Volumes, auch Laufwerke genannt, sind Verzeichnisse auf dem Host Rechner auf den ein Container zugreifen kann.</p>
-            <p>Ein benanntes Volume muss im Abschnitt des Containers mit einem Pfad im Container verbunden werden, getrennt mit einem Doppelpunkt. Außerdem muss es im Abschnitt <code>volumes:</code> auf der obersten Ebene angelegt werden. Ein benanntes Volume kann man wie folgt der Yaml-Datei hinzufügen:</p>
+            <p>Ein benanntes Volume muss im Abschnitt des Containers mit einem Pfad im Container verbunden werden, getrennt mit einem Doppelpunkt. Außerdem muss es im Abschnitt <code>volumes:</code> auf der obersten Ebene angelegt werden. Ein benanntes Volume kann man wie folgt der YAML-Datei hinzufügen:</p>
             <pre class="line-numbers language-yaml"><code>services:
 db:
   image: mysql:5.7

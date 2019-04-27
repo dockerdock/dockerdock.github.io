@@ -21,7 +21,6 @@
     "cross-env": "^5.2.0",
     "del": "^3.0.0",
     "font-awesome": "^4.7.0",
-    "gulp": "3.9.1",
     "gulp-autoprefixer": "^6.0.0",
     "gulp-cache": "^1.0.2",
     "gulp-changed": "^3.2.0",
@@ -51,5 +50,8 @@
   },
   "scripts": {
     "start": "gulp serve"
+  },
+  "dependencies": {
+    "gulp": "^4.0.1"
   }
 }
