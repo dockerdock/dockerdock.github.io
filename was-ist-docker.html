@@ -165,13 +165,13 @@
                <img src="assets/img/dockervsvm.jpeg" class="img-fluid" alt="Responsive image">
 
               <h4>Speicherplatz</h4>
-               <p>Container sind in der Regel nicht größer als 100 MB. Virtuelle Maschinen benötigen durch das eigene Betriebssystem mehrere Gigabyte. So kann ein Server viel mehr Container hosten als VM. Dadurch werden Ressourcen gespart.</p>
+               <p>Container sind in der Regel nicht größer als 100 MB. Virtuelle Maschinen benötigen durch das eigene Betriebssystem mehrere Gigabyte. So kann ein Server viel mehr Container hosten als VMs. Dadurch werden Ressourcen gespart.</p>
 
               <h4>Boot-Zeit</h4>
-               <p>Da die Container kein eigenes OS besitzen und recht klein sind benötigen sie nur wenige Augenblicke zum Start, während VM einige Minuten brauchen bis sie betriebsbereit sind. Dadurch könnte man theoretisch Container beenden um Strom zu sparen und bei Bedarf wieder schnell booten.</p>
+               <p>Da die Container kein eigenes OS besitzen und recht klein sind benötigen sie nur wenige Augenblicke zum Start, während VMs einige Minuten brauchen bis sie betriebsbereit sind. Dadurch könnte man theoretisch Container beenden um Strom zu sparen und bei Bedarf wieder schnell booten.</p>
 
               <h4>Modularisierung</h4>
-               <p>Statt eine komplette und komplexe Applikation in einem Container zu betreiben, arbeiten verschiedene modulare Container zusammen. Dieser sogenannte Mircoservice-Ansatz ermöglicht die Aufteilung von bspw. einer Datenbank. So können auch einfach Komponenten geändert oder ausgetauscht werden, ohne die gesamte Applikation umzuschreiben.</p>
+               <p>Statt eine komplette und komplexe Applikation in einem Container zu betreiben, arbeiten verschiedene modulare Container zusammen. Dieser sogenannte Mircoservice-Ansatz ermöglicht die Aufteilung von bspw. einer Website mit einer verbundenen Datenbank. So können auch einfach Komponenten geändert oder ausgetauscht werden, ohne die gesamte Applikation umzuschreiben.</p>
 
               <h4>Versionierung</h4>
                 <p>Mit Docker können verschiedene Versionen eines Containers erstellt, untersucht und wiederhergestellt werden. Außerdem werden Komponenten aus den vorhergehenden Schichten wiederverwendet, umso den Container schlank zu halten.</p>
@@ -182,16 +182,16 @@
 
             <h3 id="reason_u2">Nachteile</h3>
               <h4>“Hauptsache Container” (Hype)</h4>
-                <p>Anstatt die angesprochene Modularisierung von Docker zu nutzen, wird eine gesamte Applikation in einen Container gepackt. In diesem Fall wird nicht das Potenzial von Docker genutzt.</p>
+                <p>Anstatt die angesprochene Modularisierung von Docker zu nutzen, wird eine gesamte Applikation in einen Container gepackt. In diesem Fall wird nicht das Potenzial von Docker, die Modularisierung durch Container, genutzt.</p>
               
               <h4>GUI</h4>
-                <p>Docker ist für Server konzipiert, also Services die ohne User Interface laufen. Deshalb ist die Unterstützung für Applikationen mit einer GUI nicht sehr gut. Anwendungen wie Photoshop können nicht mit Docker genutzt werden.</p>
+                <p>Docker ist für Server konzipiert, also Services die ohne Graphical User Interface (GUI) laufen. Deshalb ist die Unterstützung für Applikationen mit einer GUI nicht sehr gut. Anwendungen wie Photoshop können nicht mit Docker genutzt werden.</p>
               
               <h4>Root Rechte</h4>
                 <p>Die Engine von Docker, der Docker Daemon, benötigt für den Einsatz root Rechte. Das ist im Prinzip das gleiche wie Administratorrechte auf einem Windows System. Da der Daemon als root läuft, hat jeder Benutzer, der Container starten kann, im Prinzip root-Rechte auf dem System. So kann auf Verzeichnisse zugegriffen werden, in dem bspw. Passwörter gespeichert werden.</p>
               
               <h4>Sicherheit</h4>
-                <p>Da Docker Open Source ist und eine Menge Entwickler auch an den verschiedenen Images arbeiten, erwartet man, dass es kaum Risiken gibt. Da Anwendungen direkt auf den Host OS-Kernel zugreifen, können jedoch leichter Sicherheitslücken auftreten als bspw. bei einer VM. Deshalb ist ein gewisses Grundvertrauen in die Entwickler eines Images nötig. Teilweise werden Images von Docker auf Docker Hub verifiziert. Diese können bedenkenlos genutzt werden.</p>
+                <p>Da Docker ein Open-Source-Projekt ist und eine Menge Entwickler auch an den verschiedenen Images arbeiten, erwartet man, dass es kaum Risiken gibt. Da Anwendungen direkt auf den Host OS-Kernel zugreifen, können jedoch leichter Sicherheitslücken auftreten als bspw. bei einer VM. Deshalb ist ein gewisses Grundvertrauen in die Entwickler eines Images nötig. Teilweise werden Images von Docker auf Docker Hub verifiziert. Diese können bedenkenlos genutzt werden.</p>
 
               <h4>Docker ersetzt nicht VMs</h4>
                 <p>Auch wenn Docker immer populärer wird werden Virtuelle Maschinen nicht gleich in großem Maß aussterben. Experten sehen die Zukunft in beiden Technologien, die sich teilweise ergänzen. Docker ist leichter und agiler zu verwenden, als Anwendungen auf VMs. Lorenzo Fontana drückt es so aus: „Container sind Prozesse, VMs sind Server.“</p>
@@ -211,13 +211,13 @@
 
 
             <hr class="hr-dash my-7">
-            <p>Docker ist sehr vielversprechend und der Erfolg unbestreitbar. Dafür sprechen die <a href="https://www.docker.com/company">offiziellen Daten</a> der Website des Open Source Projekts. Über 80 Milliarden Container wurden bisher heruntergeladen und heute befinden sich über 2 Millionen Images im Docker Hub. Doch nicht nur die über 100 000 Third-Party-Projekte nutzen die Container Software, Docker hat über 650 kommerzielle Kunden. Dazu zählen auch namenhafte Kunden wie PayPal, Visa oder GSK.</p><br>
-            <p>Die Popularität von Docker lässt sich am besten mit dem folgenden Diagramm zeigen. Man sieht die Suchhäufigkeit des jeweiligen Begriffs "Docker" und "virtuelle Maschine (Virtual Box)" im Verlauf der letzten Jahre. Docker, das erst 2013 veröffentlicht wurde, schaffte es innerhalb von nur drei Jahren auf ein ähnlich hohes Suchinteresse wie die virtuelle Maschinen.</p><br>
+            <p>Docker ist sehr vielversprechend und der Erfolg unbestreitbar. Dafür sprechen die <a href="https://www.docker.com/company">offiziellen Daten</a> der Website des Open-Source-Projekts. Über 80 Milliarden Container wurden bisher heruntergeladen und heute befinden sich über 2 Millionen Images im Docker Hub. Doch nicht nur die über 100 000 Third-Party-Projekte nutzen die Container Software, Docker hat über 650 kommerzielle Kunden. Dazu zählen auch namenhafte Kunden wie PayPal, Visa oder GSK.</p><br>
+            <p>Die Popularität von Docker lässt sich am besten mit dem folgenden Diagramm zeigen. Man sieht die Suchhäufigkeit der Begriffe "Docker" und "Virtual Box" im Verlauf der letzten Jahre. Docker, das erst 2013 veröffentlicht wurde, schaffte es innerhalb von nur drei Jahren auf ein ähnlich hohes Suchinteresse wie die beliebteste virtuelle Maschine Virtual Box.</p><br>
             <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/1754_RC01/embed_loader.js"></script>
             <script type="text/javascript">
               trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"/m/0wkcjgj","geo":"","time":"2010-01-01 2019-04-15"},{"keyword":"/m/027q8xw","geo":"","time":"2010-01-01 2019-04-15"}],"category":0,"property":""}, {"exploreQuery":"date=2010-01-01%202019-04-15&q=%2Fm%2F0wkcjgj,%2Fm%2F027q8xw","guestPath":"https://trends.google.de:443/trends/embed/"});
             </script>      
-            <p>Ein wichtiger Faktor dafür ist auch die Docker-Community. Mit 32 000 Sternen auf GitHub und über 200 Meetups hat Docker eine solide Basis an Beitragenden. Jährlich findet auch aus diesem Grund eine DockerCon statt, auf der Neuerungen vorgestellt werden und Workshops stattfinden. Bei Docker handelt es sich also längst nicht mehr um ein Nischenprodukt, sondern um eine Lösung, die lange Zeit gesucht wurde. Das zeigt auch die Zahl der Docker Job Angebote, die seit Veröffentlichung um 77 000 % gestiegen sind.</p>          
+            <p>Ein wichtiger Faktor für den Erfolg ist auch die Docker-Community. Mit 32 000 Sternen auf GitHub und über 200 Meetups hat Docker eine solide Basis an Beitragenden. Jährlich findet auch aus diesem Grund eine DockerCon statt, auf der Neuerungen vorgestellt werden und Workshops stattfinden. Bei Docker handelt es sich also längst nicht mehr um ein Nischenprodukt, sondern um eine Lösung, die lange Zeit gesucht wurde. Das zeigt auch die Zahl der Docker Job Angebote, die seit Veröffentlichung um 77 000 % gestiegen sind.</p>          
             <hr class="hr-dash my-7">
           </div>
 
