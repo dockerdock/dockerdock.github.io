@@ -88,7 +88,7 @@
      <header class="header" style="background-color: #f1f6fa">
       <div class="container">
         <h1>Auf hoher See - Weiterführendes</h1>
-        <p class="lead">Nach einfachen Grundlagen soll auf dieser Seite nun gezeigt werden welches Potenzial in Docker steckt und weiterführende Themen vorgestellt werden.</p>
+        <p class="lead">Nach einfachen Grundlagen soll auf dieser Seite nun gezeigt werden, welches Potenzial in Docker steckt und weiterführende Themen vorgestellt werden.</p>
       </div>
     </header><!-- /.header -->
 
@@ -169,9 +169,9 @@ services:
   wd: null
     - test
 </code></pre> -->
-            <p> Sobald das passende Container-Image gefunden ist, kann man diesen mit <code>$ docker run &lt;Name des Images&gt;</Name></code> starten. Wir haben ebenfalls schon gesehen dass der docker run Command allerlei Parameter akzeptiert. Die Parameter ermöglichen es den Container nach belieben zu personalisieren, man kann ihm einen Namen zuweisen, ein Port auf der Host-Maschine verfügbar machen oder ein Volumen anhängen. Leider ergibt das schon bei einfachen Aufgaben wie ein Webserver, einen langen, unleserlichen Befehl. Genauso unpraktisch wird es, wenn der Container abhängigkeiten aufweist und mit anderen Containern zusammenarbeitet.
+            <p> Sobald das passende Container-Image gefunden ist, kann man diesen mit <code>$ docker run &lt;Name des Images&gt;</Name></code> starten. Wir haben ebenfalls schon gesehen dass der docker run Command allerlei Parameter akzeptiert. Die Parameter ermöglichen es den Container nach Belieben zu personalisieren, man kann ihm einen Namen zuweisen, ein Port auf der Host-Maschine verfügbar machen oder ein Volumen anhängen. Leider ergibt das schon bei einfachen Aufgaben wie ein Webserver, einen langen, unleserlichen Befehl. Genauso unpraktisch wird es, wenn der Container Abhängigkeiten aufweist und mit anderen Containern zusammenarbeitet.
             Mit Docker-Compose wird der auszuführende Container in einer YAML-Datei definiert. Name, Volumen, Ports und Abhängigkeiten werden hier definiert. Anschließend kann die Komposition mit docker-composer up ausgeführt werden.
-              </p>
+            </p>
             
 
 
@@ -193,7 +193,7 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-
 
             <hr class="hr-dash my-7">
             <h3 id="docker-compose_u5">Erstes Projekt</h3>
-            <p>Für das erste Projekt lege, einen Ordner an. Der Ordnername bestimmt nachher den Namen des Containers, deswegen sollte dieser aus praktischen Gründen nicht zu lang sein. Erstelle hier die Datei docker-compose.yml. </p>
+            <p>Für das erste Projekt legen wir einen Ordner an. Der Ordnername bestimmt nachher den Namen des Containers, deswegen sollte dieser aus praktischen Gründen nicht zu lang sein. Erstelle hier die Datei docker-compose.yml.</p>
             <p>Eine Compose-Datei beginnt immer mit der Angabe der <code>version:</code>, die die Version der Compose-Version angibt. Welche Version du nutzen kannst, hängt von deiner Docker-Version ab. Zum Zeitpunkt des Schreibens ist Docker-Version 18.09 die aktuellste. Falls du gerade einsteigst, dann hast du sehr wahrscheinlich diese Version installiert und kannst in der YAML-Datei version 3.7 fordern. Um sicher zu gehen, kannst du mit <code>docker -v</code> deine Docker-Version herausfinden.</p>
             <p>Im nächsten Abschnitt werden unsere Container definiert. Dieser Abschnitt nennt sich <code>services</code> Es nimmt folgendes Format an: </p>
 <pre class="line-numbers language-yaml"><code>services:
@@ -201,7 +201,7 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-
 -----> Container-Optionen
 --> Containername:
 -----> Container-Optionen</code></pre>
-            <p>Das erste Projekt soll ein WordPress-Blog sein. Damit wir diesen erfolgreich starten können brauchen wir zwei Services: Wordpress und ein Webserver. Um herauszufinden wie der Name des benötigten Images heißt, empfiehlt es sich unter hub.docker.com danach zu suchen. Wie wir unserer Service nennen ist dem uns überlassen. Der erste Service bekommt den Namen <code>wordpress</code> und das Image <code>wordpress:latest</code>. Der Tag <code>:latest</code> gibt an, dass die aktuellste Version des Images verwendet werden soll. Zum Ablegen der Daten braucht WordPress eine MySQL- oder MariaDB-Datenbank. Sie bekommt den Namen <code>db</code> und soll aus dem Image <code>mysql:5.7</code> entstehen. Die Compose-Datei beginnt mit folgenden Zeilen:</p>
+            <p>Das erste Projekt soll ein WordPress-Blog sein. Damit wir diesen erfolgreich starten können brauchen wir zwei Services: Wordpress und ein Webserver. Um herauszufinden wie der Name des benötigten Images heißt, empfiehlt es sich unter <a href="https://hub.docker.com/">hub.docker.com</a> danach zu suchen. Wie wir unserer Service nennen ist dem uns überlassen. Der erste Service bekommt den Namen <code>wordpress</code> und das Image <code>wordpress:latest</code>. Der Tag <code>:latest</code> gibt an, dass die aktuellste Version des Images verwendet werden soll. Zum Ablegen der Daten braucht WordPress eine MySQL- oder MariaDB-Datenbank. Sie bekommt den Namen <code>db</code> und soll aus dem Image <code>mysql:5.7</code> entstehen. Die Compose-Datei beginnt mit folgenden Zeilen:</p>
 <pre class="line-numbers language-yaml"><code>version: '3.3'
 services:
   db:
@@ -214,9 +214,9 @@ services:
 
             <hr class="hr-dash my-7">
             <h3 id="docker-compose_u6">Ports und Netzwerke</h3>
-            <p>Netzwerken ist unter Docker-Containern aus der gleichen Docker-Compose-Datei sehr einfach. Wenn du keine weiteren Angaben machst, richtet Docker-Compose ein Netzwerk für alle Container einer Compose-Datei ein. Das Netzwerk heißt dann <code>ordnername_default</code>. In diesem Netzwerk kann jeder Container jeden anderen über den Service-Namen erreichen – Docker stellt einen internen DNS bereit und löst die Hostnamen, im Beispiel wordpress und db, auf. </p>
+            <p>Netzwerken ist unter Docker-Containern aus der gleichen Docker-Compose-Datei sehr einfach. Wenn du keine weiteren Angaben machst, richtet Docker-Compose ein Netzwerk für alle Container einer Compose-Datei ein. Das Netzwerk heißt dann <code>ordnername_default</code>. In diesem Netzwerk kann jeder Container jeden anderen über den Service-Namen erreichen – Docker stellt einen internen DNS bereit und löst die Hostnamen, im Beispiel <code>wordpress</code> und <code>db</code>, auf.</p>
             <p>Mit IP-Adressen musst und solltest du nicht hantieren, sie werden dynamisch zugewiesen. </p>
-            <p>Das Standard-Netzwerk ist vom Typ „Bridge“. Das bedeutet, dass Docker sich mit NAT-Regeln darum kümmert, dass die Pakete, die an den Netzwerkkarten des unterliegenden Systems ankommen, an Container weitergereicht werden. Der Container wordpress soll auf Port 8000 lauschen und HTTP-Anfragen beantworten. Der Webserver im Container hört auf Port 80 – eine Information, die man in der  Dokumentation des Containers oder beim Studium des zugehörigen Dockerfiles findet. Um den Port von außen erreichbar zu machen, wird eine Liste von Zuordnungen in der Liste ports: übergeben. </p>
+            <p>Das Standard-Netzwerk ist vom Typ „Bridge“. Das bedeutet, dass Docker sich mit NAT-Regeln darum kümmert, dass die Pakete, die an den Netzwerkkarten des unterliegenden Systems ankommen, an Container weitergereicht werden. Der Container <code>wordpress</code> soll auf Port 8000 lauschen und HTTP-Anfragen beantworten. Der Webserver im Container hört auf Port 80 – eine Information, die man in der  Dokumentation des Containers oder beim Studium des zugehörigen Dockerfiles findet. Um den Port von außen erreichbar zu machen, wird eine Liste von Zuordnungen in der Liste <code>ports:</code> übergeben. </p>
             <p>Mit der Zuweisung 8000:80 reserviert Docker den Port 8000 auf allen Netzwerkkarten des Systems und lauscht darauf.</p>
             <pre class="line-numbers language-yaml"><code>version: '3.3'
 services:
@@ -250,7 +250,7 @@ volumes:
 
             <hr class="hr-dash my-7">
             <h3 id="docker-compose_u7">Restart: always</h3>
-            <p>Sinnvoll für Container, die ständig laufen sollen –wie eine Datenbank oder ein Webserver – ist die Anweisung: <code>restart: always</code>. Steigt das Programm wegen eines Fehlers aus, fährt Docker-Compose den Container sofort wieder hoch. </p>
+            <p>Sinnvoll für Container, die ständig laufen sollen – wie eine Datenbank oder ein Webserver – ist die Anweisung: <code>restart: always</code>. Steigt das Programm wegen eines Fehlers aus, fährt Docker-Compose den Container sofort wieder hoch. </p>
             <p>Die Anweisung <code>depends_on:</code> teilt Docker-Compose mit, in welcher Reihenfolge die Container gestartet werden sollen. Da das WordPress-Blog ohne Datenbankanbindung Fehlermeldungen auswirft, soll sein Container erst anlaufen, wenn die Datenbank bereit ist. In komplexeren Setups können das auch mehrere Abhängigkeiten pro Container sein, bei Zirkelschlüssen beschwert sich Docker-Compose.</p>
           
 
@@ -265,18 +265,18 @@ db:
     - db_data:/var/lib/mysql</code></pre>
             <p>Setzt du ein solches benanntes Volume ein, kümmert sich Docker darum, die Daten auf der Festplatte zu speichern. Dazu legt Docker in seinem Datenverzeichnis Ordner mit kryptischen Namen an. In diese Ordner solltest du nie per Hand eingreifen, das Verfahren ist also nur praktikabel, wenn du die Daten nicht über das Dateisystem des Hosts bearbeiten möchtest. </p>
             <p> Alternativ verwendest du, eine Pfadangabe auf dem Host-Dateisystem. Entweder absolut (beginnend mit „/“) oder relativ, ausgehend vom Compose-File. Auch einzelne Dateien können als „Volume“ übergeben werden. Das ist zum Beispiel für Konfigurationsdateien sinnvoll. Mit <code>:ro</code> am Ende markierst du das Volume als read-only, der Container kann es also nicht verändern. </p>
-            <p>Soll ein Container auf ein Hardwaregerät des Hosts zugreifen, zum Beispiel ein USB-Gerät, übergibst du das nach der gleichen Syntax wie ein Volume, allerdings im Abschnitt devices.</p>
+            <p>Soll ein Container auf ein Hardwaregerät des Hosts zugreifen, zum Beispiel ein USB-Gerät, übergibst du das nach der gleichen Syntax wie ein Volume, allerdings im Abschnitt <code>devices</code>.</p>
             
 
 
             <hr class="hr-dash my-7">
             <h3 id="docker-compose_u10">Container starten und stoppen</h3>
             <p>Ist die Container-Zusammenstellung fertig, musst du sie nur noch starten. Navigiere auf der Kommandozeile in das Verzeichnis mit dem Compose-File und führe fogenden Befehl aus.</p>
-            <pre><code class="language-docker">$ docker-compose up</code></pre>
-            <p>Auf der Kommandozeile kannst du beobachten, wie die beiden Container hochfahren und ihre Einrichtungsprozeduren durchlaufen. Die Datenbank bemerkt, dass das Datenverzeichnis noch leer ist und legt eine Datenbank anhand der Umgebungs -variablen an. Rufst du http://localhost:8000 im Browser auf, begrüßt dich der Einrichtungsassistent von WordPress und möchte mit Ihnen den Blog einrichten. </p>
-            <p>Für Entwicklungsarbeit ist ein einfaches <code>up</code> sehr nützlich, da du jede Aktivität in den Containern live verfolgen kannst (jeder HTTP-Aufruf erzeugt zum Beispiel eine Zeile). Allerdings ist die Kommandozeile jetzt belegt und die Container leben nur, bis du Docker-Compose mit Strg+C beendest. Sinnvoller ist es, den Parameter <code>-d</code> (für „detached“) anzuhängen. Dann landen die Ausgaben nicht mehr auf der Kommandozeile. Mit docker-compose logs kann man dann nach Bedarf anzeigen, was in den Containern vor sich gegangen ist. Haben die Container die Anweisung <code>restart: always</code> bekommen, kannst du den Server jetzt auch neu starten. Docker-Compose kümmert sich nach dem Boot darum, dass sie wieder starten. Erst der folgende Befehl, ausgeführt im Ordner mit der Compose-Datei, schaltet die Container aus.</p>
-            <pre><code class="language-docker">$ docker-compose down</code></pre>
-            <p> Manchmal ist es sinnvoll, nicht alle Container hochzufahren, die in der Compose-Datei definiert sind. Um nur ausgewählte Container zu starten, übergibt man deren Namen (wie unter services angegeben) als Paramter: <code>$ docker-compose up wordpress db</code>. In diesem Beispiel würde “wordpress” ausreichen, da Docker-Compose die Abhängigkeiten automatisch berücksichtigt. </p>
+              <pre><code class="language-docker">$ docker-compose up</code></pre>
+            <p>Auf der Kommandozeile kannst du beobachten, wie die beiden Container hochfahren und ihre Einrichtungsprozeduren durchlaufen. Die Datenbank bemerkt, dass das Datenverzeichnis noch leer ist und legt eine Datenbank anhand der Umgebungsvariablen an. Rufst du http://localhost:8000 im Browser auf, begrüßt dich der Einrichtungsassistent von WordPress und möchte mit Ihnen den Blog einrichten. </p>
+            <p>Für Entwicklungsarbeit ist ein einfaches <code>up</code> sehr nützlich, da du jede Aktivität in den Containern live verfolgen kannst (jeder HTTP-Aufruf erzeugt zum Beispiel eine Zeile). Allerdings ist die Kommandozeile jetzt belegt und die Container leben nur, bis du Docker-Compose mit Strg+C beendest. Sinnvoller ist es, den Parameter <code>-d</code> (für „detached“) anzuhängen. Dann landen die Ausgaben nicht mehr auf der Kommandozeile. Mit <code>docker-compose logs</code> kann man dann nach Bedarf anzeigen, was in den Containern vor sich gegangen ist. Haben die Container die Anweisung <code>restart: always</code> bekommen, kannst du den Server jetzt auch neu starten. Docker-Compose kümmert sich nach dem Boot darum, dass sie wieder starten. Erst der folgende Befehl, ausgeführt im Ordner mit der Compose-Datei, schaltet die Container aus.</p>
+              <pre><code class="language-docker">$ docker-compose down</code></pre>
+            <p> Manchmal ist es sinnvoll, nicht alle Container hochzufahren, die in der Compose-Datei definiert sind. Um nur ausgewählte Container zu starten, übergibt man deren Namen (wie unter <code>services</code> angegeben) als Paramter: <code>$ docker-compose up wordpress db</code>. In diesem Beispiel würde <code>wordpress</code> ausreichen, da Docker-Compose die Abhängigkeiten automatisch berücksichtigt. </p>
             <p> Mit der Angabe dieser kurzen Namen kann man auch andere Docker-Compose-Befehle auf einzelne Container zuschneiden. So führt <code>$ docker-compose restart wordpress</code> einen Neustart aus. Diese kurzen Namen existieren aber nur in der Welt von Docker-Compose. Mit <code>$ docker ps</code> erfährst du, welchen Namen der Container vom Docker-Daemon bekommen hat. Das Namensschema ist immer gleich: der Name des Ordners, in dem die Compose-Datei liegt, der Name des Services, eine Ziffer, beginnend bei 1, jeweils durch einen Unterstrich getrennt. </p>
             <p>Wenn du mit Docker-Compose experimentierst und die Volumes änderst, musst du die Container herunterfahren und Docker überzeugen, die neuen Volumes zu nutzen. Dazu hängst du den Parameter <code>--force-recreate</code> an <code>$ docker-compose up</code> an. </p>
             <p>Manchmal ist es sinnvoll, Container aus anderen Compose-Projekten verfügbar zu machen. Betreibt man zum Beispiel mehrere Webseiten auf einem Server, kann jede Seite ein eigenes Compose-Projekt bekommen. In einer eigenen Compose-Datei wird ein Webproxy angelegt, die alle eingehenden Anfragen verteilt und sich um die Beschaffung von Zertifikaten beschäftigt.</p>
@@ -290,7 +290,7 @@ db:
             <p>Die Compose-Datei muss nicht docker-compose.yml heißen. Nach einer Datei mit diesem Namen sucht Docker-Compose aber, wenn du ihm keinen anderen Dateinamen übergibst. Dafür dient der Parameter <code>-f</code>, dem du hintereinander einen oder mehrere Dateinamen übergeben darfst. Gibst du mehrere Dateien an, kombiniert Docker-Compose ihre Inhalte. Das kann man ausnutzen, um zum Beispiel eine alternative Entwickler-Umgebung einzurichten. Zusätzlich zur docker-compose.yml lege eine docker-compose.dev.yml an: </p>
             <pre class="line-numbers language-yaml"><code>wordpress:
   image: wordpress:4-php7.2-apache</code></pre>
-            <p>Mit docker-compose -f docker-compose.yml docker-compose.dev.yml up fahren die beiden Container fast genauso wie zuvor hoch – geändert wurde nur das Image des WordPress-Containers. Die Angaben der letztgenannten Datei ersetzen immer die zuvor gesetzten Werte, zusätzliche Attribute werden hinzugefügt.</p>
+            <p>Mit <code>docker-compose -f docker-compose.yml docker-compose.dev.yml up</code> fahren die beiden Container fast genauso wie zuvor hoch – geändert wurde nur das Image des WordPress-Containers. Die Angaben der letztgenannten Datei ersetzen immer die zuvor gesetzten Werte, zusätzliche Attribute werden hinzugefügt.</p>
             
             
 
@@ -298,7 +298,7 @@ db:
             <hr class="hr-dash my-7">
             <h3 id="docker-compose_u12">Im Swarm</h3>
             <p>Docker-Compose ist nicht nur ein nützliches Werkzeug für Docker-Anwender, es ist auch die Voraussetzung, um mehrere Docker-Hosts im Swarm Mode zu betreiben. Damit ist es möglich, mehrere Instanzen eines Containers zu starten und die Last zu verteilen. </p>
-            <p> Die Docker-Dokumentation liefert unter „Swarm Mode“ einen Einstieg in das Thema. Wie ein Docker-Schwarm in der Praxis aussieht und welche Besonderheiten in dieser Betriebsart zu berücksichtigen sind, zeigen wir Ihnen im nächsten Abschnitt.</p>
+            <p> Die Docker-Dokumentation liefert unter „Swarm Mode“ einen Einstieg in das Thema. Wie ein Docker-Schwarm in der Praxis aussieht und welche Besonderheiten in dieser Betriebsart zu berücksichtigen sind, zeigen wir Ihnen im <a href="#swarm">nächsten Abschnitt</a>.</p>
             
             
 
@@ -329,16 +329,16 @@ db:
             <h3 id="swarm_u2">Bestandteile und Funktionsweise</h3>
             <p>Ein Schwarm besteht aus zwei unterschiedlichen Komponenten: mindestens einem Manager und nach Belieben unterschiedliche viele Arbeiterknoten. Der Manager hat als zentrale Einheit die Aufgabe, den Schwarm zu koordinieren. So werden von ihm bestimmte Aufgaben verteilt. Der Arbeiterknoten bekommt seine Aufgaben vom Manager zugeteilt und führt dann die ihm genannten Docker Container aus. Es kann mehr als einen Manager geben, dies ist empfehlenswert, wenn man bei einem Ausfall eines Managers einen anderen als Backup haben möchte. </p>
         
-            <p>Docker Swarm baut auf dem Modell von Docker Compose auf. Laufende Container heißen in diesem Zusammenhang jedoch Tasks. Eine Beschreibung gibt an, wie häufig diese Tasks ausgeführt werden sollen. Die Tasks zusammen mit der Beschreibung werden “Service” genannt. Eine Möglichkeit ist, dass jeder Knoten einen Task ausführt. Eine andere Möglichkeit ist, dass eine genau definierte Anzahl von Knoten dies tut. Beispielsweise kann der Nutzer bei einem Manager fünf Nginx Server angefordern. Der Manager startet darauf auf fünf freien Knoten diese dann jeweils als Task. Als “Stack” oder Anwendung bezeichnet man eine Vielzahl von Services. </p>
-            <p>Eine Stärke von Docker Swarm ist, dass virtuelle Netzwerke zum Organisieren der Zusammenarbeit automatisch aufgebaut werden. So können beispielsweise die anderen Knoten auf Ports, die von einem Service genutzt werden, zugreifen. Sobald der Schwarm erst einmal eingerichtet ist, muss man sich um nichts weiter kümmern. Eine Anwendungen kann über mehrere Knoten ausgeführt werden und wenn man beispielsweise Knoten wegnimmt, werden die Aufgaben auf die verbleibenden Arbeiterknoten automatisch verteilt. Leider hat Docker Swarm keinen gemeinsamen Datenspeicher, was bedeutet, dass sich nicht alle Container für den Schwarm direkt eignen wie z.B. ein MySQL Image. Den Speicher kann man über umwege jedoch selber erstellen. Verschiedene Ansätze (die hier nicht weiter erläutert werden) sind Rex-Ray, GlusterFs oder Portworx. Alternativ kann man die Container, die Zustandsdaten haben auf dem Manager behalten. Die Container, die ohne diese klarkommen, kann man dem Schwarm übergeben.</p>
+            <p>Docker Swarm baut auf dem Modell von Docker Compose auf. Laufende Container heißen in diesem Zusammenhang jedoch Tasks. Eine Beschreibung gibt an, wie häufig diese Tasks ausgeführt werden sollen. Die Tasks zusammen mit der Beschreibung werden „Service“ genannt. Eine Möglichkeit ist, dass jeder Knoten einen Task ausführt. Die andere Möglichkeit ist, dass eine genau definierte Anzahl von Knoten dies tut. Beispielsweise kann der Nutzer bei einem Manager fünf Nginx Server angefordern. Der Manager startet darauf auf fünf freien Knoten diese dann jeweils als Task. Als „Stack“ oder Anwendung bezeichnet man eine Vielzahl von Services.</p>
+            <p>Eine Stärke von Docker Swarm ist, dass virtuelle Netzwerke zum Organisieren der Zusammenarbeit automatisch aufgebaut werden. So können beispielsweise die anderen Knoten auf Ports, die von einem Service genutzt werden, zugreifen. Sobald der Schwarm erst einmal eingerichtet ist, muss man sich um nichts weiter kümmern. Eine Anwendungen kann über mehrere Knoten ausgeführt werden und wenn man beispielsweise Knoten wegnimmt, werden die Aufgaben auf die verbleibenden Arbeiterknoten automatisch verteilt. Leider hat Docker Swarm keinen gemeinsamen Datenspeicher, was bedeutet, dass sich nicht alle Container für den Schwarm direkt eignen wie z.B. ein MySQL-Image. Den Speicher kann man über Umwege jedoch selber erstellen. Verschiedene Ansätze (die hier nicht weiter erläutert werden) sind Rex-Ray, GlusterFs oder Portworx. Alternativ kann man die Container, die Zustandsdaten haben auf dem Manager behalten. Die Container, die ohne diese klarkommen, kann man dem Schwarm übergeben.</p>
 
 
             <hr class="hr-dash my-7">
             <h3 id="swarm_u3">Einen Swarm erstellen</h3>
             <p>Mit folgendem Befehl wird der Computer als Manager eingerichtet und Docker Swarm in Betrieb genommen:</p>
-            <pre class="language-docker"><code class="language-docker">$ docker swarm init --advertise-addr xxx.xx.x.xx</code></pre>
-            <p>Mit “docker swarm init” initialisiert Docker einen neuen Schwarm und macht das System zum ersten Manager. Der Befehl “--advertise-addr” ist die IP Adresse und der Port, den andere Knoten nutzen sollen um sich mit dem Manager zu verbinden. Docker gibt nach Eingabe des Befehls eine Antwort zurück, die dieser ähnelt:</p>
-            <pre class="language-docker"><code class="language-docker">$ docker swarm init --advertise-addr 172.18.0.51
+              <pre class="language-docker"><code class="language-docker">$ docker swarm init --advertise-addr xxx.xx.x.xx</code></pre>
+            <p>Mit <code>docker swarm init</code> initialisiert Docker einen neuen Schwarm und macht das System zum ersten Manager. Der Befehl <code>--advertise-addr</code> ist die IP Adresse und der Port, den andere Knoten nutzen sollen um sich mit dem Manager zu verbinden. Docker gibt nach Eingabe des Befehls eine Antwort zurück, die dieser ähnelt:</p>
+              <pre class="language-docker"><code class="language-docker">$ docker swarm init --advertise-addr 172.18.0.51
   Swarm initialized: current node (sol4lngdnaidtywpo0boipmqp) isnow a manager.
   To add a worker to this swarm, run the following command:
   docker swarm join --token SWMTKN-1-1fuq7n6tnvltfq4xcn5sp3aak1zeflmmmim1w3stgyrlkxt89z-6c2l1zfkqz3xm43tv7gl9axlg 172.18.0.51:2377
@@ -348,17 +348,17 @@ db:
             <hr class="hr-dash my-7">
             <h3 id="swarm_u4">Einem Schwarm beitreten</h3>
             <p>Mit dem folgenden Befehl tritt ein System unserem erstellen Swarm bei und wird zum Arbeiterknoten:</p>
-            <pre class="language-docker"><code class="language-docker">$ docker swarm join --token &lt;hier der Token&gt; xxx.xx.xxx.x:xxxx</code></pre>
+              <pre class="language-docker"><code class="language-docker">$ docker swarm join --token &lt;hier der Token&gt; xxx.xx.xxx.x:xxxx</code></pre>
             <p>Docker gibt daraufhin folgende Antwort zurück, falls die Eingabe erfolgreich war:</p>
-            <pre class="language-docker"><code class="language-docker">This node joined a swarm as a worker.</code></pre>
+              <pre class="language-docker"><code class="language-docker">This node joined a swarm as a worker.</code></pre>
 
 
             <hr class="hr-dash my-7">
             <h3 id="swarm_u5">Den Schwarm nutzen</h3>
             <p>Mit dem folgenden Befehl kann man auf dem System des Managers überprüfen welche Knoten Teil des Schwarm sind und welche Rollen sie erfüllen:</p>
-            <pre class="language-docker"><code class="language-docker">$ docker node ls</code></pre>
+              <pre class="language-docker"><code class="language-docker">$ docker node ls</code></pre>
             <p>Eine Rückgabe könnte folgendermaßen aussehen:</p>
-            <pre><code class="language-bash">
+              <pre><code class="language-bash">
               ID                            HOSTNAME            STATUS       AVAILABILITY        MANAGER STATUS      ENGINE VERSION
               r3761tjtwpv81kbltx7tib9a4 *   node1               Ready        Active              Leader              18.09.4
               r1i697r13mva25675tksrvakn     node2               Ready        Active                                  18.09.4
@@ -382,16 +382,16 @@ pdfe8yrrwy0w        www.2               containous/whoami:latest   node3        
 xs8c7w6s5nr3        www.3               containous/whoami:latest   node3               Running             Running 6 minutes ago</code></pre>
             
             <p>Der folgende Befehl ändert die Anzahl der Tasks auf eins:</p>
-            <pre class="language-docker"><code class="language-docker">$ docker service scale www=1</code></pre>
+              <pre class="language-docker"><code class="language-docker">$ docker service scale www=1</code></pre>
             <p>Ein bestimmter Knoten kann von seinen Aufgaben erlöst werden mit folgendem Befehl:</p>
-            <pre class="language-docker"><code class="language-docker">$ docker node update--availability drain swarm2</code></pre>
+              <pre class="language-docker"><code class="language-docker">$ docker node update--availability drain swarm2</code></pre>
             
 
             <hr class="hr-dash my-7">
             <h3 id="swarm_u6">Die Nutzung vereinfachen</h3>
             <p>Mithilfe von YAML Dateien kann die Verwendung von Docker Swarm vereinfacht werden. So kann man alle Services einer Anwendung zu einem Stack zusammenführen. </p>
             <p>Für unser Beispiel von oben sähe das dann so aus:</p>
-            <pre class="line-numbers language-yaml"><code>version: "3.3"
+              <pre class="line-numbers language-yaml"><code>version: "3.3"
 services:
   whoami:
     image: containous/whoami
@@ -402,18 +402,11 @@ services:
       ports:
         80:80</code></pre>
             <p>Gestartet wird die Datei mit folgendem Befehl:</p>
-            <pre class="language-docker"><code class="language-docker">$ docker-stack deploy -c ./datei.yml testname</code></pre>
+              <pre class="language-docker"><code class="language-docker">$ docker-stack deploy -c ./datei.yml testname</code></pre>
             <p>Es besteht die Möglichkeit Umgebungsvariablen in eine .env Datei auszulagern, was üblich ist, wenn man mehrere Container mit Docker Compose auf einmal starten möchte. Mit folgendem Befehl können diese verwertet werden:</p>
-            <pre class="language-docker"><code class="language-docker">$ docker-compose up</code></pre>
-            <p>Der Befehl “docker create stack” ignoriert die .env Dateien und liest nur die YAML Datei ein. </p>
-            <p>Container in einem Schwarm können bestimmte Dateien einbinden. Es gibt die Möglichkeiten diese Dateien als “Docker Secrets” oder als “Docker Configs” anzulegen, je nachdem wie gesichert es passieren soll. Bei “Docker Secrets” werden die Dateien verschlüsselt abgespeichert. Verwaltet und verwendet werden diese mit den uns bereits bekannten Befehlen. Die Dateien sind für alle Knoten unseres Schwarm abrufbar. Sie können während Container auf sie zugreifen nicht verändert werden. Dieses Problem umgeht man, indem man eine neue Datei anlegt und diese zur Laufzeit hinzugefügt mit “service update --secret-add”. Es besteht nicht die Möglichkeit, dass Container sie bearbeiten. Sie haben nur die Möglichkeit die Dateien zu lesen.</p>
-            <pre class="language-docker"><code class="language-docker">$ docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer</code></pre>
-            <p>Nun wird auf Docker Hub nach der neuesten Version von Portainer geschaut und diese heruntergeladen. Du kannst mit <code>$ docker ps</code> bereits sehen, dass der Container in betrieb ist. Wie in dem Befehl oben festgelegt ist für die Portainer-Seite der Port 9000 festgesetzt, dies kannst du auch aus dem docker ps auslesen. Dort ist sogar der vollständige Port 0.0.0.0:9000 beschrieben. Wenn du diesen in die URL-Leiste deines Browsers eingibst solltest du zum ersten mal das Portainer UI erreichen. Hier wird nun ein Benutzername und ein Passwort verlangt. Nach der Registrierung solltest du auf deiner individuellen Portainer.io Seite sein. </p>
-            <p>Unter Dashboard siehst du eine Übersicht aller Dienste. Eine der nützlichsten Funktionen sollte das Verwalten von Containern oder Images sein. So bekommt man erstmals eine Übersicht der schieren Anzahl totgeglaubter, vergessener zu testzwecken angelegter images oder container.</p>
-
-
-
-
+              <pre class="language-docker"><code class="language-docker">$ docker-compose up</code></pre>
+            <p>Der Befehl <code>docker create stack</code> ignoriert die .env Dateien und liest nur die YAML Datei ein.</p>
+            <p>Container in einem Schwarm können bestimmte Dateien einbinden. Es gibt die Möglichkeiten diese Dateien als “Docker Secrets” oder als “Docker Configs” anzulegen, je nachdem wie gesichert es passieren soll. Bei “Docker Secrets” werden die Dateien verschlüsselt abgespeichert. Verwaltet und verwendet werden diese mit den uns bereits bekannten Befehlen. Die Dateien sind für alle Knoten unseres Schwarm abrufbar. Sie können während Container auf sie zugreifen nicht verändert werden. Dieses Problem umgeht man, indem man eine neue Datei anlegt und diese zur Laufzeit hinzugefügt mit <code>service update --secret-add</code>. Es besteht nicht die Möglichkeit, dass Container sie bearbeiten. Sie haben nur die Möglichkeit die Dateien zu lesen.</p>
 
             <hr class="hr-dash my-7">
 
@@ -432,19 +425,21 @@ services:
 
 
             <h3 id="gui_u1">Einleitung</h3>
-            <p>Die meisten Prozesse von Docker lassen sich über die Kommandozeile verwalten. Dies hat den Vorteil, dass man sehr flexibel, code-nah und kompatibel über verschiedene Setups ist. Allerdings verliert man als Laie schnell die Übersicht und braucht sehr lange zum einarbeiten. Auch wenn beim richtigen lernen und Arbeiten mit Docker kein Weg an der Kommandozeile vorbeiführt lohnt sich ein Blick auf eine grafische Oberfläche für Container. Gerade zum Behalten der Ordnung über viele Container oder auch wenn es darum geht sich das Eintippen ellenlanger Befehle zu sparen ist ein Blick auf solch ein Tool wert.</p>
+            <p>Die meisten Prozesse von Docker lassen sich über die Kommandozeile verwalten. Dies hat den Vorteil, dass man sehr flexibel, codenah und kompatibel über verschiedene Setups ist. Allerdings verliert man als Laie schnell die Übersicht und braucht sehr lange zum Einarbeiten. Auch wenn beim richtigen Lernen und Arbeiten mit Docker kein Weg an der Kommandozeile vorbeiführt lohnt sich ein Blick auf eine grafische Oberfläche für Container. Gerade zum Behalten der Ordnung über viele Container oder auch wenn es darum geht, sich das Eintippen ellenlanger Befehle zu sparen, ist ein Blick auf solch ein Tool wert.</p>
             <hr class="hr-dash my-7">
 
 
             <h3 id="gui_u2">Portainer</h3>
-            <p>Eine der populärsten GUIs für Docker ist Portainer. Portainer ist ein Open Sourrce Projekt, das wie Docker selbst über eine kostenlose Community und eine kostenpflichtige Enterprice Version verfügt. Die Installation per Docker-Container ist vergleichsweise simpel und der Betrieb ressourcen-sparend. Man erreicht das grafik-interface per Browser und besonders die gute usability und Übersicht über alle Container, Images und andere Anwendungen sind hier als Pluspunkt zu erwähnen. 
-
-                Die Installation läuft hier per Docker-Container. Dafür einfach folgenden Befehl eingeben:
-                 </p>
+            <p>Eine der populärsten GUIs für Docker ist Portainer. Portainer ist ein Open Sourrce Projekt, das wie Docker selbst über eine kostenlose Community und eine kostenpflichtige Enterprise Version verfügt. Die Installation per Docker-Container ist vergleichsweise simpel und der Betrieb ressourcen-sparend. Man erreicht das Grafikinterface per Browser und besonders die gute Usability und Übersicht über alle Container, Images und andere Anwendungen sind hier als Pluspunkt zu erwähnen. Die Installation läuft hier per Docker-Container. Dafür einfach folgenden Befehl eingeben:</p>
+              <pre class="language-docker"><code class="language-docker">$ docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer</code></pre>
+            <p>Nun wird auf Docker Hub nach der neuesten Version von Portainer geschaut und diese heruntergeladen. Du kannst mit <code>$ docker ps</code> bereits sehen, dass der Container in Betrieb ist. Wie in dem Befehl oben festgelegt ist für die Portainer-Seite der Port 9000 festgesetzt, dies kannst du auch aus dem docker ps auslesen. Dort ist sogar der vollständige Port 0.0.0.0:9000 beschrieben. Wenn du diesen in die URL-Leiste deines Browsers eingibst solltest du zum ersten Mal das Portainer UI erreichen. Hier wird nun ein Benutzername und ein Passwort verlangt. Nach der Registrierung solltest du auf deiner individuellen Portainer.io Seite sein.</p>
+            <p>Unter Dashboard siehst du eine Übersicht aller Dienste. Eine der nützlichsten Funktionen ist das Verwalten von Containern oder Images. So bekommt man erstmals eine Übersicht der schieren Anzahl totgeglaubter, vergessener zu Testzwecken angelegter Images oder Container.</p>
+            <img src="assets/img/portainer-gui.png" class="img-fluid" alt="Portainer GUI">
             <hr class="hr-dash my-7">
 
+
             <h3 id="gui_u3">Kitematic</h3>
-            <p>Eine Alternative, die besonders für die Mac und Windows-User interessant sein könnte ist Kitematic. Dieses wurde vor einiger Zeit von Docker inc. übernommen und wird somit besonders von der Docker-Desktop version aktiv unterstützt. Gehe einfach in der Taskleiste auf den Dockerwal und auf Kitematic. Bei erstmaliger Installation sollte nun eine  Meldung mit kurzer Beschreibung und Download-Link auftauchen. Nach der Installation einfach starten und schon hast du eine Übersicht über alle Container. Außerdem hast du direkt Zugriff auf Docker Hub und kannst einfach nach images suchen, diese installieren und wertvolle Informationen herauslesen.</p>
+            <p>Eine Alternative, die besonders für die Mac und Windows-User interessant sein könnte ist Kitematic. Dieses wurde vor einiger Zeit von Docker Inc. übernommen und wird somit besonders von der Docker-Desktop-Version aktiv unterstützt. Gehe einfach in der Taskleiste auf den Dockerwal und auf Kitematic. Bei erstmaliger Installation sollte nun eine  Meldung mit kurzer Beschreibung und Download-Link auftauchen. Nach der Installation einfach starten und schon hast du eine Übersicht über alle Container. Außerdem hast du direkt Zugriff auf Docker Hub und kannst einfach nach Images suchen, diese installieren und wertvolle Informationen herauslesen.</p>
             <hr class="hr-dash my-7">
           </div>
         </div>
