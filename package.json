@@ -9,7 +9,7 @@
     "docs",
     "manual"
   ],
-  "author": "Felix Keller, Nils Eisenhauer, Ole Mantei, Pascal Walter",
+  "author": "Felix Keller, Nils Eisenhauer, Ole M., Pascal Walter",
   "homepage": "https://dockerdock.github.io/",
   "license": "ISC",
   "devDependencies": {
